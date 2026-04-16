@@ -30,4 +30,6 @@
 
 ## P8 — Self-Directed Ideas
 
-(Ideas will be added here as P0–P7 tasks are completed)
+- [x] IDEA-001: Keyboard shortcuts help overlay
+  - **Why:** CalendarGrid already has keyboard shortcuts (M/W/D/T/arrows) but they're undiscoverable. Power users need a quick reference.
+  - **What:** Press `?` to toggle a dark luxury-styled overlay showing all shortcuts. Dismisses with Escape or click outside. Matches the design system.

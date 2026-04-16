@@ -4,7 +4,7 @@
 
 ## Health
 - **Build:** Passing (zero errors)
-- **Tests:** 76 passing across 12 test files
+- **Tests:** 118 passing across 15 test files
 - **TypeScript:** Strict mode, zero `any` types
 
 ## Known Bugs (from CLAUDE.md) — All Fixed

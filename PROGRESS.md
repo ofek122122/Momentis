@@ -31,3 +31,8 @@
 - **Task:** TEST-001/002/003 — API route schema tests
 - **Status:** Completed
 - **Summary:** Added `api-schemas.test.ts` with 29 tests covering: updateEventSchema (10 tests: valid updates, invalid categories/colors/priorities, nullable fields, length limits), membershipActionSchema (5 tests: valid/invalid actions, missing/empty/non-string), searchSchema (5 tests: valid queries, filters, empty/missing/long queries), updatePrefsSchema (9 tests: valid preferences, time format validation, range limits, optional fields). 112 tests pass, build clean.
+
+### Iteration 7 (P8 Self-Directed)
+- **Task:** IDEA-001 — Keyboard shortcuts help overlay
+- **Status:** Completed
+- **Summary:** Created `KeyboardShortcuts.tsx` — press `?` to toggle a dark luxury-styled overlay showing all keyboard shortcuts organized by category (Navigation, Views, Actions, Calendar). Features gold accent, kbd elements, backdrop blur, smooth animation. Added to calendar page. 6 tests for shortcut configuration. 118 tests pass, build clean.
