@@ -16,7 +16,7 @@
 
 ## P3 — Accessibility
 
-- [ ] A11Y-001: Add missing aria-labels to icon buttons in DailyBriefing, FocusMode, and EventTemplates
+- [x] A11Y-001: Add missing aria-labels to icon buttons in DailyBriefing, FocusMode, and EventTemplates
 
 ## P4 — Test Coverage
 

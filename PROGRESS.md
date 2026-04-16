@@ -16,3 +16,8 @@
 - **Task:** BUG-007 — Fix router.refresh() in CalendarGrid
 - **Status:** Completed
 - **Summary:** Replaced 5 fire-and-forget `router.refresh()` calls with `useTransition`-wrapped refresh. Added `isRefreshing` guard to all handlers alongside `busy`. Implemented full optimistic updates: saves show updated event instantly, deletes hide event instantly, drag-drop moves event instantly, creates show temp event. Optimistic state clears automatically when server data arrives via transition completion. 76 tests pass, build clean.
+
+### Iteration 4
+- **Task:** A11Y-001 — Add missing aria-labels
+- **Status:** Completed
+- **Summary:** Added aria-labels to: DailyBriefing expand/collapse button (with aria-expanded), FocusMode expand button and reset timer buttons, EventTemplates new/cancel button and delete template buttons. 76 tests pass, build clean.
