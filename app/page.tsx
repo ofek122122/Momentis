@@ -1,28 +1,35 @@
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import {
   Calendar, Mic, Camera, Brain, Clock, Globe, BarChart3,
-  Palette, Users, Zap, Shield, Sparkles,
+  Palette, Users, Zap, Shield, Sparkles, ArrowRight, Check,
 } from 'lucide-react'
+import { SiteHeader } from '@/components/marketing/SiteHeader'
+import { SiteFooter } from '@/components/marketing/SiteFooter'
+import { HeroDemo } from '@/components/marketing/HeroDemo'
+import { Testimonials } from '@/components/marketing/Testimonials'
+import { LogoMarquee } from '@/components/marketing/LogoMarquee'
+import { StatCounter } from '@/components/marketing/StatCounter'
+import { CTA } from '@/components/marketing/CTA'
+import { Reveal } from '@/components/marketing/Reveal'
 
 export const metadata: Metadata = {
   title: 'Calendro — Just say it. It\'s scheduled.',
-  description: 'AI-powered calendar app. Type, speak, or snap a photo — Calendro parses your words and fills your calendar. Zero friction scheduling.',
-  keywords: ['calendar', 'AI calendar', 'voice calendar', 'smart scheduling', 'Google Calendar'],
+  description: 'The zero-friction AI calendar. Type, speak or snap a photo — Calendro parses your words and fills your calendar automatically. No date pickers. No friction.',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'Calendro — Just say it. It\'s scheduled.',
-    description: 'AI-powered calendar app. Type, speak, or snap a photo — Calendro parses your words and fills your calendar.',
+    description: 'AI-powered calendar. Type, speak or snap a photo to add events instantly.',
     type: 'website',
+    url: '/',
     images: ['/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Calendro — Just say it. It\'s scheduled.',
-    description: 'AI-powered calendar. Type, speak, or snap a photo. Zero friction scheduling.',
+    description: 'AI-powered calendar. Type, speak or snap a photo. Zero friction.',
   },
 }
 
@@ -31,221 +38,287 @@ export default async function Home() {
   if (session) redirect('/calendar')
 
   return (
-    <div className="min-h-screen dot-grid flex flex-col">
-      {/* Top bar */}
-      <header className="flex items-center justify-between px-6 md:px-8 py-6">
-        <div className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="Calendro" className="h-7 w-7" />
-          <span className="font-display text-lg font-semibold tracking-tight text-foreground">
-            Calendro
-          </span>
-        </div>
-        <div className="flex items-center gap-3">
-          <Link
-            href="/pricing"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:inline"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/login"
-            className={cn(
-              buttonVariants({ variant: 'ghost', size: 'sm' }),
-              'text-muted-foreground hover:text-foreground'
-            )}
-          >
-            Sign in
-          </Link>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <main className="flex-1 flex flex-col items-center justify-center px-6 pb-16 text-center">
-        <div className="max-w-3xl mx-auto space-y-8">
-          <p className="animate-fade-up animate-fade-up-1 text-xs font-mono tracking-[0.2em] uppercase text-gold opacity-80">
-            AI-Powered Calendar
-          </p>
-
-          <h1 className="animate-fade-up animate-fade-up-2 font-display text-4xl sm:text-6xl md:text-8xl font-bold leading-[0.95] tracking-tight text-foreground">
-            Just say it.
-            <br />
-            <em className="not-italic text-gold">It&apos;s scheduled.</em>
-          </h1>
-
-          <p className="animate-fade-up animate-fade-up-3 text-base md:text-lg text-muted-foreground max-w-md mx-auto leading-relaxed font-light">
-            Type it. Say it. Snap a photo. Calendro parses your words and
-            fills your Google Calendar — no date pickers, no scrolling, no friction.
-          </p>
-
-          <div className="animate-fade-up animate-fade-up-4 flex flex-col sm:flex-row gap-3 items-center justify-center pt-2">
-            <Link
-              href="/login"
-              className={cn(
-                buttonVariants({ size: 'lg' }),
-                'rounded-full px-8 bg-gold text-[#0c0c0f] hover:bg-gold/90 font-medium press shadow-lg shadow-gold/10'
-              )}
-            >
-              Get started free
-            </Link>
-            <Link
-              href="/pricing"
-              className="text-sm text-muted-foreground hover:text-gold transition-colors"
-            >
-              See Pro features →
-            </Link>
-          </div>
-        </div>
-      </main>
-
-      {/* Social proof stats */}
-      <section className="border-t border-border py-10 px-6" aria-label="Stats">
-        <div className="max-w-3xl mx-auto grid grid-cols-3 gap-6 text-center">
-          {[
-            { value: '10,000+', label: 'Events scheduled' },
-            { value: '3', label: 'Input methods' },
-            { value: '<2s', label: 'Avg. parse time' },
-          ].map(s => (
-            <div key={s.label} className="space-y-1">
-              <p className="font-display text-2xl sm:text-3xl font-bold shimmer-text">{s.value}</p>
-              <p className="font-mono text-[10px] sm:text-xs tracking-wider uppercase text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Features — How it works */}
-      <section className="border-t border-border" aria-label="How Calendro works">
-        <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border">
-          {[
-            {
-              icon: Calendar,
-              label: '01',
-              title: 'Type naturally',
-              desc: '"Dentist thursday 3pm" → added. No form fields, ever.',
-            },
-            {
-              icon: Mic,
-              label: '02',
-              title: 'Speak freely',
-              desc: 'Hold the mic, dump your week out loud. AI does the rest.',
-            },
-            {
-              icon: Camera,
-              label: '03',
-              title: 'Snap any schedule',
-              desc: 'Photo of exam timetable? All 20 dates in one tap.',
-            },
-          ].map(f => (
-            <div key={f.label} className="px-6 md:px-8 py-8 space-y-2.5 group">
-              <div className="flex items-center gap-2">
-                <f.icon className="h-4 w-4 text-gold/60 group-hover:text-gold transition-colors" />
-                <span className="font-mono text-xs text-gold/60">{f.label}</span>
+    <div className="min-h-screen flex flex-col bg-background">
+      <SiteHeader />
+      <main id="main-content" className="flex-1">
+        {/* HERO */}
+        <section className="relative overflow-hidden">
+          <div aria-hidden className="pointer-events-none absolute inset-0 dot-grid opacity-50" />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(50% 40% at 50% 0%, rgba(197,163,92,0.16) 0%, transparent 60%)',
+            }}
+          />
+          <div className="relative max-w-6xl mx-auto px-5 md:px-8 pt-20 md:pt-28 pb-20 md:pb-28">
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/20 bg-gold/5 text-[11px] font-mono uppercase tracking-[0.2em] text-gold/90 animate-fade-up">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                Now in public beta
               </div>
-              <h3 className="font-display text-base font-semibold">{f.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Feature grid */}
-      <section className="py-16 px-6 md:px-8 border-t border-border" aria-label="Features">
-        <div className="max-w-5xl mx-auto">
-          <p className="font-mono text-xs tracking-[0.2em] uppercase text-gold/60 text-center mb-3">
-            Everything you need
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            More than a calendar
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { icon: Brain, title: 'AI Parsing', desc: 'Natural language, voice, and image processing with Gemini AI' },
-              { icon: Clock, title: 'Smart Suggestions', desc: 'AI finds the perfect time slot based on your schedule' },
-              { icon: BarChart3, title: 'Analytics', desc: 'See how you spend time with beautiful charts and insights' },
-              { icon: Globe, title: 'Multi-Calendar', desc: 'Google Calendar + Apple Calendar in one unified view' },
-              { icon: Palette, title: 'Themes', desc: '5 beautiful themes to match your style' },
-              { icon: Users, title: 'Collaboration', desc: 'Share calendars and schedule together' },
-              { icon: Zap, title: 'Focus Mode', desc: 'Pomodoro timer to protect your deep work time' },
-              { icon: Sparkles, title: 'Daily Briefing', desc: 'AI summary of your day with smart insights' },
-              { icon: Shield, title: 'Privacy First', desc: 'Your data stays yours. No ads, no tracking.' },
-            ].map((f, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-border bg-card/50 p-5 space-y-2.5 hover:border-gold/20 hover:bg-card/80 transition-all duration-200 group/card"
-              >
-                <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center group-hover/card:bg-gold/15 transition-colors">
-                  <f.icon className="h-4.5 w-4.5 text-gold/70 group-hover/card:text-gold transition-colors" />
-                </div>
-                <h3 className="text-sm font-medium text-foreground">{f.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
+              <h1 className="mt-6 font-display text-5xl sm:text-7xl md:text-[104px] font-bold leading-[0.95] tracking-tight text-foreground animate-fade-up animate-fade-up-2">
+                Just say it.
+                <br />
+                <em className="not-italic text-gold">It&apos;s scheduled.</em>
+              </h1>
+              <p className="mt-7 text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up animate-fade-up-3">
+                Type it. Speak it. Snap a photo. Calendro&apos;s AI parses your words and
+                fills your calendar — no date pickers, no form fields, no friction.
+              </p>
+              <div className="mt-9 flex flex-col sm:flex-row gap-3 items-center justify-center animate-fade-up animate-fade-up-4">
+                <Link
+                  href="/login"
+                  className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-xl shadow-gold/10"
+                >
+                  Get started free
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/demo"
+                  className="inline-flex items-center gap-2 h-11 px-5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Try live demo →
+                </Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 px-6 border-t border-border text-center cta-glow" aria-label="Call to action">
-        <div className="max-w-lg mx-auto space-y-6">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground">
-            Ready to simplify your schedule?
-          </h2>
-          <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-            Join thousands who schedule smarter. Free to start, no credit card required.
-          </p>
-          <Link
-            href="/login"
-            className={cn(
-              buttonVariants({ size: 'lg' }),
-              'rounded-full px-10 bg-gold text-[#0c0c0f] hover:bg-gold/90 font-medium press shadow-lg shadow-gold/10'
-            )}
-          >
-            Get started free
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border py-10 px-6 md:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-start justify-between gap-8 mb-8">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <img src="/logo.png" alt="Calendro" className="h-6 w-6" />
-                <span className="font-display text-base font-semibold text-foreground">Calendro</span>
-              </div>
-              <p className="text-xs text-muted-foreground max-w-xs">
-                AI-powered calendar that understands natural language. Zero friction scheduling.
+              <p className="mt-5 text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 animate-fade-up animate-fade-up-4">
+                Free forever plan · No credit card · 90-second setup
               </p>
             </div>
-            <div className="flex gap-12">
-              <div className="space-y-2">
-                <p className="font-mono text-[10px] tracking-widest uppercase text-muted-foreground/60">Product</p>
-                <div className="flex flex-col gap-1.5">
-                  <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
-                  <Link href="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Sign in</Link>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <p className="font-mono text-[10px] tracking-widest uppercase text-muted-foreground/60">Legal</p>
-                <div className="flex flex-col gap-1.5">
-                  <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</Link>
-                  <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms</Link>
-                </div>
-              </div>
+
+            <div className="mt-16 md:mt-20 animate-fade-up animate-fade-up-4">
+              <HeroDemo />
             </div>
           </div>
-          <div className="border-t border-border pt-6 flex items-center justify-between">
-            <span className="font-mono text-[10px] text-muted-foreground/50">
-              © {new Date().getFullYear()} Calendro. All rights reserved.
-            </span>
-            <span className="font-mono text-[10px] text-muted-foreground/50">
-              Made with ✦ for productivity
-            </span>
+        </section>
+
+        <LogoMarquee />
+
+        {/* HOW IT WORKS */}
+        <section className="py-24 px-5 md:px-8 border-t border-border">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="text-center mb-16">
+              <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-4">
+                How it works
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+                Three ways in.<br />
+                <em className="not-italic text-gold">One calendar, sorted.</em>
+              </h2>
+            </Reveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                {
+                  icon: Calendar,
+                  step: '01',
+                  title: 'Type naturally',
+                  desc: '“Dentist thursday 3pm” lands on your calendar in a second. Plain English, every time.',
+                  sample: 'dentist thursday 3pm',
+                },
+                {
+                  icon: Mic,
+                  step: '02',
+                  title: 'Speak freely',
+                  desc: 'Hold the mic. Dump your week out loud. Deepgram + AI turn rambling into structured events.',
+                  sample: '“Standup every weekday 9 for 15 minutes”',
+                },
+                {
+                  icon: Camera,
+                  step: '03',
+                  title: 'Snap any schedule',
+                  desc: 'Photo of an exam timetable? All 20 dates extracted at once. Gemini Vision sees everything.',
+                  sample: '📷 → 20 events added',
+                },
+              ].map((f, i) => (
+                <Reveal key={f.step} delay={i * 100}>
+                  <div className="group rounded-2xl border border-border lux-card p-7 md:p-8 h-full">
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="w-11 h-11 rounded-xl bg-gold/10 border border-gold/15 flex items-center justify-center group-hover:bg-gold/15 transition-colors">
+                        <f.icon className="h-5 w-5 text-gold" />
+                      </div>
+                      <span className="font-mono text-xs text-gold/50">{f.step}</span>
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                      {f.desc}
+                    </p>
+                    <div className="rounded-lg border border-border bg-white/[0.02] px-3 py-2.5 font-mono text-xs text-foreground/80">
+                      {f.sample}
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </footer>
+        </section>
+
+        {/* STATS */}
+        <section className="py-20 px-5 md:px-8 border-t border-border relative overflow-hidden">
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-60"
+            style={{
+              background:
+                'radial-gradient(50% 60% at 50% 50%, rgba(197,163,92,0.05) 0%, transparent 70%)',
+            }}
+          />
+          <div className="relative max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+            <StatCounter value={50000} suffix="+" label="Events scheduled" />
+            <StatCounter value={120} suffix="+" label="Countries" />
+            <StatCounter value={98} suffix="%" label="Parse accuracy" />
+            <StatCounter value={2} suffix="s" label="Avg. parse time" />
+          </div>
+        </section>
+
+        {/* FEATURE GRID */}
+        <section className="py-24 px-5 md:px-8 border-t border-border">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="text-center mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-4">
+                Everything you need
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+                More than a calendar.
+              </h2>
+              <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+                A quiet, deliberate toolkit for the way you actually work. No clutter, no ads, no dark patterns.
+              </p>
+            </Reveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { icon: Brain, title: 'AI Parsing', desc: 'Gemini 2.5 parses your text, voice, or photos into perfect events.' },
+                { icon: Clock, title: 'Smart time slots', desc: 'Calendro finds the gap that fits — respects meetings, focus, and sleep.' },
+                { icon: BarChart3, title: 'Insights', desc: 'See where your hours go. Meeting load, deep-work ratio, weekly rhythm.' },
+                { icon: Globe, title: 'Unified calendars', desc: 'Google, Apple, and Outlook (soon) in one elegant grid.' },
+                { icon: Palette, title: 'Themeable', desc: 'Five hand-tuned themes, all sharing the same quiet confidence.' },
+                { icon: Users, title: 'Teams', desc: 'Share calendars, schedule together, find overlap in a single click.' },
+                { icon: Zap, title: 'Focus mode', desc: 'Pomodoro timer that actually respects your deep work window.' },
+                { icon: Sparkles, title: 'Daily briefing', desc: 'A warm morning summary — not a 40-point checklist.' },
+                { icon: Shield, title: 'Private by design', desc: 'Your data stays yours. End-to-end encrypted sync. No ads, ever.' },
+              ].map((f, i) => (
+                <Reveal key={f.title} delay={(i % 3) * 80}>
+                  <div className="rounded-xl border border-border lux-card p-6 h-full group">
+                    <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/15 transition-colors">
+                      <f.icon className="h-4 w-4 text-gold" />
+                    </div>
+                    <h3 className="text-sm font-medium text-foreground mb-1.5">{f.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <Link
+                href="/features"
+                className="inline-flex items-center gap-1.5 text-sm text-gold hover:text-gold/80 transition-colors font-medium"
+              >
+                See every feature <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <Testimonials />
+
+        {/* PRICING PREVIEW */}
+        <section className="py-24 px-5 md:px-8 border-t border-border">
+          <div className="max-w-5xl mx-auto">
+            <Reveal className="text-center mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-4">
+                Honest pricing
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+                Free to start.<br />
+                <em className="not-italic text-gold">Worth it when you scale.</em>
+              </h2>
+            </Reveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {[
+                {
+                  name: 'Free',
+                  price: '$0',
+                  tagline: 'For anyone who schedules.',
+                  features: ['Unlimited events', 'Type & voice input', 'Google Calendar sync', '5 photos / day'],
+                  cta: 'Start free',
+                  highlight: false,
+                },
+                {
+                  name: 'Pro',
+                  price: '$8',
+                  per: '/mo',
+                  tagline: 'For people whose time matters.',
+                  features: ['Everything in Free', 'Unlimited photos', 'Apple Calendar sync', 'AI briefings & insights', 'Priority parsing'],
+                  cta: 'Start Pro trial',
+                  highlight: true,
+                },
+                {
+                  name: 'Team',
+                  price: '$12',
+                  per: '/user/mo',
+                  tagline: 'For the whole company.',
+                  features: ['Everything in Pro', 'Shared calendars', 'Team scheduling links', 'Admin & SSO', 'Priority support'],
+                  cta: 'Talk to us',
+                  highlight: false,
+                },
+              ].map((p) => (
+                <div
+                  key={p.name}
+                  className={`relative rounded-2xl border p-7 flex flex-col ${
+                    p.highlight
+                      ? 'border-gold/40 bg-gradient-to-b from-gold/5 to-transparent shadow-2xl shadow-gold/5'
+                      : 'border-border lux-card'
+                  }`}
+                >
+                  {p.highlight && (
+                    <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 inline-flex items-center px-2.5 py-0.5 rounded-full bg-gold text-[#0c0c0f] text-[10px] font-mono uppercase tracking-wider">
+                      Most popular
+                    </span>
+                  )}
+                  <div className="flex items-baseline gap-1 mb-1">
+                    <span className="font-display text-4xl font-bold text-foreground">{p.price}</span>
+                    {p.per && <span className="text-xs text-muted-foreground font-mono">{p.per}</span>}
+                  </div>
+                  <div className="font-display text-lg font-semibold text-foreground mt-1">{p.name}</div>
+                  <p className="text-sm text-muted-foreground mt-1 mb-5">{p.tagline}</p>
+                  <ul className="space-y-2.5 mb-7 flex-1">
+                    {p.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2 text-sm text-foreground/90">
+                        <Check className="h-4 w-4 text-gold mt-0.5 shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/pricing"
+                    className={`h-10 rounded-full text-sm font-medium inline-flex items-center justify-center transition-all press ${
+                      p.highlight
+                        ? 'bg-gold text-[#0c0c0f] hover:bg-gold/90'
+                        : 'border border-border text-foreground hover:border-gold/30'
+                    }`}
+                  >
+                    {p.cta}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <CTA
+          title="Your calendar, but gentler."
+          subtitle="Ninety seconds to set up. Three ways in. One quieter day."
+          primary={{ label: 'Get started free', href: '/login' }}
+          secondary={{ label: 'Watch a 60s demo', href: '/demo' }}
+        />
+      </main>
+      <SiteFooter />
     </div>
   )
 }
