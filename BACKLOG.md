@@ -8,7 +8,7 @@
 
 ## P1 — High Priority Bugs
 
-- [ ] BUG-007: Fix `router.refresh()` in CalendarGrid — replace with optimistic updates and prevent duplicate events on rapid clicks
+- [x] BUG-007: Fix `router.refresh()` in CalendarGrid — replaced with useTransition + optimistic updates to prevent duplicate events on rapid clicks
 
 ## P2 — Feature Completeness
 
