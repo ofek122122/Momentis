@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npx vitest:*)",
+      "Bash(grep:*)",
+      "Bash(find D:\\\\Documents\\\\!myProjects\\\\Start\\\\calendro:*)",
+      "Bash(xargs -0 grep -i \"bytesread\\\\|byteswritten\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}
