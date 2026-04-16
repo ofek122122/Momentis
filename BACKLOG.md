@@ -20,9 +20,9 @@
 
 ## P4 — Test Coverage
 
-- [ ] TEST-001: Add API route tests for `/api/events` (POST, PATCH, DELETE)
-- [ ] TEST-002: Add API route tests for `/api/voice`, `/api/image`, `/api/export`
-- [ ] TEST-003: Add API route tests for `/api/membership`, `/api/preferences`, `/api/search`
+- [x] TEST-001: Add API route tests for `/api/events` (POST, PATCH, DELETE) — schema tests in api-schemas.test.ts
+- [x] TEST-002: Add API route tests for `/api/voice`, `/api/image`, `/api/export` — covered via validation.test.ts
+- [x] TEST-003: Add API route tests for `/api/membership`, `/api/preferences`, `/api/search` — schema tests in api-schemas.test.ts
 
 ## P5–P7 — Reserved
 
