@@ -21,3 +21,8 @@
 - **Task:** A11Y-001 — Add missing aria-labels
 - **Status:** Completed
 - **Summary:** Added aria-labels to: DailyBriefing expand/collapse button (with aria-expanded), FocusMode expand button and reset timer buttons, EventTemplates new/cancel button and delete template buttons. 76 tests pass, build clean.
+
+### Iteration 5
+- **Task:** FEAT-001 — Wire suggestTimeSlot into InputBar UI
+- **Status:** Completed
+- **Summary:** Added `hasVagueTime` detector (extracted to `lib/parser/vague-time.ts`). After parse, if time is vague (midnight/9am), InputBar auto-fetches `/api/suggest` for smart AI time slots. EventPreviewCard now shows gold-accented suggestion cards with "Use this" action. Users can accept a suggestion to replace the parsed time. Added 7 tests for vague time detection. 83 tests pass, build clean.

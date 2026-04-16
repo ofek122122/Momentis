@@ -12,7 +12,7 @@
 
 ## P2 — Feature Completeness
 
-- [ ] FEAT-001: Wire `suggestTimeSlot` into InputBar UI — when user input has no explicit time, offer AI-suggested time slots
+- [x] FEAT-001: Wire `suggestTimeSlot` into InputBar UI — auto-fetches AI suggestions when parsed time is vague, displayed in EventPreviewCard
 
 ## P3 — Accessibility
 
