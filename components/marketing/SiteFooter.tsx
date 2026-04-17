@@ -68,6 +68,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '/terms' },
       { label: 'Security', href: '/security' },
+      { label: 'Trust center', href: '/trust' },
       { label: 'Accessibility', href: '/accessibility' },
       { label: 'Cookies', href: '/privacy#cookies' },
     ],

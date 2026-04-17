@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { CUSTOMER_STORIES } from '@/lib/customers'
 import { ArrowUpRight, Quote } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -16,56 +17,17 @@ export const metadata: Metadata = {
   },
 }
 
-const CASES = [
-  {
-    company: 'Kindrid Health',
-    industry: 'Healthtech · 1,200 employees',
-    person: 'Marcus Wolfe, CTO',
-    initials: 'MW',
-    tagline: 'Replaced three scheduling tools in one weekend.',
-    quote:
-      'We onboarded 400 employees in a weekend. Their IT team actually read our pen-test report and approved in 48 hours. I\'ve been in procurement for 12 years — this never happens.',
-    metrics: [
-      { value: '48h', label: 'Security review' },
-      { value: '3', label: 'Tools replaced' },
-      { value: '27%', label: 'Fewer meetings' },
-    ],
-    body:
-      'Kindrid was running Google Calendar, Calendly, and a homegrown scheduling tool. After a pilot with 50 of their engineering team, they rolled Calendro out company-wide. Within three months, their total meeting load dropped 27% — thanks in part to Calendro\'s meeting cost indicator, which showed teams the aggregate hourly cost of each recurring meeting.',
-  },
-  {
-    company: 'Lanternwork',
-    industry: 'Design studio · 14 people',
-    person: 'Yuki Tanaka, Founder',
-    initials: 'YT',
-    tagline: 'The first calendar that feels like our studio.',
-    quote:
-      'The voice input is my favorite feature. I dump my week out loud on my walk home and by the time I\'m at my door my schedule is set. My co-founder uses it the same way. We just... don\'t schedule anymore. We talk, and it happens.',
-    metrics: [
-      { value: '11 min', label: 'Saved per day' },
-      { value: '14/14', label: 'Active users' },
-      { value: '5', label: 'Sync sources' },
-    ],
-    body:
-      'A 14-person design studio in Kyoto switched from Google Calendar alone to Calendro plus Google. Their biggest win: voice input. In a studio where a lot of work is done on the move — site visits, client walkthroughs — the ability to speak a week\'s worth of events and have them land on the calendar transformed how they plan.',
-  },
-  {
-    company: 'Meridian VC',
-    industry: 'Venture capital · 40 people',
-    person: 'Daniel Reyes, Partner',
-    initials: 'DR',
-    tagline: 'Board meetings that actually happen on time.',
-    quote:
-      'I snap a photo of my kids\' school calendar and every conference, every recital, every half-day lands on my phone. It feels like cheating. My personal calendar hasn\'t been this tidy in eight years.',
-    metrics: [
-      { value: '~40', label: 'Events / week' },
-      { value: '2 min', label: 'Per photo parsed' },
-      { value: '0', label: 'Missed PTA meetings' },
-    ],
-    body:
-      'Daniel is a partner at Meridian VC and the father of three school-age kids. His calendar is an all-day tetris game of board meetings, portfolio reviews, and recitals. Before Calendro, his executive assistant manually entered events from printed school schedules. After Calendro, he snaps a photo and Gemini Vision does the work — about 40 events a week, entered in seconds.',
-  },
-]
+const CASES = CUSTOMER_STORIES.map((c) => ({
+  slug: c.slug,
+  company: c.company,
+  industry: c.industry,
+  person: `${c.person}, ${c.personTitle.split('·')[0].trim()}`,
+  initials: c.initials,
+  tagline: c.tagline,
+  quote: c.quote,
+  metrics: c.metrics,
+  body: c.challenge,
+}))
 
 export default function CustomersPage() {
   return (
@@ -147,7 +109,7 @@ export default function CustomersPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{c.body}</p>
                   <div className="mt-6">
                     <Link
-                      href="#"
+                      href={`/customers/${c.slug}`}
                       className="inline-flex items-center gap-1.5 text-sm text-gold hover:text-gold/80 transition-colors"
                     >
                       Read the full story <ArrowUpRight className="h-4 w-4" />

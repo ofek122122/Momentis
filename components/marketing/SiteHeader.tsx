@@ -35,6 +35,7 @@ const NAV: NavGroup[] = [
       { label: 'Investors', href: '/investors', desc: 'Our cap table' },
       { label: 'Contact', href: '/contact', desc: 'Get in touch' },
       { label: 'Security', href: '/security', desc: 'How we protect your data' },
+      { label: 'Trust Center', href: '/trust', desc: 'Compliance & subprocessors' },
       { label: 'Accessibility', href: '/accessibility', desc: 'Our a11y commitment' },
     ],
   },

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 import { COMPETITORS } from '@/lib/competitors'
 import { HELP_ARTICLES } from '@/lib/help-articles'
+import { CUSTOMER_STORIES } from '@/lib/customers'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -16,6 +17,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/startups', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/education', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/customers', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/trust', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/use-cases', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/templates', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
@@ -65,6 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(a.updated),
       changeFrequency: 'monthly' as const,
       priority: 0.5,
+    })),
+    ...CUSTOMER_STORIES.map((c) => ({
+      url: `${BASE}/customers/${c.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
   ]
 }
