@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 import { COMPETITORS } from '@/lib/competitors'
+import { HELP_ARTICLES } from '@/lib/help-articles'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -58,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...HELP_ARTICLES.map((a) => ({
+      url: `${BASE}/help/${a.categorySlug}/${a.slug}`,
+      lastModified: new Date(a.updated),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
     })),
   ]
 }

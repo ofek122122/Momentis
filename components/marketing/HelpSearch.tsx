@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import Link from 'next/link'
 import { Search, X } from 'lucide-react'
 
 type Cat = {
   slug: string
   label: string
-  articles: { title: string; excerpt: string }[]
+  articles: { title: string; excerpt: string; slug?: string }[]
 }
 
 export function HelpSearch({ categories }: { categories: Cat[] }) {
@@ -22,7 +23,7 @@ export function HelpSearch({ categories }: { categories: Cat[] }) {
             a.title.toLowerCase().includes(needle) ||
             a.excerpt.toLowerCase().includes(needle)
         )
-        .map((a) => ({ ...a, category: c.label }))
+        .map((a) => ({ ...a, category: c.label, categorySlug: c.slug }))
     )
   }, [q, categories])
 
@@ -63,8 +64,8 @@ export function HelpSearch({ categories }: { categories: Cat[] }) {
             <ul className="max-h-[360px] overflow-y-auto py-2">
               {results.slice(0, 8).map((r, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
+                  <Link
+                    href={r.slug ? `/help/${r.categorySlug}/${r.slug}` : '#'}
                     className="flex items-start gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
                   >
                     <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-gold/70 mt-0.5 shrink-0">
@@ -74,7 +75,7 @@ export function HelpSearch({ categories }: { categories: Cat[] }) {
                       <div className="text-sm text-foreground truncate">{r.title}</div>
                       <div className="text-xs text-muted-foreground truncate">{r.excerpt}</div>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

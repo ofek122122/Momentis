@@ -4,7 +4,15 @@ import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { HelpSearch } from '@/components/marketing/HelpSearch'
+import { HELP_ARTICLES } from '@/lib/help-articles'
 import { Rocket, Link as LinkIcon, Sparkles, CreditCard, Wrench, ArrowUpRight, BookOpen } from 'lucide-react'
+
+function resolveArticleHref(categorySlug: string, title: string): string {
+  const match = HELP_ARTICLES.find(
+    (a) => a.categorySlug === categorySlug && a.title === title
+  )
+  return match ? `/help/${match.categorySlug}/${match.slug}` : '#'
+}
 
 export const metadata: Metadata = {
   title: 'Help Center — Guides & FAQ',
@@ -110,7 +118,12 @@ export default function HelpPage() {
           categories={CATEGORIES.map((c) => ({
             slug: c.slug,
             label: c.label,
-            articles: c.articles,
+            articles: c.articles.map((a) => {
+              const match = HELP_ARTICLES.find(
+                (h) => h.categorySlug === c.slug && h.title === a.title
+              )
+              return { ...a, slug: match?.slug }
+            }),
           }))}
         />
       </PageHero>
@@ -126,18 +139,18 @@ export default function HelpPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              'Creating your first event',
-              'Connecting Google Calendar',
-              'How the parser understands you',
-            ].map((t, i) => (
-              <Reveal key={t} delay={i * 80}>
+              { title: 'Creating your first event', href: '/help/getting-started/creating-your-first-event' },
+              { title: 'Connecting Google Calendar', href: '/help/getting-started/connecting-google-calendar' },
+              { title: 'How the parser understands you', href: '/help/ai-features/how-the-parser-understands-you' },
+            ].map((a, i) => (
+              <Reveal key={a.title} delay={i * 80}>
                 <Link
-                  href="#"
+                  href={a.href}
                   className="block rounded-xl border border-border lux-card p-5 group"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="text-sm font-medium text-foreground group-hover:text-gold transition-colors">
-                      {t}
+                      {a.title}
                     </h3>
                     <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-gold group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all shrink-0" />
                   </div>
@@ -169,7 +182,7 @@ export default function HelpPage() {
                   {cat.articles.map((article) => (
                     <Link
                       key={article.title}
-                      href="#"
+                      href={resolveArticleHref(cat.slug, article.title)}
                       className="block rounded-xl border border-border lux-card p-5 group"
                     >
                       <div className="flex items-start justify-between gap-3">
