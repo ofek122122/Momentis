@@ -4,6 +4,7 @@ import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { JOBS } from '@/lib/jobs'
+import { ItemListJsonLd } from '@/components/marketing/StructuredData'
 import { ArrowUpRight, Coffee, Globe, Heart, Sparkles, BookOpen, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -40,6 +41,10 @@ const ROLES = JOBS.map((j) => ({
 export default function CareersPage() {
   return (
     <>
+      <ItemListJsonLd
+        name="Open roles at Calendro"
+        items={JOBS.map((j) => ({ url: `/careers/${j.slug}`, name: j.title }))}
+      />
       <PageHero
         eyebrow="Careers"
         title={

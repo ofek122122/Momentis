@@ -4,6 +4,7 @@ import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { BLOG_POSTS, formatDate } from '@/lib/blog-posts'
+import { ItemListJsonLd } from '@/components/marketing/StructuredData'
 import { ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -33,6 +34,10 @@ export default function BlogPage() {
 
   return (
     <>
+      <ItemListJsonLd
+        name="Calendro field notes"
+        items={BLOG_POSTS.map((p) => ({ url: `/blog/${p.slug}`, name: p.title }))}
+      />
       <PageHero
         eyebrow="Calendro field notes"
         title={

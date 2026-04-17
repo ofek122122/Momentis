@@ -91,6 +91,27 @@ export function BlogPostingJsonLd({
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serialize(data) }} />
 }
 
+export function ItemListJsonLd({
+  items,
+  name,
+}: {
+  items: { url: string; name: string }[]
+  name?: string
+}) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    ...(name ? { name } : {}),
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: it.url.startsWith('http') ? it.url : `${BASE}${it.url}`,
+      name: it.name,
+    })),
+  }
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serialize(data) }} />
+}
+
 export function FAQPageJsonLd({ items }: { items: { q: string; a: string }[] }) {
   const data = {
     '@context': 'https://schema.org',

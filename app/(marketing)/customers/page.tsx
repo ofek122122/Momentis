@@ -4,6 +4,7 @@ import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { CUSTOMER_STORIES } from '@/lib/customers'
+import { ItemListJsonLd } from '@/components/marketing/StructuredData'
 import { ArrowUpRight, Quote } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -32,6 +33,13 @@ const CASES = CUSTOMER_STORIES.map((c) => ({
 export default function CustomersPage() {
   return (
     <>
+      <ItemListJsonLd
+        name="Calendro customer stories"
+        items={CUSTOMER_STORIES.map((c) => ({
+          url: `/customers/${c.slug}`,
+          name: c.company,
+        }))}
+      />
       <PageHero
         eyebrow="Customer stories"
         title={

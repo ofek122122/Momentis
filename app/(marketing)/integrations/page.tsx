@@ -4,6 +4,7 @@ import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
+import { ItemListJsonLd } from '@/components/marketing/StructuredData'
 import { ArrowUpRight, Check } from 'lucide-react'
 
 function slugForName(name: string): string | null {
@@ -85,6 +86,13 @@ function StatusBadge({ status }: { status: Integration['status'] }) {
 export default function IntegrationsPage() {
   return (
     <>
+      <ItemListJsonLd
+        name="Calendro integrations"
+        items={DETAILED_INTEGRATIONS.map((i) => ({
+          url: `/integrations/${i.slug}`,
+          name: i.name,
+        }))}
+      />
       <PageHero
         eyebrow="Integrations"
         title={

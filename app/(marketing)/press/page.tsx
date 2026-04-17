@@ -126,9 +126,17 @@ export default function PressPage() {
       <section className="py-16 px-5 md:px-8 border-b border-border">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight mb-10">
-              Brand guidelines
-            </h2>
+            <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
+                Brand guidelines
+              </h2>
+              <Link
+                href="/brand"
+                className="inline-flex items-center gap-1.5 text-sm text-gold hover:text-gold/80 transition-colors"
+              >
+                Full brand system <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-5">
             <Reveal>
