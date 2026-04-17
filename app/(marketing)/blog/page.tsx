@@ -18,8 +18,18 @@ export const metadata: Metadata = {
   },
 }
 
+const CATEGORY_SLUGS: Record<string, string> = {
+  Productivity: 'productivity',
+  AI: 'ai',
+  Design: 'design',
+  Time: 'time',
+  Engineering: 'engineering',
+  Company: 'company',
+}
+
 export default function BlogPage() {
   const [featured, ...rest] = BLOG_POSTS
+  const categories = Array.from(new Set(BLOG_POSTS.map((p) => p.category)))
 
   return (
     <>
@@ -34,6 +44,27 @@ export default function BlogPage() {
         lede="One piece a fortnight. No listicles. No SEO filler. Just things worth reading with coffee."
         crumbs={[{ label: 'Blog' }]}
       />
+
+      {/* Category nav */}
+      <section className="px-5 md:px-8 py-6 border-b border-border">
+        <div className="max-w-6xl mx-auto flex items-center gap-2 overflow-x-auto scrollbar-none">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70 shrink-0 mr-2">
+            Browse:
+          </span>
+          <span className="shrink-0 px-3 h-8 inline-flex items-center rounded-full text-xs border border-gold bg-gold text-[#0c0c0f]">
+            All
+          </span>
+          {categories.map((c) => (
+            <Link
+              key={c}
+              href={`/blog/category/${CATEGORY_SLUGS[c] ?? c.toLowerCase()}`}
+              className="shrink-0 px-3 h-8 inline-flex items-center rounded-full text-xs border border-border hover:border-gold/30 hover:text-gold transition-colors text-muted-foreground"
+            >
+              {c}
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Featured post */}
       <section className="py-14 px-5 md:px-8 border-b border-border">

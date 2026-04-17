@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowLeft, ArrowUpRight, Share2 } from 'lucide-react'
 import { BLOG_POSTS, getPostBySlug, formatDate } from '@/lib/blog-posts'
 import { Breadcrumbs } from '@/components/marketing/Breadcrumbs'
+import { BlogPostingJsonLd, BreadcrumbJsonLd } from '@/components/marketing/StructuredData'
 import { CTA } from '@/components/marketing/CTA'
 
 export async function generateStaticParams() {
@@ -88,6 +89,20 @@ export default async function BlogPostPage({
 
   return (
     <article>
+      <BlogPostingJsonLd
+        title={post.title}
+        description={post.excerpt}
+        slug={post.slug}
+        date={post.date}
+        author={post.author.name}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog' },
+          { name: post.title, url: `/blog/${post.slug}` },
+        ]}
+      />
       <section className="px-5 md:px-8 pt-10 md:pt-14 pb-2">
         <div className="max-w-3xl mx-auto">
           <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }, { label: post.title }]} />

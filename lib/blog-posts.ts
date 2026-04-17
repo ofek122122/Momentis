@@ -129,6 +129,25 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: 'the-meeting-that-didnt-happen',
+    title: "The meeting that didn't happen",
+    subtitle: 'On the quiet art of canceling a recurring invite.',
+    author: { name: 'Daniel Reyes', role: 'Partner · Meridian VC (guest)', initials: 'DR' },
+    date: '2026-04-15',
+    readingMinutes: 4,
+    category: 'Productivity',
+    excerpt:
+      'Calendars are mostly full of meetings that are no longer necessary. Here\'s how one VC learned to cancel them — and what the whole firm got back.',
+    body: [
+      "Sometime last year, in a conversation with my assistant, I realized that 40% of the recurring meetings on my calendar had either outlived their purpose or had purposes no one could remember.",
+      "This is embarrassing. I had been attending some of these meetings for years. Some weekly. Some for the comfort of seeing the same faces. Some because I was afraid that if I canceled, it would look like I didn't care.",
+      "I canceled them anyway. Not all at once — one at a time, with notes. For each, I asked: if this meeting had never existed, and someone proposed it today, would I say yes? If the answer was no, it got cut.",
+      "Roughly half of them, no one objected. The meeting ended and no one wrote to ask why. A quarter had one person write to gently push back, which usually led to a shorter, better-scoped meeting. The final quarter turned out to be load-bearing — important, quiet work was happening inside them that wasn't visible from the outside. Those I kept.",
+      "Calendro's **meeting cost indicator** made the exercise faster. It shows the aggregate hourly cost of each recurring invite based on the attendees' stated comp. For a 5-person, 1-hour weekly meeting with senior engineers, that's about $85,000/year. Seeing the number made the decision to cancel feel like a real act, not a defection.",
+      "I am writing this from the quiet hour I got back on Wednesday mornings. I have not filled it with another meeting. The cursor blinks. A book is open. I am going to recommend this to anyone whose calendar has more recurring invites than new ideas.",
+    ],
+  },
+  {
     slug: 'against-the-dashboard',
     title: 'Against the dashboard',
     subtitle: 'Why Calendro has almost no charts.',
@@ -146,6 +165,27 @@ export const BLOG_POSTS: BlogPost[] = [
       "**What we show instead:** the calendar itself. The events. The people. The places. The quiet visual of a week laid out in a grid, where your eyes can rest and your hands can rearrange.",
       "**The result:** users tell us Calendro feels calmer than other tools. We take this compliment seriously. It was the design goal.",
       "If you miss the rings and streaks, we hear you. We'd rather lose that user than become the thing we were trying not to be.",
+    ],
+  },
+  {
+    slug: 'how-we-interview-engineers',
+    title: 'How we interview engineers',
+    subtitle: 'Four rounds, zero whiteboards, one paid pair.',
+    author: { name: 'Oren Marlow', role: 'Co-founder', initials: 'OM' },
+    date: '2026-01-30',
+    readingMinutes: 6,
+    category: 'Company',
+    excerpt:
+      'Our engineering interview loop, explained in public. No algorithm trivia. Paid pair on a real issue. Bring a project you actually love.',
+    body: [
+      "We re-designed our engineering interview loop three times in 2025. Here's where we landed, and why.",
+      "**Round 1: 30-minute intro.** This is a conversation, not a screen. We want to know what you're curious about, what you've shipped, and what you *don't* want to work on. Caldendro has a small set of hard problems; it helps us both to figure out whether any of them match what you want.",
+      "**Round 2: a paid, 2-hour pair on a real Calendro issue.** No algorithms. No LeetCode. We open our issue tracker, pick something small-to-medium, and work on it together. You drive; we're there to answer questions and watch you think. We pay your market rate for the time, because your time is worth something whether or not we hire you.",
+      "**Round 3: a systems / architecture conversation.** You bring a project you care about — open source, a side project, something you shipped at a previous company. We dig into it: what decisions did you make, what would you change, what did you learn. This round exists because shipping is a skill, and we want to see how yours developed.",
+      "**Round 4: references.** We take these seriously. We call two or three people you choose, and we ask them the same five questions. It matters.",
+      "That's it. Target turnaround: 10 business days from the first email to an offer. We keep it tight because interviewing is disruptive; extending it indefinitely is disrespectful.",
+      "The anti-patterns we try to avoid: vanity whiteboards, take-home exercises that take more than 2 hours, any question where the 'right' answer depends on you having seen it before. We interview for judgment and taste, not for pattern matching.",
+      "Our hit rate since adopting this loop: ~40% offer-to-accept, which is high for our stage. And every engineer who's been through it has said, without prompting, that it felt like the most respectful interview they'd ever done. We'll take the compliment and keep going.",
     ],
   },
   {

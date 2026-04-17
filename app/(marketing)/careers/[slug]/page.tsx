@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/marketing/Breadcrumbs'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { JobPostingJsonLd, BreadcrumbJsonLd } from '@/components/marketing/StructuredData'
 import { JOBS, getJob } from '@/lib/jobs'
 import { ArrowLeft, ArrowUpRight, Check, MapPin, Clock, DollarSign } from 'lucide-react'
 
@@ -45,6 +46,20 @@ export default async function JobPage({
 
   return (
     <article>
+      <JobPostingJsonLd
+        title={job.title}
+        description={job.summary}
+        slug={job.slug}
+        salary={job.salary}
+        location={job.location}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Careers', url: '/careers' },
+          { name: job.title, url: `/careers/${job.slug}` },
+        ]}
+      />
       <section className="px-5 md:px-8 pt-10 md:pt-14 pb-2">
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs items={[{ label: 'Careers', href: '/careers' }, { label: job.title }]} />

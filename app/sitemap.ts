@@ -5,6 +5,7 @@ import { HELP_ARTICLES } from '@/lib/help-articles'
 import { CUSTOMER_STORIES } from '@/lib/customers'
 import { JOBS } from '@/lib/jobs'
 import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
+import { allEntries as allReleases } from '@/lib/changelog'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -94,6 +95,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...allReleases().map((e) => ({
+      url: `${BASE}/changelog/${e.version}`,
+      lastModified: new Date(e.date),
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    })),
+    ...['productivity', 'ai', 'design', 'time', 'engineering', 'company'].map((cat) => ({
+      url: `${BASE}/blog/category/${cat}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
     })),
   ]
 }

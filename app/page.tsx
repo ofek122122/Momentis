@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import { SiteHeader } from '@/components/marketing/SiteHeader'
 import { SiteFooter } from '@/components/marketing/SiteFooter'
+import { SoftwareApplicationJsonLd } from '@/components/marketing/StructuredData'
 import { HeroDemo } from '@/components/marketing/HeroDemo'
 import { Testimonials } from '@/components/marketing/Testimonials'
 import { LogoMarquee } from '@/components/marketing/LogoMarquee'
@@ -39,6 +40,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SoftwareApplicationJsonLd />
       <SiteHeader />
       <main id="main-content" className="flex-1">
         {/* HERO */}
