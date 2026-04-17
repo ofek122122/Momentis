@@ -54,20 +54,14 @@ pip install calendro`,
   },
 ]
 
-const ENDPOINTS = [
-  { method: 'POST', path: '/v1/events', desc: 'Create an event (accepts NL input)' },
-  { method: 'GET', path: '/v1/events', desc: 'List events with filters' },
-  { method: 'GET', path: '/v1/events/:id', desc: 'Retrieve a single event' },
-  { method: 'PATCH', path: '/v1/events/:id', desc: 'Update event fields' },
-  { method: 'DELETE', path: '/v1/events/:id', desc: 'Delete an event' },
-  { method: 'POST', path: '/v1/parse', desc: 'Parse text without creating' },
-  { method: 'POST', path: '/v1/parse/voice', desc: 'Upload audio, get events' },
-  { method: 'POST', path: '/v1/parse/image', desc: 'Upload image, get events' },
-  { method: 'GET', path: '/v1/calendars', desc: 'List connected calendars' },
-  { method: 'POST', path: '/v1/suggestions', desc: 'AI time-slot suggestions' },
-  { method: 'GET', path: '/v1/insights', desc: 'Weekly analytics payload' },
-  { method: 'POST', path: '/v1/webhooks', desc: 'Create a webhook subscription' },
-]
+import { ENDPOINTS as DETAILED_ENDPOINTS } from '@/lib/api-endpoints'
+
+const ENDPOINTS = DETAILED_ENDPOINTS.map((e) => ({
+  method: e.method,
+  path: e.path,
+  desc: e.summary,
+  slug: e.slug,
+}))
 
 const METHOD_COLORS: Record<string, string> = {
   GET: 'text-sky-300 border-sky-400/30 bg-sky-500/10',
@@ -200,22 +194,24 @@ export default function ApiDocsPage() {
           </Reveal>
           <div className="rounded-2xl border border-border overflow-hidden">
             {ENDPOINTS.map((e, i) => (
-              <div
-                key={e.path}
-                className={`flex items-center gap-4 px-5 py-3.5 border-b border-border last:border-b-0 hover:bg-white/[0.025] transition-colors ${i % 2 === 0 ? '' : 'bg-white/[0.012]'}`}
+              <Link
+                key={`${e.method}-${e.path}`}
+                href={`/api-docs/${e.slug}`}
+                className={`group flex items-center gap-4 px-5 py-3.5 border-b border-border last:border-b-0 hover:bg-white/[0.025] transition-colors ${i % 2 === 0 ? '' : 'bg-white/[0.012]'}`}
               >
                 <span
                   className={`inline-flex items-center px-2 py-0.5 rounded-md border text-[10px] font-mono font-semibold tracking-wider w-16 justify-center ${METHOD_COLORS[e.method]}`}
                 >
                   {e.method}
                 </span>
-                <code className="font-mono text-sm text-foreground flex-1 min-w-0 truncate">
+                <code className="font-mono text-sm text-foreground flex-1 min-w-0 truncate group-hover:text-gold transition-colors">
                   {e.path}
                 </code>
                 <span className="text-xs text-muted-foreground hidden md:block text-right">
                   {e.desc}
                 </span>
-              </div>
+                <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground/50 group-hover:text-gold shrink-0" />
+              </Link>
             ))}
           </div>
         </div>

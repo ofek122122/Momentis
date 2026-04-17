@@ -8,6 +8,7 @@ import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
 import { allEntries as allReleases } from '@/lib/changelog'
 import { AUTHORS } from '@/lib/authors'
 import { USE_CASES } from '@/lib/use-cases'
+import { ENDPOINTS as API_ENDPOINTS } from '@/lib/api-endpoints'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -126,6 +127,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    })),
+    ...API_ENDPOINTS.map((e) => ({
+      url: `${BASE}/api-docs/${e.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
     })),
   ]
 }
