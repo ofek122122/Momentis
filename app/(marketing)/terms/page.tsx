@@ -7,22 +7,8 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen dot-grid">
-      {/* Header */}
-      <header className="flex items-center justify-between px-6 md:px-8 py-6">
-        <Link href="/" className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="Calendro" className="h-7 w-7" />
-          <span className="font-display text-lg font-semibold tracking-tight text-foreground">Calendro</span>
-        </Link>
-        <Link
-          href="/"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          ← Back
-        </Link>
-      </header>
-
-      <div className="max-w-2xl mx-auto px-6 py-12">
+    <div className="dot-grid">
+      <div className="max-w-2xl mx-auto px-6 py-16">
         <div className="space-y-3 mb-10">
           <p className="font-mono text-xs tracking-[0.2em] uppercase text-gold/50">Legal</p>
           <h1 className="font-display text-4xl font-bold">Terms of Service</h1>

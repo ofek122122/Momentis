@@ -44,21 +44,7 @@ export default async function PricingPage() {
   const isPro = tier === 'pro'
 
   return (
-    <div className="min-h-screen dot-grid">
-      {/* Header */}
-      <header className="flex items-center justify-between px-8 py-6">
-        <Link href="/" className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="Calendro" className="h-7 w-7" />
-          <span className="font-display text-lg font-semibold tracking-tight text-foreground">Calendro</span>
-        </Link>
-        <Link
-          href={session ? '/calendar' : '/login'}
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          {session ? '← Back to Calendar' : 'Sign in →'}
-        </Link>
-      </header>
-
+    <div className="dot-grid">
       {/* Hero */}
       <div className="text-center py-16 px-6">
         <p className="font-mono text-xs tracking-[0.2em] uppercase text-gold/80 mb-4">Pricing</p>
