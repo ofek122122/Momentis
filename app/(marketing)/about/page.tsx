@@ -117,6 +117,15 @@ export default function AboutPage() {
               Just say it. It&apos;s scheduled.
             </p>
           </Reveal>
+          <Reveal delay={300}>
+            <p className="text-sm text-muted-foreground">
+              For the long version of our thinking, read the{' '}
+              <a href="/manifesto" className="text-gold hover:underline">
+                Calendro Manifesto
+              </a>
+              .
+            </p>
+          </Reveal>
         </div>
       </section>
 

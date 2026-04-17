@@ -29,6 +29,7 @@ const NAV: NavGroup[] = [
     label: 'Company',
     items: [
       { label: 'About', href: '/about', desc: 'Our story & mission' },
+      { label: 'Manifesto', href: '/manifesto', desc: 'Eight theses we live by' },
       { label: 'Customers', href: '/customers', desc: 'Stories from the field' },
       { label: 'Careers', href: '/careers', desc: 'Join the team' },
       { label: 'Press', href: '/press', desc: 'Media kit & coverage' },

@@ -21,6 +21,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/use-cases', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/templates', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/about', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/manifesto', priority: 0.6, changeFrequency: 'yearly' },
   { path: '/careers', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/contact', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/security', priority: 0.7, changeFrequency: 'monthly' },

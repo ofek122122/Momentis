@@ -43,6 +43,7 @@ const COLUMNS: FooterColumn[] = [
     title: 'Company',
     links: [
       { label: 'About', href: '/about' },
+      { label: 'Manifesto', href: '/manifesto' },
       { label: 'Customers', href: '/customers' },
       { label: 'Careers', href: '/careers', badge: 'Hiring' },
       { label: 'Press', href: '/press' },
