@@ -4,6 +4,7 @@ import { COMPETITORS } from '@/lib/competitors'
 import { HELP_ARTICLES } from '@/lib/help-articles'
 import { CUSTOMER_STORIES } from '@/lib/customers'
 import { JOBS } from '@/lib/jobs'
+import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -42,6 +43,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/subprocessors', priority: 0.4, changeFrequency: 'monthly' },
   { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/cookies', priority: 0.3, changeFrequency: 'yearly' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -83,6 +85,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.6,
+    })),
+    ...DETAILED_INTEGRATIONS.map((i) => ({
+      url: `${BASE}/integrations/${i.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
   ]
 }

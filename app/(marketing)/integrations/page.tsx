@@ -3,7 +3,20 @@ import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
 import { ArrowUpRight, Check } from 'lucide-react'
+
+function slugForName(name: string): string | null {
+  const matches: Record<string, string> = {
+    'Google Calendar': 'google-calendar',
+    'Apple Calendar': 'apple-calendar',
+    'Outlook / Microsoft 365': 'outlook',
+    Slack: 'slack',
+    Zoom: 'zoom',
+    Notion: 'notion',
+  }
+  return matches[name] ?? null
+}
 
 export const metadata: Metadata = {
   title: 'Integrations — Calendro works with your stack',
@@ -126,20 +139,30 @@ export default function IntegrationsPage() {
                       </div>
                       <h3 className="text-sm font-medium text-foreground mb-1.5">{i.name}</h3>
                       <p className="text-xs text-muted-foreground leading-relaxed flex-1">{i.desc}</p>
-                      <button
-                        type="button"
-                        disabled={i.status === 'soon'}
-                        className={`mt-5 inline-flex items-center justify-between w-full h-9 px-3 rounded-lg text-xs font-medium transition-colors ${
+                      {(() => {
+                        const detailSlug = slugForName(i.name)
+                        const baseCls = `mt-5 inline-flex items-center justify-between w-full h-9 px-3 rounded-lg text-xs font-medium transition-colors ${
                           i.status === 'soon'
-                            ? 'border border-border text-muted-foreground/50 cursor-not-allowed'
+                            ? 'border border-border text-muted-foreground/50'
                             : 'border border-border hover:border-gold/30 text-foreground group-hover:text-gold'
-                        }`}
-                      >
-                        {i.status === 'soon' ? 'Notify me' : 'Connect'}
-                        {i.status !== 'soon' && (
-                          <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                        )}
-                      </button>
+                        }`
+                        if (detailSlug) {
+                          return (
+                            <Link href={`/integrations/${detailSlug}`} className={baseCls}>
+                              Learn more
+                              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                            </Link>
+                          )
+                        }
+                        return (
+                          <button type="button" disabled={i.status === 'soon'} className={baseCls}>
+                            {i.status === 'soon' ? 'Notify me' : 'Connect'}
+                            {i.status !== 'soon' && (
+                              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                            )}
+                          </button>
+                        )
+                      })()}
                     </div>
                   </Reveal>
                 ))}

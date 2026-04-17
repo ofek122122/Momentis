@@ -73,7 +73,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Trust center', href: '/trust' },
       { label: 'Subprocessors', href: '/subprocessors' },
       { label: 'Accessibility', href: '/accessibility' },
-      { label: 'Cookies', href: '/privacy#cookies' },
+      { label: 'Cookies', href: '/cookies' },
     ],
   },
 ]
