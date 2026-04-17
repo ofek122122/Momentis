@@ -71,6 +71,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Terms', href: '/terms' },
       { label: 'Security', href: '/security' },
       { label: 'Trust center', href: '/trust' },
+      { label: 'Subprocessors', href: '/subprocessors' },
       { label: 'Accessibility', href: '/accessibility' },
       { label: 'Cookies', href: '/privacy#cookies' },
     ],

@@ -31,7 +31,7 @@ const LINKS = [
   { icon: Activity, title: 'System status', desc: 'Real-time service health, 90-day uptime, and incident history.', href: '/status' },
   { icon: Eye, title: 'Accessibility statement', desc: 'WCAG 2.2 AA conformance report and feedback channel.', href: '/accessibility' },
   { icon: FileText, title: 'Terms of service', desc: 'The legal relationship between you and Calendro.', href: '/terms' },
-  { icon: CheckCircle2, title: 'Subprocessors', desc: 'Every third-party that handles your data.', href: '#subprocessors' },
+  { icon: CheckCircle2, title: 'Subprocessors', desc: 'Every third-party that handles your data.', href: '/subprocessors' },
 ]
 
 const SUBPROCESSORS = [

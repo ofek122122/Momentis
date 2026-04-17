@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { JOBS } from '@/lib/jobs'
 import { ArrowUpRight, Coffee, Globe, Heart, Sparkles, BookOpen, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -25,44 +26,16 @@ const VALUES = [
   { icon: Sparkles, title: 'Craft matters', desc: 'Design and engineering peer at the same bar. We\'d rather delay a month than ship something mediocre.' },
 ]
 
-const ROLES = [
-  {
-    title: 'Senior Product Designer',
-    team: 'Design',
-    type: 'Full-time',
-    location: 'Remote (Americas/EU)',
-    salary: '$160k–$210k + equity',
-    summary: 'Lead design on the next wave of AI-driven scheduling. You\'ve shipped consumer software with a strong point of view.',
-    tags: ['Figma', 'Prototyping', 'Design systems'],
-  },
-  {
-    title: 'Staff Engineer — AI Platform',
-    team: 'Engineering',
-    type: 'Full-time',
-    location: 'Remote (worldwide)',
-    salary: '$220k–$280k + equity',
-    summary: 'Own our parsing and inference stack. You have experience with LLM eval, prompt infrastructure, and low-latency serving.',
-    tags: ['Python', 'TypeScript', 'LLMs', 'Eval'],
-  },
-  {
-    title: 'Full-stack Engineer',
-    team: 'Engineering',
-    type: 'Full-time',
-    location: 'Remote (Americas/EU)',
-    salary: '$170k–$220k + equity',
-    summary: 'Ship features end-to-end across our Next.js app, API, and mobile. Pragmatic, fast, deeply curious.',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-  },
-  {
-    title: 'Customer Support Engineer',
-    team: 'Support',
-    type: 'Full-time',
-    location: 'Remote (EU timezone)',
-    salary: '$90k–$120k + equity',
-    summary: 'Answer customers in a way that feels like a kind friend. Diagnose real bugs. Fix the ones you can.',
-    tags: ['Writing', 'SQL', 'Curiosity'],
-  },
-]
+const ROLES = JOBS.map((j) => ({
+  slug: j.slug,
+  title: j.title,
+  team: j.team,
+  type: j.type,
+  location: j.location,
+  salary: j.salary,
+  summary: j.summary,
+  tags: j.tags.slice(0, 4),
+}))
 
 export default function CareersPage() {
   return (
@@ -150,7 +123,7 @@ export default function CareersPage() {
             {ROLES.map((r, i) => (
               <Reveal key={r.title} delay={i * 70}>
                 <Link
-                  href="#"
+                  href={`/careers/${r.slug}`}
                   className="block group rounded-2xl border border-border lux-card p-6 hover:border-gold/25 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-4">
