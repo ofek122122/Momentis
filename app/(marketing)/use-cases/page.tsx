@@ -146,17 +146,17 @@ export default function UseCasesPage() {
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
-                    href="/login"
+                    href={`/use-cases/${p.slug}`}
                     className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
                   >
-                    Try it free
+                    Read the full case
                     <ArrowUpRight className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="/features"
+                    href="/login"
                     className="inline-flex items-center gap-2 h-10 px-5 rounded-full border border-border text-sm text-foreground hover:border-gold/30 transition-colors"
                   >
-                    See features
+                    Try it free
                   </Link>
                 </div>
               </Reveal>

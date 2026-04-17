@@ -7,6 +7,7 @@ import { JOBS } from '@/lib/jobs'
 import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
 import { allEntries as allReleases } from '@/lib/changelog'
 import { AUTHORS } from '@/lib/authors'
+import { USE_CASES } from '@/lib/use-cases'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -119,6 +120,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.4,
+    })),
+    ...USE_CASES.map((u) => ({
+      url: `${BASE}/use-cases/${u.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
   ]
 }
