@@ -141,6 +141,9 @@ export default function BlogPage() {
               Subscribe
             </button>
           </form>
+          <p className="mt-5 text-xs font-mono text-muted-foreground/70">
+            Prefer an RSS reader? <a href="/feed.xml" className="text-gold hover:underline">/feed.xml</a>
+          </p>
         </div>
       </section>
 
