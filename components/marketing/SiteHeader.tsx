@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { ChevronDown, Menu, X } from 'lucide-react'
+import { ChevronDown, Menu, X, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 type NavItem = { label: string; href: string; desc?: string }
@@ -36,6 +36,7 @@ const NAV: NavGroup[] = [
       { label: 'Press', href: '/press', desc: 'Media kit & coverage' },
       { label: 'Brand', href: '/brand', desc: 'Logos, colors, voice' },
       { label: 'Investors', href: '/investors', desc: 'Our cap table' },
+      { label: 'Open metrics', href: '/open', desc: 'Our numbers, in public' },
       { label: 'Contact', href: '/contact', desc: 'Get in touch' },
       { label: 'Partners', href: '/partners', desc: 'Agencies & accelerators' },
       { label: 'Security', href: '/security', desc: 'How we protect your data' },
@@ -154,6 +155,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link
+            href="/search"
+            aria-label="Search"
+            className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors"
+          >
+            <Search className="h-4 w-4" />
+          </Link>
           <Link
             href="/login"
             className="hidden sm:inline-flex items-center h-8 px-3 text-sm text-muted-foreground hover:text-foreground rounded-lg transition-colors"
