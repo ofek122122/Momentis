@@ -6,6 +6,7 @@ import { CUSTOMER_STORIES } from '@/lib/customers'
 import { JOBS } from '@/lib/jobs'
 import { INTEGRATIONS as DETAILED_INTEGRATIONS } from '@/lib/integrations'
 import { allEntries as allReleases } from '@/lib/changelog'
+import { AUTHORS } from '@/lib/authors'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -14,6 +15,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/features', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/pricing', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/demo', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/ai', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/compare', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/integrations', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/enterprise', priority: 0.8, changeFrequency: 'monthly' },
@@ -107,6 +109,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.5,
+    })),
+    ...AUTHORS.map((a) => ({
+      url: `${BASE}/authors/${a.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
     })),
   ]
 }

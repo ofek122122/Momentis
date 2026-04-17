@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { ContactForm } from '@/components/marketing/ContactForm'
+import { FAQPageJsonLd } from '@/components/marketing/StructuredData'
 import { Mail, MapPin, Clock, MessageSquare, Shield, Briefcase, ChevronDown, Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ const FAQS = [
 export default function ContactPage() {
   return (
     <>
+      <FAQPageJsonLd items={FAQS} />
       <PageHero
         eyebrow="Contact"
         title={

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Breadcrumbs } from '@/components/marketing/Breadcrumbs'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { FAQPageJsonLd, BreadcrumbJsonLd } from '@/components/marketing/StructuredData'
 import { INTEGRATIONS, getIntegration } from '@/lib/integrations'
 import { ArrowUpRight, Check, Shield, Zap } from 'lucide-react'
 
@@ -59,6 +60,14 @@ export default async function IntegrationPage({
 
   return (
     <article>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Integrations', url: '/integrations' },
+          { name: integration.name, url: `/integrations/${integration.slug}` },
+        ]}
+      />
+      {integration.faqs.length > 0 && <FAQPageJsonLd items={integration.faqs} />}
       <section className="px-5 md:px-8 pt-10 md:pt-14 pb-2">
         <div className="max-w-4xl mx-auto">
           <Breadcrumbs

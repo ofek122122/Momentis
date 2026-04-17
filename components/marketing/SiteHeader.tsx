@@ -16,6 +16,7 @@ const NAV: NavGroup[] = [
       { label: 'Features', href: '/features', desc: 'Everything Calendro can do' },
       { label: 'Integrations', href: '/integrations', desc: 'Google, Apple, Slack & more' },
       { label: 'Demo', href: '/demo', desc: 'Try the AI in your browser' },
+      { label: 'AI in Calendro', href: '/ai', desc: 'How we use AI (quietly)' },
       { label: 'Templates', href: '/templates', desc: 'Ready-made weekly rhythms' },
       { label: 'Downloads', href: '/downloads', desc: 'Web, desktop, mobile, CLI' },
       { label: 'Pricing', href: '/pricing', desc: 'Simple, transparent plans' },

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, ArrowUpRight, Share2 } from 'lucide-react'
 import { BLOG_POSTS, getPostBySlug, formatDate } from '@/lib/blog-posts'
+import { authorSlugForName } from '@/lib/authors'
 import { Breadcrumbs } from '@/components/marketing/Breadcrumbs'
 import { BlogPostingJsonLd, BreadcrumbJsonLd } from '@/components/marketing/StructuredData'
 import { CTA } from '@/components/marketing/CTA'
@@ -129,7 +130,19 @@ export default async function BlogPostPage({
               {post.author.initials}
             </div>
             <div>
-              <div className="text-sm text-foreground font-medium">{post.author.name}</div>
+              {(() => {
+                const s = authorSlugForName(post.author.name)
+                return s ? (
+                  <Link
+                    href={`/authors/${s}`}
+                    className="text-sm text-foreground font-medium hover:text-gold transition-colors"
+                  >
+                    {post.author.name}
+                  </Link>
+                ) : (
+                  <div className="text-sm text-foreground font-medium">{post.author.name}</div>
+                )
+              })()}
               <div className="text-xs font-mono text-muted-foreground">
                 {post.author.role} · {formatDate(post.date)}
               </div>

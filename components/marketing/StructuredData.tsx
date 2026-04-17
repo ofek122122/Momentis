@@ -125,6 +125,13 @@ export function SoftwareApplicationJsonLd() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serialize(data) }} />
 }
 
+function parseSalaryRange(raw: string): { min: number; max: number } | null {
+  // Accepts "$160k–$210k + equity" or "$220k–$280k" etc.
+  const match = raw.match(/\$(\d+)k[^\d]+\$?(\d+)k/i)
+  if (!match) return null
+  return { min: parseInt(match[1], 10) * 1000, max: parseInt(match[2], 10) * 1000 }
+}
+
 export function JobPostingJsonLd({
   title,
   description,
@@ -138,7 +145,8 @@ export function JobPostingJsonLd({
   salary: string
   location: string
 }) {
-  const data = {
+  const range = parseSalaryRange(salary)
+  const data: Thing = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title,
@@ -153,12 +161,19 @@ export function JobPostingJsonLd({
     },
     jobLocationType: 'TELECOMMUTE',
     applicantLocationRequirements: { '@type': 'Country', name: location },
-    baseSalary: {
+    url: `${BASE}/careers/${slug}`,
+  }
+  if (range) {
+    data.baseSalary = {
       '@type': 'MonetaryAmount',
       currency: 'USD',
-      value: { '@type': 'QuantitativeValue', unitText: 'YEAR', value: salary },
-    },
-    url: `${BASE}/careers/${slug}`,
+      value: {
+        '@type': 'QuantitativeValue',
+        minValue: range.min,
+        maxValue: range.max,
+        unitText: 'YEAR',
+      },
+    }
   }
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serialize(data) }} />
 }

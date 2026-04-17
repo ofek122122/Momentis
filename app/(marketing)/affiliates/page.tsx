@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
+import { FAQPageJsonLd } from '@/components/marketing/StructuredData'
 import { DollarSign, Share2, Gift, Check, ArrowUpRight, Users, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -70,6 +71,7 @@ const FAQS = [
 export default function AffiliatesPage() {
   return (
     <>
+      <FAQPageJsonLd items={FAQS} />
       <PageHero
         eyebrow="Affiliate program"
         title={

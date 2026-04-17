@@ -30,6 +30,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Integrations', href: '/integrations' },
       { label: 'Enterprise', href: '/enterprise' },
       { label: 'Demo', href: '/demo' },
+      { label: 'AI', href: '/ai' },
       { label: 'Templates', href: '/templates' },
       { label: 'Downloads', href: '/downloads' },
       { label: 'For startups', href: '/startups' },
