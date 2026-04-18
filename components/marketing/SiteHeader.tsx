@@ -18,6 +18,7 @@ const NAV: NavGroup[] = [
       { label: 'Integrations', href: '/integrations', desc: 'Google, Apple, Slack & more' },
       { label: 'Demo', href: '/demo', desc: 'Try the AI in your browser' },
       { label: 'AI in Momenties', href: '/ai', desc: 'How we use AI (quietly)' },
+      { label: 'Speed', href: '/speed', desc: 'Sub-20ms parsing, explained' },
       { label: 'Templates', href: '/templates', desc: 'Ready-made weekly rhythms' },
       { label: 'Downloads', href: '/downloads', desc: 'Web, desktop, mobile, CLI' },
       { label: 'Mobile app', href: '/mobile', desc: 'iOS & Android — coming Q4 2026' },
