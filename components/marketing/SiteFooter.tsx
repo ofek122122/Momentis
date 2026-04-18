@@ -63,6 +63,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Blog', href: '/blog' },
       { label: 'Use cases', href: '/use-cases' },
       { label: 'Help Center', href: '/help' },
+      { label: 'Learn', href: '/learn', badge: 'New' },
       { label: 'API Docs', href: '/api-docs' },
       { label: 'Community', href: '/community' },
       { label: 'Webinars', href: '/webinars' },

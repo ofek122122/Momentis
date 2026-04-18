@@ -43,3 +43,8 @@
 - **Task:** Wire contact + newsletter forms to real server actions, and build `/wall-of-love` page.
 - **Status:** Completed
 - **Summary:** (a) Added `app/(marketing)/_actions/contact.ts` and `newsletter.ts` — Zod-validated server actions with IP-scoped rate limiting, honeypot fields, and structured logging. Refactored `ContactForm` to `useTransition` with field-level error surfacing; extracted a shared `NewsletterForm` used by footer and blog. (b) Built `/wall-of-love` — a curated filterable masonry of 24 testimonials across 8 role categories (founders, designers, engineers, operators, freelancers, writers, students, parents), each with source badge (X / LinkedIn / email / review / call), featured ring, sticky filter chips, latest-three highlights, and a 4-stat hero metrics row. Linked from site header, footer, HTML sitemap, and sitemap.xml. Added `.no-scrollbar` utility to globals. 118 tests pass, build clean.
+
+### Iteration 15
+- **Task:** Build `/learn` — a premium learning hub in the Linear / Notion style.
+- **Status:** Completed
+- **Summary:** Added `lib/learn.ts` with 4 tracks (Quickstart 7m, Voice 10m, AI 15m, Power User 30m), 13 lessons across read/try/watch kinds, and 3 curated learning paths (brand-new-to-Calendro, founder-workflow, ops-and-chief-of-staff). Built `app/(marketing)/learn/page.tsx` with: hero + 4-stat strip, track overview cards (icon + tag + lesson preview), a 13-card lesson grid with scroll-reveal and new/popular/short badges, a curated-paths section with numbered ordered list and per-lesson minute/kind metadata, and a manifesto pullquote. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.

@@ -51,6 +51,7 @@ const NAV: NavGroup[] = [
       { label: 'Blog', href: '/blog', desc: 'Ideas on time & AI' },
       { label: 'Use cases', href: '/use-cases', desc: 'For founders, students, parents' },
       { label: 'Help Center', href: '/help', desc: 'Guides & FAQs' },
+      { label: 'Learn', href: '/learn', desc: 'An hour to power user' },
       { label: 'Changelog', href: '/changelog', desc: 'What we shipped' },
       { label: 'Roadmap', href: '/roadmap', desc: 'What\'s coming next' },
       { label: 'API Docs', href: '/api-docs', desc: 'For developers' },
