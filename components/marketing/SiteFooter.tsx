@@ -40,6 +40,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Changelog', href: '/changelog' },
       { label: 'Launch Week 01', href: '/launch-week-1', badge: 'New' },
       { label: 'Roadmap', href: '/roadmap' },
+      { label: 'Labs', href: '/labs', badge: 'Beta' },
     ],
   },
   {

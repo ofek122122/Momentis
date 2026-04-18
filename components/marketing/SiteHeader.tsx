@@ -57,6 +57,7 @@ const NAV: NavGroup[] = [
       { label: 'Changelog', href: '/changelog', desc: 'What we shipped' },
       { label: 'Launch Week 01', href: '/launch-week-1', desc: 'Five days. Five upgrades.' },
       { label: 'Roadmap', href: '/roadmap', desc: 'What\'s coming next' },
+      { label: 'Labs', href: '/labs', desc: 'Experiments, in plain sight' },
       { label: 'API Docs', href: '/api-docs', desc: 'For developers' },
       { label: 'Webinars', href: '/webinars', desc: 'Live sessions with the team' },
       { label: 'Glossary', href: '/glossary', desc: 'Calendar terminology defined' },
