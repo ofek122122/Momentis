@@ -58,6 +58,7 @@ const SECTIONS: Section[] = [
     title: 'Company',
     links: [
       { href: '/about', label: 'About' },
+      { href: '/why', label: 'Why Momenties', note: 'The argument' },
       { href: '/manifesto', label: 'Manifesto' },
       { href: '/method', label: 'Method', note: 'How we work' },
       { href: '/uses', label: 'Uses', note: 'What we work with' },

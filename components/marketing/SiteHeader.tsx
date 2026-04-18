@@ -35,6 +35,7 @@ const NAV: NavGroup[] = [
     label: 'Company',
     items: [
       { label: 'About', href: '/about', desc: 'Our story & mission' },
+      { label: 'Why Momenties', href: '/why', desc: 'The case for AI calendar, in prose' },
       { label: 'Manifesto', href: '/manifesto', desc: 'Eight theses we live by' },
       { label: 'Method', href: '/method', desc: 'How we decide, write, ship, measure' },
       { label: 'Uses', href: '/uses', desc: 'What we work with, by hand' },
