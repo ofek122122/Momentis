@@ -48,6 +48,7 @@ const NAV: NavGroup[] = [
       { label: 'Investors', href: '/investors', desc: 'Our cap table' },
       { label: 'Open metrics', href: '/open', desc: 'Our numbers, in public' },
       { label: 'Contact', href: '/contact', desc: 'Get in touch' },
+      { label: 'Impact', href: '/impact', desc: 'What we stand for beyond software' },
       { label: 'Partners', href: '/partners', desc: 'Agencies & accelerators' },
       { label: 'AI use policy', href: '/ai/policy', desc: 'What AI does with your data' },
       { label: 'Security', href: '/security', desc: 'How we protect your data' },
