@@ -61,6 +61,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Careers', href: '/careers', badge: 'Hiring' },
       { label: 'Press', href: '/press' },
       { label: 'Brand', href: '/brand' },
+      { label: 'Design language', href: '/design' },
       { label: 'Investors', href: '/investors' },
       { label: 'Contact', href: '/contact' },
       { label: 'Affiliates', href: '/affiliates' },
@@ -95,6 +96,7 @@ const COLUMNS: FooterColumn[] = [
     title: 'Legal',
     links: [
       { label: 'Privacy', href: '/privacy' },
+      { label: 'Refund policy', href: '/refund' },
       { label: 'Terms', href: '/terms' },
       { label: 'Security', href: '/security' },
       { label: 'Report vulnerability', href: '/security/report' },
