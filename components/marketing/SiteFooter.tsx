@@ -72,6 +72,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'API Docs', href: '/api-docs' },
       { label: 'Community', href: '/community' },
       { label: 'Webinars', href: '/webinars' },
+      { label: 'Podcast', href: '/podcast' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'Status', href: '/status' },
       { label: 'Open metrics', href: '/open' },

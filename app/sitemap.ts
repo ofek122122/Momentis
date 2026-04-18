@@ -47,6 +47,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/api-docs', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/community', priority: 0.5, changeFrequency: 'weekly' },
   { path: '/webinars', priority: 0.5, changeFrequency: 'weekly' },
+  { path: '/podcast', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/glossary', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/sitemap', priority: 0.3, changeFrequency: 'monthly' },
   { path: '/status', priority: 0.5, changeFrequency: 'daily' },

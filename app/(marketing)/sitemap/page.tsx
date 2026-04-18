@@ -77,6 +77,7 @@ const SECTIONS: Section[] = [
       { href: '/roadmap', label: 'Roadmap' },
       { href: '/labs', label: 'Labs', note: 'Active experiments' },
       { href: '/webinars', label: 'Webinars' },
+      { href: '/podcast', label: 'Podcast', note: 'The Quiet Hours' },
       { href: '/glossary', label: 'Glossary' },
       { href: '/status', label: 'System status' },
       { href: '/feed.xml', label: 'RSS feed', note: '(XML)' },
