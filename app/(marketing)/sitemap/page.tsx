@@ -89,6 +89,7 @@ const SECTIONS: Section[] = [
     title: 'Trust & legal',
     links: [
       { href: '/security', label: 'Security' },
+      { href: '/security/report', label: 'Report a vulnerability', note: 'Responsible disclosure' },
       { href: '/trust', label: 'Trust center' },
       { href: '/subprocessors', label: 'Subprocessors' },
       { href: '/accessibility', label: 'Accessibility statement' },

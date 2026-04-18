@@ -45,6 +45,7 @@ const NAV: NavGroup[] = [
       { label: 'Contact', href: '/contact', desc: 'Get in touch' },
       { label: 'Partners', href: '/partners', desc: 'Agencies & accelerators' },
       { label: 'Security', href: '/security', desc: 'How we protect your data' },
+      { label: 'Report a vulnerability', href: '/security/report', desc: 'Responsible disclosure · PGP + safe harbor' },
       { label: 'Trust Center', href: '/trust', desc: 'Compliance & subprocessors' },
       { label: 'Accessibility', href: '/accessibility', desc: 'Our a11y commitment' },
     ],

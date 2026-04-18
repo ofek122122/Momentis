@@ -87,12 +87,12 @@ export default function SecurityPage() {
           >
             See certifications
           </Link>
-          <a
-            href="mailto:security@calendro.app"
+          <Link
+            href="/security/report"
             className="inline-flex items-center gap-2 h-10 px-5 rounded-full border border-border text-sm text-foreground hover:border-gold/30 transition-colors"
           >
             Report a vulnerability
-          </a>
+          </Link>
         </div>
       </PageHero>
 
