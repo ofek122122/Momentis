@@ -32,6 +32,7 @@ const NAV: NavGroup[] = [
       { label: 'About', href: '/about', desc: 'Our story & mission' },
       { label: 'Manifesto', href: '/manifesto', desc: 'Eight theses we live by' },
       { label: 'Customers', href: '/customers', desc: 'Stories from the field' },
+      { label: 'Wall of love', href: '/wall-of-love', desc: 'Every kind thing anyone has said' },
       { label: 'Careers', href: '/careers', desc: 'Join the team' },
       { label: 'Press', href: '/press', desc: 'Media kit & coverage' },
       { label: 'Brand', href: '/brand', desc: 'Logos, colors, voice' },

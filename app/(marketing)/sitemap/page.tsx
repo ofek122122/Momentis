@@ -53,6 +53,7 @@ const SECTIONS: Section[] = [
       { href: '/about', label: 'About' },
       { href: '/manifesto', label: 'Manifesto' },
       { href: '/customers', label: 'Customer stories' },
+      { href: '/wall-of-love', label: 'Wall of love', note: '(updated weekly)' },
       { href: '/careers', label: 'Careers' },
       { href: '/press', label: 'Press kit' },
       { href: '/investors', label: 'Investors' },

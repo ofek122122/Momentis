@@ -327,6 +327,10 @@
   height: 1px;
 }
 
+/* Hide horizontal scrollbar on filter pills */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
 /* Noise texture overlay */
 .noise {
   position: relative;
