@@ -9,6 +9,7 @@ import { allEntries as allReleases } from '@/lib/changelog'
 import { AUTHORS } from '@/lib/authors'
 import { USE_CASES } from '@/lib/use-cases'
 import { ENDPOINTS as API_ENDPOINTS } from '@/lib/api-endpoints'
+import { EPISODES as PODCAST_EPISODES } from '@/lib/podcast'
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
 
@@ -142,6 +143,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.5,
+    })),
+    ...PODCAST_EPISODES.map((e) => ({
+      url: `${BASE}/podcast/${e.slug}`,
+      lastModified: new Date(e.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
     })),
   ]
 }

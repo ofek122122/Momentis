@@ -123,7 +123,9 @@ export default function PodcastPage() {
                 Latest episode · {featured.n.toString().padStart(2, '0')}
               </p>
               <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground tracking-tight leading-[1.05]">
-                {featured.title}
+                <Link href={`/podcast/${featured.slug}`} className="hover:text-gold transition-colors">
+                  {featured.title}
+                </Link>
               </h2>
               <div className="mt-4 flex flex-wrap items-center gap-3 text-[12px] font-mono text-muted-foreground">
                 <span
@@ -248,44 +250,49 @@ export default function PodcastPage() {
           <ol className="divide-y divide-border/70 border-y border-border/70">
             {rest.map((e, i) => (
               <Reveal key={e.slug} delay={i * 30}>
-                <li className="py-6 flex items-start gap-5 group">
-                  <span className="font-display text-[28px] md:text-[36px] text-gold/50 font-semibold leading-none w-14 shrink-0 pt-1 tabular-nums">
-                    {e.n.toString().padStart(2, '0')}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-3 flex-wrap">
-                      <h3 className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-snug">
-                        {e.title}
-                      </h3>
-                      <span
-                        className={`inline-flex items-center h-5 px-2 rounded-full border text-[10px] font-mono uppercase tracking-wider ${TAG_TONE[e.tag].ring} ${TAG_TONE[e.tag].fg}`}
-                      >
-                        {e.tag}
-                      </span>
-                    </div>
-                    <p className="mt-1.5 text-sm text-muted-foreground font-mono">
-                      {e.guest} · <span className="text-foreground/70">{e.role}</span>
-                    </p>
-                    <p className="mt-3 text-[14px] text-foreground/85 italic leading-relaxed max-w-3xl">
-                      {e.teaser}
-                    </p>
-                    <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-muted-foreground/80">
-                      <span className="inline-flex items-center gap-1">
-                        <Clock className="h-3 w-3" aria-hidden />
-                        {e.durationMin} min
-                      </span>
-                      <span className="text-muted-foreground/30">·</span>
-                      <span>{formatDate(e.publishedAt)}</span>
-                      <span className="text-muted-foreground/30">·</span>
-                      <span>{e.chapters.length} chapters</span>
-                    </div>
-                  </div>
-                  <span
-                    aria-hidden
-                    className="hidden md:inline-flex shrink-0 w-10 h-10 rounded-full border border-border bg-[#131318] items-center justify-center text-gold group-hover:border-gold/40 group-hover:bg-gold/5 transition-colors"
+                <li>
+                  <Link
+                    href={`/podcast/${e.slug}`}
+                    className="py-6 flex items-start gap-5 group hover:bg-white/[0.015] -mx-2 px-2 rounded-xl transition-colors"
                   >
-                    <Play className="h-3.5 w-3.5 fill-current" />
-                  </span>
+                    <span className="font-display text-[28px] md:text-[36px] text-gold/50 font-semibold leading-none w-14 shrink-0 pt-1 tabular-nums">
+                      {e.n.toString().padStart(2, '0')}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline gap-3 flex-wrap">
+                        <h3 className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-snug group-hover:text-gold transition-colors">
+                          {e.title}
+                        </h3>
+                        <span
+                          className={`inline-flex items-center h-5 px-2 rounded-full border text-[10px] font-mono uppercase tracking-wider ${TAG_TONE[e.tag].ring} ${TAG_TONE[e.tag].fg}`}
+                        >
+                          {e.tag}
+                        </span>
+                      </div>
+                      <p className="mt-1.5 text-sm text-muted-foreground font-mono">
+                        {e.guest} · <span className="text-foreground/70">{e.role}</span>
+                      </p>
+                      <p className="mt-3 text-[14px] text-foreground/85 italic leading-relaxed max-w-3xl">
+                        {e.teaser}
+                      </p>
+                      <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-muted-foreground/80">
+                        <span className="inline-flex items-center gap-1">
+                          <Clock className="h-3 w-3" aria-hidden />
+                          {e.durationMin} min
+                        </span>
+                        <span className="text-muted-foreground/30">·</span>
+                        <span>{formatDate(e.publishedAt)}</span>
+                        <span className="text-muted-foreground/30">·</span>
+                        <span>{e.chapters.length} chapters</span>
+                      </div>
+                    </div>
+                    <span
+                      aria-hidden
+                      className="hidden md:inline-flex shrink-0 w-10 h-10 rounded-full border border-border bg-[#131318] items-center justify-center text-gold group-hover:border-gold/40 group-hover:bg-gold/5 transition-colors"
+                    >
+                      <Play className="h-3.5 w-3.5 fill-current" />
+                    </span>
+                  </Link>
                 </li>
               </Reveal>
             ))}
