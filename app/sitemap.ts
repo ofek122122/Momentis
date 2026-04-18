@@ -158,6 +158,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/for/architects', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/student-planner', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/for/financial-advisors', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/for/marketing-managers', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/calendar-tips', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
