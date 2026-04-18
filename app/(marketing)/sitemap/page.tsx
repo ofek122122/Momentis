@@ -31,6 +31,7 @@ const SECTIONS: Section[] = [
       { href: '/features', label: 'Features' },
       { href: '/pricing', label: 'Pricing' },
       { href: '/pricing/calculator', label: 'Pricing calculator', note: 'Live ROI' },
+      { href: '/switch', label: 'Switch to Calendro', note: 'Concierge migration' },
       { href: '/demo', label: 'Live demo' },
       { href: '/templates', label: 'Templates' },
       { href: '/downloads', label: 'Downloads' },

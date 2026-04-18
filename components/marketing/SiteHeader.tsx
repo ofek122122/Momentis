@@ -25,6 +25,7 @@ const NAV: NavGroup[] = [
       { label: 'For startups', href: '/startups', desc: 'Free for seed-stage teams' },
       { label: 'For students', href: '/education', desc: 'Free with a .edu email' },
       { label: 'Compare', href: '/compare', desc: 'Side-by-side with alternatives' },
+      { label: 'Switch to Calendro', href: '/switch', desc: 'Migrate in under 10 minutes' },
     ],
   },
   {
