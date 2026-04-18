@@ -28,6 +28,7 @@ const COLUMNS: FooterColumn[] = [
     links: [
       { label: 'Features', href: '/features' },
       { label: 'Product tour', href: '/product' },
+      { label: 'Pro', href: '/pro' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Pricing calculator', href: '/pricing/calculator' },
       { label: 'Integrations', href: '/integrations' },

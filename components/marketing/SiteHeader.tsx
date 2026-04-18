@@ -22,6 +22,7 @@ const NAV: NavGroup[] = [
       { label: 'Templates', href: '/templates', desc: 'Ready-made weekly rhythms' },
       { label: 'Downloads', href: '/downloads', desc: 'Web, desktop, mobile, CLI' },
       { label: 'Mobile app', href: '/mobile', desc: 'iOS & Android — coming Q4 2026' },
+      { label: 'Pro', href: '/pro', desc: 'Everything in the Pro plan' },
       { label: 'Pricing', href: '/pricing', desc: 'Simple, transparent plans' },
       { label: 'Pricing calculator', href: '/pricing/calculator', desc: 'Live ROI, transparent math' },
       { label: 'For teams', href: '/teams', desc: 'Shared calendars for 2–50 people' },
