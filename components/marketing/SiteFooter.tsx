@@ -40,6 +40,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Templates', href: '/templates' },
       { label: 'Downloads', href: '/downloads' },
       { label: 'Mobile app', href: '/mobile', badge: 'Soon' },
+      { label: 'Mobile waitlist', href: '/waitlist', badge: 'Join' },
       { label: 'For startups', href: '/startups' },
       { label: 'For students', href: '/education' },
       { label: 'Compare', href: '/compare' },
