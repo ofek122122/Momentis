@@ -6,10 +6,10 @@ import { Keyboard, Eye, Volume2, Type, Check, AlertCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Accessibility — Our commitment',
-  description: 'Calendro is built to WCAG 2.2 AA. Here\'s our statement of accessibility, our audit results, and how to reach us with feedback.',
+  description: 'Momenties is built to WCAG 2.2 AA. Here\'s our statement of accessibility, our audit results, and how to reach us with feedback.',
   alternates: { canonical: '/accessibility' },
   openGraph: {
-    title: 'Calendro Accessibility',
+    title: 'Momenties Accessibility',
     description: 'Our WCAG 2.2 AA accessibility statement and audit results.',
     url: '/accessibility',
   },
@@ -61,7 +61,7 @@ export default function AccessibilityPage() {
             Built to be <em className="not-italic text-gold">used by everyone</em>.
           </>
         }
-        lede="Calendro is designed and tested against WCAG 2.2 AA. We don't always get it right the first time — and when we don't, we want to hear from you."
+        lede="Momenties is designed and tested against WCAG 2.2 AA. We don't always get it right the first time — and when we don't, we want to hear from you."
         crumbs={[{ label: 'Accessibility' }]}
       />
 
@@ -75,7 +75,7 @@ export default function AccessibilityPage() {
           </Reveal>
           <Reveal delay={120}>
             <p>
-              Calendro&apos;s accessibility work is led by a dedicated engineer working alongside design and QA.
+              Momenties&apos;s accessibility work is led by a dedicated engineer working alongside design and QA.
               We run automated audits every PR (axe-core in CI), manual reviews every release, and an
               external audit annually. We fix critical a11y regressions before other bugs.
             </p>
@@ -83,8 +83,8 @@ export default function AccessibilityPage() {
           <Reveal delay={180}>
             <p>
               If something on this site or in the app is making your life harder, please write us:{' '}
-              <a href="mailto:a11y@calendro.app" className="text-gold hover:underline">
-                a11y@calendro.app
+              <a href="mailto:a11y@momenties.app" className="text-gold hover:underline">
+                a11y@momenties.app
               </a>
               . We acknowledge within 24 hours and we take it seriously.
             </p>
@@ -178,7 +178,7 @@ export default function AccessibilityPage() {
       <CTA
         title="Found something we missed?"
         subtitle="Tell us. Every report is acknowledged within 24 hours and triaged the same week."
-        primary={{ label: 'a11y@calendro.app', href: 'mailto:a11y@calendro.app' }}
+        primary={{ label: 'a11y@momenties.app', href: 'mailto:a11y@momenties.app' }}
         secondary={{ label: 'See all contact options', href: '/contact' }}
       />
     </>

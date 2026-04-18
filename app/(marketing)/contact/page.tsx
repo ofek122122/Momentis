@@ -10,17 +10,17 @@ export const metadata: Metadata = {
   description: 'Reach out about support, sales, press, or say hello. We answer every email, usually within a few hours.',
   alternates: { canonical: '/contact' },
   openGraph: {
-    title: 'Contact Calendro',
+    title: 'Contact Momenties',
     description: 'We answer every email. Usually within a few hours.',
     url: '/contact',
   },
 }
 
 const CHANNELS = [
-  { icon: MessageSquare, label: 'Support', value: 'help@calendro.app', desc: 'Questions, bugs, anything fussy.' },
-  { icon: Briefcase, label: 'Sales', value: 'sales@calendro.app', desc: 'Team plans, Enterprise, volume licensing.' },
-  { icon: Shield, label: 'Security', value: 'security@calendro.app', desc: 'Responsible disclosure & vulnerability reports.' },
-  { icon: Mail, label: 'Press', value: 'press@calendro.app', desc: 'Media requests, interviews, quotes.' },
+  { icon: MessageSquare, label: 'Support', value: 'help@momenties.app', desc: 'Questions, bugs, anything fussy.' },
+  { icon: Briefcase, label: 'Sales', value: 'sales@momenties.app', desc: 'Team plans, Enterprise, volume licensing.' },
+  { icon: Shield, label: 'Security', value: 'security@momenties.app', desc: 'Responsible disclosure & vulnerability reports.' },
+  { icon: Mail, label: 'Press', value: 'press@momenties.app', desc: 'Media requests, interviews, quotes.' },
 ]
 
 const FAQS = [
@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: 'I think I found a bug. What now?',
-    a: 'Email help@calendro.app with a screenshot, your browser, and the exact text of what you typed. You\'ll get a personal reply from an engineer, not a ticket robot.',
+    a: 'Email help@momenties.app with a screenshot, your browser, and the exact text of what you typed. You\'ll get a personal reply from an engineer, not a ticket robot.',
   },
   {
     q: 'I want to suggest a feature — will you read it?',
@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: 'Can I speak with your security team?',
-    a: 'Yes. security@calendro.app reaches our CTO and a senior engineer. We publish a responsible-disclosure policy at /security and have a small bounty program for serious findings.',
+    a: 'Yes. security@momenties.app reaches our CTO and a senior engineer. We publish a responsible-disclosure policy at /security and have a small bounty program for serious findings.',
   },
   {
     q: 'Do you have an office I can visit?',

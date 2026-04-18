@@ -12,8 +12,8 @@ export default function LoginPage() {
       {/* Left — decorative */}
       <div className="hidden lg:flex flex-1 flex-col justify-between p-12 border-r border-border">
         <div className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="Calendro" className="h-7 w-7" />
-          <span className="font-display text-lg font-semibold">Calendro</span>
+          <img src="/logo.png" alt="Momenties" className="h-7 w-7" />
+          <span className="font-display text-lg font-semibold">Momenties</span>
         </div>
         <blockquote className="space-y-3">
           <p className="font-display text-3xl font-semibold leading-snug text-foreground max-w-xs">
@@ -33,8 +33,8 @@ export default function LoginPage() {
         <div className="w-full max-w-sm space-y-10 animate-fade-up">
           {/* Logo (mobile only) */}
           <div className="lg:hidden flex flex-col items-center gap-2">
-            <img src="/logo.png" alt="Calendro" className="h-12 w-12" />
-            <span className="font-display text-2xl font-bold">Calendro</span>
+            <img src="/logo.png" alt="Momenties" className="h-12 w-12" />
+            <span className="font-display text-2xl font-bold">Momenties</span>
           </div>
 
           {/* Heading */}

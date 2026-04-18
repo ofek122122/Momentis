@@ -7,12 +7,12 @@ import { WALL_QUOTES, WALL_STATS } from '@/lib/wall-of-love'
 import { Heart, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Wall of Love — What people say about Calendro',
+  title: 'Wall of Love — What people say about Momenties',
   description:
     'A quiet corner of the internet where we keep every kind thing anyone has ever said about our calendar. Filterable by role. Updated weekly.',
   alternates: { canonical: '/wall-of-love' },
   openGraph: {
-    title: 'The Calendro Wall of Love',
+    title: 'The Momenties Wall of Love',
     description:
       'Every kind thing anyone has ever said about our calendar, kept in one quiet place.',
     url: '/wall-of-love',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Calendro Wall of Love',
+    title: 'The Momenties Wall of Love',
     description:
       'Every kind thing anyone has ever said about our calendar, kept in one quiet place.',
   },
@@ -139,7 +139,7 @@ export default function WallOfLovePage() {
       <CTA
         title="The best thing on this wall is the one you haven't sent yet."
         subtitle="Mention us, email us, or just try the product. Every one of these started somewhere."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read the manifesto', href: '/manifesto' }}
       />
     </>

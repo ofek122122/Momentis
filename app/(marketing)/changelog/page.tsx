@@ -8,10 +8,10 @@ import { Sparkles, Wrench, Bug, Shield, Zap, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Changelog — What we shipped',
-  description: 'Every update to Calendro. Notes written by the engineers who shipped them.',
+  description: 'Every update to Momenties. Notes written by the engineers who shipped them.',
   alternates: { canonical: '/changelog' },
   openGraph: {
-    title: 'Calendro Changelog',
+    title: 'Momenties Changelog',
     description: 'Every update, in chronological order.',
     url: '/changelog',
   },
@@ -35,7 +35,7 @@ export default function ChangelogPage() {
             What we <em className="not-italic text-gold">shipped</em>.
           </>
         }
-        lede="A chronological record of every change to Calendro. No marketing gloss. Just the engineering notes."
+        lede="A chronological record of every change to Momenties. No marketing gloss. Just the engineering notes."
         crumbs={[{ label: 'Changelog' }]}
       />
 

@@ -50,7 +50,7 @@ type Result = {
   yearlyHoursSavedPerPerson: number
   teamYearlyHoursSaved: number
   teamYearlyDollarSaved: number
-  calendroAnnualCost: number
+  momentiesAnnualCost: number
   roiMultiple: number
   paybackDays: number
   plan: 'Pro' | 'Team' | 'Enterprise'
@@ -68,19 +68,19 @@ function calculate(hoursPerWeek: number, hourlyRate: number, teamSize: number): 
 
   const plan = pickPlan(teamSize)
   const perUserMonth = pricePerUserMonth(plan)
-  const calendroAnnualCost = perUserMonth * 12 * teamSize
+  const momentiesAnnualCost = perUserMonth * 12 * teamSize
 
-  const roiMultiple = calendroAnnualCost > 0 ? teamYearlyDollarSaved / calendroAnnualCost : 0
-  // Days to payback = (Calendro annual cost / daily dollar savings)
+  const roiMultiple = momentiesAnnualCost > 0 ? teamYearlyDollarSaved / momentiesAnnualCost : 0
+  // Days to payback = (Momenties annual cost / daily dollar savings)
   const dailySaving = teamYearlyDollarSaved / 365
-  const paybackDays = dailySaving > 0 ? calendroAnnualCost / dailySaving : Infinity
+  const paybackDays = dailySaving > 0 ? momentiesAnnualCost / dailySaving : Infinity
 
   return {
     weeklyHoursSavedPerPerson,
     yearlyHoursSavedPerPerson,
     teamYearlyHoursSaved,
     teamYearlyDollarSaved,
-    calendroAnnualCost,
+    momentiesAnnualCost,
     roiMultiple,
     paybackDays,
     plan,
@@ -271,7 +271,7 @@ export function ROICalculator() {
           <OutputTile
             label="ROI multiple"
             value={`${r.roiMultiple >= 1 ? r.roiMultiple.toFixed(1) : r.roiMultiple.toFixed(2)}×`}
-            hint={`On ${currency(r.calendroAnnualCost)} annual cost`}
+            hint={`On ${currency(r.momentiesAnnualCost)} annual cost`}
             tone="emerald"
           />
           <OutputTile

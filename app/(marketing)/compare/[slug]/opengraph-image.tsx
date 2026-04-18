@@ -3,7 +3,7 @@ import { getCompetitor } from '@/lib/competitors'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro comparison'
+export const alt = 'Momenties comparison'
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const c = getCompetitor(params.slug)
@@ -44,7 +44,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           >
             C
           </div>
-          <span>Calendro</span>
+          <span>Momenties</span>
           <span style={{ color: 'rgba(240,236,227,0.4)', fontSize: 20 }}>· Comparison</span>
         </div>
 
@@ -72,7 +72,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
               flexWrap: 'wrap',
             }}
           >
-            <span>Calendro</span>
+            <span>Momenties</span>
             <span style={{ color: 'rgba(240,236,227,0.35)', fontSize: 64 }}>vs.</span>
             <span style={{ color: '#c5a35c', fontStyle: 'italic' }}>{competitor}</span>
           </div>
@@ -99,7 +99,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             color: 'rgba(240,236,227,0.5)',
           }}
         >
-          <span>calendro.app/compare</span>
+          <span>momenties.app/compare</span>
           <span>Honest comparison</span>
         </div>
       </div>

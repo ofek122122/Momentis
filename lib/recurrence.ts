@@ -9,7 +9,7 @@ import {
   startOfDay,
   differenceInMinutes,
 } from 'date-fns'
-import type { CalendroEvent, RecurrenceRule } from '@/types'
+import type { MomentiesEvent, RecurrenceRule } from '@/types'
 
 /**
  * Convert a RecurrenceRule to an RRULE string (RFC 5545 subset).
@@ -110,19 +110,19 @@ export function parseRRULE(rrule: string): RecurrenceRule {
 
 /**
  * Generate all occurrences of a recurring event within a date range.
- * Returns CalendroEvent instances for each occurrence.
+ * Returns MomentiesEvent instances for each occurrence.
  */
 export function expandRecurringEvent(
-  event: CalendroEvent,
+  event: MomentiesEvent,
   rangeStart: Date,
   rangeEnd: Date,
   exceptions: string[] = []
-): CalendroEvent[] {
+): MomentiesEvent[] {
   if (!event.recurrence) return [event]
 
   const rule = event.recurrence
   const durationMin = differenceInMinutes(event.end, event.start)
-  const occurrences: CalendroEvent[] = []
+  const occurrences: MomentiesEvent[] = []
   const exceptionDates = new Set(exceptions.map(d => startOfDay(new Date(d)).toISOString()))
 
   let current = new Date(event.start)

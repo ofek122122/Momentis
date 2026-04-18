@@ -65,7 +65,7 @@ export default async function SettingsPage() {
           <CardHeader>
             <CardTitle className="text-base">Connected accounts</CardTitle>
             <CardDescription>
-              Calendro syncs events with these services.
+              Momenties syncs events with these services.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -131,7 +131,7 @@ export default async function SettingsPage() {
           <CardContent>
             <a
               href="/api/export"
-              download="calendro-export.ics"
+              download="momenties-export.ics"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border text-sm text-foreground hover:bg-gold/5 hover:border-gold/30 transition-all press"
             >
               <Download className="h-4 w-4" />

@@ -6,12 +6,12 @@ import { CTA } from '@/components/marketing/CTA'
 import { Terminal, Code2, Webhook, Key, Package, BookOpen, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'API Docs — Build on top of Calendro',
+  title: 'API Docs — Build on top of Momenties',
   description: 'REST API, WebSocket events, and official SDKs for Node, Python, Go, and Rust. OAuth 2.0 everywhere. Webhooks for everything.',
   alternates: { canonical: '/api-docs' },
   openGraph: {
-    title: 'Calendro API Documentation',
-    description: 'REST, WebSockets, and SDKs for building on Calendro.',
+    title: 'Momenties API Documentation',
+    description: 'REST, WebSockets, and SDKs for building on Momenties.',
     url: '/api-docs',
   },
 }
@@ -21,7 +21,7 @@ const SECTIONS = [
     icon: Key,
     title: 'Authentication',
     desc: 'OAuth 2.0 Authorization Code flow with PKCE. Personal Access Tokens for scripts. All tokens are scoped per-resource.',
-    snippet: `curl https://api.calendro.app/v1/events \\
+    snippet: `curl https://api.momenties.app/v1/events \\
   -H "Authorization: Bearer $TOKEN"`,
   },
   {
@@ -48,9 +48,9 @@ const SECTIONS = [
     icon: Package,
     title: 'Official SDKs',
     desc: 'First-party clients for Node, Python, Go, and Rust. Generated from the same OpenAPI spec. Full type safety in every language.',
-    snippet: `npm install @calendro/sdk
+    snippet: `npm install @momenties/sdk
 # or
-pip install calendro`,
+pip install momenties`,
   },
 ]
 
@@ -77,7 +77,7 @@ export default function ApiDocsPage() {
         eyebrow="Developer documentation"
         title={
           <>
-            Build on top of <em className="not-italic text-gold">Calendro</em>.
+            Build on top of <em className="not-italic text-gold">Momenties</em>.
           </>
         }
         lede="A clean REST API, real-time WebSockets, and first-party SDKs. Integrations in minutes. OAuth 2.0 everywhere. Honest rate limits."
@@ -130,12 +130,12 @@ export default function ApiDocsPage() {
               # create your first event with Node SDK
             </div>
             <pre className="text-foreground/90">
-              <span className="text-rose-300">import</span> {'{ Calendro }'} <span className="text-rose-300">from</span>{' '}
-              <span className="text-emerald-300">&quot;@calendro/sdk&quot;</span>;
+              <span className="text-rose-300">import</span> {'{ Momenties }'} <span className="text-rose-300">from</span>{' '}
+              <span className="text-emerald-300">&quot;@momenties/sdk&quot;</span>;
               {'\n\n'}
               <span className="text-rose-300">const</span>{' '}
               <span className="text-sky-300">client</span> = <span className="text-rose-300">new</span>{' '}
-              <span className="text-foreground">Calendro</span>({'{'} <span className="text-sky-300">token</span>: process.env.<span className="text-foreground">CALENDRO_TOKEN</span> {'}'});
+              <span className="text-foreground">Momenties</span>({'{'} <span className="text-sky-300">token</span>: process.env.<span className="text-foreground">MOMENTIES_TOKEN</span> {'}'});
               {'\n\n'}
               <span className="text-rose-300">const</span>{' '}
               <span className="text-sky-300">event</span> = <span className="text-rose-300">await</span> client.events.<span className="text-gold">create</span>({'{'}
@@ -253,7 +253,7 @@ export default function ApiDocsPage() {
 
       <CTA
         title="Have an idea?"
-        subtitle="If you're building something on Calendro, we want to see it. Enterprise partners get early access to new API endpoints."
+        subtitle="If you're building something on Momenties, we want to see it. Enterprise partners get early access to new API endpoints."
         primary={{ label: 'Request API access', href: '/contact' }}
         secondary={{ label: 'Join our community', href: '/community' }}
       />

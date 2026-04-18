@@ -4,11 +4,11 @@ import { SiteSearch } from '@/components/marketing/SiteSearch'
 import { buildSearchIndex } from '@/lib/search-index'
 
 export const metadata: Metadata = {
-  title: 'Search — Find anything on Calendro.app',
+  title: 'Search — Find anything on Momenties.app',
   description: 'Search across every page, blog post, integration, customer story, help article, and more. Filter by type.',
   alternates: { canonical: '/search' },
   openGraph: {
-    title: 'Search Calendro',
+    title: 'Search Momenties',
     description: 'Find anything across the site.',
     url: '/search',
   },

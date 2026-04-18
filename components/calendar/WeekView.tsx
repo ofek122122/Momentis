@@ -5,7 +5,7 @@ import {
   startOfWeek, endOfWeek, eachDayOfInterval,
   format, isSameDay, isToday, setHours,
 } from 'date-fns'
-import type { CalendroEvent, EventColor } from '@/types'
+import type { MomentiesEvent, EventColor } from '@/types'
 import { EVENT_COLORS, CATEGORY_TO_COLOR } from '@/types'
 
 const HOUR_HEIGHT = 60 // px per hour
@@ -13,11 +13,11 @@ const START_HOUR = 6
 const END_HOUR = 24
 
 interface WeekViewProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   currentDate: Date
-  onEventClick: (event: CalendroEvent) => void
+  onEventClick: (event: MomentiesEvent) => void
   onTimeSlotClick: (date: Date) => void
-  onDropEvent: (event: CalendroEvent, targetDate: Date) => void
+  onDropEvent: (event: MomentiesEvent, targetDate: Date) => void
 }
 
 export function WeekView({ events, currentDate, onEventClick, onTimeSlotClick, onDropEvent }: WeekViewProps) {
@@ -39,7 +39,7 @@ export function WeekView({ events, currentDate, onEventClick, onTimeSlotClick, o
     [events]
   )
 
-  function getEventStyle(event: CalendroEvent): React.CSSProperties {
+  function getEventStyle(event: MomentiesEvent): React.CSSProperties {
     const start = new Date(event.start)
     const end = new Date(event.end)
     const startMin = start.getHours() * 60 + start.getMinutes()
@@ -61,7 +61,7 @@ export function WeekView({ events, currentDate, onEventClick, onTimeSlotClick, o
     const data = e.dataTransfer.getData('application/json')
     if (!data) return
     try {
-      const event: CalendroEvent = JSON.parse(data)
+      const event: MomentiesEvent = JSON.parse(data)
       const target = new Date(day)
       target.setHours(hour, 0, 0, 0)
       onDropEvent(event, target)

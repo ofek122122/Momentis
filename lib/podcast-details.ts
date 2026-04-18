@@ -30,7 +30,7 @@ const BY_SLUG: Record<string, Omit<EpisodeDetail, 'slug'>> = {
     transcript: [
       "Mei opens with a ritual she started in 2024: every December, she deletes her calendar down to the bones and rebuilds it from a blank page. It takes three evenings. She says it is the only way to see which meetings are load-bearing and which were inherited from a version of her life that no longer exists.",
       'We talk about the moment quiet software wins — which, she argues, is usually not when you open it, but when you close it. If the day after using a tool is calmer than the day before, the tool is working. If the day after is busier, the tool has made you its marketing channel.',
-      "Iris offers Calendro's internal measure: the 'exhale test.' Do users exhale when they open the app, or inhale? The exhale is a rare product shape, but a measurable one in user interviews. Mei is unconvinced that the exhale can be designed into existence — she thinks it comes from restraint, not feature work.",
+      "Iris offers Momenties's internal measure: the 'exhale test.' Do users exhale when they open the app, or inhale? The exhale is a rare product shape, but a measurable one in user interviews. Mei is unconvinced that the exhale can be designed into existence — she thinks it comes from restraint, not feature work.",
       "Closing chapter is on Mei's reading ritual. She reads fiction for twenty minutes before bed every night, on a Kindle with no software other than the books. She considers it the most underrated form of calendar management.",
     ],
     related: ['a-manifesto-in-public', 'typography-as-trust'],
@@ -86,7 +86,7 @@ const BY_SLUG: Record<string, Omit<EpisodeDetail, 'slug'>> = {
       "Closing chapter is on costs. The parser cost per event fell 71% between v1 and v2 — not because the model got cheaper, but because fewer events reached the model. The best cost optimization in AI, Oren argues, is often not using the AI.",
     ],
     related: ['typography-as-trust', 'a-manifesto-in-public'],
-    recordedIn: 'The Calendro office, Tel Aviv',
+    recordedIn: 'The Momenties office, Tel Aviv',
   },
   'typography-as-trust': {
     highlights: [
@@ -108,8 +108,8 @@ const BY_SLUG: Record<string, Omit<EpisodeDetail, 'slug'>> = {
     ],
     transcript: [
       "Isabelle frames typography as a trust signal: before a single word is read, the user has already made a micro-judgment about whether the company knows what it is doing. A thoughtful pairing of display and body typefaces is the fastest visible signal of care.",
-      "We walk through four rejected typefaces for Calendro (Tiempos Text, Freight Big, Ciutadella, Austin Text) and explain the rejection reasoning for each. Isabelle adds a short defense of italics as emphasis in interfaces where other kinds of emphasis would feel loud.",
-      "Closing chapter is on DM Sans, the body typeface Calendro uses. Isabelle agrees with the choice but argues it is slightly overexposed. She predicts we will move to something more neutral within a year.",
+      "We walk through four rejected typefaces for Momenties (Tiempos Text, Freight Big, Ciutadella, Austin Text) and explain the rejection reasoning for each. Isabelle adds a short defense of italics as emphasis in interfaces where other kinds of emphasis would feel loud.",
+      "Closing chapter is on DM Sans, the body typeface Momenties uses. Isabelle agrees with the choice but argues it is slightly overexposed. She predicts we will move to something more neutral within a year.",
     ],
     related: ['when-the-software-gets-out-of-the-way', 'the-hybrid-parser-in-detail'],
     recordedIn: 'Folio Studio, Paris',
@@ -119,7 +119,7 @@ const BY_SLUG: Record<string, Omit<EpisodeDetail, 'slug'>> = {
       {
         at: '00:00',
         quote:
-          'The walk from the office to my front door is twenty-two minutes. In those minutes, I dictate my week into Calendro. I have not planned my week any other way since March.',
+          'The walk from the office to my front door is twenty-two minutes. In those minutes, I dictate my week into Momenties. I have not planned my week any other way since March.',
       },
       {
         at: '08:11',
@@ -171,7 +171,7 @@ const BY_SLUG: Record<string, Omit<EpisodeDetail, 'slug'>> = {
     ],
     transcript: [
       "Jonas opens by distinguishing between notebooks and todo apps. The notebook, he argues, is a ledger of thought, not a ledger of tasks. The calendar is a commitment record. The three together — paper, tasks, calendar — form a trust-weighted working system.",
-      "We talk about the Sunday review ritual. Jonas spends 15 minutes each Sunday flipping through the previous week's notebook pages. Things worth keeping migrate to Calendro or to a long-term notes system; the rest stay on paper, unmigrated, where they belong.",
+      "We talk about the Sunday review ritual. Jonas spends 15 minutes each Sunday flipping through the previous week's notebook pages. Things worth keeping migrate to Momenties or to a long-term notes system; the rest stay on paper, unmigrated, where they belong.",
       "Closing is on what never migrates. Certain ideas, Jonas says, need the slowness of handwriting. They are the ideas that will be ruined by being searchable.",
     ],
     related: ['the-walk-home-planning-ritual', 'hiring-for-people-who-finish-things'],

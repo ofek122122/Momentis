@@ -10,11 +10,11 @@ import {
 
 export const metadata: Metadata = {
   title: 'Features — The complete tour',
-  description: 'Every feature in Calendro, from natural-language parsing to unified multi-calendar sync. Calm, capable, and respectful of your time.',
+  description: 'Every feature in Momenties, from natural-language parsing to unified multi-calendar sync. Calm, capable, and respectful of your time.',
   alternates: { canonical: '/features' },
   openGraph: {
-    title: 'Calendro Features',
-    description: 'Everything Calendro does, in one long, quiet tour.',
+    title: 'Momenties Features',
+    description: 'Everything Momenties does, in one long, quiet tour.',
     url: '/features',
   },
 }
@@ -97,7 +97,7 @@ const DEEP_FEATURES = [
 ]
 
 const GRID_FEATURES = [
-  { icon: Clock, title: 'Smart time suggestions', desc: 'Calendro finds the gap that actually fits. Respects meetings, focus, and sleep.' },
+  { icon: Clock, title: 'Smart time suggestions', desc: 'Momenties finds the gap that actually fits. Respects meetings, focus, and sleep.' },
   { icon: BarChart3, title: 'Insights & analytics', desc: 'Where did your week go? Meeting load, deep-work ratio, rhythm patterns.' },
   { icon: Globe, title: 'Unified calendars', desc: 'Google, Apple, Outlook (soon) in one grid. Color-coded by source.' },
   { icon: Palette, title: 'Five themes', desc: 'Obsidian, Paper, Harvest, Botanical, Aurora — all dark, each distinct.' },
@@ -140,7 +140,7 @@ export default function FeaturesPage() {
             <em className="not-italic text-gold">Take your time.</em>
           </>
         }
-        lede="A long, honest list of what Calendro actually does. No marketing fog. Just features we ship, tested and tuned."
+        lede="A long, honest list of what Momenties actually does. No marketing fog. Just features we ship, tested and tuned."
         crumbs={[{ label: 'Features' }]}
       >
         <Link
@@ -217,7 +217,7 @@ export default function FeaturesPage() {
               A fair comparison.
             </h2>
             <p className="mt-4 text-sm text-muted-foreground max-w-xl mx-auto">
-              We only included things we ship today. If something on this list becomes wrong, please write us at hello@calendro.app.
+              We only included things we ship today. If something on this list becomes wrong, please write us at hello@momenties.app.
             </p>
           </Reveal>
           <div className="rounded-2xl border border-border overflow-hidden">
@@ -227,7 +227,7 @@ export default function FeaturesPage() {
                   <th className="text-left px-5 py-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                     Feature
                   </th>
-                  <th className="px-4 py-4 font-display text-base text-gold">Calendro</th>
+                  <th className="px-4 py-4 font-display text-base text-gold">Momenties</th>
                   <th className="px-4 py-4 font-display text-base text-muted-foreground">Google</th>
                   <th className="px-4 py-4 font-display text-base text-muted-foreground">Notion Cal</th>
                   <th className="px-4 py-4 font-display text-base text-muted-foreground">Superhuman</th>

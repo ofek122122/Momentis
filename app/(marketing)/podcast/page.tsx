@@ -24,12 +24,12 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'The Quiet Hours — A Calendro podcast',
+  title: 'The Quiet Hours — A Momenties podcast',
   description:
     "A podcast about time, software, and the small decisions that make both of them feel larger than they are. Eight episodes, every other Tuesday.",
   alternates: { canonical: '/podcast' },
   openGraph: {
-    title: 'The Quiet Hours — a Calendro podcast',
+    title: 'The Quiet Hours — a Momenties podcast',
     description:
       "Eight episodes on time, software, and small decisions. Hosted by Iris Koval. Every other Tuesday.",
     url: '/podcast',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'The Quiet Hours',
-    description: 'A Calendro podcast about time, software, and small decisions.',
+    description: 'A Momenties podcast about time, software, and small decisions.',
   },
 }
 
@@ -55,7 +55,7 @@ export default function PodcastPage() {
   return (
     <>
       <PageHero
-        eyebrow="The Quiet Hours · a Calendro podcast"
+        eyebrow="The Quiet Hours · a Momenties podcast"
         title={
           <>
             A podcast about time, software, and the small decisions that make both of them feel{' '}
@@ -365,9 +365,9 @@ export default function PodcastPage() {
       </section>
 
       <CTA
-        title="If the podcast was a product, it would be Calendro."
+        title="If the podcast was a product, it would be Momenties."
         subtitle="Same principles, different medium. Free forever for individuals. Try it in the time between episodes."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read the manifesto', href: '/manifesto' }}
       />
     </>

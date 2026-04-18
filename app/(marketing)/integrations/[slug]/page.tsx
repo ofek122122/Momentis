@@ -25,7 +25,7 @@ export async function generateMetadata({
     description: integration.tagline,
     alternates: { canonical: `/integrations/${integration.slug}` },
     openGraph: {
-      title: `Calendro × ${integration.name}`,
+      title: `Momenties × ${integration.name}`,
       description: integration.tagline,
       url: `/integrations/${integration.slug}`,
     },
@@ -96,7 +96,7 @@ export default async function IntegrationPage({
                 <StatusPill status={integration.status} />
               </div>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-[1.05] tracking-tight">
-                Calendro × {integration.name}
+                Momenties × {integration.name}
               </h1>
               <p className="mt-4 text-lg text-gold italic">{integration.tagline}</p>
             </div>
@@ -114,7 +114,7 @@ export default async function IntegrationPage({
               </Link>
             ) : (
               <a
-                href="mailto:waitlist@calendro.app"
+                href="mailto:waitlist@momenties.app"
                 className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
               >
                 Join the waitlist
@@ -270,7 +270,7 @@ export default async function IntegrationPage({
       </section>
 
       <CTA
-        title={`Calendro + ${integration.name}, in one click.`}
+        title={`Momenties + ${integration.name}, in one click.`}
         subtitle="Free to start. Connect as many integrations as you like."
         primary={{ label: 'Get started free', href: '/login' }}
         secondary={{ label: 'Browse all integrations', href: '/integrations' }}

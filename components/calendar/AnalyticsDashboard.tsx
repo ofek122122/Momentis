@@ -3,10 +3,10 @@
 import { useMemo } from 'react'
 import { differenceInMinutes, format, startOfWeek, getDay, isThisWeek, isThisMonth } from 'date-fns'
 import { BarChart3, Clock, TrendingUp, Flame, Calendar } from 'lucide-react'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface AnalyticsDashboardProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
 }
 
 export function AnalyticsDashboard({ events }: AnalyticsDashboardProps) {

@@ -9,11 +9,11 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI in Calendro — Quiet, capable, and on your side',
-  description: 'How Calendro uses AI: natural-language parsing, voice, photo OCR, smart time suggestions — with privacy-first defaults and your data never used for training.',
+  title: 'AI in Momenties — Quiet, capable, and on your side',
+  description: 'How Momenties uses AI: natural-language parsing, voice, photo OCR, smart time suggestions — with privacy-first defaults and your data never used for training.',
   alternates: { canonical: '/ai' },
   openGraph: {
-    title: 'AI in Calendro',
+    title: 'AI in Momenties',
     description: 'Quiet, capable AI — with privacy-first defaults.',
     url: '/ai',
   },
@@ -45,7 +45,7 @@ const CAPABILITIES = [
     icon: Clock,
     title: 'Smart time suggestions',
     tagline: 'The gap that fits.',
-    desc: 'When you omit the time, Calendro proposes an optimal slot based on your meetings, focus hours, timezone, and historical preferences. Local model for privacy and speed.',
+    desc: 'When you omit the time, Momenties proposes an optimal slot based on your meetings, focus hours, timezone, and historical preferences. Local model for privacy and speed.',
     sample: '"coffee with sarah this week" → proposes Thu 10am',
   },
   {
@@ -65,16 +65,16 @@ const CAPABILITIES = [
 ]
 
 const PRINCIPLES = [
-  { icon: Lock, title: 'Zero retention from our AI providers', desc: 'Gemini and Deepgram both operate under no-retention enterprise agreements with Calendro. Your inputs are processed and discarded.' },
+  { icon: Lock, title: 'Zero retention from our AI providers', desc: 'Gemini and Deepgram both operate under no-retention enterprise agreements with Momenties. Your inputs are processed and discarded.' },
   { icon: Eye, title: 'Never used for training', desc: 'We contractually prohibit any training use of customer data, full stop — ours or our vendors\'.' },
   { icon: Check, title: 'A human is always in the loop', desc: 'Every parsed event shows a preview before it commits. No AI-only writes to your calendar. You stay in charge.' },
   { icon: Shield, title: 'Opt-out at any time', desc: 'Want zero AI? Turn it off in Settings → AI. The app still works — just with chrono-node as the only parser.' },
 ]
 
 const FAQS = [
-  { q: 'Does Calendro train on my calendar data?', a: 'No. We contractually prohibit any training use of customer data — ours or our AI providers\'. When you submit an event for parsing, it\'s processed and discarded.' },
+  { q: 'Does Momenties train on my calendar data?', a: 'No. We contractually prohibit any training use of customer data — ours or our AI providers\'. When you submit an event for parsing, it\'s processed and discarded.' },
   { q: 'What AI models are you using?', a: 'Gemini 2.5 Flash for text and image parsing. Deepgram Nova-3 for voice transcription. We evaluate new models quarterly.' },
-  { q: 'Can I use Calendro without AI?', a: 'Yes. Settings → AI → disable. You\'ll have a local, chrono-node-based parser and a manual event creator. Most features still work.' },
+  { q: 'Can I use Momenties without AI?', a: 'Yes. Settings → AI → disable. You\'ll have a local, chrono-node-based parser and a manual event creator. Most features still work.' },
   { q: 'What happens when the AI gets it wrong?', a: 'Every parsed event is previewed before it commits. You can edit, re-parse with more context, or discard — all in one tap. We track error rates and ship fixes.' },
   { q: 'Do you retain my voice recordings?', a: 'No. Voice uploads are transcribed by Deepgram, returned to us, and immediately discarded. Neither we nor Deepgram keep the audio.' },
   { q: 'Is the AI available on the free tier?', a: 'Yes. Free gets full AI with a daily photo limit (5). Pro removes the limit and gives you priority parsing.' },
@@ -85,13 +85,13 @@ export default function AiPage() {
     <>
       <FAQPageJsonLd items={FAQS} />
       <PageHero
-        eyebrow="AI in Calendro"
+        eyebrow="AI in Momenties"
         title={
           <>
             Quiet AI. <em className="not-italic text-gold">On your side.</em>
           </>
         }
-        lede="The machine learning is behind the curtain, where it belongs. Calendro's AI does the boring work so you keep the judgment. Here's exactly what it does and how we protect you."
+        lede="The machine learning is behind the curtain, where it belongs. Momenties's AI does the boring work so you keep the judgment. Here's exactly what it does and how we protect you."
         crumbs={[{ label: 'AI' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -232,7 +232,7 @@ export default function AiPage() {
 
       <CTA
         title="See the AI in action."
-        subtitle="No signup. Type a sentence, watch Calendro turn it into a calendar event in under a second."
+        subtitle="No signup. Type a sentence, watch Momenties turn it into a calendar event in under a second."
         primary={{ label: 'Try the demo', href: '/demo' }}
         secondary={{ label: 'Read the blog', href: '/blog' }}
       />

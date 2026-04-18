@@ -1,14 +1,14 @@
 import { flashModel } from '@/lib/ai/gemini-client'
 import { sanitizeForPrompt } from '@/lib/validation'
 import { log } from '@/lib/logger'
-import type { CalendroEvent, ParseResult } from '@/types'
+import type { MomentiesEvent, ParseResult } from '@/types'
 
 interface GeminiEvent {
   title: string
   start: string
   end: string
   location?: string
-  category?: CalendroEvent['category']
+  category?: MomentiesEvent['category']
 }
 
 const VALID_CATEGORIES = new Set([
@@ -92,8 +92,8 @@ function parseGeminiResponse(raw: string): GeminiEvent[] {
   )
 }
 
-function toCalendroEvents(parsed: GeminiEvent[]): CalendroEvent[] {
-  const results: CalendroEvent[] = []
+function toMomentiesEvents(parsed: GeminiEvent[]): MomentiesEvent[] {
+  const results: MomentiesEvent[] = []
 
   for (const e of parsed) {
     const start = new Date(e.start)
@@ -108,7 +108,7 @@ function toCalendroEvents(parsed: GeminiEvent[]): CalendroEvent[] {
       end: end > start ? end : new Date(start.getTime() + 60 * 60 * 1000),
       location: e.location?.slice(0, 500),
       category: VALID_CATEGORIES.has(e.category ?? '')
-        ? (e.category as CalendroEvent['category'])
+        ? (e.category as MomentiesEvent['category'])
         : 'other',
     })
   }
@@ -121,7 +121,7 @@ export async function parseWithGemini(text: string): Promise<ParseResult> {
   const sanitized = sanitizeForPrompt(text)
   const result = await flashModel.generateContent(buildTextPrompt(sanitized, now))
   const parsed = parseGeminiResponse(result.response.text())
-  const events = toCalendroEvents(parsed)
+  const events = toMomentiesEvents(parsed)
 
   return {
     events,
@@ -141,7 +141,7 @@ export async function extractEventsFromImage(
     buildImagePrompt(now),
   ])
   const parsed = parseGeminiResponse(result.response.text())
-  const events = toCalendroEvents(parsed)
+  const events = toMomentiesEvents(parsed)
 
   return {
     events,

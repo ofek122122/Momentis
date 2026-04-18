@@ -56,7 +56,7 @@ const tests = [
   ['Google OAuth Config', testOAuth],
 ]
 
-console.log('\n━━━ Calendro Integration Tests ━━━\n')
+console.log('\n━━━ Momenties Integration Tests ━━━\n')
 
 for (const [name, fn] of tests) {
   try {

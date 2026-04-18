@@ -7,11 +7,11 @@ import { FAQPageJsonLd } from '@/components/marketing/StructuredData'
 import { DollarSign, Share2, Gift, Check, ArrowUpRight, Users, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Affiliates — Earn by sharing Calendro',
-  description: 'Refer Calendro and earn 30% recurring revenue for a year. No minimums, no dark patterns, real cash via Stripe.',
+  title: 'Affiliates — Earn by sharing Momenties',
+  description: 'Refer Momenties and earn 30% recurring revenue for a year. No minimums, no dark patterns, real cash via Stripe.',
   alternates: { canonical: '/affiliates' },
   openGraph: {
-    title: 'Calendro Affiliate Program',
+    title: 'Momenties Affiliate Program',
     description: '30% recurring for 12 months. Paid via Stripe.',
     url: '/affiliates',
   },
@@ -51,12 +51,12 @@ const FAQS = [
     a: 'The 5th of every month, for the prior month\'s earnings. Stripe Connect, Wise, or bank transfer — your call. Minimum $50 accrued.',
   },
   {
-    q: 'Can I buy Calendro through my own link?',
+    q: 'Can I buy Momenties through my own link?',
     a: 'No. Self-referrals are forbidden and will disqualify your account. It\'s the cheapest way to lose a good program.',
   },
   {
     q: 'What\'s not allowed?',
-    a: 'Incentivized signups (e.g., cashback sites), spam, paid search bidding on our brand keywords, impersonating Calendro. Full terms in the agreement.',
+    a: 'Incentivized signups (e.g., cashback sites), spam, paid search bidding on our brand keywords, impersonating Momenties. Full terms in the agreement.',
   },
   {
     q: 'What\'s the cookie window?',
@@ -64,7 +64,7 @@ const FAQS = [
   },
   {
     q: 'Do you work with agencies?',
-    a: 'Yes. Agencies and consultancies get custom terms. Email partners@calendro.app to open a conversation.',
+    a: 'Yes. Agencies and consultancies get custom terms. Email partners@momenties.app to open a conversation.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function AffiliatesPage() {
             Earn 30% recurring <em className="not-italic text-gold">for a year</em>, for every referral.
           </>
         }
-        lede="Honest payouts, transparent reporting, real money. If Calendro has been good to you, share it — and get paid properly for the favor."
+        lede="Honest payouts, transparent reporting, real money. If Momenties has been good to you, share it — and get paid properly for the favor."
         crumbs={[{ label: 'Affiliates' }]}
       >
         <Link
@@ -246,7 +246,7 @@ export default function AffiliatesPage() {
             Apply takes three minutes. We approve most applicants within 48 hours. New payouts begin the following month.
           </p>
           <a
-            href="mailto:partners@calendro.app"
+            href="mailto:partners@momenties.app"
             className="mt-8 inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
             Apply to the program
@@ -279,8 +279,8 @@ export default function AffiliatesPage() {
 
       <CTA
         title="Share quietly. Earn properly."
-        subtitle="Calendro is a product worth talking about — let's make it worth your time."
-        primary={{ label: 'Apply now', href: 'mailto:partners@calendro.app' }}
+        subtitle="Momenties is a product worth talking about — let's make it worth your time."
+        primary={{ label: 'Apply now', href: 'mailto:partners@momenties.app' }}
         secondary={{ label: 'Read the terms', href: '/terms' }}
       />
     </>

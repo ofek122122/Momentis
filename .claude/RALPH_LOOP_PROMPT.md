@@ -22,7 +22,7 @@ Mark it `[~]` in BACKLOG.md before starting work.
 Enter **SELF-DIRECTED MODE** (P8). Do NOT stop the loop. Instead:
  
 1. Read the entire BACKLOG.md and PROGRESS.md to know what's been built.
-2. Think hard about what Calendro is missing. Consider: user delight, retention, monetization, virality, competitive edge, workflow depth, polish. Look at the inspiration buckets in P8.
+2. Think hard about what Momenties is missing. Consider: user delight, retention, monetization, virality, competitive edge, workflow depth, polish. Look at the inspiration buckets in P8.
 3. Invent ONE new feature or improvement. It should be:
    - Genuinely valuable to users (not filler)
    - Shippable and polished in one iteration (not a massive multi-day project)

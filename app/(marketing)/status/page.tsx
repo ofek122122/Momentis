@@ -5,11 +5,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { CheckCircle2, AlertTriangle, Activity } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Status — Calendro system health',
-  description: 'Real-time system status, incident history, and uptime metrics for Calendro.',
+  title: 'Status — Momenties system health',
+  description: 'Real-time system status, incident history, and uptime metrics for Momenties.',
   alternates: { canonical: '/status' },
   openGraph: {
-    title: 'Calendro Status',
+    title: 'Momenties Status',
     description: 'Live system status and uptime metrics.',
     url: '/status',
   },

@@ -16,12 +16,12 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'The Calendro Method — How we work',
+  title: 'The Momenties Method — How we work',
   description:
     'The companion to our manifesto. How we decide what to build, how we write before we code, how we ship, and how we measure. A working document.',
   alternates: { canonical: '/method' },
   openGraph: {
-    title: 'The Calendro Method',
+    title: 'The Momenties Method',
     description:
       'How we work, written down. Deciding, writing, shipping, measuring. A working document.',
     url: '/method',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Calendro Method',
+    title: 'The Momenties Method',
     description: 'How we work, written down.',
   },
 }
@@ -164,7 +164,7 @@ const TOOLS: { name: string; for: string }[] = [
   { name: 'Linear', for: 'Work tracking. Strict cycle discipline.' },
   { name: 'Cursor', for: 'Our editor of choice.' },
   { name: 'Sentry', for: 'Errors. A Sitter reads it live on release day.' },
-  { name: 'Calendro', for: 'Our own calendar. Eaten daily.' },
+  { name: 'Momenties', for: 'Our own calendar. Eaten daily.' },
 ]
 
 export default function MethodPage() {
@@ -189,7 +189,7 @@ export default function MethodPage() {
             A working document · companion to the manifesto
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02] tracking-tight">
-            The <em className="not-italic text-gold">Calendro</em> Method
+            The <em className="not-italic text-gold">Momenties</em> Method
           </h1>
           <p className="mt-7 font-display italic text-xl md:text-2xl text-foreground/90 leading-snug max-w-2xl">
             How we decide what to build. How we write before we code. How we ship. How we measure.
@@ -386,7 +386,7 @@ export default function MethodPage() {
       <CTA
         title="The method matters less than the user who reads it."
         subtitle="If any of this sounded familiar, try the calendar we built by it."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read the manifesto', href: '/manifesto' }}
       />
     </>

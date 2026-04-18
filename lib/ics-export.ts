@@ -1,4 +1,4 @@
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 function formatICSDate(d: Date): string {
   return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
@@ -8,18 +8,18 @@ function escapeICSText(text: string): string {
   return text.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n')
 }
 
-export function eventsToICS(events: CalendroEvent[], calendarName = 'Calendro'): string {
+export function eventsToICS(events: MomentiesEvent[], calendarName = 'Momenties'): string {
   const lines: string[] = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    `PRODID:-//Calendro//${calendarName}//EN`,
+    `PRODID:-//Momenties//${calendarName}//EN`,
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     `X-WR-CALNAME:${calendarName}`,
   ]
 
   for (const event of events) {
-    const uid = event.id ?? event.sourceId ?? `calendro-${Date.now()}-${Math.random().toString(36).slice(2)}@calendro.app`
+    const uid = event.id ?? event.sourceId ?? `momenties-${Date.now()}-${Math.random().toString(36).slice(2)}@momenties.app`
     lines.push('BEGIN:VEVENT')
     lines.push(`UID:${uid}`)
     lines.push(`DTSTAMP:${formatICSDate(new Date())}`)
@@ -36,8 +36,8 @@ export function eventsToICS(events: CalendroEvent[], calendarName = 'Calendro'):
   return lines.join('\r\n')
 }
 
-export function parseICSFeed(icsContent: string): CalendroEvent[] {
-  const events: CalendroEvent[] = []
+export function parseICSFeed(icsContent: string): MomentiesEvent[] {
+  const events: MomentiesEvent[] = []
   const eventBlocks = icsContent.split('BEGIN:VEVENT')
 
   for (let i = 1; i < eventBlocks.length; i++) {

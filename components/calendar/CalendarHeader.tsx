@@ -2,14 +2,14 @@
 
 import { SearchBar } from './SearchBar'
 import { NotificationBell } from './NotificationBell'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface CalendarHeaderProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
 }
 
 export function CalendarHeader({ events }: CalendarHeaderProps) {
-  function handleEventSelect(event: CalendroEvent) {
+  function handleEventSelect(event: MomentiesEvent) {
     // Scroll to or highlight the event — for now just log
     // In a full implementation, this would communicate with CalendarGrid
     console.log('Selected event:', event.title)

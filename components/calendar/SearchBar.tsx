@@ -3,17 +3,17 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Search, X, Clock, MapPin } from 'lucide-react'
 import { format } from 'date-fns'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface SearchBarProps {
-  events: CalendroEvent[]
-  onEventSelect: (event: CalendroEvent) => void
+  events: MomentiesEvent[]
+  onEventSelect: (event: MomentiesEvent) => void
 }
 
 export function SearchBar({ events, onEventSelect }: SearchBarProps) {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState<CalendroEvent[]>([])
+  const [results, setResults] = useState<MomentiesEvent[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
   // Cmd+K / Ctrl+K shortcut
@@ -53,7 +53,7 @@ export function SearchBar({ events, onEventSelect }: SearchBarProps) {
     return () => clearTimeout(timeout)
   }, [query, search])
 
-  function handleSelect(event: CalendroEvent) {
+  function handleSelect(event: MomentiesEvent) {
     onEventSelect(event)
     setOpen(false)
     setQuery('')

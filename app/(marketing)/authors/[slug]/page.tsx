@@ -42,7 +42,7 @@ export async function generateMetadata({
     description: author.bio,
     alternates: { canonical: `/authors/${author.slug}` },
     openGraph: {
-      title: `${author.name} · Calendro`,
+      title: `${author.name} · Momenties`,
       description: author.bio,
       url: `/authors/${author.slug}`,
     },
@@ -211,7 +211,7 @@ export default async function AuthorPage({
 
       <CTA
         title="Read everything on one page."
-        subtitle="The Calendro blog has essays on time, attention, AI, and quiet software."
+        subtitle="The Momenties blog has essays on time, attention, AI, and quiet software."
         primary={{ label: 'All posts', href: '/blog' }}
         secondary={{ label: 'Subscribe via RSS', href: '/feed.xml' }}
       />

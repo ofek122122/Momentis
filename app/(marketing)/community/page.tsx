@@ -7,10 +7,10 @@ import { MessageCircle, Calendar, Users, Mic2, BookOpen, ArrowUpRight, Handshake
 
 export const metadata: Metadata = {
   title: 'Community — Come say hello',
-  description: 'Join the Calendro community: Discord, monthly office hours, user-run meetups, and a quiet corner of the internet for people who care about their time.',
+  description: 'Join the Momenties community: Discord, monthly office hours, user-run meetups, and a quiet corner of the internet for people who care about their time.',
   alternates: { canonical: '/community' },
   openGraph: {
-    title: 'Calendro Community',
+    title: 'Momenties Community',
     description: 'Discord, office hours, meetups, and more.',
     url: '/community',
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const CHANNELS = [
   { icon: MessageCircle, title: 'Discord server', members: '4,200+', desc: 'The main forum. Feature requests, bug chat, show-and-tell. Open 24/7.', cta: 'Join Discord' },
   { icon: Mic2, title: 'Monthly office hours', members: 'Every 1st Thursday', desc: 'One hour with our founders. Questions, feedback, previews of what\'s coming. RSVPs on Luma.', cta: 'Next session →' },
-  { icon: Calendar, title: 'User-run meetups', members: '14 cities', desc: 'Coffee with other Calendro users. Organized by people, not by us. Find one near you.', cta: 'Find a meetup' },
+  { icon: Calendar, title: 'User-run meetups', members: '14 cities', desc: 'Coffee with other Momenties users. Organized by people, not by us. Find one near you.', cta: 'Find a meetup' },
   { icon: BookOpen, title: 'Reading group', members: '~200 people', desc: 'A biweekly book club on time, attention, and calm software. Current book: Four Thousand Weeks.', cta: 'Join the list' },
 ]
 
@@ -35,7 +35,7 @@ const EVENTS = [
 const PROGRAMS = [
   { icon: Handshake, title: 'Student ambassadors', desc: 'Free Pro for a year, a branded kit, and a few dozen new friends. For students running their campus\'s productivity community.' },
   { icon: Users, title: 'Power-user program', desc: 'Early access to beta features. A private Slack. Quarterly swag. For people who tap every key on the keyboard.' },
-  { icon: Coffee, title: 'Speakers & writers', desc: 'Guest posts on the Calendro blog. Podcast appearances. Co-branded essays. Email press@calendro.app to pitch.' },
+  { icon: Coffee, title: 'Speakers & writers', desc: 'Guest posts on the Momenties blog. Podcast appearances. Co-branded essays. Email press@momenties.app to pitch.' },
 ]
 
 export default function CommunityPage() {

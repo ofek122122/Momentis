@@ -7,11 +7,11 @@ import { DemoParser } from '@/components/marketing/DemoParser'
 import { ArrowRight, Type, Mic, Camera, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Live demo — Try Calendro in your browser',
-  description: 'Type any sentence. Watch Calendro turn it into a real calendar event. No signup, no card, no catch.',
+  title: 'Live demo — Try Momenties in your browser',
+  description: 'Type any sentence. Watch Momenties turn it into a real calendar event. No signup, no card, no catch.',
   alternates: { canonical: '/demo' },
   openGraph: {
-    title: 'Try Calendro\'s AI live',
+    title: 'Try Momenties\'s AI live',
     description: 'Type a sentence. See it parsed. No signup required.',
     url: '/demo',
   },
@@ -27,7 +27,7 @@ export default function DemoPage() {
             Try it. <em className="not-italic text-gold">Right here.</em>
           </>
         }
-        lede="No signup. No card. Just the parser. Type a sentence and watch Calendro turn it into a structured event. If you like what you see, the real thing is two clicks away."
+        lede="No signup. No card. Just the parser. Type a sentence and watch Momenties turn it into a structured event. If you like what you see, the real thing is two clicks away."
         crumbs={[{ label: 'Demo' }]}
       />
 
@@ -152,7 +152,7 @@ export default function DemoPage() {
           Ready to stop typing into form fields?
         </h2>
         <p className="mt-4 text-sm text-muted-foreground max-w-lg mx-auto">
-          Calendro is free forever for individual use. Takes 90 seconds to set up.
+          Momenties is free forever for individual use. Takes 90 seconds to set up.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link

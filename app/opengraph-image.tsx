@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro — Just say it. It\'s scheduled.'
+export const alt = 'Momenties — Just say it. It\'s scheduled.'
 
 export default function Image() {
   return new ImageResponse(
@@ -49,7 +49,7 @@ export default function Image() {
           >
             C
           </div>
-          Calendro
+          Momenties
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -89,7 +89,7 @@ export default function Image() {
             color: 'rgba(240,236,227,0.5)',
           }}
         >
-          <span>calendro.app</span>
+          <span>momenties.app</span>
           <span>Type it. Speak it. Snap it.</span>
         </div>
       </div>

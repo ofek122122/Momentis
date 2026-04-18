@@ -20,12 +20,12 @@ function slugForName(name: string): string | null {
 }
 
 export const metadata: Metadata = {
-  title: 'Integrations — Calendro works with your stack',
-  description: 'Google Calendar, Apple, Outlook, Slack, Zoom, Notion, Linear — connect Calendro to what you already use. One click each.',
+  title: 'Integrations — Momenties works with your stack',
+  description: 'Google Calendar, Apple, Outlook, Slack, Zoom, Notion, Linear — connect Momenties to what you already use. One click each.',
   alternates: { canonical: '/integrations' },
   openGraph: {
-    title: 'Calendro Integrations',
-    description: 'Connect Calendro to what you already use.',
+    title: 'Momenties Integrations',
+    description: 'Connect Momenties to what you already use.',
     url: '/integrations',
   },
 }
@@ -44,7 +44,7 @@ const INTEGRATIONS: Integration[] = [
   { name: 'Apple Calendar', category: 'Calendar', desc: 'Full CalDAV sync with iCloud. App passwords supported.', status: 'live', letter: 'A', color: '#8E8E93' },
   { name: 'Outlook / Microsoft 365', category: 'Calendar', desc: 'Microsoft Graph API. OAuth in two clicks.', status: 'soon', letter: 'O', color: '#0078D4' },
   { name: 'Fastmail', category: 'Calendar', desc: 'CalDAV + CardDAV. For the discerning calendar-haver.', status: 'beta', letter: 'F', color: '#2E5CB9' },
-  { name: 'Slack', category: 'Messaging', desc: 'Daily briefing in-channel. Mention @calendro to schedule.', status: 'live', letter: 'S', color: '#4A154B' },
+  { name: 'Slack', category: 'Messaging', desc: 'Daily briefing in-channel. Mention @momenties to schedule.', status: 'live', letter: 'S', color: '#4A154B' },
   { name: 'Discord', category: 'Messaging', desc: 'Community events piped into your personal calendar.', status: 'beta', letter: 'D', color: '#5865F2' },
   { name: 'Microsoft Teams', category: 'Messaging', desc: 'Team-channel briefings and meeting linkouts.', status: 'soon', letter: 'M', color: '#464EB8' },
   { name: 'Zoom', category: 'Video', desc: 'Auto-generate meeting links for every scheduled event.', status: 'live', letter: 'Z', color: '#2D8CFF' },
@@ -58,7 +58,7 @@ const INTEGRATIONS: Integration[] = [
   { name: 'Alfred', category: 'Developer', desc: 'Custom Alfred workflow for quick event entry.', status: 'beta', letter: 'A', color: '#1D3A57' },
   { name: 'IFTTT', category: 'Automation', desc: '200+ triggers & actions. Schedule from anything.', status: 'live', letter: 'I', color: '#33CCFF' },
   { name: 'Zapier', category: 'Automation', desc: 'Two-way webhooks, 5,000+ apps.', status: 'live', letter: 'Z', color: '#FF4A00' },
-  { name: 'n8n', category: 'Automation', desc: 'Self-hosted workflow automation with Calendro nodes.', status: 'beta', letter: 'n', color: '#EA4B71' },
+  { name: 'n8n', category: 'Automation', desc: 'Self-hosted workflow automation with Momenties nodes.', status: 'beta', letter: 'n', color: '#EA4B71' },
   { name: 'Apple Shortcuts', category: 'Mobile', desc: 'Siri-triggered scheduling: "hey Siri, add event".', status: 'live', letter: 'S', color: '#FF3B30' },
   { name: 'Todoist', category: 'Tasks', desc: 'Convert tasks with dates into calendar blocks.', status: 'live', letter: 'T', color: '#E44332' },
   { name: 'Things 3', category: 'Tasks', desc: 'Today list → time-blocked day, automatically.', status: 'beta', letter: 'T', color: '#4D8CDD' },
@@ -87,7 +87,7 @@ export default function IntegrationsPage() {
   return (
     <>
       <ItemListJsonLd
-        name="Calendro integrations"
+        name="Momenties integrations"
         items={DETAILED_INTEGRATIONS.map((i) => ({
           url: `/integrations/${i.slug}`,
           name: i.name,
@@ -100,7 +100,7 @@ export default function IntegrationsPage() {
             Works with what <em className="not-italic text-gold">you&apos;ve already got</em>.
           </>
         }
-        lede="Calendro isn't an island. Connect Google, Apple, Outlook, Slack, and 20+ more in one click. No migrations. No lock-in. No drama."
+        lede="Momenties isn't an island. Connect Google, Apple, Outlook, Slack, and 20+ more in one click. No migrations. No lock-in. No drama."
         crumbs={[{ label: 'Integrations' }]}
       />
 
@@ -216,7 +216,7 @@ export default function IntegrationsPage() {
           <div className="rounded-2xl border border-border bg-[#0a0a0d] p-5 font-mono text-[12px] leading-relaxed">
             <div className="text-muted-foreground mb-2"># Create an event from anywhere</div>
             <div className="text-foreground/90">
-              <span className="text-rose-300">curl</span> -X POST <span className="text-gold">https://api.calendro.app/v1/events</span>{'\n'}
+              <span className="text-rose-300">curl</span> -X POST <span className="text-gold">https://api.momenties.app/v1/events</span>{'\n'}
               &nbsp;&nbsp;-H <span className="text-emerald-300">&quot;Authorization: Bearer $TOKEN&quot;</span>{'\n'}
               &nbsp;&nbsp;-d <span className="text-emerald-300">&apos;{'{'}&quot;input&quot;: &quot;dentist thursday 3pm&quot;{'}'}&apos;</span>
             </div>
@@ -229,7 +229,7 @@ export default function IntegrationsPage() {
       </section>
 
       <CTA
-        title="Plug Calendro into your stack."
+        title="Plug Momenties into your stack."
         subtitle="Free to start. Connect as many services as you like."
         primary={{ label: 'Get started free', href: '/login' }}
         secondary={{ label: 'Browse all integrations', href: '#calendar' }}

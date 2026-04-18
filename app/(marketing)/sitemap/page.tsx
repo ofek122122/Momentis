@@ -11,11 +11,11 @@ import { JOBS } from '@/lib/jobs'
 import { HELP_ARTICLES } from '@/lib/help-articles'
 
 export const metadata: Metadata = {
-  title: 'Sitemap — Everything on Calendro.app',
-  description: 'A complete, human-friendly index of every page on Calendro.app. For people who like knowing what\'s behind every door.',
+  title: 'Sitemap — Everything on Momenties.app',
+  description: 'A complete, human-friendly index of every page on Momenties.app. For people who like knowing what\'s behind every door.',
   alternates: { canonical: '/sitemap' },
   openGraph: {
-    title: 'Calendro Sitemap',
+    title: 'Momenties Sitemap',
     description: 'Every page on the site, organized and linked.',
     url: '/sitemap',
   },
@@ -31,7 +31,7 @@ const SECTIONS: Section[] = [
       { href: '/features', label: 'Features' },
       { href: '/pricing', label: 'Pricing' },
       { href: '/pricing/calculator', label: 'Pricing calculator', note: 'Live ROI' },
-      { href: '/switch', label: 'Switch to Calendro', note: 'Concierge migration' },
+      { href: '/switch', label: 'Switch to Momenties', note: 'Concierge migration' },
       { href: '/demo', label: 'Live demo' },
       { href: '/templates', label: 'Templates' },
       { href: '/downloads', label: 'Downloads' },
@@ -72,6 +72,7 @@ const SECTIONS: Section[] = [
       { href: '/use-cases', label: 'Use cases' },
       { href: '/help', label: 'Help center' },
       { href: '/learn', label: 'Learn', note: 'An hour to power user' },
+      { href: '/keyboard', label: 'Keyboard reference', note: 'Printable cheatsheet' },
       { href: '/api-docs', label: 'API docs' },
       { href: '/community', label: 'Community' },
       { href: '/changelog', label: 'Changelog' },
@@ -112,7 +113,7 @@ const DYNAMIC_SECTIONS: Section[] = [
   },
   {
     title: 'Comparisons',
-    links: COMPETITORS.map((c) => ({ href: `/compare/${c.slug}`, label: `Calendro vs. ${c.short}` })),
+    links: COMPETITORS.map((c) => ({ href: `/compare/${c.slug}`, label: `Momenties vs. ${c.short}` })),
   },
   {
     title: 'Integration guides',
@@ -141,7 +142,7 @@ export default function SitemapPage() {
             Every door, <em className="not-italic text-gold">labelled</em>.
           </>
         }
-        lede={`A complete, human-friendly index of everything on Calendro.app — ${totalStatic + totalDynamic} pages in total. Also available as XML at /sitemap.xml.`}
+        lede={`A complete, human-friendly index of everything on Momenties.app — ${totalStatic + totalDynamic} pages in total. Also available as XML at /sitemap.xml.`}
         crumbs={[{ label: 'Sitemap' }]}
       />
 

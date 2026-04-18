@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Check, Crown, Palette } from 'lucide-react'
 import { THEMES, getTheme, applyTheme } from '@/lib/themes'
-import type { CalendroTheme } from '@/lib/themes'
+import type { MomentiesTheme } from '@/lib/themes'
 import { ProBadge } from '@/components/ui/pro-badge'
 
 interface ThemePickerProps {
@@ -19,7 +19,7 @@ export function ThemePicker({ isPro, currentThemeId = 'midnight-gold' }: ThemePi
     applyTheme(theme)
   }, [selected])
 
-  function handleSelect(theme: CalendroTheme) {
+  function handleSelect(theme: MomentiesTheme) {
     if (theme.isPro && !isPro) return
     setSelected(theme.id)
     // Persist to preferences

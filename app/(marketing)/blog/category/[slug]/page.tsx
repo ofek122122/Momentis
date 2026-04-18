@@ -32,10 +32,10 @@ export async function generateMetadata({
   const count = BLOG_POSTS.filter((p) => p.category === label).length
   return {
     title: `${label} — Blog`,
-    description: `${count} essays on ${label.toLowerCase()} from the Calendro team.`,
+    description: `${count} essays on ${label.toLowerCase()} from the Momenties team.`,
     alternates: { canonical: `/blog/category/${slug}` },
     openGraph: {
-      title: `${label} · Calendro Blog`,
+      title: `${label} · Momenties Blog`,
       description: `${count} essays on ${label.toLowerCase()}.`,
       url: `/blog/category/${slug}`,
     },
@@ -62,7 +62,7 @@ export default async function BlogCategoryPage({
             Field notes on <em className="not-italic text-gold">{label.toLowerCase()}</em>.
           </>
         }
-        lede={`${posts.length} ${posts.length === 1 ? 'essay' : 'essays'} from the Calendro team. Slow reading, ideally with coffee.`}
+        lede={`${posts.length} ${posts.length === 1 ? 'essay' : 'essays'} from the Momenties team. Slow reading, ideally with coffee.`}
         crumbs={[{ label: 'Blog', href: '/blog' }, { label }]}
       />
 

@@ -17,11 +17,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { Reveal } from '@/components/marketing/Reveal'
 
 export const metadata: Metadata = {
-  title: 'Calendro — Just say it. It\'s scheduled.',
-  description: 'The zero-friction AI calendar. Type, speak or snap a photo — Calendro parses your words and fills your calendar automatically. No date pickers. No friction.',
+  title: 'Momenties — Just say it. It\'s scheduled.',
+  description: 'The zero-friction AI calendar. Type, speak or snap a photo — Momenties parses your words and fills your calendar automatically. No date pickers. No friction.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Calendro — Just say it. It\'s scheduled.',
+    title: 'Momenties — Just say it. It\'s scheduled.',
     description: 'AI-powered calendar. Type, speak or snap a photo to add events instantly.',
     type: 'website',
     url: '/',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calendro — Just say it. It\'s scheduled.',
+    title: 'Momenties — Just say it. It\'s scheduled.',
     description: 'AI-powered calendar. Type, speak or snap a photo. Zero friction.',
   },
 }
@@ -66,7 +66,7 @@ export default async function Home() {
                 <em className="not-italic text-gold">It&apos;s scheduled.</em>
               </h1>
               <p className="mt-7 text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up animate-fade-up-3">
-                Type it. Speak it. Snap a photo. Calendro&apos;s AI parses your words and
+                Type it. Speak it. Snap a photo. Momenties&apos;s AI parses your words and
                 fills your calendar — no date pickers, no form fields, no friction.
               </p>
               <div className="mt-9 flex flex-col sm:flex-row gap-3 items-center justify-center animate-fade-up animate-fade-up-4">
@@ -194,7 +194,7 @@ export default async function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { icon: Brain, title: 'AI Parsing', desc: 'Gemini 2.5 parses your text, voice, or photos into perfect events.' },
-                { icon: Clock, title: 'Smart time slots', desc: 'Calendro finds the gap that fits — respects meetings, focus, and sleep.' },
+                { icon: Clock, title: 'Smart time slots', desc: 'Momenties finds the gap that fits — respects meetings, focus, and sleep.' },
                 { icon: BarChart3, title: 'Insights', desc: 'See where your hours go. Meeting load, deep-work ratio, weekly rhythm.' },
                 { icon: Globe, title: 'Unified calendars', desc: 'Google, Apple, and Outlook (soon) in one elegant grid.' },
                 { icon: Palette, title: 'Themeable', desc: 'Five hand-tuned themes, all sharing the same quiet confidence.' },

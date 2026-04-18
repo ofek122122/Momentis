@@ -25,10 +25,10 @@ export type SearchRecord = {
 
 const STATIC_PAGES: SearchRecord[] = [
   { title: 'Home', description: 'Just say it. It\'s scheduled.', url: '/', type: 'page' },
-  { title: 'Features', description: 'Everything Calendro does, honestly described.', url: '/features', type: 'page' },
+  { title: 'Features', description: 'Everything Momenties does, honestly described.', url: '/features', type: 'page' },
   { title: 'Pricing', description: 'Simple, transparent plans.', url: '/pricing', type: 'page' },
   { title: 'Demo', description: 'Try the AI parser in your browser.', url: '/demo', type: 'page' },
-  { title: 'AI in Calendro', description: 'How we use AI and how we protect you.', url: '/ai', type: 'page' },
+  { title: 'AI in Momenties', description: 'How we use AI and how we protect you.', url: '/ai', type: 'page' },
   { title: 'Integrations', description: 'Google, Apple, Outlook, Slack, Zoom, Notion, and more.', url: '/integrations', type: 'page' },
   { title: 'Enterprise', description: 'SSO, audit logs, dedicated support.', url: '/enterprise', type: 'page' },
   { title: 'For startups', description: '10 seats free for a year.', url: '/startups', type: 'page' },
@@ -38,8 +38,8 @@ const STATIC_PAGES: SearchRecord[] = [
   { title: 'Compare', description: 'Side-by-side with the alternatives.', url: '/compare', type: 'page' },
   { title: 'About', description: 'Our story and mission.', url: '/about', type: 'page' },
   { title: 'Manifesto', description: 'Eight theses we live by.', url: '/manifesto', type: 'page' },
-  { title: 'Customers', description: 'Stories from people who use Calendro.', url: '/customers', type: 'page' },
-  { title: 'Careers', description: 'Open roles at Calendro.', url: '/careers', type: 'page' },
+  { title: 'Customers', description: 'Stories from people who use Momenties.', url: '/customers', type: 'page' },
+  { title: 'Careers', description: 'Open roles at Momenties.', url: '/careers', type: 'page' },
   { title: 'Press', description: 'Logos, coverage, and media kit.', url: '/press', type: 'page' },
   { title: 'Brand', description: 'Our visual and verbal brand system.', url: '/brand', type: 'page' },
   { title: 'Investors', description: 'Our cap table.', url: '/investors', type: 'page' },
@@ -50,7 +50,7 @@ const STATIC_PAGES: SearchRecord[] = [
   { title: 'Authors', description: 'The people behind the words.', url: '/authors', type: 'page' },
   { title: 'Use cases', description: 'For founders, students, parents, and more.', url: '/use-cases', type: 'page' },
   { title: 'Help Center', description: 'Guides and FAQs.', url: '/help', type: 'page' },
-  { title: 'API Docs', description: 'Build on Calendro.', url: '/api-docs', type: 'page' },
+  { title: 'API Docs', description: 'Build on Momenties.', url: '/api-docs', type: 'page' },
   { title: 'Community', description: 'Discord, office hours, meetups.', url: '/community', type: 'page' },
   { title: 'Webinars', description: 'Live sessions with the team.', url: '/webinars', type: 'page' },
   { title: 'Glossary', description: 'Calendar terminology, defined.', url: '/glossary', type: 'page' },
@@ -64,7 +64,7 @@ const STATIC_PAGES: SearchRecord[] = [
   { title: 'Privacy policy', description: 'What we collect and why.', url: '/privacy', type: 'page' },
   { title: 'Cookies policy', description: 'The few cookies we set.', url: '/cookies', type: 'page' },
   { title: 'Terms of service', description: 'The legal relationship.', url: '/terms', type: 'page' },
-  { title: 'Sitemap', description: 'Every page on Calendro.app.', url: '/sitemap', type: 'page' },
+  { title: 'Sitemap', description: 'Every page on Momenties.app.', url: '/sitemap', type: 'page' },
 ]
 
 export function buildSearchIndex(): SearchRecord[] {
@@ -83,7 +83,7 @@ export function buildSearchIndex(): SearchRecord[] {
       type: 'customer' as const,
     })),
     ...COMPETITORS.map((c) => ({
-      title: `Calendro vs. ${c.short}`,
+      title: `Momenties vs. ${c.short}`,
       description: c.tagline,
       url: `/compare/${c.slug}`,
       type: 'compare' as const,

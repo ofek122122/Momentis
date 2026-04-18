@@ -1,4 +1,4 @@
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://momenties.app'
 
 type Thing = Record<string, unknown>
 
@@ -10,17 +10,17 @@ export function OrganizationJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Calendro',
+    name: 'Momenties',
     url: BASE,
     logo: `${BASE}/logo.png`,
     sameAs: [
-      'https://twitter.com/calendroapp',
-      'https://github.com/calendro',
-      'https://linkedin.com/company/calendro',
+      'https://twitter.com/momentiesapp',
+      'https://github.com/momenties',
+      'https://linkedin.com/company/momenties',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'hello@calendro.app',
+      email: 'hello@momenties.app',
       contactType: 'customer support',
       availableLanguage: ['en'],
     },
@@ -32,7 +32,7 @@ export function WebsiteJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Calendro',
+    name: 'Momenties',
     url: BASE,
     potentialAction: {
       '@type': 'SearchAction',
@@ -83,7 +83,7 @@ export function BlogPostingJsonLd({
     author: { '@type': 'Person', name: author },
     publisher: {
       '@type': 'Organization',
-      name: 'Calendro',
+      name: 'Momenties',
       logo: { '@type': 'ImageObject', url: `${BASE}/logo.png` },
     },
     image: `${BASE}/blog/${slug}/opengraph-image`,
@@ -129,7 +129,7 @@ export function SoftwareApplicationJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Calendro',
+    name: 'Momenties',
     operatingSystem: 'Web, iOS, Android, macOS, Windows',
     applicationCategory: 'ProductivityApplication',
     offers: [
@@ -176,7 +176,7 @@ export function JobPostingJsonLd({
     employmentType: 'FULL_TIME',
     hiringOrganization: {
       '@type': 'Organization',
-      name: 'Calendro',
+      name: 'Momenties',
       sameAs: BASE,
       logo: `${BASE}/logo.png`,
     },

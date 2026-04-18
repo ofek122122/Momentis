@@ -4,7 +4,7 @@ const LOGOS = [
   'Orbit & Co.', 'Atelier', 'Parallel', 'Mariner',
 ]
 
-export function LogoMarquee({ title = 'Teams who schedule with Calendro' }: { title?: string }) {
+export function LogoMarquee({ title = 'Teams who schedule with Momenties' }: { title?: string }) {
   return (
     <section className="py-14 px-5 md:px-8 border-t border-border overflow-hidden">
       <div className="max-w-6xl mx-auto">

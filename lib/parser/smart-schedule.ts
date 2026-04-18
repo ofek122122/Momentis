@@ -1,7 +1,7 @@
 import { flashModel } from '@/lib/ai/gemini-client'
 import { sanitizeForPrompt } from '@/lib/validation'
 import { log } from '@/lib/logger'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 /**
  * When a user says something like "schedule a gym session this week" without
@@ -10,9 +10,9 @@ import type { CalendroEvent } from '@/types'
  */
 export async function suggestTimeSlot(
   text: string,
-  existingEvents: CalendroEvent[],
+  existingEvents: MomentiesEvent[],
   preferences?: { workingHoursStart: string; workingHoursEnd: string; timezone: string }
-): Promise<CalendroEvent[] | null> {
+): Promise<MomentiesEvent[] | null> {
   if (existingEvents.length === 0) return null
 
   const now = new Date().toISOString()
@@ -73,7 +73,7 @@ Return raw JSON only. No markdown. No explanation.`
         title: e.title.slice(0, 200),
         start: new Date(e.start),
         end: new Date(e.end),
-        category: (e.category as CalendroEvent['category']) ?? 'other',
+        category: (e.category as MomentiesEvent['category']) ?? 'other',
       }))
   } catch (err) {
     log.apiError('smart-schedule', err)

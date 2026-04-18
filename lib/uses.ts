@@ -28,7 +28,7 @@ export const FOUNDERS: FounderSetup[] = [
     initials: 'IK',
     essay: [
       "My tools are mostly old and mostly quiet. I've kept the same mechanical keyboard since 2019 because the act of buying a new one always felt like cheating on a piece of writing I hadn't finished. The oldest thing on my desk is a 1978 Braun desk clock that belonged to my grandfather. It is both the most expensive object I own and the reason I do not own a smartwatch.",
-      "The most used surface in my day is my notebook. I carry a small, plain-lined Leuchtturm everywhere. When a thought is too important to lose in a tab, it goes there first, and into Calendro second. The calendar is the back-end of my notebook, not the other way around.",
+      "The most used surface in my day is my notebook. I carry a small, plain-lined Leuchtturm everywhere. When a thought is too important to lose in a tab, it goes there first, and into Momenties second. The calendar is the back-end of my notebook, not the other way around.",
     ],
     categories: [
       {
@@ -46,7 +46,7 @@ export const FOUNDERS: FounderSetup[] = [
         items: [
           { name: 'Figma', note: 'Small files. I delete frames weekly as a form of hygiene.' },
           { name: 'iA Writer', note: 'Every Spec Letter lives here first.' },
-          { name: 'Calendro', note: 'Obviously. Voice-first on my walks.' },
+          { name: 'Momenties', note: 'Obviously. Voice-first on my walks.' },
           { name: 'Procreate', note: 'For the sketches that become UI two months later.' },
           { name: 'Readwise', note: 'Single source of truth for highlights.' },
         ],
@@ -89,7 +89,7 @@ export const FOUNDERS: FounderSetup[] = [
           { name: 'Cursor', note: 'Primary editor. AI assist on, suggestions at half intensity.' },
           { name: 'WezTerm', note: 'Terminal. Transparent background, Berkeley Mono 12pt.' },
           { name: 'Fish shell', note: 'Opinionated and quiet. Zero plugins.' },
-          { name: 'Calendro', note: 'Eaten daily. Voice input during kitchen breaks.' },
+          { name: 'Momenties', note: 'Eaten daily. Voice input during kitchen breaks.' },
           { name: 'Obsidian', note: 'My second brain. Vault is in plain markdown, in Git.' },
         ],
       },
@@ -124,7 +124,7 @@ export const SHARED_STACK: UsesCategory[] = [
       { name: 'Readwise', note: 'Unified highlights across books, tweets, and essays.' },
       { name: 'Instapaper', note: 'The reading queue lives here.' },
       { name: 'Figma FigJam', note: 'Synchronous whiteboarding, asynchronously.' },
-      { name: 'Calendly', note: 'For external calls only. Internal, we use Calendro.' },
+      { name: 'Calendly', note: 'For external calls only. Internal, we use Momenties.' },
     ],
   },
 ]

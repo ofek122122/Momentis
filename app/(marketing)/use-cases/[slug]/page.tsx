@@ -32,11 +32,11 @@ export async function generateMetadata({
   const useCase = getUseCase(slug)
   if (!useCase) return { title: 'Use case not found' }
   return {
-    title: `Calendro for ${useCase.persona.toLowerCase()}`,
+    title: `Momenties for ${useCase.persona.toLowerCase()}`,
     description: useCase.oneLiner,
     alternates: { canonical: `/use-cases/${useCase.slug}` },
     openGraph: {
-      title: `Calendro for ${useCase.persona}`,
+      title: `Momenties for ${useCase.persona}`,
       description: useCase.oneLiner,
       url: `/use-cases/${useCase.slug}`,
     },
@@ -148,7 +148,7 @@ export default async function UseCasePage({
           </Reveal>
           <Reveal delay={120}>
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">
-              How Calendro helps
+              How Momenties helps
             </p>
             <h2 className="font-display text-2xl font-bold text-foreground tracking-tight mb-4">
               What changes.
@@ -166,7 +166,7 @@ export default async function UseCasePage({
               In practice
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-              A day with Calendro.
+              A day with Momenties.
             </h2>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-4">
@@ -274,7 +274,7 @@ export default async function UseCasePage({
       </section>
 
       <CTA
-        title={`Calendro, shaped around your week.`}
+        title={`Momenties, shaped around your week.`}
         subtitle="Free to start. Takes 90 seconds to set up."
         primary={{ label: 'Start free', href: '/login' }}
         secondary={{ label: 'See all use cases', href: '/use-cases' }}

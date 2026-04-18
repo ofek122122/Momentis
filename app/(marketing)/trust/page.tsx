@@ -7,10 +7,10 @@ import { Shield, Lock, CheckCircle2, Activity, FileText, Eye, ArrowUpRight } fro
 
 export const metadata: Metadata = {
   title: 'Trust — Security, privacy, and reliability',
-  description: 'The one-page overview of Calendro\'s security posture, compliance, subprocessors, and uptime. Everything an IT reviewer needs.',
+  description: 'The one-page overview of Momenties\'s security posture, compliance, subprocessors, and uptime. Everything an IT reviewer needs.',
   alternates: { canonical: '/trust' },
   openGraph: {
-    title: 'Calendro Trust Center',
+    title: 'Momenties Trust Center',
     description: 'Security, privacy, and reliability at a glance.',
     url: '/trust',
   },
@@ -30,7 +30,7 @@ const LINKS = [
   { icon: Lock, title: 'Privacy policy', desc: 'What we collect, what we don\'t, and what you can do about it.', href: '/privacy' },
   { icon: Activity, title: 'System status', desc: 'Real-time service health, 90-day uptime, and incident history.', href: '/status' },
   { icon: Eye, title: 'Accessibility statement', desc: 'WCAG 2.2 AA conformance report and feedback channel.', href: '/accessibility' },
-  { icon: FileText, title: 'Terms of service', desc: 'The legal relationship between you and Calendro.', href: '/terms' },
+  { icon: FileText, title: 'Terms of service', desc: 'The legal relationship between you and Momenties.', href: '/terms' },
   { icon: CheckCircle2, title: 'Subprocessors', desc: 'Every third-party that handles your data.', href: '/subprocessors' },
 ]
 
@@ -60,7 +60,7 @@ export default function TrustPage() {
       >
         <div className="flex flex-wrap gap-3">
           <a
-            href="mailto:security@calendro.app"
+            href="mailto:security@momenties.app"
             className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
             Request documents
@@ -177,8 +177,8 @@ export default function TrustPage() {
           </div>
           <p className="text-xs text-muted-foreground mt-5">
             Want to be notified when this list changes? Email{' '}
-            <a href="mailto:security@calendro.app" className="text-gold hover:underline">
-              security@calendro.app
+            <a href="mailto:security@momenties.app" className="text-gold hover:underline">
+              security@momenties.app
             </a>{' '}
             with &quot;subprocessor updates&quot; in the subject.
           </p>
@@ -188,7 +188,7 @@ export default function TrustPage() {
       <CTA
         title="Bring your IT team."
         subtitle="We'll happily join a call, share documents under NDA, and answer every question."
-        primary={{ label: 'Request a security review', href: 'mailto:security@calendro.app' }}
+        primary={{ label: 'Request a security review', href: 'mailto:security@momenties.app' }}
         secondary={{ label: 'See enterprise tier', href: '/enterprise' }}
       />
     </>

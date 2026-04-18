@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/marketing/SiteFooter'
 export default function NotFound() {
   const suggestions = [
     { label: 'Home', href: '/', desc: 'Start fresh' },
-    { label: 'Features', href: '/features', desc: 'What Calendro does' },
+    { label: 'Features', href: '/features', desc: 'What Momenties does' },
     { label: 'Pricing', href: '/pricing', desc: 'Plans & pricing' },
     { label: 'Demo', href: '/demo', desc: 'Try it in browser' },
     { label: 'Help Center', href: '/help', desc: 'Answers & guides' },

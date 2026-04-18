@@ -134,7 +134,7 @@ export default async function PricingPage() {
             &ldquo;I just say what I need and it&apos;s on my calendar. No more fighting with date pickers.&rdquo;
           </p>
           <footer className="text-sm text-muted-foreground">
-            — A happy Calendro user
+            — A happy Momenties user
           </footer>
         </blockquote>
       </div>

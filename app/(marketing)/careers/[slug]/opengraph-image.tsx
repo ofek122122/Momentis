@@ -3,7 +3,7 @@ import { getJob } from '@/lib/jobs'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro role'
+export const alt = 'Momenties role'
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const job = getJob(params.slug)
@@ -46,7 +46,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           >
             C
           </div>
-          <span>Calendro</span>
+          <span>Momenties</span>
           <span style={{ color: 'rgba(240,236,227,0.4)', fontSize: 20 }}>· Careers</span>
         </div>
 
@@ -100,7 +100,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             color: 'rgba(240,236,227,0.5)',
           }}
         >
-          <span>calendro.app/careers</span>
+          <span>momenties.app/careers</span>
           <span>Apply today</span>
         </div>
       </div>

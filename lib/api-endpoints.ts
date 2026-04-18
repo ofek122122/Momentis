@@ -28,7 +28,7 @@ export type ApiEndpoint = {
   errors: { code: number; reason: string; when: string }[]
 }
 
-const BASE_URL = 'https://api.calendro.app'
+const BASE_URL = 'https://api.momenties.app'
 
 export const ENDPOINTS: ApiEndpoint[] = [
   {
@@ -70,15 +70,15 @@ export const ENDPOINTS: ApiEndpoint[] = [
   -H "Authorization: Bearer $TOKEN" \\
   -H "Content-Type: application/json" \\
   -d '{"input": "dentist thursday 3pm"}'`,
-      node: `import { Calendro } from "@calendro/sdk";
+      node: `import { Momenties } from "@momenties/sdk";
 
-const client = new Calendro({ token: process.env.CALENDRO_TOKEN });
+const client = new Momenties({ token: process.env.MOMENTIES_TOKEN });
 const event = await client.events.create({
   input: "dentist thursday 3pm",
 });`,
-      python: `from calendro import Calendro
+      python: `from momenties import Momenties
 
-client = Calendro(token=os.environ["CALENDRO_TOKEN"])
+client = Momenties(token=os.environ["MOMENTIES_TOKEN"])
 event = client.events.create(input="dentist thursday 3pm")`,
     },
     errors: [
@@ -455,25 +455,25 @@ event = client.events.create(input="dentist thursday 3pm")`,
     ],
     scopes: ['webhooks:write'],
     requestExample: `{
-  "url": "https://hooks.example.com/calendro",
+  "url": "https://hooks.example.com/momenties",
   "events": ["event.created", "event.updated"]
 }`,
     responseExample: `{
   "id": "whk_01HN...",
-  "url": "https://hooks.example.com/calendro",
+  "url": "https://hooks.example.com/momenties",
   "events": ["event.created", "event.updated"],
   "secret": "whsec_..."
 }`,
     codeExamples: {
       curl: `curl -X POST ${BASE_URL}/v1/webhooks \\
   -H "Authorization: Bearer $TOKEN" \\
-  -d '{"url": "https://hooks.example.com/calendro", "events": ["event.created"]}'`,
+  -d '{"url": "https://hooks.example.com/momenties", "events": ["event.created"]}'`,
       node: `const webhook = await client.webhooks.create({
-  url: "https://hooks.example.com/calendro",
+  url: "https://hooks.example.com/momenties",
   events: ["event.created"],
 });`,
       python: `webhook = client.webhooks.create(
-    url="https://hooks.example.com/calendro",
+    url="https://hooks.example.com/momenties",
     events=["event.created"],
 )`,
     },

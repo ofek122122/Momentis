@@ -8,12 +8,12 @@ import { AUTHORS, authorPostsByName } from '@/lib/authors'
 import { ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Authors — Who writes the Calendro blog',
-  description: 'Meet the people who write for the Calendro blog — founders, engineers, product leads, and the occasional thoughtful guest.',
+  title: 'Authors — Who writes the Momenties blog',
+  description: 'Meet the people who write for the Momenties blog — founders, engineers, product leads, and the occasional thoughtful guest.',
   alternates: { canonical: '/authors' },
   openGraph: {
-    title: 'Calendro Authors',
-    description: 'The people who write for the Calendro blog.',
+    title: 'Momenties Authors',
+    description: 'The people who write for the Momenties blog.',
     url: '/authors',
   },
 }
@@ -27,7 +27,7 @@ export default function AuthorsPage() {
   return (
     <>
       <ItemListJsonLd
-        name="Calendro authors"
+        name="Momenties authors"
         items={AUTHORS.map((a) => ({ url: `/authors/${a.slug}`, name: a.name }))}
       />
       <PageHero
@@ -37,7 +37,7 @@ export default function AuthorsPage() {
             The people <em className="not-italic text-gold">behind the words</em>.
           </>
         }
-        lede="Our blog is written by the team that builds Calendro, with the occasional thoughtful guest. Each byline links here."
+        lede="Our blog is written by the team that builds Momenties, with the occasional thoughtful guest. Each byline links here."
         crumbs={[{ label: 'Authors' }]}
       />
 
@@ -76,9 +76,9 @@ export default function AuthorsPage() {
       </section>
 
       <CTA
-        title="Write for the Calendro blog."
+        title="Write for the Momenties blog."
         subtitle="If you're thinking carefully about time, attention, or calm software, we'd love to publish you."
-        primary={{ label: 'Pitch an essay', href: 'mailto:press@calendro.app' }}
+        primary={{ label: 'Pitch an essay', href: 'mailto:press@momenties.app' }}
         secondary={{ label: 'All posts', href: '/blog' }}
       />
     </>

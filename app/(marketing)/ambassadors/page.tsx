@@ -29,18 +29,18 @@ import {
 export const metadata: Metadata = {
   title: 'Ambassadors — A small program for the quiet evangelists',
   description:
-    "A capped, hand-picked program of fifty people who write, talk, and post about Calendro without being paid to. Perks, principles, current ambassadors, and how to join.",
+    "A capped, hand-picked program of fifty people who write, talk, and post about Momenties without being paid to. Perks, principles, current ambassadors, and how to join.",
   alternates: { canonical: '/ambassadors' },
   openGraph: {
-    title: 'Calendro Ambassadors',
+    title: 'Momenties Ambassadors',
     description:
-      'A capped, hand-picked program of fifty people who talk about Calendro without being paid to.',
+      'A capped, hand-picked program of fifty people who talk about Momenties without being paid to.',
     url: '/ambassadors',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calendro Ambassadors',
+    title: 'Momenties Ambassadors',
     description: 'A small program for the quiet evangelists.',
   },
 }
@@ -287,7 +287,7 @@ export default function AmbassadorsPage() {
               {[
                 'A minimum number of posts, tweets, or mentions per month.',
                 'Access to analytics on the posts you do make.',
-                'Exclusivity with Calendro or any other calendar tool.',
+                'Exclusivity with Momenties or any other calendar tool.',
                 'Participation in engagement-farming threads or "launch amplification" posts.',
                 "Any kind of review, positive or otherwise, we didn't earn.",
               ].map((t, i) => (

@@ -7,17 +7,17 @@ import { Download, ArrowUpRight, Check, X } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Brand — Logos, colors, typography, voice',
-  description: 'The Calendro brand system — exact hex values, font specs, voice guidelines, and logo assets. For partners, press, and internal use.',
+  description: 'The Momenties brand system — exact hex values, font specs, voice guidelines, and logo assets. For partners, press, and internal use.',
   alternates: { canonical: '/brand' },
   openGraph: {
-    title: 'Calendro Brand',
+    title: 'Momenties Brand',
     description: 'Logos, colors, typography, and voice.',
     url: '/brand',
   },
 }
 
 const COLORS = [
-  { name: 'Calendro Black', hex: '#0c0c0f', rgb: 'rgb(12, 12, 15)', cls: 'bg-[#0c0c0f]', usage: 'Primary background, dark surfaces, body text on light' },
+  { name: 'Momenties Black', hex: '#0c0c0f', rgb: 'rgb(12, 12, 15)', cls: 'bg-[#0c0c0f]', usage: 'Primary background, dark surfaces, body text on light' },
   { name: 'Card Night', hex: '#131318', rgb: 'rgb(19, 19, 24)', cls: 'bg-[#131318]', usage: 'Card backgrounds, elevated surfaces' },
   { name: 'Cream Foreground', hex: '#f0ece3', rgb: 'rgb(240, 236, 227)', cls: 'bg-[#f0ece3]', usage: 'Body text on dark, hero text, light surface backgrounds' },
   { name: 'Gold', hex: '#c5a35c', rgb: 'rgb(197, 163, 92)', cls: 'bg-[#c5a35c]', usage: 'Accents, primary buttons, links, focus rings, emphasis' },
@@ -48,11 +48,11 @@ const DONT = [
 ]
 
 const ASSETS = [
-  { name: 'Wordmark — on dark', file: 'calendro-wordmark-dark.svg', size: '4 KB' },
-  { name: 'Wordmark — on light', file: 'calendro-wordmark-light.svg', size: '4 KB' },
-  { name: 'Icon — gold', file: 'calendro-icon-gold.svg', size: '2 KB' },
-  { name: 'Icon — cream', file: 'calendro-icon-cream.svg', size: '2 KB' },
-  { name: 'Full brand kit', file: 'calendro-brand-kit.zip', size: '1.8 MB' },
+  { name: 'Wordmark — on dark', file: 'momenties-wordmark-dark.svg', size: '4 KB' },
+  { name: 'Wordmark — on light', file: 'momenties-wordmark-light.svg', size: '4 KB' },
+  { name: 'Icon — gold', file: 'momenties-icon-gold.svg', size: '2 KB' },
+  { name: 'Icon — cream', file: 'momenties-icon-cream.svg', size: '2 KB' },
+  { name: 'Full brand kit', file: 'momenties-brand-kit.zip', size: '1.8 MB' },
 ]
 
 export default function BrandPage() {
@@ -62,10 +62,10 @@ export default function BrandPage() {
         eyebrow="Brand guidelines"
         title={
           <>
-            The <em className="not-italic text-gold">Calendro</em> brand system.
+            The <em className="not-italic text-gold">Momenties</em> brand system.
           </>
         }
-        lede="Exact hex values, font specs, voice guidelines, and logo assets. Everything you need to represent Calendro accurately — in a pitch deck, in a press piece, or on your own site."
+        lede="Exact hex values, font specs, voice guidelines, and logo assets. Everything you need to represent Momenties accurately — in a pitch deck, in a press piece, or on your own site."
         crumbs={[{ label: 'Brand' }]}
       >
         <a
@@ -100,7 +100,7 @@ export default function BrandPage() {
                     className="h-44 flex items-center justify-center"
                     style={{ background: l.bg, color: l.fg }}
                   >
-                    <span className="font-display text-3xl font-semibold tracking-tight">Calendro</span>
+                    <span className="font-display text-3xl font-semibold tracking-tight">Momenties</span>
                   </div>
                   <div className="p-4 flex items-center justify-between">
                     <span className="text-xs text-muted-foreground">{l.label}</span>
@@ -244,8 +244,8 @@ export default function BrandPage() {
           </div>
           <p className="text-xs text-muted-foreground mt-5">
             Need a custom asset for a partner lockup? Email{' '}
-            <a href="mailto:brand@calendro.app" className="text-gold hover:underline">
-              brand@calendro.app
+            <a href="mailto:brand@momenties.app" className="text-gold hover:underline">
+              brand@momenties.app
             </a>{' '}
             and we&apos;ll respond within 48 hours.
           </p>
@@ -253,10 +253,10 @@ export default function BrandPage() {
       </section>
 
       <CTA
-        title="Using Calendro in a piece?"
-        subtitle="We'd love to see it. Tag @calendroapp or send us a link — we'll often share it."
+        title="Using Momenties in a piece?"
+        subtitle="We'd love to see it. Tag @momentiesapp or send us a link — we'll often share it."
         primary={{ label: 'Press kit', href: '/press' }}
-        secondary={{ label: 'brand@calendro.app', href: 'mailto:brand@calendro.app' }}
+        secondary={{ label: 'brand@momenties.app', href: 'mailto:brand@momenties.app' }}
       />
     </>
   )

@@ -6,10 +6,10 @@ import { CTA } from '@/components/marketing/CTA'
 
 export const metadata: Metadata = {
   title: 'Cookie policy — What we set, and why',
-  description: 'Calendro\'s plain-English cookie policy. No marketing cookies. No third-party trackers. Just the few things we need to keep you signed in.',
+  description: 'Momenties\'s plain-English cookie policy. No marketing cookies. No third-party trackers. Just the few things we need to keep you signed in.',
   alternates: { canonical: '/cookies' },
   openGraph: {
-    title: 'Calendro Cookie Policy',
+    title: 'Momenties Cookie Policy',
     description: 'The few cookies we actually set, and why.',
     url: '/cookies',
   },
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 type CookieRow = { name: string; purpose: string; type: 'essential' | 'preference' | 'analytics'; expires: string; party: 'first' | 'third' }
 
 const COOKIES: CookieRow[] = [
-  { name: 'calendro-session', purpose: 'Keeps you signed in.', type: 'essential', expires: '30 days', party: 'first' },
-  { name: 'calendro-csrf', purpose: 'Protects you from cross-site request forgery.', type: 'essential', expires: 'Session', party: 'first' },
-  { name: 'calendro-timezone', purpose: 'Remembers your selected display timezone across devices.', type: 'preference', expires: '1 year', party: 'first' },
-  { name: 'calendro-theme', purpose: 'Remembers your theme choice (Obsidian, Paper, Harvest, Botanical, Aurora).', type: 'preference', expires: '1 year', party: 'first' },
+  { name: 'momenties-session', purpose: 'Keeps you signed in.', type: 'essential', expires: '30 days', party: 'first' },
+  { name: 'momenties-csrf', purpose: 'Protects you from cross-site request forgery.', type: 'essential', expires: 'Session', party: 'first' },
+  { name: 'momenties-timezone', purpose: 'Remembers your selected display timezone across devices.', type: 'preference', expires: '1 year', party: 'first' },
+  { name: 'momenties-theme', purpose: 'Remembers your theme choice (Obsidian, Paper, Harvest, Botanical, Aurora).', type: 'preference', expires: '1 year', party: 'first' },
   { name: 'cf-clearance', purpose: 'Cloudflare DDoS protection challenge token.', type: 'essential', expires: '30 minutes', party: 'third' },
 ]
 
@@ -63,7 +63,7 @@ export default function CookiesPage() {
           <Reveal>
             <p>
               Most cookie policies are written by lawyers for regulators, and they read that way.
-              We&apos;ve written ours for you. The important part: Calendro does not use advertising
+              We&apos;ve written ours for you. The important part: Momenties does not use advertising
               cookies, cross-site trackers, or third-party marketing pixels. What we do set, we set
               because the product genuinely needs it.
             </p>
@@ -182,7 +182,7 @@ export default function CookiesPage() {
       <CTA
         title="Questions about cookies?"
         subtitle="Our privacy team answers every email personally, usually within 24 hours."
-        primary={{ label: 'privacy@calendro.app', href: 'mailto:privacy@calendro.app' }}
+        primary={{ label: 'privacy@momenties.app', href: 'mailto:privacy@momenties.app' }}
         secondary={{ label: 'Read the full privacy policy', href: '/privacy' }}
       />
     </>

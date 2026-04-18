@@ -7,12 +7,12 @@ import { Reveal } from '@/components/marketing/Reveal'
 import { Calculator, LineChart, Clock, ArrowUpRight, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Pricing calculator — Is Calendro worth it for your team?',
+  title: 'Pricing calculator — Is Momenties worth it for your team?',
   description:
     "A conservative ROI calculator. Three sliders, live numbers. Hours saved, dollars saved, ROI multiple, and payback period — with transparent methodology.",
   alternates: { canonical: '/pricing/calculator' },
   openGraph: {
-    title: 'Calendro pricing calculator',
+    title: 'Momenties pricing calculator',
     description:
       'Three sliders. Live numbers. A transparent, conservative ROI calculator for teams of any size.',
     url: '/pricing/calculator',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calendro pricing calculator',
+    title: 'Momenties pricing calculator',
     description: 'Three sliders. Live numbers. Transparent methodology.',
   },
 }
@@ -60,14 +60,14 @@ const PROOF = [
     metric: '3 tools',
     label: 'retired',
     quote:
-      'Calendro replaced three scheduling apps I was paying for. My team adopted it in a week with zero training.',
+      'Momenties replaced three scheduling apps I was paying for. My team adopted it in a week with zero training.',
     who: 'Amira Okafor · Head of Design, Stratify',
   },
   {
     metric: '24 people',
     label: 'across 3 cities',
     quote:
-      "I ran the whole offsite off Calendro — 24 people, 3 cities, 2 time zones. Nothing dropped, nobody asked me 'when was that again?'",
+      "I ran the whole offsite off Momenties — 24 people, 3 cities, 2 time zones. Nothing dropped, nobody asked me 'when was that again?'",
     who: 'Pauline Rivera · Chief of Staff',
   },
 ]
@@ -295,7 +295,7 @@ export default function PricingCalculatorPage() {
       <CTA
         title="Ready to stop scheduling?"
         subtitle="Free forever for individuals. Pilot for 30 days on Enterprise. No credit card to try any plan."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Talk to sales', href: '/enterprise' }}
       />
     </>

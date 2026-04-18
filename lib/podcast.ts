@@ -18,7 +18,7 @@ export const SHOW = {
   tagline:
     'A podcast about time, software, and the small decisions that make both of them feel larger than they are.',
   host: 'Iris Koval',
-  hostRole: 'Cofounder · Calendro',
+  hostRole: 'Cofounder · Momenties',
   cadence: 'Every other Tuesday, Europe time',
   episodes: 'Season 1 · 8 episodes',
   artwork: 'TQH',
@@ -43,7 +43,7 @@ export const EPISODES: Episode[] = [
     teaser:
       'On the paradox of tools that disappear: why the best product wins by becoming invisible, and what disappears along with it.',
     description:
-      "We talk with Mei Lin about the essay 'An Exhale, At 9pm' and why she stopped writing about software until Calendro. We cover the design principle of restraint, the attention economy in reverse, and why Mei deletes her calendar every December.",
+      "We talk with Mei Lin about the essay 'An Exhale, At 9pm' and why she stopped writing about software until Momenties. We cover the design principle of restraint, the attention economy in reverse, and why Mei deletes her calendar every December.",
     durationMin: 41,
     publishedAt: '2026-04-07',
     tag: 'Writing',
@@ -65,7 +65,7 @@ export const EPISODES: Episode[] = [
     teaser:
       "Pauline's unusual hiring test: one reference call, zero whiteboards, and a request to send us something you've shipped.",
     description:
-      "How Pauline ran an offsite for 24 people across 3 cities using Calendro, and what that taught her about hiring. We compare pipelines, reject the 'rockstar' framing, and talk about the references she actually reads.",
+      "How Pauline ran an offsite for 24 people across 3 cities using Momenties, and what that taught her about hiring. We compare pipelines, reject the 'rockstar' framing, and talk about the references she actually reads.",
     durationMin: 38,
     publishedAt: '2026-03-24',
     tag: 'Business',
@@ -81,11 +81,11 @@ export const EPISODES: Episode[] = [
     slug: 'the-hybrid-parser-in-detail',
     title: 'The hybrid parser, in embarrassing detail',
     guest: 'Oren Weiss',
-    role: 'Cofounder · Calendro',
+    role: 'Cofounder · Momenties',
     teaser:
       'The technical episode. Why 86% of events never touch the AI, how the arbiter works, and what broke the week we shipped v2.',
     description:
-      "A deep dive into the Calendro parser pipeline. We cover the local NLP pass, the confidence scorer, the Gemini fallback prompt, and the three-week misadventure that ended in the v2 shipped during Launch Week 01.",
+      "A deep dive into the Momenties parser pipeline. We cover the local NLP pass, the confidence scorer, the Gemini fallback prompt, and the three-week misadventure that ended in the v2 shipped during Launch Week 01.",
     durationMin: 52,
     publishedAt: '2026-03-10',
     tag: 'Engineering',
@@ -106,7 +106,7 @@ export const EPISODES: Episode[] = [
     teaser:
       'Why the typefaces you pick for a product change how much a user is willing to share with it. With a small defense of serif.',
     description:
-      "We geek out on Playfair Display, the difference between display and body serif, and why the wrong italic tells the wrong story. Includes a short history of Calendro's four typographic rejections.",
+      "We geek out on Playfair Display, the difference between display and body serif, and why the wrong italic tells the wrong story. Includes a short history of Momenties's four typographic rejections.",
     durationMin: 33,
     publishedAt: '2026-02-24',
     tag: 'Design',
@@ -126,7 +126,7 @@ export const EPISODES: Episode[] = [
     teaser:
       'A four-paragraph dictation technique that replaces a 45-minute Sunday schedule with a 4-minute walk.',
     description:
-      "Tomás walks us through the exact cadence he uses to dictate his week into Calendro during his walk home. We cover phrasing, cadence, how to correct mistakes without breaking the flow, and what he used to spend Sundays doing.",
+      "Tomás walks us through the exact cadence he uses to dictate his week into Momenties during his walk home. We cover phrasing, cadence, how to correct mistakes without breaking the flow, and what he used to spend Sundays doing.",
     durationMin: 27,
     publishedAt: '2026-02-10',
     tag: 'Life',
@@ -142,11 +142,11 @@ export const EPISODES: Episode[] = [
     slug: 'a-manifesto-in-public',
     title: 'Publishing a manifesto in public',
     guest: 'Iris Koval',
-    role: 'Cofounder · Calendro',
+    role: 'Cofounder · Momenties',
     teaser:
       'Why we wrote eight theses down, argued about them in a shared doc for three months, and published them without editing.',
     description:
-      "Iris hosts and is the guest. A single-voice episode on the Calendro manifesto: how it began as margin notes, what we cut, and why the final version is deliberately longer than we'd like.",
+      "Iris hosts and is the guest. A single-voice episode on the Momenties manifesto: how it began as margin notes, what we cut, and why the final version is deliberately longer than we'd like.",
     durationMin: 24,
     publishedAt: '2026-01-27',
     tag: 'Writing',
@@ -182,7 +182,7 @@ export const EPISODES: Episode[] = [
     slug: 'pilot',
     title: 'Pilot: Why we made a podcast at all',
     guest: 'Iris & Oren',
-    role: 'Cofounders · Calendro',
+    role: 'Cofounders · Momenties',
     teaser:
       'One promise: we will not make this into a marketing channel. A season of eight episodes, then we rest.',
     description:

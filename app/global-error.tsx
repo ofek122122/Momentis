@@ -74,8 +74,8 @@ export default function GlobalErrorBoundary({
             }}
           >
             A catastrophic error slipped past every guard. We&apos;ve already logged it. Try refreshing; if the problem persists, reach us at{' '}
-            <a href="mailto:help@calendro.app" style={{ color: '#c5a35c' }}>
-              help@calendro.app
+            <a href="mailto:help@momenties.app" style={{ color: '#c5a35c' }}>
+              help@momenties.app
             </a>
             .
           </p>

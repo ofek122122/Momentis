@@ -13,7 +13,7 @@ export type BlogPost = {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'the-quietest-feature',
-    title: 'The quietest feature in Calendro',
+    title: 'The quietest feature in Momenties',
     subtitle: 'Why the absence of a notification is a feature.',
     author: { name: 'Iris Kwon', role: 'Co-founder', initials: 'IK' },
     date: '2026-04-02',
@@ -22,11 +22,11 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Most calendar apps measure success in pings. We decided to measure it in the silences between them.',
     body: [
-      "The most common request we got in our first year of Calendro wasn't for a new integration, a new theme, or a better AI model. It was, in so many words: *please stop interrupting me*.",
+      "The most common request we got in our first year of Momenties wasn't for a new integration, a new theme, or a better AI model. It was, in so many words: *please stop interrupting me*.",
       "We took that seriously. We built a calendar that, by default, doesn't notify you about things you already know — about meetings you accepted weeks ago, about birthdays you've remembered on your own, about the bus you always catch at 8:15.",
-      "Instead, Calendro only notifies you when something has changed, when a friend has invited you into a block you previously held open, or when a meeting you cared about got canceled. In other words: when a notification actually earns its ping.",
+      "Instead, Momenties only notifies you when something has changed, when a friend has invited you into a block you previously held open, or when a meeting you cared about got canceled. In other words: when a notification actually earns its ping.",
       "This is a hard feature to demo. It's literally the absence of something. But our users — the quiet ones, the ones whose phones already buzz for a living — tell us this is the thing they feel most strongly. They describe it as 'calmer.' One person said: 'My phone stopped lying to me.'",
-      "Our bet at Calendro is that calm software will win — eventually — because attention is the most expensive currency we spend. We hope this essay is a small, quiet piece of evidence in that direction.",
+      "Our bet at Momenties is that calm software will win — eventually — because attention is the most expensive currency we spend. We hope this essay is a small, quiet piece of evidence in that direction.",
     ],
   },
   {
@@ -40,11 +40,11 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "50,000 events later, patterns started to emerge. Here's what real calendars look like — and what we changed because of it.",
     body: [
-      "Last month, Calendro crossed 50,000 events scheduled through our natural-language parser. That's small potatoes compared to Google Calendar, but it's enough to notice things. Here's what we found.",
+      "Last month, Momenties crossed 50,000 events scheduled through our natural-language parser. That's small potatoes compared to Google Calendar, but it's enough to notice things. Here's what we found.",
       "**Most events are under 40 characters long.** The median input is 28 characters. This surprised us — we'd designed our input bar assuming long, rambling sentences. Most people say exactly what they need and nothing more.",
       "**Fridays are chaos.** Friday between 2-4pm is the most frequent reschedule window in our data. Whatever is happening in people's lives — let's call it the *Friday shuffle* — it reliably disrupts plans. We responded by making drag-to-reschedule faster and less punishing.",
       "**About 1 in 12 inputs contains a location.** Half of those locations are people, not places — 'at Sarah's house,' 'at Dave's desk,' 'at my dentist's office.' We now treat named people in locations as a soft hint to link the event to a contact.",
-      "**The word 'maybe' appears in 3% of inputs.** That might not sound like a lot, but it was enough to convince us to add tentative events as a first-class concept. You can now type 'coffee with Marc maybe Thursday' and Calendro marks it as provisional until you accept.",
+      "**The word 'maybe' appears in 3% of inputs.** That might not sound like a lot, but it was enough to convince us to add tentative events as a first-class concept. You can now type 'coffee with Marc maybe Thursday' and Momenties marks it as provisional until you accept.",
       "**Photos beat voice, narrowly.** 28% of inputs this quarter came from camera; 24% from voice; the rest from text. Vision is the sleeper hit. We think it's because the physical world is full of schedules no one wants to retype.",
       "None of this is world-shaking. But good software comes from quiet observation, and we think you deserve to know what we're looking at when we build.",
     ],
@@ -60,7 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'We evaluated four frontier models for our parsing pipeline. Here\'s what made Gemini 2.5 the right fit for a calm calendar.',
     body: [
-      "When we started Calendro, our parser was chrono-node plus a hand-written set of regexes. It worked. It worked for most short inputs. It did not work for 'a friend's wedding the weekend after Easter but only the reception, no ceremony.'",
+      "When we started Momenties, our parser was chrono-node plus a hand-written set of regexes. It worked. It worked for most short inputs. It did not work for 'a friend's wedding the weekend after Easter but only the reception, no ceremony.'",
       "So we evaluated AI models. We built the same suite of 600 test inputs — including traps — and ran them through GPT-4o, Claude 3.5 Sonnet, Gemini 2.5 Flash, and Gemini 2.5 Pro.",
       "**Accuracy**. All four were above 94%. Gemini 2.5 Pro was highest at 98.1%; Claude second at 97.3%; Gemini 2.5 Flash at 96.8%; GPT-4o at 96.2%. The gaps are small and real.",
       "**Latency**. This is where Gemini 2.5 Flash pulled away. Median 480ms to structured JSON, compared to 1.2s for Claude and 1.8s for GPT. On a device in your pocket, this is the difference between feeling instant and feeling laggy. We pick instant, every time.",
@@ -85,7 +85,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Money is transferable. Time is not. You can lend me a hundred dollars; you cannot lend me an hour. Every hour I have is mine and only mine, non-refundable.",
       "Money is recoverable. Time is not. A dollar lost in a bad investment can be earned again. An hour lost in a bad meeting is simply gone, permanently, from the finite pile you were born with.",
       "Most productivity software misreads this. It treats hours as units to be maximized, as if your life were a spreadsheet whose efficiency score wanted raising. But the goal of a life is not efficiency. The goal is *presence* — the felt sense of actually being inside your hours rather than watching them fly by.",
-      "Calendro is a small attempt to build software that respects this difference. We try to give you back minutes of agency, not to squeeze your day until it hums. If we save you 45 seconds creating an event, the goal is not to fit in another task — it's to give you 45 seconds of not looking at a screen.",
+      "Momenties is a small attempt to build software that respects this difference. We try to give you back minutes of agency, not to squeeze your day until it hums. If we save you 45 seconds creating an event, the goal is not to fit in another task — it's to give you 45 seconds of not looking at a screen.",
     ],
   },
   {
@@ -100,7 +100,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "When we design interfaces, we don't picture a fresh, caffeinated user. We picture someone at the end of a hard week, trying to remember one thing before bed.",
     body: [
       "Open any productivity app on a Sunday evening and you'll feel the mismatch. Bright whites. Sharp reds. Aggressive calls to action. 'Get more done!' shouts the splash screen. It feels like being yelled at by a life coach who never sleeps.",
-      "We made a decision early at Calendro: design for 9pm, not 9am. Here's what that meant in practice.",
+      "We made a decision early at Momenties: design for 9pm, not 9am. Here's what that meant in practice.",
       "**Dark by default.** Not dark-mode-as-toggle, but dark as the primary theme. Our background is #0c0c0f — warmer than pure black, softer on late-night eyes.",
       "**Gold instead of blue.** Blue is the color of notifications, of action, of urgency. We chose a muted gold for accents — #c5a35c — because gold reads as 'earned,' not 'urgent.'",
       "**Serif headings.** Playfair Display, not Inter or SF Pro. Serifs feel slower, more considered. They signal that what you're reading is for thinking, not for scrolling.",
@@ -112,7 +112,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'why-small-teams-ship-more',
     title: 'Why small teams ship more',
-    subtitle: 'We\'ve grown Calendro 12× with 14 people. Here\'s why we\'re not hiring faster.',
+    subtitle: 'We\'ve grown Momenties 12× with 14 people. Here\'s why we\'re not hiring faster.',
     author: { name: 'Iris Kwon', role: 'Co-founder', initials: 'IK' },
     date: '2026-03-02',
     readingMinutes: 5,
@@ -120,12 +120,12 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "Doubling headcount often slows a company down. Here's the case for staying deliberately small, from a team that keeps being told to hire faster.",
     body: [
-      "In the last twelve months, Calendro has grown revenue 12× and added 14 people. Our investors — kind, thoughtful, experienced investors — regularly ask why the second number isn't higher. This essay is our answer.",
+      "In the last twelve months, Momenties has grown revenue 12× and added 14 people. Our investors — kind, thoughtful, experienced investors — regularly ask why the second number isn't higher. This essay is our answer.",
       "**A team of 14 can hold the whole product in one head.** Every engineer understands the parser pipeline. Every designer understands the database model. Every support human has shipped at least one bug fix. You can't do that at 50, and you certainly can't at 200. We think the coherence of the product is directly downstream from the coherence of the team.",
       "**Hiring slowly forces discipline.** When you can't just throw a person at a problem, you have to actually solve it. We've killed three features in 2026 that, at larger companies, would have quietly shipped because someone was assigned to them. Fewer hands, better product.",
       "**Communication overhead is real.** Fred Brooks figured this out in 1975. The number of communication paths in an organization grows with n². A 14-person team has 91 paths. A 28-person team has 378. You can feel the difference in a Slack workspace long before you see it in a shipping velocity chart.",
       "**Great small teams pay disproportionately well.** We cap headcount so we can pay top-of-market salaries and grant meaningful equity. If we hired twice as fast, we'd have to halve both. We think the former buys us the kind of team you can't backfill, and the latter would just buy us mediocrity at scale.",
-      "**Stay small until you have a reason to grow.** Every hire at Calendro answers the question: *what would be impossible without this person?* If we can't answer it, we don't hire. It's slower. It's also how we sleep at night.",
+      "**Stay small until you have a reason to grow.** Every hire at Momenties answers the question: *what would be impossible without this person?* If we can't answer it, we don't hire. It's slower. It's also how we sleep at night.",
     ],
   },
   {
@@ -143,14 +143,14 @@ export const BLOG_POSTS: BlogPost[] = [
       "This is embarrassing. I had been attending some of these meetings for years. Some weekly. Some for the comfort of seeing the same faces. Some because I was afraid that if I canceled, it would look like I didn't care.",
       "I canceled them anyway. Not all at once — one at a time, with notes. For each, I asked: if this meeting had never existed, and someone proposed it today, would I say yes? If the answer was no, it got cut.",
       "Roughly half of them, no one objected. The meeting ended and no one wrote to ask why. A quarter had one person write to gently push back, which usually led to a shorter, better-scoped meeting. The final quarter turned out to be load-bearing — important, quiet work was happening inside them that wasn't visible from the outside. Those I kept.",
-      "Calendro's **meeting cost indicator** made the exercise faster. It shows the aggregate hourly cost of each recurring invite based on the attendees' stated comp. For a 5-person, 1-hour weekly meeting with senior engineers, that's about $85,000/year. Seeing the number made the decision to cancel feel like a real act, not a defection.",
+      "Momenties's **meeting cost indicator** made the exercise faster. It shows the aggregate hourly cost of each recurring invite based on the attendees' stated comp. For a 5-person, 1-hour weekly meeting with senior engineers, that's about $85,000/year. Seeing the number made the decision to cancel feel like a real act, not a defection.",
       "I am writing this from the quiet hour I got back on Wednesday mornings. I have not filled it with another meeting. The cursor blinks. A book is open. I am going to recommend this to anyone whose calendar has more recurring invites than new ideas.",
     ],
   },
   {
     slug: 'against-the-dashboard',
     title: 'Against the dashboard',
-    subtitle: 'Why Calendro has almost no charts.',
+    subtitle: 'Why Momenties has almost no charts.',
     author: { name: 'Lena Osei', role: 'Head of Product', initials: 'LO' },
     date: '2026-04-08',
     readingMinutes: 4,
@@ -160,10 +160,10 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       "Open any productivity app in 2026 and you'll find a dashboard. Rings. Charts. Streaks. Percentages. A dashboard is what software reaches for when it doesn't know what else to show you.",
       "Dashboards are seductive because they look quantitative. They imply the existence of a number that, if only you could optimize it, would make your life better. But the numbers productivity apps track — meetings attended, tasks completed, minutes focused — are almost never the numbers that matter. The number that matters is usually *how you feel at the end of the day.* And no chart captures that.",
-      "Calendro has almost no charts. We have one panel in Analytics that shows you where your week went, and we added it only after a year of debate. Even then, we kept it small. You see it when you go looking for it. It doesn't follow you around.",
+      "Momenties has almost no charts. We have one panel in Analytics that shows you where your week went, and we added it only after a year of debate. Even then, we kept it small. You see it when you go looking for it. It doesn't follow you around.",
       "**The hypothesis:** a calendar should leave you alone. It should tell you where to be next, not how you're performing. It should feel like a journal, not a Fitbit.",
       "**What we show instead:** the calendar itself. The events. The people. The places. The quiet visual of a week laid out in a grid, where your eyes can rest and your hands can rearrange.",
-      "**The result:** users tell us Calendro feels calmer than other tools. We take this compliment seriously. It was the design goal.",
+      "**The result:** users tell us Momenties feels calmer than other tools. We take this compliment seriously. It was the design goal.",
       "If you miss the rings and streaks, we hear you. We'd rather lose that user than become the thing we were trying not to be.",
     ],
   },
@@ -180,7 +180,7 @@ export const BLOG_POSTS: BlogPost[] = [
     body: [
       "We re-designed our engineering interview loop three times in 2025. Here's where we landed, and why.",
       "**Round 1: 30-minute intro.** This is a conversation, not a screen. We want to know what you're curious about, what you've shipped, and what you *don't* want to work on. Caldendro has a small set of hard problems; it helps us both to figure out whether any of them match what you want.",
-      "**Round 2: a paid, 2-hour pair on a real Calendro issue.** No algorithms. No LeetCode. We open our issue tracker, pick something small-to-medium, and work on it together. You drive; we're there to answer questions and watch you think. We pay your market rate for the time, because your time is worth something whether or not we hire you.",
+      "**Round 2: a paid, 2-hour pair on a real Momenties issue.** No algorithms. No LeetCode. We open our issue tracker, pick something small-to-medium, and work on it together. You drive; we're there to answer questions and watch you think. We pay your market rate for the time, because your time is worth something whether or not we hire you.",
       "**Round 3: a systems / architecture conversation.** You bring a project you care about — open source, a side project, something you shipped at a previous company. We dig into it: what decisions did you make, what would you change, what did you learn. This round exists because shipping is a skill, and we want to see how yours developed.",
       "**Round 4: references.** We take these seriously. We call two or three people you choose, and we ask them the same five questions. It matters.",
       "That's it. Target turnaround: 10 business days from the first email to an offer. We keep it tight because interviewing is disruptive; extending it indefinitely is disrespectful.",
@@ -197,9 +197,9 @@ export const BLOG_POSTS: BlogPost[] = [
     readingMinutes: 8,
     category: 'Engineering',
     excerpt:
-      "We thought the hardest part of Calendro would be the AI. We were wrong. The hardest part — by miles — was timezones.",
+      "We thought the hardest part of Momenties would be the AI. We were wrong. The hardest part — by miles — was timezones.",
     body: [
-      "When we started building Calendro, we assumed the hard part would be the AI: tuning prompts, handling edge cases, wrestling with latency. We were wrong. The AI was the easy part.",
+      "When we started building Momenties, we assumed the hard part would be the AI: tuning prompts, handling edge cases, wrestling with latency. We were wrong. The AI was the easy part.",
       "The hard part, by miles, was timezones.",
       "Consider: what does 'tomorrow at 3pm' mean? Simple, right? Except — tomorrow in whose timezone? The user's device timezone? The calendar account's default timezone? The timezone of the meeting organizer? The timezone of the location being referenced? ('Meeting at 3pm in Tokyo next week' is not 3pm the user's time.)",
       "Now consider recurring events. A weekly standup at 9am in New York, for someone who's traveling to Singapore for three weeks. Do the 9am occurrences in Singapore stay at 9am New York time (which is a deeply weird hour in Singapore) or do they stay at 9am in whatever timezone the user is currently in? The answer is: it depends. On what? On the user's actual intent, which is not in the data.",

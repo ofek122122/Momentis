@@ -6,10 +6,10 @@ import { Compass, Feather, Heart, Lock, Sparkles, Sunrise } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About — Our story, our mission',
-  description: 'Calendro is built by a small team obsessed with the quiet hours of the day. This is why we started, and where we\'re going.',
+  description: 'Momenties is built by a small team obsessed with the quiet hours of the day. This is why we started, and where we\'re going.',
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About Calendro',
+    title: 'About Momenties',
     description: 'The story behind the calendar built for your most-protected hours.',
     type: 'website',
     url: '/about',
@@ -71,13 +71,13 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Calendro"
+        eyebrow="About Momenties"
         title={
           <>
             A calendar for the <em className="not-italic text-gold">quiet hours</em>.
           </>
         }
-        lede="We started Calendro because scheduling software felt like an argument. It barked, it nagged, and it confused what mattered with what merely was urgent. We wanted a gentler tool. One that asked less and did more."
+        lede="We started Momenties because scheduling software felt like an argument. It barked, it nagged, and it confused what mattered with what merely was urgent. We wanted a gentler tool. One that asked less and did more."
         crumbs={[{ label: 'About' }]}
       />
 
@@ -121,7 +121,7 @@ export default function AboutPage() {
             <p className="text-sm text-muted-foreground">
               For the long version of our thinking, read the{' '}
               <a href="/manifesto" className="text-gold hover:underline">
-                Calendro Manifesto
+                Momenties Manifesto
               </a>
               .
             </p>
@@ -142,7 +142,7 @@ export default function AboutPage() {
             Give people a kinder relationship with their time.
           </h2>
           <p className="mt-5 text-muted-foreground text-base leading-relaxed max-w-xl mx-auto">
-            We believe the way software treats your attention shapes the way you treat yourself. Calendro is our
+            We believe the way software treats your attention shapes the way you treat yourself. Momenties is our
             attempt to make that treatment a little more careful, a little more quiet, and a little more true.
           </p>
         </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
         title="Build your quieter day with us."
         subtitle="We're hiring thoughtful people. And we're always hiring thoughtful users."
         primary={{ label: 'See open roles', href: '/careers' }}
-        secondary={{ label: 'Start using Calendro', href: '/login' }}
+        secondary={{ label: 'Start using Momenties', href: '/login' }}
       />
     </>
   )

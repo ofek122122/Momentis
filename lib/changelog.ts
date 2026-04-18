@@ -105,7 +105,7 @@ export const CHANGELOG: MonthGroup[] = [
       {
         version: '1.0.0',
         date: '2026-01-15',
-        title: 'Calendro is open to the world',
+        title: 'Momenties is open to the world',
         summary:
           'Public beta: three input methods, Google Calendar sync, and five hand-tuned themes.',
         changes: [

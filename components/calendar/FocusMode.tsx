@@ -49,7 +49,7 @@ export function FocusMode() {
   useEffect(() => {
     if (state === 'break' && timeLeft === (sessions % 4 === 0 ? LONG_BREAK : BREAK_DURATION)) {
       if ('Notification' in window && Notification.permission === 'granted') {
-        new Notification('Calendro Focus', {
+        new Notification('Momenties Focus', {
           body: 'Focus session complete! Time for a break.',
           icon: '/logo.png',
         })

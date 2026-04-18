@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 const STEPS = [
   {
     icon: Calendar,
-    title: 'Welcome to Calendro',
+    title: 'Welcome to Momenties',
     description: 'Your AI-powered calendar that understands natural language. Let\'s get you set up in 30 seconds.',
     action: null,
   },

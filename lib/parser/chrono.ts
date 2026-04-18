@@ -1,5 +1,5 @@
 import * as chrono from 'chrono-node'
-import type { CalendroEvent, ParseResult } from '@/types'
+import type { MomentiesEvent, ParseResult } from '@/types'
 
 function extractTitle(raw: string, matchedText: string): string {
   return raw
@@ -20,7 +20,7 @@ function scoreConfidence(results: chrono.ParsedResult[]): 'high' | 'medium' | 'l
 export function parseWithChrono(text: string, referenceDate: Date = new Date()): ParseResult {
   const results = chrono.parse(text, referenceDate, { forwardDate: true })
 
-  const events: CalendroEvent[] = results.map(r => {
+  const events: MomentiesEvent[] = results.map(r => {
     const start = r.start.date()
     const end = r.end ? r.end.date() : new Date(start.getTime() + 60 * 60 * 1000)
     const title = extractTitle(text, r.text)

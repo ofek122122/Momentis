@@ -16,12 +16,12 @@ import {
 import { ArrowUpRight, BookOpen, Clock, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Learn Calendro — An hour you will not regret',
+  title: 'Learn Momenties — An hour you will not regret',
   description:
-    "Calendro's learning hub: four short tracks, thirteen lessons, three curated paths. Built for people who have better things to do than read manuals.",
+    "Momenties's learning hub: four short tracks, thirteen lessons, three curated paths. Built for people who have better things to do than read manuals.",
   alternates: { canonical: '/learn' },
   openGraph: {
-    title: 'Learn Calendro',
+    title: 'Learn Momenties',
     description:
       'Four tracks, thirteen lessons. One hour to go from new user to power user — and not a minute more.',
     url: '/learn',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Learn Calendro',
+    title: 'Learn Momenties',
     description: 'Four tracks, thirteen lessons. One hour to power user.',
   },
 }
@@ -93,7 +93,7 @@ export default function LearnPage() {
         eyebrow="Learn"
         title={
           <>
-            An hour of Calendro you <em className="not-italic text-gold">won&apos;t regret</em> —
+            An hour of Momenties you <em className="not-italic text-gold">won&apos;t regret</em> —
             from new user to power user, quietly.
           </>
         }
@@ -303,15 +303,15 @@ export default function LearnPage() {
             hour.&rdquo;
           </p>
           <div className="mt-5 font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground/70">
-            — the Calendro manifesto, §06
+            — the Momenties manifesto, §06
           </div>
         </div>
       </section>
 
       <CTA
-        title="The fastest way to learn Calendro is to use it."
+        title="The fastest way to learn Momenties is to use it."
         subtitle="Free forever for individuals. The tour takes seven minutes. The rest is optional."
-        primary={{ label: 'Try Calendro', href: '/login' }}
+        primary={{ label: 'Try Momenties', href: '/login' }}
         secondary={{ label: 'Read the manifesto', href: '/manifesto' }}
       />
     </>

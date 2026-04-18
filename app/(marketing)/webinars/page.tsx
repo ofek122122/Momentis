@@ -6,11 +6,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { Video, Users, Calendar, ArrowUpRight, Play } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Webinars — Live sessions from the Calendro team',
-  description: 'Monthly office hours, product tours, and deep dives with the Calendro team. Free to attend. Recordings posted within 48 hours.',
+  title: 'Webinars — Live sessions from the Momenties team',
+  description: 'Monthly office hours, product tours, and deep dives with the Momenties team. Free to attend. Recordings posted within 48 hours.',
   alternates: { canonical: '/webinars' },
   openGraph: {
-    title: 'Calendro Webinars',
+    title: 'Momenties Webinars',
     description: 'Live office hours, product tours, and deep dives.',
     url: '/webinars',
   },
@@ -29,11 +29,11 @@ type Session = {
 
 const SESSIONS: Session[] = [
   { date: 'May 1, 2026', time: '11:00 AM ET', title: 'Office hours with Iris & Oren', speakers: 'Iris Kwon & Oren Marlow, co-founders', desc: 'Our monthly open Q&A. Bring any question — product, company, craft. One hour, no slides.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Office hours' },
-  { date: 'May 15, 2026', time: '10:00 AM ET', title: 'Parser deep-dive: how Gemini meets chrono-node', speakers: 'Rafa Vieira, Founding AI', desc: 'An engineer-facing walk-through of Calendro\'s parsing pipeline. Two stages, fallback strategy, eval harness, prompt cache. 45 minutes + Q&A.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Technical' },
-  { date: 'May 22, 2026', time: '2:00 PM ET', title: 'Designing for the end of the day', speakers: 'Iris Kwon, co-founder', desc: 'A design-led tour of the aesthetic choices behind Calendro. Dark-first, typography, restraint — and the research we did to get there.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Design' },
+  { date: 'May 15, 2026', time: '10:00 AM ET', title: 'Parser deep-dive: how Gemini meets chrono-node', speakers: 'Rafa Vieira, Founding AI', desc: 'An engineer-facing walk-through of Momenties\'s parsing pipeline. Two stages, fallback strategy, eval harness, prompt cache. 45 minutes + Q&A.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Technical' },
+  { date: 'May 22, 2026', time: '2:00 PM ET', title: 'Designing for the end of the day', speakers: 'Iris Kwon, co-founder', desc: 'A design-led tour of the aesthetic choices behind Momenties. Dark-first, typography, restraint — and the research we did to get there.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Design' },
   { date: 'Jun 5, 2026', time: '11:00 AM ET', title: 'Office hours', speakers: 'Iris Kwon, Oren Marlow', desc: 'Monthly open Q&A. If you missed May\'s, catch this one.', cta: 'Reserve a seat', status: 'upcoming', tag: 'Office hours' },
   { date: 'Apr 3, 2026', time: '', title: 'The hardest part of calendar software', speakers: 'Sam Halverson, Founding Engineer', desc: 'Forty-five minutes on timezones, RRULEs, CalDAV quirks, and why calendar engineering is harder than you think.', cta: 'Watch recording', status: 'recorded', tag: 'Technical' },
-  { date: 'Mar 11, 2026', time: '', title: 'Calendro for founders — an operator\'s tour', speakers: 'Lena Osei, Head of Product', desc: 'How VC partners and startup founders are using Calendro to run quieter weeks. 30 minutes + audience Q&A.', cta: 'Watch recording', status: 'recorded', tag: 'For operators' },
+  { date: 'Mar 11, 2026', time: '', title: 'Momenties for founders — an operator\'s tour', speakers: 'Lena Osei, Head of Product', desc: 'How VC partners and startup founders are using Momenties to run quieter weeks. 30 minutes + audience Q&A.', cta: 'Watch recording', status: 'recorded', tag: 'For operators' },
 ]
 
 function StatusPill({ status }: { status: Session['status'] }) {
@@ -208,10 +208,10 @@ export default function WebinarsPage() {
             We build the webinar calendar in response to what people actually want to hear. Suggest a topic and we&apos;ll see if we can line it up.
           </p>
           <a
-            href="mailto:webinars@calendro.app"
+            href="mailto:webinars@momenties.app"
             className="mt-8 inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
-            webinars@calendro.app
+            webinars@momenties.app
           </a>
         </div>
       </section>

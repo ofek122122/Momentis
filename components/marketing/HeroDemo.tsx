@@ -103,7 +103,7 @@ export function HeroDemo() {
             <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
           </div>
           <div className="ml-3 text-[11px] font-mono text-muted-foreground/60">
-            calendro — new event
+            momenties — new event
           </div>
         </div>
 

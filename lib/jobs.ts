@@ -25,19 +25,19 @@ export const JOBS: Job[] = [
     summary: 'Lead design on the next wave of AI-driven scheduling. You\'ve shipped consumer software with a strong point of view.',
     tags: ['Figma', 'Prototyping', 'Design systems', 'Motion'],
     about:
-      'Design at Calendro is two people: Iris (co-founder) and Lena (Head of Product). We\'re hiring the third. You\'ll own a full surface area of the product — probably AI interactions, possibly mobile — and you\'ll be the design voice in every decision for that surface. Small team, small ego, lots of ownership.',
+      'Design at Momenties is two people: Iris (co-founder) and Lena (Head of Product). We\'re hiring the third. You\'ll own a full surface area of the product — probably AI interactions, possibly mobile — and you\'ll be the design voice in every decision for that surface. Small team, small ego, lots of ownership.',
     responsibilities: [
       'Own end-to-end design for one major product surface, from research to ship.',
       'Push the design system forward as you discover where it\'s thin.',
       'Work directly with engineers on interaction details, not by throwing mocks over a wall.',
       'Run your own user research — no proxies. We believe designers should talk to users every week.',
-      'Write. Design decisions at Calendro are captured in short memos so everyone else can audit them.',
+      'Write. Design decisions at Momenties are captured in short memos so everyone else can audit them.',
     ],
     qualifications: [
       '6+ years shipping consumer-grade software. At least 2 years as a senior IC.',
       'A portfolio that shows strong opinions, not just polish. We want to see a decision you\'re proud of, not a screenshot.',
       'Comfort with prototyping in Figma and at least one code tool (we use Next.js + Tailwind).',
-      'Excellent written communication. Calendro is async-first; writing is how decisions happen.',
+      'Excellent written communication. Momenties is async-first; writing is how decisions happen.',
     ],
     niceToHave: [
       'Background in calendar, scheduling, or AI interaction design.',
@@ -63,7 +63,7 @@ export const JOBS: Job[] = [
     summary: 'Own our parsing and inference stack. You have experience with LLM eval, prompt infrastructure, and low-latency serving.',
     tags: ['Python', 'TypeScript', 'LLMs', 'Eval', 'Infra'],
     about:
-      'Calendro\'s parsing stack is chrono-node + Gemini + a carefully-tuned prompt library, wrapped in a Zod-validated pipeline. It is, by volume, the busiest code path we run. This role owns it. You\'ll be our second AI engineer and report to our Founding AI, Rafa.',
+      'Momenties\'s parsing stack is chrono-node + Gemini + a carefully-tuned prompt library, wrapped in a Zod-validated pipeline. It is, by volume, the busiest code path we run. This role owns it. You\'ll be our second AI engineer and report to our Founding AI, Rafa.',
     responsibilities: [
       'Own the parser pipeline end-to-end: tokenization, prompt construction, model routing, schema validation, fallback policy.',
       'Build and maintain our eval harness. Ship regressions never, knowingly.',
@@ -123,7 +123,7 @@ export const JOBS: Job[] = [
     ],
     howWeHire: [
       '30-min intro with Oren or Sam.',
-      'Paid 2-hour pair on a real Calendro issue (we pay your market rate for the time).',
+      'Paid 2-hour pair on a real Momenties issue (we pay your market rate for the time).',
       'Systems / architecture discussion.',
       'References.',
       'Offer.',
@@ -139,7 +139,7 @@ export const JOBS: Job[] = [
     summary: 'Answer customers in a way that feels like a kind friend. Diagnose real bugs. Fix the ones you can.',
     tags: ['Writing', 'SQL', 'Curiosity'],
     about:
-      'Support at Calendro isn\'t tier-1 triage. It\'s high-leverage: you\'re the voice of the company for most of our users. You\'ll read logs, reproduce bugs, file issues with repro steps, sometimes ship fixes yourself. This role reports to Noa, our first support hire.',
+      'Support at Momenties isn\'t tier-1 triage. It\'s high-leverage: you\'re the voice of the company for most of our users. You\'ll read logs, reproduce bugs, file issues with repro steps, sometimes ship fixes yourself. This role reports to Noa, our first support hire.',
     responsibilities: [
       'Answer emails from customers within hours, not days. 4-hour weekday SLA, 24-hour weekend.',
       'Reproduce bugs. Read logs. File crisp tickets with repro steps.',

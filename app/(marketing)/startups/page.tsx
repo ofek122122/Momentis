@@ -6,18 +6,18 @@ import { CTA } from '@/components/marketing/CTA'
 import { Rocket, Gift, Check, ArrowUpRight, Users, Clock, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Calendro for Startups — 90% off for your first year',
-  description: 'Seed-stage startups get Calendro Team free for 10 seats for 12 months. Apply in three minutes. Keep your focus, not your scheduling headaches.',
+  title: 'Momenties for Startups — 90% off for your first year',
+  description: 'Seed-stage startups get Momenties Team free for 10 seats for 12 months. Apply in three minutes. Keep your focus, not your scheduling headaches.',
   alternates: { canonical: '/startups' },
   openGraph: {
-    title: 'Calendro for Startups',
+    title: 'Momenties for Startups',
     description: '90% off for seed-stage founders.',
     url: '/startups',
   },
 }
 
 const PERKS = [
-  { icon: Gift, title: '10 seats, free for 12 months', desc: 'Full Calendro Team — unlimited events, shared calendars, AI briefings, for your whole founding team.' },
+  { icon: Gift, title: '10 seats, free for 12 months', desc: 'Full Momenties Team — unlimited events, shared calendars, AI briefings, for your whole founding team.' },
   { icon: Sparkles, title: '90% off into year two', desc: 'When your free year ends, you get 90% off your next year. No pressure, no auto-upgrade shenanigans.' },
   { icon: Users, title: 'Direct Slack with our founders', desc: 'A shared channel with Iris and Oren. Bug reports answered in hours. Feature requests considered seriously.' },
   { icon: Clock, title: 'Priority onboarding', desc: 'A 30-min call with our Head of Product to set your team up. Optional. No sales pitch.' },
@@ -37,7 +37,7 @@ const FAQS = [
     a: 'Pre-seed, seed, and seed-extension rounds. If you\'ve raised a Series A already, you\'re past the program — but we have generous year-one discounts for Series A too.',
   },
   {
-    q: 'Is Calendro affiliated with any accelerator?',
+    q: 'Is Momenties affiliated with any accelerator?',
     a: 'We partner with Y Combinator, Techstars, Entrepreneur First, South Park Commons, and about a dozen others. If your program is on the list, you get a faster approval path.',
   },
   {
@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: 'Can I use it for personal + company calendars?',
-    a: 'Yes. Each seat is a full Calendro account. Connect your personal Google, your company Workspace, and a client calendar or two — all in one view.',
+    a: 'Yes. Each seat is a full Momenties account. Connect your personal Google, your company Workspace, and a client calendar or two — all in one view.',
   },
 ]
 
@@ -54,13 +54,13 @@ export default function StartupsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Calendro for Startups"
+        eyebrow="Momenties for Startups"
         title={
           <>
             Free for your first year. <em className="not-italic text-gold">Because your runway matters.</em>
           </>
         }
-        lede="Seed-stage teams get 10 seats of Calendro Team free for 12 months, then 90% off for year two. We don't think a calendar should cost more than your team's first laptop."
+        lede="Seed-stage teams get 10 seats of Momenties Team free for 12 months, then 90% off for year two. We don't think a calendar should cost more than your team's first laptop."
         crumbs={[{ label: 'For startups' }]}
       >
         <Link
@@ -145,10 +145,10 @@ export default function StartupsPage() {
             Email us a one-sentence description of your company, your round size, and an ops email. We respond within 48 hours.
           </p>
           <a
-            href="mailto:startups@calendro.app"
+            href="mailto:startups@momenties.app"
             className="mt-8 inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
-            startups@calendro.app <ArrowUpRight className="h-4 w-4" />
+            startups@momenties.app <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
       </section>
@@ -177,8 +177,8 @@ export default function StartupsPage() {
 
       <CTA
         title="Save a meeting. Save a week."
-        subtitle="The startups using Calendro run 27% fewer meetings in their first quarter. That's dozens of hours back, at zero cost."
-        primary={{ label: 'Apply to the program', href: 'mailto:startups@calendro.app' }}
+        subtitle="The startups using Momenties run 27% fewer meetings in their first quarter. That's dozens of hours back, at zero cost."
+        primary={{ label: 'Apply to the program', href: 'mailto:startups@momenties.app' }}
         secondary={{ label: 'See customer stories', href: '/customers' }}
       />
     </>

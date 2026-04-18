@@ -7,10 +7,10 @@ import { Bell, Download, Mail } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Subprocessors — Third parties that handle your data',
-  description: 'Every third-party service that processes Calendro customer data on our behalf. Updated whenever the list changes, with 30-day advance notice.',
+  description: 'Every third-party service that processes Momenties customer data on our behalf. Updated whenever the list changes, with 30-day advance notice.',
   alternates: { canonical: '/subprocessors' },
   openGraph: {
-    title: 'Calendro Subprocessors',
+    title: 'Momenties Subprocessors',
     description: 'Every third-party that handles your data.',
     url: '/subprocessors',
   },
@@ -207,7 +207,7 @@ export default function SubprocessorsPage() {
       <CTA
         title="Questions?"
         subtitle="Our security team will answer procurement questions on the same day."
-        primary={{ label: 'security@calendro.app', href: 'mailto:security@calendro.app' }}
+        primary={{ label: 'security@momenties.app', href: 'mailto:security@momenties.app' }}
         secondary={{ label: 'Back to Trust Center', href: '/trust' }}
       />
     </>

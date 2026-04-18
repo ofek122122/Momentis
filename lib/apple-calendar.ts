@@ -1,7 +1,7 @@
 import { createDAVClient, DAVObject } from 'tsdav'
 import { db } from '@/lib/db'
 import { log } from '@/lib/logger'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 async function getAppleClient(userId: string) {
   const apple = await db.appleCalendar.findUnique({ where: { userId } })
@@ -91,7 +91,7 @@ function extractICSField(ics: string, field: string): { value: string; params: R
   return { value, params }
 }
 
-function icsToCalendroEvent(obj: DAVObject): CalendroEvent | null {
+function icsToMomentiesEvent(obj: DAVObject): MomentiesEvent | null {
   const raw = obj.data as string
   if (!raw) return null
 
@@ -134,15 +134,15 @@ function icsToCalendroEvent(obj: DAVObject): CalendroEvent | null {
   }
 }
 
-function calendroEventToICS(event: CalendroEvent): string {
-  const uid = event.id ?? `calendro-${Date.now()}@calendro.app`
+function momentiesEventToICS(event: MomentiesEvent): string {
+  const uid = event.id ?? `momenties-${Date.now()}@momenties.app`
   const now = new Date()
   const formatDate = (d: Date) =>
     d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
 
   let ics = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Calendro//EN
+PRODID:-//Momenties//EN
 BEGIN:VEVENT
 UID:${uid}
 DTSTAMP:${formatDate(now)}
@@ -161,7 +161,7 @@ export async function listAppleEvents(
   userId: string,
   from: Date,
   to: Date
-): Promise<CalendroEvent[]> {
+): Promise<MomentiesEvent[]> {
   try {
     const client = await getAppleClient(userId)
     if (!client) return []
@@ -169,7 +169,7 @@ export async function listAppleEvents(
     const calendars = await client.fetchCalendars()
     if (!calendars.length) return []
 
-    const allEvents: CalendroEvent[] = []
+    const allEvents: MomentiesEvent[] = []
 
     for (const calendar of calendars) {
       try {
@@ -182,7 +182,7 @@ export async function listAppleEvents(
         })
 
         for (const obj of objects) {
-          const event = icsToCalendroEvent(obj)
+          const event = icsToMomentiesEvent(obj)
           if (event) allEvents.push(event)
         }
       } catch (err) {
@@ -202,7 +202,7 @@ export async function listAppleEvents(
 
 export async function createAppleEvent(
   userId: string,
-  event: CalendroEvent
+  event: MomentiesEvent
 ): Promise<string | null> {
   try {
     const client = await getAppleClient(userId)
@@ -212,7 +212,7 @@ export async function createAppleEvent(
     const calendar = calendars[0]
     if (!calendar) return null
 
-    const ics = calendroEventToICS(event)
+    const ics = momentiesEventToICS(event)
 
     await client.createCalendarObject({
       calendar,

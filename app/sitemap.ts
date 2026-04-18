@@ -11,7 +11,7 @@ import { USE_CASES } from '@/lib/use-cases'
 import { ENDPOINTS as API_ENDPOINTS } from '@/lib/api-endpoints'
 import { EPISODES as PODCAST_EPISODES } from '@/lib/podcast'
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://momenties.app'
 
 const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
   { path: '/', priority: 1, changeFrequency: 'weekly' },
@@ -47,6 +47,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/labs', priority: 0.6, changeFrequency: 'weekly' },
   { path: '/help', priority: 0.6, changeFrequency: 'weekly' },
   { path: '/learn', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/keyboard', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/downloads', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/api-docs', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/community', priority: 0.5, changeFrequency: 'weekly' },

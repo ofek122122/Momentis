@@ -20,11 +20,11 @@ export async function generateMetadata({
   const c = getCompetitor(slug)
   if (!c) return { title: 'Comparison not found' }
   return {
-    title: `Calendro vs. ${c.name}`,
+    title: `Momenties vs. ${c.name}`,
     description: c.tagline,
     alternates: { canonical: `/compare/${c.slug}` },
     openGraph: {
-      title: `Calendro vs. ${c.name}`,
+      title: `Momenties vs. ${c.name}`,
       description: c.tagline,
       url: `/compare/${c.slug}`,
     },
@@ -49,7 +49,7 @@ export default async function ComparePage({
   return (
     <>
       <PageHero
-        eyebrow={`Calendro vs. ${c.short}`}
+        eyebrow={`Momenties vs. ${c.short}`}
         title={
           <>
             How we&apos;re <em className="not-italic text-gold">different</em> from {c.name}.
@@ -88,7 +88,7 @@ export default async function ComparePage({
                   <th className="text-left px-5 py-4 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
                     Feature
                   </th>
-                  <th className="px-4 py-4 font-display text-base text-gold w-28">Calendro</th>
+                  <th className="px-4 py-4 font-display text-base text-gold w-28">Momenties</th>
                   <th className="px-4 py-4 font-display text-base text-muted-foreground w-28">
                     {c.short}
                   </th>
@@ -203,7 +203,7 @@ export default async function ComparePage({
       </section>
 
       <CTA
-        title={`Try Calendro — see for yourself.`}
+        title={`Try Momenties — see for yourself.`}
         subtitle="Free forever tier. No card. 90-second setup. If it's not an improvement, keep using what you had."
         primary={{ label: 'Get started free', href: '/login' }}
         secondary={{ label: 'Browse all features', href: '/features' }}

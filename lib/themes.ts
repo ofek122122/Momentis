@@ -1,4 +1,4 @@
-export interface CalendroTheme {
+export interface MomentiesTheme {
   id: string
   name: string
   description: string
@@ -15,11 +15,11 @@ export interface CalendroTheme {
   }
 }
 
-export const THEMES: CalendroTheme[] = [
+export const THEMES: MomentiesTheme[] = [
   {
     id: 'midnight-gold',
     name: 'Midnight Gold',
-    description: 'The signature Calendro look',
+    description: 'The signature Momenties look',
     isPro: false,
     colors: {
       background: '#0c0c0f',
@@ -98,11 +98,11 @@ export const THEMES: CalendroTheme[] = [
   },
 ]
 
-export function getTheme(id: string): CalendroTheme {
+export function getTheme(id: string): MomentiesTheme {
   return THEMES.find(t => t.id === id) ?? THEMES[0]
 }
 
-export function applyTheme(theme: CalendroTheme): void {
+export function applyTheme(theme: MomentiesTheme): void {
   const root = document.documentElement
   root.style.setProperty('--background', theme.colors.background)
   root.style.setProperty('--foreground', theme.colors.foreground)

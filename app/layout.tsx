@@ -26,13 +26,13 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://calendro.app'
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://momenties.app'
   ),
   title: {
-    default: 'Calendro — Just say it. It\'s scheduled.',
-    template: '%s | Calendro',
+    default: 'Momenties — Just say it. It\'s scheduled.',
+    template: '%s | Momenties',
   },
-  description: 'Zero-friction AI calendar. Type it, say it, snap it. Calendro parses your words and fills your Google Calendar automatically.',
+  description: 'Zero-friction AI calendar. Type it, say it, snap it. Momenties parses your words and fills your Google Calendar automatically.',
   manifest: '/manifest.json',
   icons: {
     icon: '/logo.png',
@@ -41,21 +41,21 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Calendro',
+    title: 'Momenties',
   },
   formatDetection: { telephone: false },
   keywords: ['calendar app', 'AI calendar', 'voice calendar', 'Google Calendar', 'smart scheduling', 'natural language calendar'],
-  authors: [{ name: 'Calendro' }],
+  authors: [{ name: 'Momenties' }],
   openGraph: {
     type: 'website',
-    title: 'Calendro — Just say it. It\'s scheduled.',
+    title: 'Momenties — Just say it. It\'s scheduled.',
     description: 'AI-powered calendar. Type, speak, or snap a photo to add events instantly.',
-    siteName: 'Calendro',
+    siteName: 'Momenties',
     images: [{ url: '/logo.png', width: 512, height: 512 }],
   },
   twitter: {
     card: 'summary',
-    title: 'Calendro — AI Calendar',
+    title: 'Momenties — AI Calendar',
     description: 'Zero-friction AI calendar. Type, speak, or snap to schedule.',
   },
   robots: {

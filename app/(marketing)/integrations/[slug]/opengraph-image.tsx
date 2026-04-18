@@ -3,12 +3,12 @@ import { getIntegration } from '@/lib/integrations'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro integration'
+export const alt = 'Momenties integration'
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const integration = getIntegration(params.slug)
   const name = integration?.name ?? 'Integration'
-  const tagline = integration?.tagline ?? 'Connect Calendro to your stack'
+  const tagline = integration?.tagline ?? 'Connect Momenties to your stack'
   const letter = integration?.letter ?? '?'
   const color = integration?.color ?? '#c5a35c'
   const category = integration?.category ?? 'Integration'
@@ -47,7 +47,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           >
             C
           </div>
-          <span>Calendro</span>
+          <span>Momenties</span>
           <span style={{ color: 'rgba(240,236,227,0.4)', fontSize: 20 }}>· Integration</span>
         </div>
 
@@ -87,7 +87,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
                 gap: 8,
               }}
             >
-              <div style={{ fontSize: 32, color: 'rgba(240,236,227,0.4)' }}>Calendro ×</div>
+              <div style={{ fontSize: 32, color: 'rgba(240,236,227,0.4)' }}>Momenties ×</div>
               <div
                 style={{
                   fontSize: 80,
@@ -123,7 +123,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             color: 'rgba(240,236,227,0.5)',
           }}
         >
-          <span>calendro.app/integrations</span>
+          <span>momenties.app/integrations</span>
           <span>Connect in seconds</span>
         </div>
       </div>

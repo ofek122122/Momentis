@@ -55,7 +55,7 @@ export const DAYS: LaunchDay[] = [
     eyebrow: 'Day one',
     title: 'The hybrid parser, redesigned.',
     lede: 'Chrono-node first. Gemini only when it earns it. 3× faster on common phrases, and a visible gold dot when the AI gets involved.',
-    body: 'Calendro has always used a hybrid parser — local NLP for the obvious cases, AI for the ambiguous ones. Today we rewrote the arbiter that decides when to call the model. The result: 86% of events never touch the AI, which means faster parses, lower costs, and a meaningfully quieter network tab.',
+    body: 'Momenties has always used a hybrid parser — local NLP for the obvious cases, AI for the ambiguous ones. Today we rewrote the arbiter that decides when to call the model. The result: 86% of events never touch the AI, which means faster parses, lower costs, and a meaningfully quieter network tab.',
     headline: { label: 'Smarter parser', icon: Sparkles, tone: 'gold' },
     shipped: [
       { icon: Sparkles, title: 'Arbiter v2', note: 'New confidence scorer picks local vs AI path per token.' },
@@ -136,7 +136,7 @@ export const DAYS: LaunchDay[] = [
     eyebrow: 'Day four',
     title: 'A keyboard you can feel through the screen.',
     lede: '9 new shortcuts. A command palette. And a printable cheatsheet PDF that fits on one page at A4.',
-    body: "Power users were already using Calendro fast. Today we made them faster. The command palette (⌘K) surfaces every action in one place. The new shortcuts cover focus mode, the voice recorder, templates, and recurring rules. The cheatsheet PDF is downloadable from the new /learn page — and we sent a printed one to the first 500 annual subscribers.",
+    body: "Power users were already using Momenties fast. Today we made them faster. The command palette (⌘K) surfaces every action in one place. The new shortcuts cover focus mode, the voice recorder, templates, and recurring rules. The cheatsheet PDF is downloadable from the new /learn page — and we sent a printed one to the first 500 annual subscribers.",
     headline: { label: 'Keyboard kit', icon: Keyboard, tone: 'sky' },
     shipped: [
       { icon: TerminalSquare, title: 'Command palette', note: '⌘K opens a fuzzy finder over every action.' },
@@ -163,8 +163,8 @@ export const DAYS: LaunchDay[] = [
     eyebrow: 'Day five',
     title: 'Teams, quietly. And SSO for the serious ones.',
     lede: 'Workspaces with per-member privacy scopes, SAML SSO, audit logs, and a quiet new Enterprise tier.',
-    body: "We held this one for the end of the week because it's the biggest. Workspaces let teams share calendars without sharing lives — busy-only views, scoped invites, revocable tokens. SAML SSO ships today for accounts on the Enterprise plan, along with read-only audit logs and a 90-day export window. Our goal: teams get the benefit of Calendro without giving up any of the privacy individuals already had.",
-    headline: { label: 'Calendro for teams', icon: Users, tone: 'rose' },
+    body: "We held this one for the end of the week because it's the biggest. Workspaces let teams share calendars without sharing lives — busy-only views, scoped invites, revocable tokens. SAML SSO ships today for accounts on the Enterprise plan, along with read-only audit logs and a 90-day export window. Our goal: teams get the benefit of Momenties without giving up any of the privacy individuals already had.",
+    headline: { label: 'Momenties for teams', icon: Users, tone: 'rose' },
     shipped: [
       { icon: Users, title: 'Workspaces', note: 'Shared calendars with per-member privacy scopes.' },
       { icon: Lock, title: 'SAML SSO', note: 'Okta, Azure AD, and Google Workspace, all on Enterprise.' },

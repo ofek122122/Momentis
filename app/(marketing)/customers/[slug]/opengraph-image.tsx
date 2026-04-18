@@ -3,12 +3,12 @@ import { getCustomerStory } from '@/lib/customers'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro customer story'
+export const alt = 'Momenties customer story'
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const story = getCustomerStory(params.slug)
   const company = story?.company ?? 'Customer'
-  const tagline = story?.tagline ?? 'A Calendro customer story'
+  const tagline = story?.tagline ?? 'A Momenties customer story'
   const industry = story?.industry ?? ''
   const metrics = story?.metrics ?? []
 
@@ -46,7 +46,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           >
             C
           </div>
-          <span>Calendro</span>
+          <span>Momenties</span>
           <span style={{ color: 'rgba(240,236,227,0.4)', fontSize: 20 }}>· Customer story</span>
         </div>
 

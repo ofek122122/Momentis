@@ -6,11 +6,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { Building2, Shield, Key, Users, Headphones, FileCheck, Check, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Enterprise — Calendro for your organization',
-  description: 'SSO, audit logs, dedicated support, custom SLAs, and DPA. Calendro Enterprise is built for teams that take scheduling seriously.',
+  title: 'Enterprise — Momenties for your organization',
+  description: 'SSO, audit logs, dedicated support, custom SLAs, and DPA. Momenties Enterprise is built for teams that take scheduling seriously.',
   alternates: { canonical: '/enterprise' },
   openGraph: {
-    title: 'Calendro for Enterprise',
+    title: 'Momenties for Enterprise',
     description: 'SSO, SCIM, audit logs, dedicated support.',
     url: '/enterprise',
   },
@@ -45,7 +45,7 @@ const FEATURES = [
   {
     icon: Headphones,
     title: 'Dedicated success manager',
-    desc: 'A named human at Calendro. Monthly business reviews. A Slack connect channel that\'s actually staffed.',
+    desc: 'A named human at Momenties. Monthly business reviews. A Slack connect channel that\'s actually staffed.',
   },
 ]
 
@@ -70,10 +70,10 @@ export default function EnterprisePage() {
   return (
     <>
       <PageHero
-        eyebrow="Calendro for Enterprise"
+        eyebrow="Momenties for Enterprise"
         title={
           <>
-            Calendro, <em className="not-italic text-gold">tuned for your org</em>.
+            Momenties, <em className="not-italic text-gold">tuned for your org</em>.
           </>
         }
         lede="The same quiet calendar you love — with the security, compliance, and support your IT team requires. Built for teams from 50 to 50,000."
@@ -198,7 +198,7 @@ export default function EnterprisePage() {
                 </p>
               </div>
               <Link
-                href="mailto:sales@calendro.app"
+                href="mailto:sales@momenties.app"
                 className="inline-flex items-center gap-2 h-12 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors shrink-0"
               >
                 Schedule a demo
@@ -224,9 +224,9 @@ export default function EnterprisePage() {
       </section>
 
       <CTA
-        title="Bring Calendro to your whole company."
+        title="Bring Momenties to your whole company."
         subtitle="We'll handle the onboarding, the security review, and the training."
-        primary={{ label: 'Contact sales', href: 'mailto:sales@calendro.app' }}
+        primary={{ label: 'Contact sales', href: 'mailto:sales@momenties.app' }}
         secondary={{ label: 'Read about security', href: '/security' }}
       />
     </>

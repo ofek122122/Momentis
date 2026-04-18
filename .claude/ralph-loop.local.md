@@ -1,6 +1,6 @@
 ---
 active: true
-iteration: 26
+iteration: 28
 session_id: 
 max_iterations: 150
 completion_promise: null
@@ -9,7 +9,7 @@ started_at: "2026-04-16T23:25:34Z"
 
 FIRST: Run 'git checkout overnight-pages' to switch to the overnight-pages branch. If the branch doesn't exist yet, run 'git checkout -b overnight-pages' to create it. Verify you are on the overnight-pages branch with 'git branch --show-current' before doing any work. ALL commits and pushes must go to the overnight-pages branch — never commit to master or main.
 
-Read CLAUDE.md and PROGRESS.md. You are working on Calendro, a premium AI-powered calendar app. Your mission tonight: make this app look like a real, professional, funded startup product that's ready to launch. You have COMPLETE creative freedom. Don't ask questions. Just build.
+Read CLAUDE.md and PROGRESS.md. You are working on Momenties, a premium AI-powered calendar app. Your mission tonight: make this app look like a real, professional, funded startup product that's ready to launch. You have COMPLETE creative freedom. Don't ask questions. Just build.
 
 BUILD THESE PAGES (create new routes in app/):
 - / (landing page) — completely redesign it. Hero with animated demo, 'How it works' 3-step section, feature showcase grid, testimonials carousel, pricing preview, stats counter ('50,000+ events scheduled'), press/partner logos bar, final CTA, beautiful footer with links to all pages

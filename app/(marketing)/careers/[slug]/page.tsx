@@ -26,7 +26,7 @@ export async function generateMetadata({
     alternates: { canonical: `/careers/${job.slug}` },
     openGraph: {
       type: 'article',
-      title: `${job.title} · Calendro`,
+      title: `${job.title} · Momenties`,
       description: job.summary,
       url: `/careers/${job.slug}`,
     },
@@ -100,7 +100,7 @@ export default async function JobPage({
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={`mailto:careers@calendro.app?subject=Application: ${encodeURIComponent(job.title)}`}
+              href={`mailto:careers@momenties.app?subject=Application: ${encodeURIComponent(job.title)}`}
               className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
             >
               Apply for this role <ArrowUpRight className="h-4 w-4" />
@@ -226,7 +226,7 @@ export default async function JobPage({
       <CTA
         title="Don't quite fit this role?"
         subtitle="We always read thoughtful emails from people who make things quietly excellent."
-        primary={{ label: 'careers@calendro.app', href: 'mailto:careers@calendro.app' }}
+        primary={{ label: 'careers@momenties.app', href: 'mailto:careers@momenties.app' }}
         secondary={{ label: 'Read about our culture', href: '/careers' }}
       />
     </article>

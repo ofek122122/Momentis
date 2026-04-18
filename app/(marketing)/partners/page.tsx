@@ -7,10 +7,10 @@ import { Handshake, BookOpen, Wrench, DollarSign, Check, ArrowUpRight } from 'lu
 
 export const metadata: Metadata = {
   title: 'Partners — Agencies, consultancies, and accelerators',
-  description: 'Calendro partner program for agencies, SI consultancies, accelerators, and professional communities. Revenue share, co-marketing, and early access.',
+  description: 'Momenties partner program for agencies, SI consultancies, accelerators, and professional communities. Revenue share, co-marketing, and early access.',
   alternates: { canonical: '/partners' },
   openGraph: {
-    title: 'Calendro Partners',
+    title: 'Momenties Partners',
     description: 'For agencies, accelerators, and communities.',
     url: '/partners',
   },
@@ -20,7 +20,7 @@ const TIERS = [
   {
     icon: BookOpen,
     title: 'Solution partners',
-    desc: 'Consultancies and agencies who deploy Calendro for their clients. Volume discounts, co-branded onboarding, dedicated support channel.',
+    desc: 'Consultancies and agencies who deploy Momenties for their clients. Volume discounts, co-branded onboarding, dedicated support channel.',
     bullets: ['15% revenue share', 'Co-branded onboarding kit', 'Dedicated Slack Connect', 'Quarterly partner briefings'],
     cta: 'Apply as solution partner',
   },
@@ -34,7 +34,7 @@ const TIERS = [
   {
     icon: Wrench,
     title: 'Technology partners',
-    desc: 'Software companies building on our API, integrating with our platform, or bundling Calendro with their own product.',
+    desc: 'Software companies building on our API, integrating with our platform, or bundling Momenties with their own product.',
     bullets: ['Dedicated API sandbox', 'Co-listing on /integrations', 'Joint product launches', 'Revenue share for bundled deals'],
     cta: 'Discuss integration',
   },
@@ -66,10 +66,10 @@ export default function PartnersPage() {
         crumbs={[{ label: 'Partners' }]}
       >
         <a
-          href="mailto:partners@calendro.app"
+          href="mailto:partners@momenties.app"
           className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
         >
-          partners@calendro.app
+          partners@momenties.app
         </a>
       </PageHero>
 
@@ -116,7 +116,7 @@ export default function PartnersPage() {
                     ))}
                   </ul>
                   <a
-                    href="mailto:partners@calendro.app"
+                    href="mailto:partners@momenties.app"
                     className="inline-flex items-center justify-center gap-1.5 h-10 rounded-full border border-border hover:border-gold/30 hover:text-gold transition-colors text-sm font-medium text-foreground"
                   >
                     {t.cta} <ArrowUpRight className="h-4 w-4" />
@@ -138,7 +138,7 @@ export default function PartnersPage() {
           </Reveal>
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              { n: '01', t: 'Reach out', d: 'Email partners@calendro.app with two sentences about what you do and what you\'d like to build together.' },
+              { n: '01', t: 'Reach out', d: 'Email partners@momenties.app with two sentences about what you do and what you\'d like to build together.' },
               { n: '02', t: '30-min call', d: 'One of our founders, no sales people. We want to understand fit before anything else.' },
               { n: '03', t: 'Pilot agreement', d: 'A short, plain-English agreement. No 40-page MSA. Usually signed same-week.' },
               { n: '04', t: 'Ship together', d: 'We align on a measurable outcome for quarter one, meet monthly, and keep score honestly.' },
@@ -158,7 +158,7 @@ export default function PartnersPage() {
       <CTA
         title="Let's do something good together."
         subtitle="We work with a small number of partners deeply. If you're a good fit, we'll know within a call."
-        primary={{ label: 'partners@calendro.app', href: 'mailto:partners@calendro.app' }}
+        primary={{ label: 'partners@momenties.app', href: 'mailto:partners@momenties.app' }}
         secondary={{ label: 'See the affiliate program', href: '/affiliates' }}
       />
     </>

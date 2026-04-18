@@ -7,10 +7,10 @@ import { Download, ArrowUpRight, Calendar, Dumbbell, Book, Plane, Baby, Wrench }
 
 export const metadata: Metadata = {
   title: 'Templates — Start with a ready-made week',
-  description: 'Download and import pre-built Calendro templates: deep-work week, student semester, founder operating rhythm, parent-of-three, travel routine.',
+  description: 'Download and import pre-built Momenties templates: deep-work week, student semester, founder operating rhythm, parent-of-three, travel routine.',
   alternates: { canonical: '/templates' },
   openGraph: {
-    title: 'Calendro Templates',
+    title: 'Momenties Templates',
     description: 'Ready-made weekly rhythms for common patterns.',
     url: '/templates',
   },
@@ -155,7 +155,7 @@ export default function TemplatesPage() {
             ones into the public gallery. Accepted authors get 6 months of Pro free.
           </p>
           <a
-            href="mailto:templates@calendro.app"
+            href="mailto:templates@momenties.app"
             className="mt-8 inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
             Submit a template

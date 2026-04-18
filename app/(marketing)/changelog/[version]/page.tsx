@@ -26,7 +26,7 @@ export async function generateMetadata({
     alternates: { canonical: `/changelog/${entry.version}` },
     openGraph: {
       type: 'article',
-      title: `Calendro v${entry.version} — ${entry.title}`,
+      title: `Momenties v${entry.version} — ${entry.title}`,
       description: entry.summary,
       url: `/changelog/${entry.version}`,
       publishedTime: entry.date,

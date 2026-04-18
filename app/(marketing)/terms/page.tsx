@@ -19,7 +19,7 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="font-display text-lg font-semibold text-foreground">Use of service</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Calendro is a personal productivity tool that connects to your Google Calendar.
+              Momenties is a personal productivity tool that connects to your Google Calendar.
               By using this application, you agree to use it in accordance with Google&apos;s Terms
               of Service and API policies.
             </p>
@@ -46,7 +46,7 @@ export default function TermsPage() {
             <h2 className="font-display text-lg font-semibold text-foreground">Disclaimer</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               This software is provided as-is without warranty of any kind. Use at your own risk.
-              Calendro is not responsible for any missed events, scheduling conflicts, or data loss.
+              Momenties is not responsible for any missed events, scheduling conflicts, or data loss.
             </p>
           </section>
         </div>

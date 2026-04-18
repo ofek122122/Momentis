@@ -6,10 +6,10 @@ import { Lightbulb, Hammer, CheckCircle2, ThumbsUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Roadmap — What we\'re building next',
-  description: 'Calendro\'s public roadmap: planned, in-progress, and shipped features. Vote with your attention.',
+  description: 'Momenties\'s public roadmap: planned, in-progress, and shipped features. Vote with your attention.',
   alternates: { canonical: '/roadmap' },
   openGraph: {
-    title: 'Calendro Roadmap',
+    title: 'Momenties Roadmap',
     description: 'What we\'re planning, building, and shipping.',
     url: '/roadmap',
   },
@@ -32,7 +32,7 @@ const ITEMS: Item[] = [
   { status: 'planned', title: 'Offline-first mobile app', desc: 'Native iOS and Android apps with full offline editing and CRDT-based sync.', tag: 'Mobile', eta: 'Q4 2026', votes: 856 },
   { status: 'planned', title: 'Team scheduling links', desc: 'Share an availability link that respects the preferences of everyone on the team.', tag: 'Teams', eta: 'Q3 2026', votes: 240 },
   { status: 'planned', title: 'Travel-aware scheduling', desc: 'Automatically block transit time between events based on real routes and your preferred transport.', tag: 'AI', eta: 'Q4 2026', votes: 189 },
-  { status: 'planned', title: 'Public API v1', desc: 'A stable, documented REST + webhook API for building on top of Calendro.', tag: 'Developer', eta: 'Q3 2026', votes: 167 },
+  { status: 'planned', title: 'Public API v1', desc: 'A stable, documented REST + webhook API for building on top of Momenties.', tag: 'Developer', eta: 'Q3 2026', votes: 167 },
 
   // In progress
   { status: 'in_progress', title: 'Clean White Pro theme', desc: 'Our first light theme, designed with the same quiet restraint as the dark set. Early access for Pro users.', tag: 'Design', eta: 'This month', votes: 320 },

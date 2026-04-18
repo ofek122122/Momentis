@@ -7,19 +7,19 @@ import {
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { AlertCircle, AlertTriangle, Clock, MapPin, Loader2, Sparkles } from 'lucide-react'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 import type { ConflictPair } from '@/lib/conflicts'
 
 interface EventPreviewCardProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   open: boolean
-  onConfirm: (events: CalendroEvent[]) => Promise<void>
+  onConfirm: (events: MomentiesEvent[]) => Promise<void>
   onClose: () => void
   error?: string | null
   conflicts?: ConflictPair[]
-  suggestions?: CalendroEvent[]
+  suggestions?: MomentiesEvent[]
   suggestLoading?: boolean
-  onUseSuggestion?: (suggestion: CalendroEvent) => void
+  onUseSuggestion?: (suggestion: MomentiesEvent) => void
 }
 
 export function EventPreviewCard({

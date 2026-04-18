@@ -7,10 +7,10 @@ import { TrendingUp, Users, DollarSign, Globe, Mail } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Investors — Backing quiet software',
-  description: 'A small, thoughtful cap table backing Calendro: Index Ventures, a few angels, and the two founders.',
+  description: 'A small, thoughtful cap table backing Momenties: Index Ventures, a few angels, and the two founders.',
   alternates: { canonical: '/investors' },
   openGraph: {
-    title: 'Calendro Investors',
+    title: 'Momenties Investors',
     description: 'The people backing quieter software.',
     url: '/investors',
   },
@@ -20,7 +20,7 @@ const INVESTORS = [
   { name: 'Index Ventures', role: 'Lead · Series A (2026)', note: 'Led our $12M Series A. Sarah Cannon sits on the board.' },
   { name: 'Homebrew', role: 'Seed lead (2024)', note: 'Led our $3M seed. Hunter Walk has been writing us notes since week 4.' },
   { name: 'Naval Ravikant', role: 'Angel · 2024', note: 'Small check, large influence. Encouraged us to stay small and deliberate.' },
-  { name: 'Tim Ferriss', role: 'Angel · 2025', note: 'Wrote us after using Calendro for a month. Called voice-entry "a life upgrade."' },
+  { name: 'Tim Ferriss', role: 'Angel · 2025', note: 'Wrote us after using Momenties for a month. Called voice-entry "a life upgrade."' },
   { name: 'Chelsea Apple', role: 'Angel · 2025', note: 'Former Superhuman exec. Weekly product feedback; often brutal; always right.' },
   { name: 'Jack Altman', role: 'Angel · 2025', note: 'Co-founder of Lattice. Introduced us to most of our first enterprise customers.' },
 ]
@@ -73,7 +73,7 @@ export default function InvestorsPage() {
           </Reveal>
           <Reveal delay={120}>
             <p>
-              Calendro is a bet that the next generation of productivity software will be quieter,
+              Momenties is a bet that the next generation of productivity software will be quieter,
               more thoughtful, and more respectful of the people who use it. We raise from investors
               who share that thesis — and who are comfortable with a company that won&apos;t ship
               features just to fill a quarter.
@@ -125,10 +125,10 @@ export default function InvestorsPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:iris@calendro.app"
+              href="mailto:iris@momenties.app"
               className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
             >
-              iris@calendro.app
+              iris@momenties.app
             </a>
             <Link
               href="/press"

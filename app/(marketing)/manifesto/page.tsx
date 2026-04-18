@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Our working beliefs about time, attention, AI, and calm software. Updated rarely. Long by design.',
   alternates: { canonical: '/manifesto' },
   openGraph: {
-    title: 'The Calendro Manifesto',
+    title: 'The Momenties Manifesto',
     description: 'Our working beliefs about time, attention, and calm software.',
     url: '/manifesto',
   },
@@ -37,7 +37,7 @@ const THESES = [
     n: '04',
     title: 'AI should be a quiet helper, not a manager.',
     body:
-      'We use AI because it saves you minutes of agency — not because we want to replace your judgment. Calendro\'s AI is a parser, not an advisor. It converts words into structured events, full stop. You stay in charge of your days.',
+      'We use AI because it saves you minutes of agency — not because we want to replace your judgment. Momenties\'s AI is a parser, not an advisor. It converts words into structured events, full stop. You stay in charge of your days.',
   },
   {
     n: '05',
@@ -61,7 +61,7 @@ const THESES = [
     n: '08',
     title: 'Software should lower your heart rate.',
     body:
-      'If an app makes you feel worse, it has failed, regardless of how many tasks it completed. The test that matters is: does the user exhale when they open it? Calendro is our attempt at an exhale.',
+      'If an app makes you feel worse, it has failed, regardless of how many tasks it completed. The test that matters is: does the user exhale when they open it? Momenties is our attempt at an exhale.',
   },
 ]
 
@@ -77,7 +77,7 @@ export default function ManifestoPage() {
             A working document · last edited April 2026
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02] tracking-tight">
-            The <em className="not-italic text-gold">Calendro</em> Manifesto
+            The <em className="not-italic text-gold">Momenties</em> Manifesto
           </h1>
           <p className="mt-7 font-display italic text-xl md:text-2xl text-foreground/90 leading-snug max-w-2xl">
             Our working beliefs about time, attention, AI, and the quiet software we want to build.
@@ -126,8 +126,8 @@ export default function ManifestoPage() {
 
       <CTA
         title="The quickest way to test a manifesto is to use the product."
-        subtitle="Calendro is free forever for individuals. No card. Ninety-second setup."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        subtitle="Momenties is free forever for individuals. No card. Ninety-second setup."
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read our blog', href: '/blog' }}
       />
     </>

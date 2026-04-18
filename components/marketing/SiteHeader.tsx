@@ -13,10 +13,10 @@ const NAV: NavGroup[] = [
   {
     label: 'Product',
     items: [
-      { label: 'Features', href: '/features', desc: 'Everything Calendro can do' },
+      { label: 'Features', href: '/features', desc: 'Everything Momenties can do' },
       { label: 'Integrations', href: '/integrations', desc: 'Google, Apple, Slack & more' },
       { label: 'Demo', href: '/demo', desc: 'Try the AI in your browser' },
-      { label: 'AI in Calendro', href: '/ai', desc: 'How we use AI (quietly)' },
+      { label: 'AI in Momenties', href: '/ai', desc: 'How we use AI (quietly)' },
       { label: 'Templates', href: '/templates', desc: 'Ready-made weekly rhythms' },
       { label: 'Downloads', href: '/downloads', desc: 'Web, desktop, mobile, CLI' },
       { label: 'Pricing', href: '/pricing', desc: 'Simple, transparent plans' },
@@ -25,7 +25,7 @@ const NAV: NavGroup[] = [
       { label: 'For startups', href: '/startups', desc: 'Free for seed-stage teams' },
       { label: 'For students', href: '/education', desc: 'Free with a .edu email' },
       { label: 'Compare', href: '/compare', desc: 'Side-by-side with alternatives' },
-      { label: 'Switch to Calendro', href: '/switch', desc: 'Migrate in under 10 minutes' },
+      { label: 'Switch to Momenties', href: '/switch', desc: 'Migrate in under 10 minutes' },
     ],
   },
   {
@@ -57,6 +57,7 @@ const NAV: NavGroup[] = [
       { label: 'Use cases', href: '/use-cases', desc: 'For founders, students, parents' },
       { label: 'Help Center', href: '/help', desc: 'Guides & FAQs' },
       { label: 'Learn', href: '/learn', desc: 'An hour to power user' },
+      { label: 'Keyboard reference', href: '/keyboard', desc: 'Printable cheatsheet' },
       { label: 'Changelog', href: '/changelog', desc: 'What we shipped' },
       { label: 'Launch Week 01', href: '/launch-week-1', desc: 'Five days. Five upgrades.' },
       { label: 'Year in review', href: '/year-in-review', desc: '2026 — a quiet annual report' },
@@ -111,10 +112,10 @@ export function SiteHeader() {
       )}
     >
       <div ref={containerRef} className="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Calendro home">
+        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Momenties home">
           <img src="/logo.png" alt="" className="h-7 w-7 transition-transform group-hover:scale-105" />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground">
-            Calendro
+            Momenties
           </span>
         </Link>
 

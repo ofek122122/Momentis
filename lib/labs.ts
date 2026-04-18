@@ -81,7 +81,7 @@ export const ACTIVE_LABS: ActiveLab[] = [
     id: 'memory',
     title: 'Calendar memory',
     oneLiner:
-      'Let Calendro remember your previous intents — "same as last Tuesday" — without mining your data.',
+      'Let Momenties remember your previous intents — "same as last Tuesday" — without mining your data.',
     body:
       "A tightly scoped, on-device memory layer that caches your last ~50 parsed events. The model never sees the memory. Only the parser's local arbiter does, and it's used exclusively to resolve ambiguous references like 'the usual team standup'. Everything stays in your browser.",
     status: 'planning',
@@ -108,11 +108,11 @@ export const ACTIVE_LABS: ActiveLab[] = [
     testers: 0,
   },
   {
-    id: 'calendro-cli',
-    title: 'Calendro CLI',
+    id: 'momenties-cli',
+    title: 'Momenties CLI',
     oneLiner: 'A terminal binary for power users. Parse events from stdin, pipe iCal out.',
     body:
-      "`calendro add 'dentist thu 3pm'` from your shell. Pipes. Composability with `cron`, `at`, and your own scripts. Builds available for macOS (arm64), Linux (x86_64), and Windows (x86_64). Signed binaries. OSS license expected.",
+      "`momenties add 'dentist thu 3pm'` from your shell. Pipes. Composability with `cron`, `at`, and your own scripts. Builds available for macOS (arm64), Linux (x86_64), and Windows (x86_64). Signed binaries. OSS license expected.",
     status: 'ready',
     progress: 91,
     risk: 'low',
@@ -197,7 +197,7 @@ export const RETIRED: RetiredLab[] = [
     title: 'Instant webhook relay',
     body: 'A server that re-broadcast Google Calendar events to your Slack, Discord, or HTTP endpoint.',
     reason:
-      "Perfectly fine feature. But we were building the wrong product adjacent to the one we care about. Open-sourced the prototype as 'Calendro-relay' and handed it to the community.",
+      "Perfectly fine feature. But we were building the wrong product adjacent to the one we care about. Open-sourced the prototype as 'Momenties-relay' and handed it to the community.",
     icon: Zap,
     retiredOn: 'January 2026',
   },
@@ -222,7 +222,7 @@ export function statusTone(status: LabStatus): { bg: string; fg: string; ring: s
 }
 
 export const OPT_IN = {
-  command: 'calendro labs enable conversational-parser',
+  command: 'momenties labs enable conversational-parser',
   url: '/settings#labs',
   forumUrl: '/community',
   emailUrl: '/contact?subject=Labs',

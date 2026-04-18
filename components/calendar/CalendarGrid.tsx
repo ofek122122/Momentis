@@ -16,26 +16,26 @@ import { DayView } from './DayView'
 import { ViewSwitcher, type CalendarViewType } from './ViewSwitcher'
 import { SearchBar } from './SearchBar'
 import { NotificationBell } from './NotificationBell'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 import { useRouter } from 'next/navigation'
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 interface CalendarGridProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   defaultView?: CalendarViewType
 }
 
 export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: CalendarGridProps) {
   const [currentDate, setCurrentDate] = useState(new Date())
   const [view, setView] = useState<CalendarViewType>(defaultView)
-  const [selectedEvent, setSelectedEvent] = useState<CalendroEvent | null>(null)
+  const [selectedEvent, setSelectedEvent] = useState<MomentiesEvent | null>(null)
   const [showEditDialog, setShowEditDialog] = useState(false)
   const [showNewDialog, setShowNewDialog] = useState(false)
   const [newEventDate, setNewEventDate] = useState<Date | undefined>()
   const [dragOverDay, setDragOverDay] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
-  const [optimisticEvents, setOptimisticEvents] = useState<CalendroEvent[]>([])
+  const [optimisticEvents, setOptimisticEvents] = useState<MomentiesEvent[]>([])
   const [removedIds, setRemovedIds] = useState<Set<string>>(new Set())
   const [isRefreshing, startTransition] = useTransition()
   const router = useRouter()
@@ -133,7 +133,7 @@ export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: Ca
     }
   }
 
-  function handleEventClick(event: CalendroEvent) {
+  function handleEventClick(event: MomentiesEvent) {
     setSelectedEvent(event)
     setShowEditDialog(true)
   }
@@ -154,7 +154,7 @@ export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: Ca
     })
   }
 
-  async function handleSaveEvent(updated: CalendroEvent) {
+  async function handleSaveEvent(updated: MomentiesEvent) {
     if (busy || isRefreshing) return
     const id = updated.id ?? updated.sourceId
     if (!id) return
@@ -198,7 +198,7 @@ export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: Ca
     }
   }
 
-  async function handleCreateEvent(event: CalendroEvent) {
+  async function handleCreateEvent(event: MomentiesEvent) {
     if (busy || isRefreshing) return
     setBusy(true)
     const tempId = `temp-${Date.now()}`
@@ -223,7 +223,7 @@ export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: Ca
     const data = e.dataTransfer.getData('application/json')
     if (!data) return
 
-    let event: CalendroEvent
+    let event: MomentiesEvent
     try {
       event = JSON.parse(data)
     } catch {
@@ -258,7 +258,7 @@ export function CalendarGrid({ events: serverEvents, defaultView = 'month' }: Ca
     }
   }
 
-  async function handleDropEventFromView(event: CalendroEvent, targetDate: Date) {
+  async function handleDropEventFromView(event: MomentiesEvent, targetDate: Date) {
     if (busy || isRefreshing) return
     const id = event.id ?? event.sourceId
     if (!id) return

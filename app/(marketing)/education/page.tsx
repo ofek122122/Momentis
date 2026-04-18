@@ -6,11 +6,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { GraduationCap, Check, Camera, BookOpen, Users, ArrowUpRight, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Calendro for Students — Free forever with a .edu email',
-  description: 'Students and educators get Calendro Pro free with a verified .edu (or equivalent) email. Snap your syllabus. Keep your semester.',
+  title: 'Momenties for Students — Free forever with a .edu email',
+  description: 'Students and educators get Momenties Pro free with a verified .edu (or equivalent) email. Snap your syllabus. Keep your semester.',
   alternates: { canonical: '/education' },
   openGraph: {
-    title: 'Calendro for Students & Educators',
+    title: 'Momenties for Students & Educators',
     description: 'Free Pro with a .edu email.',
     url: '/education',
   },
@@ -33,7 +33,7 @@ export default function EducationPage() {
   return (
     <>
       <PageHero
-        eyebrow="Calendro for Students"
+        eyebrow="Momenties for Students"
         title={
           <>
             Your <em className="not-italic text-gold">whole semester</em>, in a photo.
@@ -65,7 +65,7 @@ export default function EducationPage() {
             { v: 'Free', l: 'Pro plan for students' },
             { v: '2 min', l: 'To parse a syllabus' },
             { v: '42', l: 'Partner universities' },
-            { v: '12k+', l: 'Students using Calendro' },
+            { v: '12k+', l: 'Students using Momenties' },
           ].map((s) => (
             <div key={s.l}>
               <div className="font-display text-3xl md:text-4xl font-bold shimmer-text">{s.v}</div>
@@ -156,7 +156,7 @@ export default function EducationPage() {
             Claim your free plan.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            Sign up with any .edu email (or equivalent academic domain) and Calendro Pro is yours for as long as you&apos;re a student. No card required, no trial, no auto-upgrade.
+            Sign up with any .edu email (or equivalent academic domain) and Momenties Pro is yours for as long as you&apos;re a student. No card required, no trial, no auto-upgrade.
           </p>
           <Link
             href="/login"
@@ -166,8 +166,8 @@ export default function EducationPage() {
           </Link>
           <p className="mt-4 text-xs font-mono text-muted-foreground">
             Need your school added to our list? Email{' '}
-            <a href="mailto:edu@calendro.app" className="text-gold hover:underline">
-              edu@calendro.app
+            <a href="mailto:edu@momenties.app" className="text-gold hover:underline">
+              edu@momenties.app
             </a>
           </p>
         </div>

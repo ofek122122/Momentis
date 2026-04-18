@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import {
   format, isSameDay, isToday, setHours,
 } from 'date-fns'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 import { EVENT_COLORS, CATEGORY_TO_COLOR, PRIORITY_CONFIG } from '@/types'
 import type { EventColor } from '@/types'
 
@@ -13,11 +13,11 @@ const START_HOUR = 6
 const END_HOUR = 24
 
 interface DayViewProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   currentDate: Date
-  onEventClick: (event: CalendroEvent) => void
+  onEventClick: (event: MomentiesEvent) => void
   onTimeSlotClick: (date: Date) => void
-  onDropEvent: (event: CalendroEvent, targetDate: Date) => void
+  onDropEvent: (event: MomentiesEvent, targetDate: Date) => void
 }
 
 export function DayView({ events, currentDate, onEventClick, onTimeSlotClick, onDropEvent }: DayViewProps) {
@@ -34,7 +34,7 @@ export function DayView({ events, currentDate, onEventClick, onTimeSlotClick, on
     return hrs
   }, [])
 
-  function getEventStyle(event: CalendroEvent): React.CSSProperties {
+  function getEventStyle(event: MomentiesEvent): React.CSSProperties {
     const start = new Date(event.start)
     const end = new Date(event.end)
     const startMin = start.getHours() * 60 + start.getMinutes()
@@ -55,7 +55,7 @@ export function DayView({ events, currentDate, onEventClick, onTimeSlotClick, on
     const data = e.dataTransfer.getData('application/json')
     if (!data) return
     try {
-      const event: CalendroEvent = JSON.parse(data)
+      const event: MomentiesEvent = JSON.parse(data)
       const target = new Date(currentDate)
       target.setHours(hour, 0, 0, 0)
       onDropEvent(event, target)

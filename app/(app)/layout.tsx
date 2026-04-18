@@ -30,9 +30,9 @@ export default async function AppLayout({
         {/* Brand */}
         <div className="px-4 mb-8">
           <Link href="/calendar" className="flex items-center gap-2.5">
-            <img src="/logo.png" alt="Calendro" className="h-6 w-6 shrink-0" />
+            <img src="/logo.png" alt="Momenties" className="h-6 w-6 shrink-0" />
             <span className="font-display text-base font-bold text-foreground tracking-tight">
-              Calendro
+              Momenties
             </span>
             {tier === 'pro' && <ProBadge />}
           </Link>

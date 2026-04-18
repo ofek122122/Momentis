@@ -25,7 +25,7 @@ export async function generateMetadata({
     alternates: { canonical: `/customers/${c.slug}` },
     openGraph: {
       type: 'article',
-      title: `${c.company} × Calendro`,
+      title: `${c.company} × Momenties`,
       description: c.tagline,
       url: `/customers/${c.slug}`,
     },
@@ -164,7 +164,7 @@ export default async function CustomerStoryPage({
       <CTA
         title="Your team next?"
         subtitle="Every week is quieter when scheduling stops being a chore."
-        primary={{ label: 'Try Calendro free', href: '/login' }}
+        primary={{ label: 'Try Momenties free', href: '/login' }}
         secondary={{ label: 'Back to customers', href: '/customers' }}
       />
     </article>

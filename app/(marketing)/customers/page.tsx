@@ -8,12 +8,12 @@ import { ItemListJsonLd } from '@/components/marketing/StructuredData'
 import { ArrowUpRight, Quote } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Customers — Stories from people who use Calendro',
-  description: 'Long-form case studies from designers, doctors, parents, and founders — all using Calendro to run quieter days.',
+  title: 'Customers — Stories from people who use Momenties',
+  description: 'Long-form case studies from designers, doctors, parents, and founders — all using Momenties to run quieter days.',
   alternates: { canonical: '/customers' },
   openGraph: {
-    title: 'Calendro Customer Stories',
-    description: 'Real stories from people who run their days with Calendro.',
+    title: 'Momenties Customer Stories',
+    description: 'Real stories from people who run their days with Momenties.',
     url: '/customers',
   },
 }
@@ -34,7 +34,7 @@ export default function CustomersPage() {
   return (
     <>
       <ItemListJsonLd
-        name="Calendro customer stories"
+        name="Momenties customer stories"
         items={CUSTOMER_STORIES.map((c) => ({
           url: `/customers/${c.slug}`,
           name: c.company,
@@ -47,7 +47,7 @@ export default function CustomersPage() {
             Real people, <em className="not-italic text-gold">quieter days</em>.
           </>
         }
-        lede="We asked three Calendro users — an enterprise CTO, a studio founder, and a VC partner — to tell us how their week actually changed. Here's what they said."
+        lede="We asked three Momenties users — an enterprise CTO, a studio founder, and a VC partner — to tell us how their week actually changed. Here's what they said."
         crumbs={[{ label: 'Customers' }]}
       />
 
@@ -148,9 +148,9 @@ export default function CustomersPage() {
 
       <CTA
         title="Your story next?"
-        subtitle="We're always looking for thoughtful case studies. If Calendro has changed how your week runs, we'd love to hear."
+        subtitle="We're always looking for thoughtful case studies. If Momenties has changed how your week runs, we'd love to hear."
         primary={{ label: 'Share your story', href: '/contact' }}
-        secondary={{ label: 'Start using Calendro', href: '/login' }}
+        secondary={{ label: 'Start using Momenties', href: '/login' }}
       />
     </>
   )

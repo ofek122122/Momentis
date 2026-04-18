@@ -6,11 +6,11 @@ import { CTA } from '@/components/marketing/CTA'
 import { Monitor, Smartphone, Globe, Terminal, Download, ArrowUpRight, Puzzle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Downloads — Calendro, everywhere',
-  description: 'Calendro runs in your browser, on Mac and Windows, iOS and Android, and in your terminal. Download the version that fits your week.',
+  title: 'Downloads — Momenties, everywhere',
+  description: 'Momenties runs in your browser, on Mac and Windows, iOS and Android, and in your terminal. Download the version that fits your week.',
   alternates: { canonical: '/downloads' },
   openGraph: {
-    title: 'Calendro Downloads',
+    title: 'Momenties Downloads',
     description: 'Browser, desktop, mobile, terminal — everywhere.',
     url: '/downloads',
   },
@@ -21,7 +21,7 @@ const PLATFORMS = [
     icon: Globe,
     name: 'Web',
     sub: 'Any modern browser',
-    desc: 'The full Calendro experience. No install required. Works on Chrome, Firefox, Safari, Edge, and Arc.',
+    desc: 'The full Momenties experience. No install required. Works on Chrome, Firefox, Safari, Edge, and Arc.',
     cta: 'Open web app',
     href: '/calendar',
     featured: true,
@@ -71,8 +71,8 @@ const PLATFORMS = [
     icon: Terminal,
     name: 'Terminal CLI',
     sub: 'macOS & Linux',
-    desc: 'For the keyboard-first crowd. Schedule from your shell: `calendro add "dentist thursday 3pm"`.',
-    cta: 'brew install calendro',
+    desc: 'For the keyboard-first crowd. Schedule from your shell: `momenties add "dentist thursday 3pm"`.',
+    cta: 'brew install momenties',
     href: '#',
     featured: false,
     meta: 'v0.8.0 · open source',
@@ -83,7 +83,7 @@ const EXTRAS = [
   {
     icon: Puzzle,
     title: 'Chrome extension',
-    desc: 'Right-click any date on any webpage, click "Schedule in Calendro". Works on Gmail, Airbnb, Ticketmaster — everywhere.',
+    desc: 'Right-click any date on any webpage, click "Schedule in Momenties". Works on Gmail, Airbnb, Ticketmaster — everywhere.',
     cta: 'Install extension',
   },
   {
@@ -95,7 +95,7 @@ const EXTRAS = [
   {
     icon: Puzzle,
     title: 'iOS Shortcut',
-    desc: 'Say "hey Siri, add event" to trigger Calendro from anywhere on your phone.',
+    desc: 'Say "hey Siri, add event" to trigger Momenties from anywhere on your phone.',
     cta: 'Download Shortcut',
   },
 ]
@@ -107,10 +107,10 @@ export default function DownloadsPage() {
         eyebrow="Apps & downloads"
         title={
           <>
-            Calendro, <em className="not-italic text-gold">wherever you are</em>.
+            Momenties, <em className="not-italic text-gold">wherever you are</em>.
           </>
         }
-        lede="Six native homes and a web app. All share the same data. All feel like Calendro. Pick the one that fits your day."
+        lede="Six native homes and a web app. All share the same data. All feel like Momenties. Pick the one that fits your day."
         crumbs={[{ label: 'Downloads' }]}
       />
 
@@ -167,7 +167,7 @@ export default function DownloadsPage() {
               Extensions & launchers
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground tracking-tight">
-              Bring Calendro everywhere else.
+              Bring Momenties everywhere else.
             </h2>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-4">

@@ -120,7 +120,7 @@ export const LESSONS: Lesson[] = [
   {
     id: 'voice-walks',
     title: 'The walk-home planning ritual',
-    summary: "A three-paragraph technique for dumping a week's worth of commitments into Calendro in one pass.",
+    summary: "A three-paragraph technique for dumping a week's worth of commitments into Momenties in one pass.",
     minutes: 3,
     kind: 'read',
     track: 'voice',
@@ -208,8 +208,8 @@ export const LESSONS: Lesson[] = [
 
 export const LEARNING_PATHS = [
   {
-    id: 'new-to-calendro',
-    title: 'Brand new to Calendro',
+    id: 'new-to-momenties',
+    title: 'Brand new to Momenties',
     minutes: 12,
     lessons: ['connect-google', 'first-event', 'shortcut-cheatsheet'],
     note: 'Run this in one sitting with a coffee. Bring a real event you\'re avoiding.',

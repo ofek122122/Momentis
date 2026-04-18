@@ -38,7 +38,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'amira-okafor',
     quote:
-      'Calendro replaced three scheduling apps we were paying for. My design team adopted it in a week with zero training. The onboarding is just: open it and start typing.',
+      'Momenties replaced three scheduling apps we were paying for. My design team adopted it in a week with zero training. The onboarding is just: open it and start typing.',
     name: 'Amira Okafor',
     handle: '@amiraok',
     role: 'Head of Design, Stratify',
@@ -82,7 +82,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'priya-shankar',
     quote:
-      'I run five calendars across three clients. Calendro unifies them without feeling like a messy inbox. It respects my attention.',
+      'I run five calendars across three clients. Momenties unifies them without feeling like a messy inbox. It respects my attention.',
     name: 'Priya Shankar',
     role: 'Fractional COO',
     categories: ['freelancers', 'operators'],
@@ -125,7 +125,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'sana-qureshi',
     quote:
-      'Between my thesis, my TA sections, and my part-time job, I used to miss one thing a week. Now I miss nothing. Calendro is the quietest support system I have.',
+      'Between my thesis, my TA sections, and my part-time job, I used to miss one thing a week. Now I miss nothing. Momenties is the quietest support system I have.',
     name: 'Sana Qureshi',
     role: 'PhD Candidate, CMU',
     categories: ['students', 'writers'],
@@ -146,7 +146,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'davide-costa',
     quote:
-      'I deleted Notion Calendar, Fantastical, and Motion. Calendro does the job of all three, and it is lighter than any of them.',
+      'I deleted Notion Calendar, Fantastical, and Motion. Momenties does the job of all three, and it is lighter than any of them.',
     name: 'Davide Costa',
     role: 'Principal Engineer, Orbiq',
     categories: ['engineers'],
@@ -168,7 +168,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'rohan-iyer',
     quote:
-      "We tried three calendar tools during our YC batch. Calendro was the only one my cofounder didn't quit within 48 hours.",
+      "We tried three calendar tools during our YC batch. Momenties was the only one my cofounder didn't quit within 48 hours.",
     name: 'Rohan Iyer',
     role: 'Cofounder, Klearly',
     categories: ['founders'],
@@ -241,7 +241,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'riya-desai',
     quote:
-      "My whole cohort is using it for our master's program. We have a running joke that Calendro is the only group project that actually works.",
+      "My whole cohort is using it for our master's program. We have a running joke that Momenties is the only group project that actually works.",
     name: 'Riya Desai',
     handle: '@riyad',
     role: 'MBA, INSEAD',
@@ -252,7 +252,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'vincent-du',
     quote:
-      "I run a newsletter with 40k readers and a podcast with 8 guests a month. Every booking starts with a voice note into Calendro. I've never missed a cadence since.",
+      "I run a newsletter with 40k readers and a podcast with 8 guests a month. Every booking starts with a voice note into Momenties. I've never missed a cadence since.",
     name: 'Vincent Du',
     role: 'Creator, Bright Mornings',
     categories: ['writers', 'freelancers'],
@@ -273,7 +273,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'pauline-rivera',
     quote:
-      "I ran the whole offsite off Calendro — 24 people, 3 cities, 2 time zones. Nothing dropped. Nobody asked me 'when was that again?' for the first time in my career.",
+      "I ran the whole offsite off Momenties — 24 people, 3 cities, 2 time zones. Nothing dropped. Nobody asked me 'when was that again?' for the first time in my career.",
     name: 'Pauline Rivera',
     role: 'Chief of Staff',
     categories: ['operators'],
@@ -283,7 +283,7 @@ export const WALL_QUOTES: WallQuote[] = [
   {
     id: 'felix-wagner',
     quote:
-      "I'm a maker, not a scheduler. Calendro is the first thing that lets me pretend to be the second one, without actually becoming it.",
+      "I'm a maker, not a scheduler. Momenties is the first thing that lets me pretend to be the second one, without actually becoming it.",
     name: 'Felix Wagner',
     handle: '@felix_wgnr',
     role: 'Illustrator',

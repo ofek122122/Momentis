@@ -1,8 +1,8 @@
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 export interface ConflictPair {
-  newEvent: CalendroEvent
-  existingEvent: CalendroEvent
+  newEvent: MomentiesEvent
+  existingEvent: MomentiesEvent
 }
 
 /**
@@ -11,8 +11,8 @@ export interface ConflictPair {
  *   newStart < existingEnd AND newEnd > existingStart
  */
 export function detectConflicts(
-  newEvents: CalendroEvent[],
-  existingEvents: CalendroEvent[]
+  newEvents: MomentiesEvent[],
+  existingEvents: MomentiesEvent[]
 ): ConflictPair[] {
   const conflicts: ConflictPair[] = []
 

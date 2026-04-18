@@ -120,8 +120,8 @@ export const MOMENTS: Moment[] = [
     title: 'The CLI binary reached beta.',
     body: 'Signed binaries for macOS, Linux, and Windows. Pipe events in from your shell. Pipe iCal out. Composes with cron, at, and your own scripts.',
     icon: FlaskConical,
-    linkLabel: 'Labs: Calendro CLI',
-    linkHref: '/labs#calendro-cli',
+    linkLabel: 'Labs: Momenties CLI',
+    linkHref: '/labs#momenties-cli',
     tone: 'sky',
   },
   {
@@ -251,7 +251,7 @@ export const KILLED: { title: string; body: string }[] = [
   },
   {
     title: 'The webhook relay service',
-    body: "A perfectly fine feature adjacent to the wrong product. Open-sourced as 'Calendro-relay'.",
+    body: "A perfectly fine feature adjacent to the wrong product. Open-sourced as 'Momenties-relay'.",
   },
 ]
 
@@ -262,7 +262,7 @@ export const NOTEWORTHY: { who: string; note: string }[] = [
   },
   {
     who: 'Pauline Rivera',
-    note: 'Ran a 24-person offsite on Calendro and then talked about it for 38 minutes on the podcast.',
+    note: 'Ran a 24-person offsite on Momenties and then talked about it for 38 minutes on the podcast.',
   },
   {
     who: 'Tomás Levi',

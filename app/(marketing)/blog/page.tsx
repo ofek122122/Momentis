@@ -10,10 +10,10 @@ import { ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Blog — Ideas on time, AI, and calm software',
-  description: 'Essays from the team at Calendro on productivity, AI, design, and the quiet hours. Slow, thoughtful reading for people who think about their time.',
+  description: 'Essays from the team at Momenties on productivity, AI, design, and the quiet hours. Slow, thoughtful reading for people who think about their time.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'Calendro Blog',
+    title: 'Momenties Blog',
     description: 'Essays on time, AI, and calm software.',
     url: '/blog',
     type: 'website',
@@ -36,11 +36,11 @@ export default function BlogPage() {
   return (
     <>
       <ItemListJsonLd
-        name="Calendro field notes"
+        name="Momenties field notes"
         items={BLOG_POSTS.map((p) => ({ url: `/blog/${p.slug}`, name: p.title }))}
       />
       <PageHero
-        eyebrow="Calendro field notes"
+        eyebrow="Momenties field notes"
         title={
           <>
             Slow essays on <em className="not-italic text-gold">time</em>, AI, and

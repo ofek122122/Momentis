@@ -7,10 +7,10 @@ import { Download, Mail, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Press Kit — Logos, photos, and media',
-  description: 'Logos, brand guidelines, press releases, and a media contact. Everything you need to write about Calendro.',
+  description: 'Logos, brand guidelines, press releases, and a media contact. Everything you need to write about Momenties.',
   alternates: { canonical: '/press' },
   openGraph: {
-    title: 'Calendro Press Kit',
+    title: 'Momenties Press Kit',
     description: 'Logos, guidelines, press releases, and media contact.',
     url: '/press',
   },
@@ -19,22 +19,22 @@ export const metadata: Metadata = {
 const RELEASES = [
   {
     date: '2026-04-12',
-    title: 'Calendro raises $12M Series A led by Index Ventures',
+    title: 'Momenties raises $12M Series A led by Index Ventures',
     excerpt: 'The round will fund Outlook integration, a native mobile app, and the company\'s first European engineering hires.',
   },
   {
     date: '2026-02-21',
-    title: 'Calendro debuts AI daily briefings for every user',
+    title: 'Momenties debuts AI daily briefings for every user',
     excerpt: 'A warm morning summary, built on Gemini 2.5 Flash, ships to all plans for free.',
   },
   {
     date: '2026-01-15',
-    title: 'Calendro launches public beta',
+    title: 'Momenties launches public beta',
     excerpt: 'After a year of private development, the AI calendar is now open to anyone with a Google account.',
   },
   {
     date: '2025-11-02',
-    title: 'Calendro wins Product Hunt Product of the Month',
+    title: 'Momenties wins Product Hunt Product of the Month',
     excerpt: 'The scheduling app — still in private beta — was selected by the Product Hunt editorial team for its quiet design and sharp AI parsing.',
   },
 ]
@@ -42,7 +42,7 @@ const RELEASES = [
 const COVERAGE = [
   { publication: 'The Verge', quote: '“The first calendar app that respects your attention.”', href: '#' },
   { publication: 'TechCrunch', quote: '“A rare piece of calm, confident consumer AI.”', href: '#' },
-  { publication: 'Wired', quote: '“Calendro made me fall back in love with my calendar.”', href: '#' },
+  { publication: 'Wired', quote: '“Momenties made me fall back in love with my calendar.”', href: '#' },
   { publication: 'Kinfolk', quote: '“Proof that productivity software can be beautiful.”', href: '#' },
   { publication: 'FastCompany', quote: '“A design-first approach to a deeply unsexy problem.”', href: '#' },
   { publication: 'Dense Discovery', quote: '“One of the nicest calendars I\'ve ever used.”', href: '#' },
@@ -70,11 +70,11 @@ export default function PressPage() {
             Download press kit (.zip)
           </a>
           <a
-            href="mailto:press@calendro.app"
+            href="mailto:press@momenties.app"
             className="inline-flex items-center gap-2 h-10 px-5 rounded-full border border-border text-sm text-foreground hover:border-gold/30 transition-colors"
           >
             <Mail className="h-4 w-4" />
-            press@calendro.app
+            press@momenties.app
           </a>
         </div>
       </PageHero>
@@ -104,7 +104,7 @@ export default function PressPage() {
                     className="h-40 flex items-center justify-center"
                     style={{ background: l.bg, color: l.fg }}
                   >
-                    <span className="font-display text-2xl font-semibold tracking-tight">Calendro</span>
+                    <span className="font-display text-2xl font-semibold tracking-tight">Momenties</span>
                   </div>
                   <div className="p-4 flex items-center justify-between">
                     <span className="text-xs text-muted-foreground">{l.label}</span>
@@ -276,7 +276,7 @@ export default function PressPage() {
       <CTA
         title="Media inquiry?"
         subtitle="Our co-founder Iris handles all press directly. Expect a reply within 24 hours."
-        primary={{ label: 'press@calendro.app', href: 'mailto:press@calendro.app' }}
+        primary={{ label: 'press@momenties.app', href: 'mailto:press@momenties.app' }}
         secondary={{ label: 'Our blog', href: '/blog' }}
       />
     </>

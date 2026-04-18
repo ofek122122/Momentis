@@ -4,14 +4,14 @@ import { useState } from 'react'
 import { BookTemplate, Plus, Trash2, Clock, Tag } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface EventTemplate {
   id: string
   name: string
   title: string
   duration: number // minutes
-  category: CalendroEvent['category']
+  category: MomentiesEvent['category']
   location?: string
   description?: string
 }
@@ -26,7 +26,7 @@ const DEFAULT_TEMPLATES: EventTemplate[] = [
 ]
 
 interface EventTemplatesProps {
-  onCreateFromTemplate: (event: CalendroEvent) => void
+  onCreateFromTemplate: (event: MomentiesEvent) => void
 }
 
 export function EventTemplates({ onCreateFromTemplate }: EventTemplatesProps) {
@@ -35,7 +35,7 @@ export function EventTemplates({ onCreateFromTemplate }: EventTemplatesProps) {
   const [newName, setNewName] = useState('')
   const [newTitle, setNewTitle] = useState('')
   const [newDuration, setNewDuration] = useState(60)
-  const [newCategory, setNewCategory] = useState<CalendroEvent['category']>('other')
+  const [newCategory, setNewCategory] = useState<MomentiesEvent['category']>('other')
 
   function createFromTemplate(template: EventTemplate) {
     const now = new Date()
@@ -153,7 +153,7 @@ export function EventTemplates({ onCreateFromTemplate }: EventTemplatesProps) {
             </select>
             <select
               value={newCategory}
-              onChange={e => setNewCategory(e.target.value as CalendroEvent['category'])}
+              onChange={e => setNewCategory(e.target.value as MomentiesEvent['category'])}
               className="h-8 rounded-md border border-border bg-background px-2 text-xs text-foreground flex-1"
             >
               <option value="work">Work</option>

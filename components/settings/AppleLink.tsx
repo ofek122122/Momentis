@@ -140,7 +140,7 @@ export function AppleLink({ linked: initialLinked, appleId: initialAppleId }: Ap
           <ol className="list-decimal list-inside space-y-1">
             <li>Go to <a href="https://appleid.apple.com/account/manage" target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2 inline-flex items-center gap-0.5">appleid.apple.com <ExternalLink className="h-2.5 w-2.5" /></a></li>
             <li>Sign in &rarr; <strong>App-Specific Passwords</strong></li>
-            <li>Click <strong>+</strong> to generate one, name it &ldquo;Calendro&rdquo;</li>
+            <li>Click <strong>+</strong> to generate one, name it &ldquo;Momenties&rdquo;</li>
             <li>Copy the password and paste it below</li>
           </ol>
         </div>

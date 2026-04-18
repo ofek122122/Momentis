@@ -7,11 +7,11 @@ import { StatCounter } from '@/components/marketing/StatCounter'
 import { Users, Briefcase, TrendingUp, Heart, Code2, Mail } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Open metrics — Calendro in public',
-  description: 'Revenue, headcount, churn, runway — the real numbers behind Calendro, updated monthly. A small company, fully in the open.',
+  title: 'Open metrics — Momenties in public',
+  description: 'Revenue, headcount, churn, runway — the real numbers behind Momenties, updated monthly. A small company, fully in the open.',
   alternates: { canonical: '/open' },
   openGraph: {
-    title: 'Calendro Open Metrics',
+    title: 'Momenties Open Metrics',
     description: 'Our real numbers, updated monthly.',
     url: '/open',
   },
@@ -57,7 +57,7 @@ export default function OpenPage() {
         eyebrow="Open metrics"
         title={
           <>
-            Calendro, <em className="not-italic text-gold">in public</em>.
+            Momenties, <em className="not-italic text-gold">in public</em>.
           </>
         }
         lede="The real numbers behind a small company trying to build quiet software. Updated on the 10th of each month. No spin, no rounding up."
@@ -273,7 +273,7 @@ export default function OpenPage() {
       <CTA
         title="Want to talk about what\'s behind these numbers?"
         subtitle="Our founders answer email personally. Include 'open metrics' in the subject."
-        primary={{ label: 'hello@calendro.app', href: 'mailto:hello@calendro.app' }}
+        primary={{ label: 'hello@momenties.app', href: 'mailto:hello@momenties.app' }}
         secondary={{ label: 'Read our blog', href: '/blog' }}
       />
     </>

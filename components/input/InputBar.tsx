@@ -6,30 +6,30 @@ import { VoiceButton } from './VoiceButton'
 import { ImageUploadButton } from './ImageUploadButton'
 import { EventPreviewCard } from '@/components/calendar/EventPreviewCard'
 import { detectConflicts, type ConflictPair } from '@/lib/conflicts'
-import type { CalendroEvent, ParseResult } from '@/types'
+import type { MomentiesEvent, ParseResult } from '@/types'
 
 import { hasVagueTime } from '@/lib/parser/vague-time'
 
 interface InputBarProps {
   onEventsAdded?: () => void
-  existingEvents?: CalendroEvent[]
+  existingEvents?: MomentiesEvent[]
 }
 
 export function InputBar({ onEventsAdded, existingEvents = [] }: InputBarProps) {
   const [text, setText] = useState('')
-  const [pendingEvents, setPendingEvents] = useState<CalendroEvent[]>([])
+  const [pendingEvents, setPendingEvents] = useState<MomentiesEvent[]>([])
   const [showPreview, setShowPreview] = useState(false)
   const [imageParsing, setImageParsing] = useState(false)
   const [confirmError, setConfirmError] = useState<string | null>(null)
   const [parseError, setParseError] = useState<string | null>(null)
   const [conflicts, setConflicts] = useState<ConflictPair[]>([])
-  const [suggestions, setSuggestions] = useState<CalendroEvent[]>([])
+  const [suggestions, setSuggestions] = useState<MomentiesEvent[]>([])
   const [suggestLoading, setSuggestLoading] = useState(false)
   const [isPending, startTransition] = useTransition()
 
   const isBusy = isPending || imageParsing
 
-  function showEvents(events: CalendroEvent[]) {
+  function showEvents(events: MomentiesEvent[]) {
     if (events.length > 0) {
       setPendingEvents(events)
       setConflicts(detectConflicts(events, existingEvents))
@@ -87,7 +87,7 @@ export function InputBar({ onEventsAdded, existingEvents = [] }: InputBarProps) 
         body: JSON.stringify({ text: inputText }),
       })
       if (res.ok) {
-        const data = (await res.json()) as { suggestions: CalendroEvent[] }
+        const data = (await res.json()) as { suggestions: MomentiesEvent[] }
         if (data.suggestions.length > 0) {
           setSuggestions(data.suggestions.map(s => ({
             ...s,
@@ -112,7 +112,7 @@ export function InputBar({ onEventsAdded, existingEvents = [] }: InputBarProps) 
     showEvents(events)
   }
 
-  async function handleConfirm(events: CalendroEvent[]) {
+  async function handleConfirm(events: MomentiesEvent[]) {
     setConfirmError(null)
     try {
       const results = await Promise.all(

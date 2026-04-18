@@ -10,10 +10,10 @@ import { Quote, ArrowUpRight } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Launch Week 01 — Five quiet, serious upgrades',
   description:
-    "April 14–18, 2026. Calendro's first Launch Week: a smarter hybrid parser, voice in 28 languages, image parsing 2.0, a command palette, and teams with SSO.",
+    "April 14–18, 2026. Momenties's first Launch Week: a smarter hybrid parser, voice in 28 languages, image parsing 2.0, a command palette, and teams with SSO.",
   alternates: { canonical: '/launch-week-1' },
   openGraph: {
-    title: 'Calendro · Launch Week 01',
+    title: 'Momenties · Launch Week 01',
     description:
       'Five days. Five quiet, serious upgrades. No ad spend. April 14–18, 2026.',
     url: '/launch-week-1',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calendro · Launch Week 01',
+    title: 'Momenties · Launch Week 01',
     description: 'Five days. Five quiet, serious upgrades. No ad spend.',
   },
 }
@@ -269,7 +269,7 @@ export default function LaunchWeek1Page() {
       <CTA
         title="Built during Launch Week. Free to try today."
         subtitle="Every feature above is live in the app right now. No waitlist, no beta form, no credit card."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'See the roadmap', href: '/roadmap' }}
       />
     </>

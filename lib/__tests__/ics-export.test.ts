@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest'
 import { eventsToICS, parseICSFeed } from '@/lib/ics-export'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 describe('eventsToICS', () => {
   it('generates valid ICS content', () => {
-    const events: CalendroEvent[] = [{
+    const events: MomentiesEvent[] = [{
       id: 'test-1',
       title: 'Team Meeting',
       start: new Date('2026-04-10T10:00:00Z'),
@@ -21,7 +21,7 @@ describe('eventsToICS', () => {
   })
 
   it('escapes special characters', () => {
-    const events: CalendroEvent[] = [{
+    const events: MomentiesEvent[] = [{
       title: 'Meet; discuss, plan',
       start: new Date('2026-04-10T10:00:00Z'),
       end: new Date('2026-04-10T11:00:00Z'),

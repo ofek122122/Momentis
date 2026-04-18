@@ -1,11 +1,11 @@
 'use client'
 
 import { format } from 'date-fns'
-import type { CalendroEvent, EventColor } from '@/types'
+import type { MomentiesEvent, EventColor } from '@/types'
 import { EVENT_COLORS, CATEGORY_TO_COLOR, PRIORITY_CONFIG } from '@/types'
 
 interface EventChipProps {
-  event: CalendroEvent
+  event: MomentiesEvent
   onClick?: () => void
   hasConflict?: boolean
   draggable?: boolean

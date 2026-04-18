@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 const QUOTES = [
   {
     quote:
-      'Calendro replaced three scheduling apps I was paying for. My team adopted it in a week with zero training.',
+      'Momenties replaced three scheduling apps I was paying for. My team adopted it in a week with zero training.',
     name: 'Amira Okafor',
     role: 'Head of Design · Stratify',
     avatar: 'AO',
@@ -34,7 +34,7 @@ const QUOTES = [
   },
   {
     quote:
-      'I run five calendars across three clients. Calendro unifies them without feeling like a messy inbox. It respects my attention.',
+      'I run five calendars across three clients. Momenties unifies them without feeling like a messy inbox. It respects my attention.',
     name: 'Priya Shankar',
     role: 'Fractional COO',
     avatar: 'PS',

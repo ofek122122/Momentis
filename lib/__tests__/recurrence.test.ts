@@ -5,7 +5,7 @@ import {
   expandRecurringEvent,
   describeRecurrence,
 } from '@/lib/recurrence'
-import type { CalendroEvent, RecurrenceRule } from '@/types'
+import type { MomentiesEvent, RecurrenceRule } from '@/types'
 
 describe('toRRULE', () => {
   it('generates a daily RRULE', () => {
@@ -57,7 +57,7 @@ describe('parseRRULE', () => {
 
 describe('expandRecurringEvent', () => {
   it('expands daily events within range', () => {
-    const event: CalendroEvent = {
+    const event: MomentiesEvent = {
       id: 'test-1',
       title: 'Standup',
       start: new Date('2026-04-06T09:00:00'),
@@ -75,7 +75,7 @@ describe('expandRecurringEvent', () => {
   })
 
   it('respects exceptions', () => {
-    const event: CalendroEvent = {
+    const event: MomentiesEvent = {
       id: 'test-2',
       title: 'Gym',
       start: new Date('2026-04-06T07:00:00'),
@@ -95,7 +95,7 @@ describe('expandRecurringEvent', () => {
   })
 
   it('respects count limit', () => {
-    const event: CalendroEvent = {
+    const event: MomentiesEvent = {
       id: 'test-3',
       title: 'Check-in',
       start: new Date('2026-04-01T10:00:00'),
@@ -111,7 +111,7 @@ describe('expandRecurringEvent', () => {
   })
 
   it('returns single event when no recurrence', () => {
-    const event: CalendroEvent = {
+    const event: MomentiesEvent = {
       id: 'test-4',
       title: 'One-off',
       start: new Date('2026-04-10T14:00:00'),

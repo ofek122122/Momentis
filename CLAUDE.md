@@ -1,8 +1,8 @@
-# Calendro — Project Context for AI Agents
+# Momenties — Project Context for AI Agents
 
 ## What Is This?
 
-Calendro is a zero-friction AI-powered calendar web app. Users create events by typing naturally ("dentist thursday 3pm"), speaking via voice, or snapping a photo of a schedule. AI parses everything into Google Calendar events.
+Momenties is a zero-friction AI-powered calendar web app. Users create events by typing naturally ("dentist thursday 3pm"), speaking via voice, or snapping a photo of a schedule. AI parses everything into Google Calendar events.
 
 **Tagline:** "Just say it. It's scheduled."
 

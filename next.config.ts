@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
   compress: false,
 
   turbopack: {
-    root: __dirname, // Calendro is the workspace root, ignore parent lockfiles
+    root: __dirname, // Momenties is the workspace root, ignore parent lockfiles
   },
 
   headers: async () => [

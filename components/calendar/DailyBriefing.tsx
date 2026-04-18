@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react'
 import { Sun, Coffee, AlertTriangle, Clock, Sparkles, ChevronDown, ChevronUp } from 'lucide-react'
 import { format, isToday, isBefore, addMinutes, differenceInMinutes } from 'date-fns'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface DailyBriefingProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
 }
 
 export function DailyBriefing({ events }: DailyBriefingProps) {

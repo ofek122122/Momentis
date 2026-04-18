@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 // Test the client-side search logic (same as SearchBar uses)
-function searchEvents(events: CalendroEvent[], query: string): CalendroEvent[] {
+function searchEvents(events: MomentiesEvent[], query: string): MomentiesEvent[] {
   if (!query.trim()) return []
   const lower = query.toLowerCase()
   return events.filter(e =>
@@ -12,7 +12,7 @@ function searchEvents(events: CalendroEvent[], query: string): CalendroEvent[] {
   )
 }
 
-const events: CalendroEvent[] = [
+const events: MomentiesEvent[] = [
   { title: 'Team Standup', start: new Date('2026-04-10T09:00:00'), end: new Date('2026-04-10T09:30:00'), location: 'Zoom', category: 'work' },
   { title: 'Gym Session', start: new Date('2026-04-10T07:00:00'), end: new Date('2026-04-10T08:00:00'), category: 'health' },
   { title: 'Lunch with Sarah', start: new Date('2026-04-10T12:00:00'), end: new Date('2026-04-10T13:00:00'), location: 'Cafe Milano', category: 'social' },

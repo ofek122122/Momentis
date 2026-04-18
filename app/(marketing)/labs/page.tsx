@@ -24,12 +24,12 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Calendro Labs — Experiments, in plain sight',
+  title: 'Momenties Labs — Experiments, in plain sight',
   description:
     'Features in progress, features that graduated, and features we killed on purpose. Opt in, give us feedback, or just watch us work.',
   alternates: { canonical: '/labs' },
   openGraph: {
-    title: 'Calendro Labs',
+    title: 'Momenties Labs',
     description:
       'Features in progress, features that graduated, and features we killed on purpose — all in one place.',
     url: '/labs',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calendro Labs',
+    title: 'Momenties Labs',
     description: 'Experiments, in plain sight.',
   },
 }
@@ -46,7 +46,7 @@ export default function LabsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Calendro Labs"
+        eyebrow="Momenties Labs"
         title={
           <>
             Experiments, <em className="not-italic text-gold">in plain sight</em>.
@@ -391,7 +391,7 @@ export default function LabsPage() {
       <CTA
         title="Prefer the finished thing?"
         subtitle="Everything in Labs eventually graduates — or gets killed on purpose. The stable app is already worth your time."
-        primary={{ label: 'Use Calendro', href: '/login' }}
+        primary={{ label: 'Use Momenties', href: '/login' }}
         secondary={{ label: 'Read the method', href: '/method' }}
       />
     </>

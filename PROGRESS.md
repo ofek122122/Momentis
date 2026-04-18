@@ -1,4 +1,4 @@
-# Calendro — Progress Log
+# Momenties — Progress Log
 
 ## 2026-04-16
 
@@ -47,7 +47,7 @@
 ### Iteration 15
 - **Task:** Build `/learn` — a premium learning hub in the Linear / Notion style.
 - **Status:** Completed
-- **Summary:** Added `lib/learn.ts` with 4 tracks (Quickstart 7m, Voice 10m, AI 15m, Power User 30m), 13 lessons across read/try/watch kinds, and 3 curated learning paths (brand-new-to-Calendro, founder-workflow, ops-and-chief-of-staff). Built `app/(marketing)/learn/page.tsx` with: hero + 4-stat strip, track overview cards (icon + tag + lesson preview), a 13-card lesson grid with scroll-reveal and new/popular/short badges, a curated-paths section with numbered ordered list and per-lesson minute/kind metadata, and a manifesto pullquote. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.
+- **Summary:** Added `lib/learn.ts` with 4 tracks (Quickstart 7m, Voice 10m, AI 15m, Power User 30m), 13 lessons across read/try/watch kinds, and 3 curated learning paths (brand-new-to-Momenties, founder-workflow, ops-and-chief-of-staff). Built `app/(marketing)/learn/page.tsx` with: hero + 4-stat strip, track overview cards (icon + tag + lesson preview), a 13-card lesson grid with scroll-reveal and new/popular/short badges, a curated-paths section with numbered ordered list and per-lesson minute/kind metadata, and a manifesto pullquote. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.
 
 ### Iteration 16
 - **Task:** Build `/launch-week-1` — a Raycast / Linear-style launch week recap page.
@@ -67,7 +67,7 @@
 ### Iteration 19
 - **Task:** Build `/labs` — a transparency-first beta-features page with active / graduated / retired sections.
 - **Status:** Completed
-- **Summary:** Added `lib/labs.ts` with 5 active experiments (conversational parser, calendar memory, location-aware suggestions, Calendro CLI, handwriting-first image parser), 4 graduated features (voice Nova-3, command palette, templates, workspaces), and 3 deliberately retired features with reasoning (AI advisor, public shareable calendars, webhook relay). Built `app/(marketing)/labs/page.tsx` with a 4-stat hero strip, a 2-col grid of active-experiment cards each showing status dot (planning/testing/ready tone), progress bar, lead/ships/testers/risk meta, and an opt-in link; a numbered ordered list of graduated features with emerald accent; a 3-col grid of retired features with rose accent + explicit "why we killed it" rationale; a three-way opt-in block (Settings → Labs, CLI command, forum & email), and a gold "Labs promise" callout (no silent defaults, no training on lab data, 30-day data deletion on opt-out, rollback-before-fix). Linked from header (Resources), footer (Resources, badged "Beta"), HTML sitemap, and sitemap.xml. Build clean.
+- **Summary:** Added `lib/labs.ts` with 5 active experiments (conversational parser, calendar memory, location-aware suggestions, Momenties CLI, handwriting-first image parser), 4 graduated features (voice Nova-3, command palette, templates, workspaces), and 3 deliberately retired features with reasoning (AI advisor, public shareable calendars, webhook relay). Built `app/(marketing)/labs/page.tsx` with a 4-stat hero strip, a 2-col grid of active-experiment cards each showing status dot (planning/testing/ready tone), progress bar, lead/ships/testers/risk meta, and an opt-in link; a numbered ordered list of graduated features with emerald accent; a 3-col grid of retired features with rose accent + explicit "why we killed it" rationale; a three-way opt-in block (Settings → Labs, CLI command, forum & email), and a gold "Labs promise" callout (no silent defaults, no training on lab data, 30-day data deletion on opt-out, rollback-before-fix). Linked from header (Resources), footer (Resources, badged "Beta"), HTML sitemap, and sitemap.xml. Build clean.
 
 ### Iteration 20
 - **Task:** Build `/pricing/calculator` — an interactive ROI calculator with transparent methodology.
@@ -75,7 +75,7 @@
 - **Summary:** Built a client `ROICalculator` component with three range sliders (hours/week, loaded hourly cost, team size) and four live-updating output tiles (hours saved/year, dollars saved/year, ROI multiple, payback period). Calculation combines a defensible 22% context-switch reduction with a 9 min/week tool-consolidation saving, over a 47-week year. Auto-selects Pro / Team / Enterprise plan based on team size and surfaces a plan-specific CTA. Added custom-styled gold range sliders to globals.css. Built `app/(marketing)/pricing/calculator/page.tsx` with hero, calculator card (2-column: inputs + outputs), a 3-card real-world proof strip with metric + quote + customer, a 4-point Methodology section explaining the assumptions on purpose, an inline formula callout, and a 3-column plan comparison grid with Pro/Team/Enterprise features and CTAs. Linked from header (Product), footer (Product), HTML sitemap, and sitemap.xml. Build clean.
 
 ### Iteration 21
-- **Task:** Build `/podcast` — "The Quiet Hours", a Calendro-produced podcast landing.
+- **Task:** Build `/podcast` — "The Quiet Hours", a Momenties-produced podcast landing.
 - **Status:** Completed
 - **Summary:** Added `lib/podcast.ts` with 8 season-1 episodes (Mei Lin on quiet software, Pauline Rivera on hiring, Oren on the hybrid parser, Isabelle Moreau on typography, Tomás Levi on the walk-home ritual, Iris on the manifesto, Jonas Berg on notebooks, and the pilot), each with guest, role, teaser, 4–5 chapter markers, duration, publish date, and a color-tagged category (Design/Engineering/Writing/Business/Life). Built `app/(marketing)/podcast/page.tsx` with a hero, featured episode card (3-column: artwork + title/chapters), a 6-platform "listen on" strip (Apple Podcasts, Spotify, Overcast, Pocket Casts, YouTube Music, RSS), a divider-style episode list with oversized numerals + color tag + chapter count + play-affordance hover, an About-the-show + host-bio block, a "Season 2" newsletter hook, and a closing CTA. Linked from header (Resources), footer (Resources), HTML sitemap, and sitemap.xml. Build clean.
 

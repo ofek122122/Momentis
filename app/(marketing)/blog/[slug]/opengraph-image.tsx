@@ -3,12 +3,12 @@ import { getPostBySlug } from '@/lib/blog-posts'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'Calendro field notes'
+export const alt = 'Momenties field notes'
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
-  const title = post?.title ?? 'Calendro field notes'
-  const author = post?.author.name ?? 'Calendro'
+  const title = post?.title ?? 'Momenties field notes'
+  const author = post?.author.name ?? 'Momenties'
   const category = post?.category ?? 'Essay'
   const reading = post?.readingMinutes ?? 5
 
@@ -46,7 +46,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           >
             C
           </div>
-          <span>Calendro</span>
+          <span>Momenties</span>
           <span style={{ color: 'rgba(240,236,227,0.4)', fontSize: 20 }}>· Field Notes</span>
         </div>
 
@@ -89,7 +89,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           }}
         >
           <span>by {author}</span>
-          <span>calendro.app/blog</span>
+          <span>momenties.app/blog</span>
         </div>
       </div>
     ),

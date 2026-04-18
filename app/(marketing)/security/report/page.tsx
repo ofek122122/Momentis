@@ -18,20 +18,20 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Report a vulnerability — Calendro Security',
+  title: 'Report a vulnerability — Momenties Security',
   description:
-    'How to responsibly report a security issue in Calendro. Three ways to reach us, our acknowledgement timeline, safe-harbor policy, and our hall of fame.',
+    'How to responsibly report a security issue in Momenties. Three ways to reach us, our acknowledgement timeline, safe-harbor policy, and our hall of fame.',
   alternates: { canonical: '/security/report' },
   openGraph: {
-    title: 'Report a vulnerability · Calendro',
+    title: 'Report a vulnerability · Momenties',
     description:
-      'Responsible disclosure at Calendro. Three channels, a safe-harbor policy, and a published hall of fame.',
+      'Responsible disclosure at Momenties. Three channels, a safe-harbor policy, and a published hall of fame.',
     url: '/security/report',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Report a vulnerability · Calendro',
+    title: 'Report a vulnerability · Momenties',
     description: 'Our responsible disclosure program, in plain English.',
   },
 }
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 const CHANNELS = [
   {
     title: 'PGP-encrypted email',
-    detail: 'security@calendro.app',
+    detail: 'security@momenties.app',
     note: "Best for high-sensitivity reports. Our public key is below.",
     icon: KeyRound,
     primary: true,
@@ -52,18 +52,18 @@ const CHANNELS = [
   },
   {
     title: 'Bounty platform',
-    detail: 'hackerone.com/calendro',
+    detail: 'hackerone.com/momenties',
     note: 'For researchers with an existing HackerOne account and workflow.',
     icon: HandCoins,
   },
 ]
 
 const SCOPE_IN = [
-  'calendro.app · web application',
-  'api.calendro.app · REST API',
-  'app.calendro.app · authenticated product',
-  'Calendro CLI (any published binary, any platform)',
-  'Calendro mobile web experience',
+  'momenties.app · web application',
+  'api.momenties.app · REST API',
+  'app.momenties.app · authenticated product',
+  'Momenties CLI (any published binary, any platform)',
+  'Momenties mobile web experience',
   'Our Google Calendar OAuth flow',
   'Our Microsoft Graph OAuth flow',
   'Our CalDAV adapter for Apple Calendar',
@@ -112,7 +112,7 @@ const SEVERITY_TONE: Record<string, string> = {
 }
 
 const PGP_KEY = `-----BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: Calendro Security · security@calendro.app
+Comment: Momenties Security · security@momenties.app
 Comment: Key ID: 4C71 D3A2 8E05 11B6
 Comment: Fingerprint: 7B9C 2F1A 4C71 D3A2 8E05 11B6 A3D9 8F42 6C01 9DE4
 
@@ -146,7 +146,7 @@ export default function SecurityReportPage() {
             Report a vulnerability.
           </h1>
           <p className="mt-6 font-display italic text-xl md:text-2xl text-foreground/90 leading-relaxed max-w-3xl">
-            If you&apos;ve found a security issue in Calendro, we want to hear about it before anyone else does.
+            If you&apos;ve found a security issue in Momenties, we want to hear about it before anyone else does.
           </p>
           <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed max-w-2xl">
             This page describes three ways to reach us, what we promise in return, what is in scope, and — most
@@ -154,11 +154,11 @@ export default function SecurityReportPage() {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="mailto:security@calendro.app"
+              href="mailto:security@momenties.app"
               className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
             >
               <Mail className="h-4 w-4" aria-hidden />
-              security@calendro.app
+              security@momenties.app
             </a>
             <Link
               href="#hall-of-fame"
@@ -417,7 +417,7 @@ export default function SecurityReportPage() {
           <div className="rounded-2xl border border-border bg-[#0c0c0f] overflow-hidden">
             <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-[#131318]">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground/80">
-                security@calendro.app · fingerprint 7B9C 2F1A 4C71 D3A2 8E05 11B6 A3D9 8F42 6C01 9DE4
+                security@momenties.app · fingerprint 7B9C 2F1A 4C71 D3A2 8E05 11B6 A3D9 8F42 6C01 9DE4
               </span>
               <a
                 href="/security/pgp.asc"
@@ -436,7 +436,7 @@ export default function SecurityReportPage() {
       <CTA
         title="We would rather hear from you than read about you."
         subtitle="If you're on the fence about whether it counts as a vulnerability — send it anyway. We'll tell you, kindly."
-        primary={{ label: 'Email security@calendro.app', href: 'mailto:security@calendro.app' }}
+        primary={{ label: 'Email security@momenties.app', href: 'mailto:security@momenties.app' }}
         secondary={{ label: 'Read our security overview', href: '/security' }}
       />
     </>

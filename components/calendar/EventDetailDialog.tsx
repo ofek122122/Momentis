@@ -8,14 +8,14 @@ import {
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Loader2, Trash2, MapPin, AlignLeft, Clock, Tag, Palette, Flag } from 'lucide-react'
-import type { CalendroEvent, EventColor, EventPriority } from '@/types'
+import type { MomentiesEvent, EventColor, EventPriority } from '@/types'
 import { EVENT_COLORS, PRIORITY_CONFIG, CATEGORY_TO_COLOR } from '@/types'
 
 interface EventDetailDialogProps {
-  event: CalendroEvent | null
+  event: MomentiesEvent | null
   open: boolean
   onClose: () => void
-  onSave: (updated: CalendroEvent) => Promise<void>
+  onSave: (updated: MomentiesEvent) => Promise<void>
   onDelete: (eventId: string) => Promise<void>
 }
 
@@ -35,12 +35,12 @@ export function EventDetailDialog({
   const [description, setDescription] = useState('')
   const [color, setColor] = useState<EventColor>('blue')
   const [priority, setPriority] = useState<EventPriority>('medium')
-  const [category, setCategory] = useState<CalendroEvent['category']>('other')
+  const [category, setCategory] = useState<MomentiesEvent['category']>('other')
   const [saving, setSaving] = useState(false)
   const [deleting, setDeleting] = useState(false)
 
   // Populate fields when event changes
-  const populateFromEvent = (e: CalendroEvent) => {
+  const populateFromEvent = (e: MomentiesEvent) => {
     setTitle(e.title)
     const s = new Date(e.start)
     const en = new Date(e.end)

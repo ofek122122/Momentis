@@ -1,8 +1,8 @@
-# CLAUDE.md — Calendro
+# CLAUDE.md — Momenties
 
 ## Project Identity
 
-Calendro is a zero-friction AI-powered calendar web app. Users create events by typing naturally, speaking via voice, or photographing schedules. AI parses everything into calendar events automatically.
+Momenties is a zero-friction AI-powered calendar web app. Users create events by typing naturally, speaking via voice, or photographing schedules. AI parses everything into calendar events automatically.
 
 **Tagline:** "Just say it. It's scheduled."
 
@@ -112,7 +112,7 @@ npx prisma generate  # Regenerate client
 
 ### Styling
 - Tailwind utilities only, no inline styles
-- shadcn/ui as base, customize to match Calendro aesthetic
+- shadcn/ui as base, customize to match Momenties aesthetic
 - Mobile-first (test 375px, 768px, 1024px, 1440px)
 
 ### Testing

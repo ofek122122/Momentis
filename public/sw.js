@@ -1,6 +1,6 @@
 /// <reference lib="webworker" />
 
-const CACHE_NAME = 'calendro-v1'
+const CACHE_NAME = 'momenties-v1'
 const STATIC_ASSETS = [
   '/',
   '/login',

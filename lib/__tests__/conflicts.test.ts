@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { detectConflicts } from '@/lib/conflicts'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
-function event(title: string, startHour: number, endHour: number): CalendroEvent {
+function event(title: string, startHour: number, endHour: number): MomentiesEvent {
   const start = new Date('2026-04-10')
   start.setHours(startHour, 0, 0, 0)
   const end = new Date('2026-04-10')

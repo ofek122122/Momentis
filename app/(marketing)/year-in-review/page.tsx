@@ -18,10 +18,10 @@ import { ArrowUpRight, Heart, Check, Minus } from 'lucide-react'
 export const metadata: Metadata = {
   title: `${YEAR.label} — A year in review`,
   description:
-    "Twelve months at Calendro: events parsed, features shipped, things killed on purpose, and thank-yous sent. A quiet annual recap.",
+    "Twelve months at Momenties: events parsed, features shipped, things killed on purpose, and thank-yous sent. A quiet annual recap.",
   alternates: { canonical: '/year-in-review' },
   openGraph: {
-    title: `Calendro · ${YEAR.label} in review`,
+    title: `Momenties · ${YEAR.label} in review`,
     description:
       'A quiet year in numbers and moments — and what we plan for the next one.',
     url: '/year-in-review',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Calendro · ${YEAR.label} in review`,
+    title: `Momenties · ${YEAR.label} in review`,
     description: 'A year in a quiet calendar.',
   },
 }
@@ -61,7 +61,7 @@ export default function YearInReviewPage() {
         </div>
         <div className="relative max-w-5xl mx-auto px-5 md:px-8 pb-20 md:pb-28">
           <p className="animate-fade-up font-mono text-[11px] uppercase tracking-[0.3em] text-gold/80 mb-5">
-            {YEAR.label} · A Calendro annual report · Jan 5 — Dec 19
+            {YEAR.label} · A Momenties annual report · Jan 5 — Dec 19
           </p>
           <h1 className="animate-fade-up animate-fade-up-2 font-display font-bold leading-[0.92] tracking-tight text-foreground">
             <span className="block text-[72px] sm:text-[108px] md:text-[168px] text-gold">
@@ -323,7 +323,7 @@ export default function YearInReviewPage() {
       <CTA
         title="The next year, as always, starts on a Tuesday."
         subtitle="Try the calendar we spent a year on. Free forever for individuals. No card, no drip, no pixel tracking."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read the roadmap', href: '/roadmap' }}
       />
     </>

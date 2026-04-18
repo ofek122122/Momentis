@@ -38,7 +38,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'For startups', href: '/startups' },
       { label: 'For students', href: '/education' },
       { label: 'Compare', href: '/compare' },
-      { label: 'Switch to Calendro', href: '/switch' },
+      { label: 'Switch to Momenties', href: '/switch' },
       { label: 'Changelog', href: '/changelog' },
       { label: 'Launch Week 01', href: '/launch-week-1', badge: 'New' },
       { label: 'Year in review', href: '/year-in-review' },
@@ -72,6 +72,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Use cases', href: '/use-cases' },
       { label: 'Help Center', href: '/help' },
       { label: 'Learn', href: '/learn', badge: 'New' },
+      { label: 'Keyboard reference', href: '/keyboard' },
       { label: 'API Docs', href: '/api-docs' },
       { label: 'Community', href: '/community' },
       { label: 'Webinars', href: '/webinars' },
@@ -112,7 +113,7 @@ export function SiteFooter() {
           <div className="col-span-2 space-y-5">
             <Link href="/" className="flex items-center gap-2.5">
               <img src="/logo.png" alt="" className="h-7 w-7" />
-              <span className="font-display text-lg font-semibold text-foreground">Calendro</span>
+              <span className="font-display text-lg font-semibold text-foreground">Momenties</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               The zero-friction AI calendar. Type it, speak it, snap it — it&apos;s scheduled.
@@ -167,7 +168,7 @@ export function SiteFooter() {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="font-mono text-[11px] text-muted-foreground/60">
-            © {year} Calendro, Inc. · Built with care in a quiet corner of the internet.
+            © {year} Momenties, Inc. · Built with care in a quiet corner of the internet.
           </p>
           <div className="flex items-center gap-5">
             <span className="inline-flex items-center gap-2 text-[11px] font-mono text-muted-foreground/60">

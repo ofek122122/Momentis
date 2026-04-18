@@ -41,7 +41,7 @@ export function UpgradePrompt({ feature }: { feature: string }) {
             {feature} is a Pro feature
           </p>
           <p className="text-xs text-muted-foreground max-w-xs">
-            Upgrade to Calendro Pro for full analytics, custom themes, and more.
+            Upgrade to Momenties Pro for full analytics, custom themes, and more.
           </p>
           <Link
             href="/pricing"

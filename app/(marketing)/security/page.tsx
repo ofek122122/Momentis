@@ -7,10 +7,10 @@ import { Lock, Shield, Key, Eye, Server, FileCheck, Users, AlertTriangle, CheckC
 
 export const metadata: Metadata = {
   title: 'Security — How we protect your calendar',
-  description: 'Calendro\'s security & privacy practices. SOC 2 Type II in progress. GDPR compliant. Your calendar is the most revealing document you own — we treat it accordingly.',
+  description: 'Momenties\'s security & privacy practices. SOC 2 Type II in progress. GDPR compliant. Your calendar is the most revealing document you own — we treat it accordingly.',
   alternates: { canonical: '/security' },
   openGraph: {
-    title: 'Calendro Security',
+    title: 'Momenties Security',
     description: 'SOC 2 in progress. GDPR compliant. End-to-end encrypted sync.',
     url: '/security',
   },
@@ -60,7 +60,7 @@ const CERTS = [
 
 const PRACTICES = [
   { title: 'Penetration testing', body: 'Annual third-party pen-test by a SOC 2 accredited firm. Report available under NDA to Enterprise customers.' },
-  { title: 'Vulnerability disclosure', body: 'Responsible disclosure at security@calendro.app. Bug bounty program coming Q3. 72-hour triage, 30-day patch target.' },
+  { title: 'Vulnerability disclosure', body: 'Responsible disclosure at security@momenties.app. Bug bounty program coming Q3. 72-hour triage, 30-day patch target.' },
   { title: 'Employee security', body: 'FIDO2 hardware keys for every employee. YubiKeys required for any production access. Quarterly security training.' },
   { title: 'Backup & disaster recovery', body: 'Encrypted snapshots every 6 hours, replicated across three regions. RTO: 4 hours. RPO: 15 minutes.' },
   { title: 'Data residency', body: 'EU customers can request data stored in Frankfurt. US customers default to us-east-1. No data leaves the region.' },
@@ -154,8 +154,8 @@ export default function SecurityPage() {
           </div>
           <p className="text-xs text-muted-foreground mt-6 leading-relaxed text-center max-w-xl mx-auto">
             Enterprise customers can request a DPA, Sub-Processor list, pen-test summary, and our SOC 2 Type I report under NDA by emailing{' '}
-            <a href="mailto:security@calendro.app" className="text-gold hover:underline">
-              security@calendro.app
+            <a href="mailto:security@momenties.app" className="text-gold hover:underline">
+              security@momenties.app
             </a>
             .
           </p>
@@ -238,7 +238,7 @@ export default function SecurityPage() {
       <CTA
         title="Questions?"
         subtitle="Our security team answers every email personally."
-        primary={{ label: 'security@calendro.app', href: 'mailto:security@calendro.app' }}
+        primary={{ label: 'security@momenties.app', href: 'mailto:security@momenties.app' }}
         secondary={{ label: 'Read privacy policy', href: '/privacy' }}
       />
     </>

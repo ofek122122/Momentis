@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'We\'re hiring thoughtful engineers, designers, and support humans. Fully remote. Generous PTO. Calm culture.',
   alternates: { canonical: '/careers' },
   openGraph: {
-    title: 'Careers at Calendro',
+    title: 'Careers at Momenties',
     description: 'Help us build a quieter calendar.',
     url: '/careers',
   },
@@ -42,7 +42,7 @@ export default function CareersPage() {
   return (
     <>
       <ItemListJsonLd
-        name="Open roles at Calendro"
+        name="Open roles at Momenties"
         items={JOBS.map((j) => ({ url: `/careers/${j.slug}`, name: j.title }))}
       />
       <PageHero
@@ -73,7 +73,7 @@ export default function CareersPage() {
           </Reveal>
           <Reveal delay={120}>
             <p>
-              Calendro is a 14-person company. We intend to stay small — maybe 30 people at the outside,
+              Momenties is a 14-person company. We intend to stay small — maybe 30 people at the outside,
               unless something surprises us. Small means craft. Small means context. Small means you
               know everyone&apos;s spouse&apos;s dog by name within your first quarter.
             </p>
@@ -180,20 +180,20 @@ export default function CareersPage() {
             We read every thoughtful email.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            If you&apos;ve been working on something quietly excellent and you suspect Calendro might be the right next thing — write us. Tell us what you make, and why.
+            If you&apos;ve been working on something quietly excellent and you suspect Momenties might be the right next thing — write us. Tell us what you make, and why.
           </p>
           <a
-            href="mailto:careers@calendro.app"
+            href="mailto:careers@momenties.app"
             className="mt-8 inline-flex items-center gap-2 h-11 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
           >
-            careers@calendro.app
+            careers@momenties.app
           </a>
         </div>
       </section>
 
       <CTA
         title="Use the product you might build."
-        subtitle="The best way to see if we'd work well together is to actually use Calendro for a week."
+        subtitle="The best way to see if we'd work well together is to actually use Momenties for a week."
         primary={{ label: 'Try it free', href: '/login' }}
         secondary={{ label: 'Read our blog', href: '/blog' }}
       />

@@ -4,7 +4,7 @@
       "Bash(npm run:*)",
       "Bash(npx vitest:*)",
       "Bash(grep:*)",
-      "Bash(find D:\\\\Documents\\\\!myProjects\\\\Start\\\\calendro:*)",
+      "Bash(find D:\\\\Documents\\\\!myProjects\\\\Start\\\\momenties:*)",
       "Bash(xargs -0 grep -i \"bytesread\\\\|byteswritten\")"
     ]
   },

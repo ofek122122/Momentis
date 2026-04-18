@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <section className="space-y-2">
             <h2 className="font-display text-lg font-semibold text-foreground">What we do not do</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              We do not sell your data, share it with third parties, or read your calendar for any purpose other than rendering it within Calendro.
+              We do not sell your data, share it with third parties, or read your calendar for any purpose other than rendering it within Momenties.
             </p>
           </section>
 

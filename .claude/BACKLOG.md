@@ -1,4 +1,4 @@
-# BACKLOG.md — Calendro Task Backlog
+# BACKLOG.md — Momenties Task Backlog
 
 This is the authoritative task list for the Ralph loop. Each iteration picks ONE task from here, completes it fully, marks it done, and commits. Tasks are ordered by priority within each category.
 
@@ -133,14 +133,14 @@ When picking a task, mark it `[~]`. When done, mark it `[x]` and add a ✅ note 
 
 ## P8 — OPEN-ENDED: Self-Directed Improvement Mode
 
-**This section has no predefined tasks. When every task above is `[x]` or `[SKIP]`, do NOT stop the loop. Instead, spend each iteration inventing and building a NEW feature or improvement that makes Calendro more useful, more beautiful, or more monetizable.**
+**This section has no predefined tasks. When every task above is `[x]` or `[SKIP]`, do NOT stop the loop. Instead, spend each iteration inventing and building a NEW feature or improvement that makes Momenties more useful, more beautiful, or more monetizable.**
 
 ### How to generate a new task in this section
 
 At the start of an iteration (after all P0-P7 tasks are complete), do this:
 
 1. Read the entire BACKLOG.md and PROGRESS.md so you know what's been built.
-2. Think deeply about what Calendro is missing. Consider these angles:
+2. Think deeply about what Momenties is missing. Consider these angles:
    - **User delight** — what would make users say "wow"?
    - **Retention** — what would make users open the app every day?
    - **Monetization** — what new Pro feature would justify the subscription?
@@ -186,7 +186,7 @@ At the start of an iteration (after all P0-P7 tasks are complete), do this:
 - **Analytics depth** — meeting load trends, time-of-day patterns, "energy" tracking
 - **Onboarding/growth** — public template gallery, shareable calendar themes, public event pages
 - **Accessibility deep dive** — voice control commands, high-contrast mode, dyslexia-friendly font option
-- **Power user** — URL protocol handler (calendro://), Raycast-style launcher, CLI companion
+- **Power user** — URL protocol handler (momenties://), Raycast-style launcher, CLI companion
 - **Monetization** — team plans, annual discount, gift Pro, lifetime license page
 
 Rotate through these buckets — don't build 5 AI features in a row. Variety keeps the product well-rounded.

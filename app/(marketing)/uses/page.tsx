@@ -9,10 +9,10 @@ import { ArrowUpRight, Calendar } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Uses — What we work with, by hand',
   description:
-    'The desks, editors, keyboards, and rituals of the Calendro team. Updated monthly. Long-form on purpose.',
+    'The desks, editors, keyboards, and rituals of the Momenties team. Updated monthly. Long-form on purpose.',
   alternates: { canonical: '/uses' },
   openGraph: {
-    title: 'What we use at Calendro',
+    title: 'What we use at Momenties',
     description:
       'The desks, editors, keyboards, and rituals of our two founders. Updated monthly, long-form on purpose.',
     url: '/uses',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'What we use at Calendro',
+    title: 'What we use at Momenties',
     description: 'The desks, editors, keyboards, and rituals of our team.',
   },
 }
@@ -301,9 +301,9 @@ export default function UsesPage() {
       </section>
 
       <CTA
-        title="Using Calendro is on this list. It should be on yours."
+        title="Using Momenties is on this list. It should be on yours."
         subtitle="Free forever for individuals. No credit card, no drip sequence, no pixel tracking."
-        primary={{ label: 'Start using Calendro', href: '/login' }}
+        primary={{ label: 'Start using Momenties', href: '/login' }}
         secondary={{ label: 'Read the method', href: '/method' }}
       />
     </>

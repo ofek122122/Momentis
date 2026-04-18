@@ -8,13 +8,13 @@ import {
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Loader2, MapPin, AlignLeft, Clock, Tag, Palette, Flag } from 'lucide-react'
-import type { CalendroEvent, EventColor, EventPriority } from '@/types'
+import type { MomentiesEvent, EventColor, EventPriority } from '@/types'
 import { EVENT_COLORS, PRIORITY_CONFIG } from '@/types'
 
 interface NewEventDialogProps {
   open: boolean
   onClose: () => void
-  onCreate: (event: CalendroEvent) => Promise<void>
+  onCreate: (event: MomentiesEvent) => Promise<void>
   defaultDate?: Date
 }
 
@@ -32,7 +32,7 @@ export function NewEventDialog({ open, onClose, onCreate, defaultDate }: NewEven
   const [description, setDescription] = useState('')
   const [color, setColor] = useState<EventColor>('blue')
   const [priority, setPriority] = useState<EventPriority>('medium')
-  const [category, setCategory] = useState<CalendroEvent['category']>('other')
+  const [category, setCategory] = useState<MomentiesEvent['category']>('other')
   const [saving, setSaving] = useState(false)
 
   async function handleCreate() {

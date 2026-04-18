@@ -1,6 +1,6 @@
 {
-  "name": "Calendro — Just say it.",
-  "short_name": "Calendro",
+  "name": "Momenties — Just say it.",
+  "short_name": "Momenties",
   "description": "Zero-friction AI calendar. Type it, say it, snap it.",
   "start_url": "/calendar",
   "scope": "/",

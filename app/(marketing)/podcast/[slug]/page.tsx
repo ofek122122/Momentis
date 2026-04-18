@@ -371,8 +371,8 @@ export default async function EpisodePage({
 
       <CTA
         title="Enjoyed this one? Try the product it came from."
-        subtitle="Calendro is free forever for individuals. Same principles, different medium."
-        primary={{ label: 'Use Calendro', href: '/login' }}
+        subtitle="Momenties is free forever for individuals. Same principles, different medium."
+        primary={{ label: 'Use Momenties', href: '/login' }}
         secondary={{ label: 'Read the manifesto', href: '/manifesto' }}
       />
     </>

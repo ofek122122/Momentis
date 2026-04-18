@@ -23,12 +23,12 @@ export async function GET() {
 
   try {
     const events = await listUpcomingEvents(session.user.id)
-    const ics = eventsToICS(events, `Calendro - ${session.user.name ?? 'My Calendar'}`)
+    const ics = eventsToICS(events, `Momenties - ${session.user.name ?? 'My Calendar'}`)
 
     return new NextResponse(ics, {
       headers: {
         'Content-Type': 'text/calendar; charset=utf-8',
-        'Content-Disposition': 'attachment; filename="calendro-export.ics"',
+        'Content-Disposition': 'attachment; filename="momenties-export.ics"',
       },
     })
   } catch (err) {

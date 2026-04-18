@@ -1,7 +1,7 @@
 import { google, calendar_v3 } from 'googleapis'
 import { db } from '@/lib/db'
 import { log } from '@/lib/logger'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 // ── Bug 5 fix: Mutex to prevent token refresh race conditions ───────
 const tokenLocks = new Map<string, Promise<void>>()
@@ -63,7 +63,7 @@ async function getCalendarClient(userId: string) {
   return google.calendar({ version: 'v3', auth: oauth2 })
 }
 
-export function buildGoogleEvent(event: CalendroEvent): calendar_v3.Schema$Event {
+export function buildGoogleEvent(event: MomentiesEvent): calendar_v3.Schema$Event {
   return {
     summary: event.title,
     location: event.location,
@@ -75,7 +75,7 @@ export function buildGoogleEvent(event: CalendroEvent): calendar_v3.Schema$Event
 
 export async function createGoogleEvent(
   userId: string,
-  event: CalendroEvent
+  event: MomentiesEvent
 ): Promise<string> {
   const calendar = await getCalendarClient(userId)
   const response = await calendar.events.insert({
@@ -90,9 +90,9 @@ export async function listEvents(
   userId: string,
   from: Date,
   to: Date
-): Promise<CalendroEvent[]> {
+): Promise<MomentiesEvent[]> {
   const calendar = await getCalendarClient(userId)
-  const allEvents: CalendroEvent[] = []
+  const allEvents: MomentiesEvent[] = []
   let pageToken: string | undefined
 
   do {
@@ -127,7 +127,7 @@ export async function listEvents(
 
 export async function listUpcomingEvents(
   userId: string
-): Promise<CalendroEvent[]> {
+): Promise<MomentiesEvent[]> {
   const from = new Date('2020-01-01T00:00:00Z')
   const to = new Date()
   to.setFullYear(to.getFullYear() + 1)
@@ -137,7 +137,7 @@ export async function listUpcomingEvents(
 export async function updateGoogleEvent(
   userId: string,
   eventId: string,
-  updates: Partial<CalendroEvent>
+  updates: Partial<MomentiesEvent>
 ): Promise<void> {
   const calendar = await getCalendarClient(userId)
 

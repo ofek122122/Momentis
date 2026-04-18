@@ -23,12 +23,12 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Switch to Calendro — Keep your events. Lose the friction.',
+  title: 'Switch to Momenties — Keep your events. Lose the friction.',
   description:
     'A concierge-grade migration from Google Calendar, Calendly, Notion Calendar, Superhuman, Fantastical, Apple, Outlook, or a plain .ics file. Most migrations finish in under ten minutes.',
   alternates: { canonical: '/switch' },
   openGraph: {
-    title: 'Switch to Calendro',
+    title: 'Switch to Momenties',
     description:
       'Migrate from Google, Notion, Fantastical, Apple, Outlook, or any .ics — in under ten minutes, with nothing lost.',
     url: '/switch',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Switch to Calendro',
+    title: 'Switch to Momenties',
     description: 'Keep your events. Lose the friction.',
   },
 }
@@ -77,7 +77,7 @@ const DIRECT_IMPORTERS: DirectImporter[] = [
   {
     name: 'Fantastical',
     format: '.ics export',
-    note: 'Export from Fantastical, drop the file into Calendro. Events imported in bulk.',
+    note: 'Export from Fantastical, drop the file into Momenties. Events imported in bulk.',
     icon: Calendar,
     minutes: 5,
   },
@@ -106,7 +106,7 @@ const TIMELINE: { n: string; title: string; body: string; minutes: string }[] = 
   {
     n: '03',
     title: 'We mirror, never duplicate',
-    body: 'Events from your source calendar show up in Calendro immediately. We never copy, re-create, or re-send invites. Your source of truth stays your source of truth.',
+    body: 'Events from your source calendar show up in Momenties immediately. We never copy, re-create, or re-send invites. Your source of truth stays your source of truth.',
     minutes: 'Instant',
   },
   {
@@ -118,7 +118,7 @@ const TIMELINE: { n: string; title: string; body: string; minutes: string }[] = 
   {
     n: '05',
     title: 'Turn off the old tool (when you are ready)',
-    body: 'Most users keep both apps running for a week. After that, almost nobody goes back. There is no contract penalty if you do — Calendro is cancel-anytime.',
+    body: 'Most users keep both apps running for a week. After that, almost nobody goes back. There is no contract penalty if you do — Momenties is cancel-anytime.',
     minutes: 'Your call',
   },
 ]
@@ -179,7 +179,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'What happens to my invites and RSVPs?',
-    a: "We never send duplicate invites, never re-invite anyone, and never send calendar-spam. When you accept or decline from Calendro, the RSVP is routed through your original provider exactly as if you had clicked accept in Gmail.",
+    a: "We never send duplicate invites, never re-invite anyone, and never send calendar-spam. When you accept or decline from Momenties, the RSVP is routed through your original provider exactly as if you had clicked accept in Gmail.",
   },
   {
     q: 'Can I run both tools for a while?',
@@ -206,7 +206,7 @@ export default function SwitchPage() {
   return (
     <>
       <PageHero
-        eyebrow="Switch to Calendro"
+        eyebrow="Switch to Momenties"
         title={
           <>
             Keep your events. <em className="not-italic text-gold">Lose the friction</em>.
@@ -453,7 +453,7 @@ export default function SwitchPage() {
               Ship the migration with an engineer, not a CSM.
             </h2>
             <p className="mt-6 text-[15px] text-muted-foreground leading-relaxed max-w-xl">
-              For teams of 20+ seats, we run a single 60-minute migration call with a Calendro engineer. We map your
+              For teams of 20+ seats, we run a single 60-minute migration call with a Momenties engineer. We map your
               naming conventions, configure SSO end-to-end, and set up a pilot group before the full rollout. No third
               parties, no recorded transcripts sold back to you as a service.
             </p>
@@ -494,7 +494,7 @@ export default function SwitchPage() {
               <span>
                 Five concierge slots per week, worldwide. Usually booked two weeks out. For urgent cases, email{' '}
                 <Link href="/contact?subject=Sales" className="text-gold hover:underline">
-                  sales@calendro.app
+                  sales@momenties.app
                 </Link>
                 .
               </span>

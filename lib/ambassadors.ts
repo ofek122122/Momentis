@@ -17,7 +17,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'Lisbon',
     initials: 'ML',
     quote:
-      "The essay that became the podcast started as a voice note dictated into Calendro on a November morning.",
+      "The essay that became the podcast started as a voice note dictated into Momenties on a November morning.",
     link: { label: 'Read the essay', href: '/blog' },
     since: '2025',
   },
@@ -28,7 +28,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'Lisbon',
     initials: 'TL',
     quote:
-      'I mention Calendro to every founder I meet for coffee. I have stopped calling it a recommendation. It is a test.',
+      'I mention Momenties to every founder I meet for coffee. I have stopped calling it a recommendation. It is a test.',
     link: { label: 'The walk-home episode', href: '/podcast/the-walk-home-planning-ritual' },
     since: '2025',
   },
@@ -50,7 +50,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'London',
     initials: 'PR',
     quote:
-      "I ran a 24-person offsite on Calendro. My team adopted it in a week. The ops world is small. Word travels.",
+      "I ran a 24-person offsite on Momenties. My team adopted it in a week. The ops world is small. Word travels.",
     link: { label: 'Listen to her episode', href: '/podcast/hiring-for-people-who-finish-things' },
     since: '2025',
   },
@@ -72,7 +72,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'Oslo',
     initials: 'JB',
     quote:
-      'I have a little section in my personal site titled "tools I love." Calendro earned its way in during my first month.',
+      'I have a little section in my personal site titled "tools I love." Momenties earned its way in during my first month.',
     link: { label: 'Notebook episode', href: '/podcast/the-second-source-of-truth' },
     since: '2026',
   },
@@ -83,7 +83,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'Taipei',
     initials: 'VD',
     quote:
-      "I run a newsletter with 40k readers. Calendro schedules every podcast interview I book. I mention it when asked.",
+      "I run a newsletter with 40k readers. Momenties schedules every podcast interview I book. I mention it when asked.",
     since: '2026',
   },
   {
@@ -93,7 +93,7 @@ export const AMBASSADORS: Ambassador[] = [
     location: 'Bangalore',
     initials: 'PS',
     quote:
-      "I run five calendars across three clients. Calendro unifies them without feeling like a messy inbox.",
+      "I run five calendars across three clients. Momenties unifies them without feeling like a messy inbox.",
     since: '2025',
   },
 ]
@@ -118,7 +118,7 @@ export const PERKS: Perk[] = [
   {
     n: '03',
     title: 'Annual hand-crafted merch',
-    body: "A small run of Calendro-branded things we'd actually want to own. Last year: a letterpress card and a Blackwing pencil. No logo-stamped trash.",
+    body: "A small run of Momenties-branded things we'd actually want to own. Last year: a letterpress card and a Blackwing pencil. No logo-stamped trash.",
   },
   {
     n: '04',

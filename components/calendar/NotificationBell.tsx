@@ -3,11 +3,11 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { Bell, BellRing, X, Clock, CheckCheck } from 'lucide-react'
 import { format, differenceInMinutes, isBefore, addMinutes } from 'date-fns'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 interface Notification {
   id: string
-  event: CalendroEvent
+  event: MomentiesEvent
   type: 'upcoming' | 'now' | 'reminder'
   message: string
   time: Date
@@ -15,7 +15,7 @@ interface Notification {
 }
 
 interface NotificationBellProps {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   defaultReminderMinutes?: number
 }
 
@@ -106,7 +106,7 @@ export function NotificationBell({ events, defaultReminderMinutes = 30 }: Notifi
       for (const notif of notifications) {
         if (notif.type === 'reminder' || notif.type === 'now') {
           try {
-            new Notification('Calendro', {
+            new Notification('Momenties', {
               body: notif.message,
               icon: '/logo.png',
               tag: notif.id, // prevents duplicates

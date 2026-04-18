@@ -139,7 +139,7 @@ export function DemoParser() {
           <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
         </div>
         <span className="font-mono text-[11px] text-muted-foreground">
-          calendro.app/demo
+          momenties.app/demo
         </span>
         <div className="w-14" />
       </div>

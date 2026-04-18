@@ -6,7 +6,7 @@ import { AnalyticsDashboard } from '@/components/calendar/AnalyticsDashboard'
 import { HabitTracker } from '@/components/calendar/HabitTracker'
 import { TimeZoneBuddy } from '@/components/calendar/TimeZoneBuddy'
 import { UpgradePrompt } from '@/components/ui/pro-badge'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default async function AnalyticsPage() {
 
   const tier = await getUserTier(session.user.id)
 
-  let events: CalendroEvent[] = []
+  let events: MomentiesEvent[] = []
   try {
     events = await listUpcomingEvents(session.user.id)
   } catch {

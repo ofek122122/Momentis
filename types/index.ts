@@ -22,7 +22,7 @@ export interface RecurrenceRule {
   count?: number // number of occurrences
 }
 
-export interface CalendroEvent {
+export interface MomentiesEvent {
   id?: string
   title: string
   start: Date
@@ -40,7 +40,7 @@ export interface CalendroEvent {
 }
 
 export interface ParseResult {
-  events: CalendroEvent[]
+  events: MomentiesEvent[]
   confidence: 'high' | 'medium' | 'low'
   method: 'chrono' | 'gemini' | 'hybrid'
   raw: string

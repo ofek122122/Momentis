@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { hasVagueTime } from '../vague-time'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
-function makeEvent(start: Date, end?: Date): CalendroEvent {
+function makeEvent(start: Date, end?: Date): MomentiesEvent {
   return {
     title: 'Test Event',
     start,

@@ -6,12 +6,12 @@ import { CTA } from '@/components/marketing/CTA'
 import { Briefcase, GraduationCap, Pen, Laptop, Heart, Users2, ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Use cases — Calendro for every kind of day',
-  description: 'Founders, students, freelancers, managers, parents, and doctors — here\'s how Calendro fits your week.',
+  title: 'Use cases — Momenties for every kind of day',
+  description: 'Founders, students, freelancers, managers, parents, and doctors — here\'s how Momenties fits your week.',
   alternates: { canonical: '/use-cases' },
   openGraph: {
-    title: 'Calendro Use Cases',
-    description: 'How Calendro works for founders, students, freelancers, and more.',
+    title: 'Momenties Use Cases',
+    description: 'How Momenties works for founders, students, freelancers, and more.',
     url: '/use-cases',
   },
 }
@@ -50,7 +50,7 @@ const PERSONAS = [
     slug: 'freelancer',
     title: 'Freelancers',
     tagline: 'Five clients. One calendar. Zero chaos.',
-    quote: 'Three client calendars, one personal, plus my partner\'s shared view. Calendro merges them without turning into a rainbow crayon box.',
+    quote: 'Three client calendars, one personal, plus my partner\'s shared view. Momenties merges them without turning into a rainbow crayon box.',
     person: 'Priya Shankar, Fractional COO',
     bullets: [
       'Unified view across Google, Apple, and client Outlook calendars.',
@@ -64,7 +64,7 @@ const PERSONAS = [
     slug: 'manager',
     title: 'Managers',
     tagline: 'Protect your team\'s attention like it\'s yours.',
-    quote: 'Our engineering team saw a 35% drop in meeting hours in the first quarter with Calendro. I did nothing but install it.',
+    quote: 'Our engineering team saw a 35% drop in meeting hours in the first quarter with Momenties. I did nothing but install it.',
     person: 'Linh Ngo, Engineering Manager · Helix',
     bullets: [
       'Team calendars with shared focus blocks and "do not disturb" windows.',
@@ -78,7 +78,7 @@ const PERSONAS = [
     slug: 'parent',
     title: 'Parents',
     tagline: 'Your family\'s week, in one quiet view.',
-    quote: 'I used to have the whole school calendar on a magnet on the fridge. Now it\'s on my phone. Calendro read the PDF and did it.',
+    quote: 'I used to have the whole school calendar on a magnet on the fridge. Now it\'s on my phone. Momenties read the PDF and did it.',
     person: 'Daniel Reyes, partner & parent',
     bullets: [
       'Snap the school calendar — every half-day, holiday, and conference populated.',
@@ -92,7 +92,7 @@ const PERSONAS = [
     slug: 'healthcare',
     title: 'Healthcare',
     tagline: 'HIPAA-ready. Shift-aware. Actually human.',
-    quote: 'Our residency program uses Calendro for shift swaps. The on-call schedule is now a photo, not a spreadsheet. Our chief resident sleeps better because of it.',
+    quote: 'Our residency program uses Momenties for shift swaps. The on-call schedule is now a photo, not a spreadsheet. Our chief resident sleeps better because of it.',
     person: 'Dr. Amira Okafor, Residency Director',
     bullets: [
       'HIPAA BAA available on Enterprise tier.',
@@ -110,10 +110,10 @@ export default function UseCasesPage() {
         eyebrow="Use cases"
         title={
           <>
-            Calendro fits <em className="not-italic text-gold">every kind of day</em>.
+            Momenties fits <em className="not-italic text-gold">every kind of day</em>.
           </>
         }
-        lede="Whatever your shape of week — startup, school, ward, studio — here's how Calendro slots in."
+        lede="Whatever your shape of week — startup, school, ward, studio — here's how Momenties slots in."
         crumbs={[{ label: 'Use cases' }]}
       />
 
@@ -176,7 +176,7 @@ export default function UseCasesPage() {
       </section>
 
       <CTA
-        title="Your week. Calendro-shaped."
+        title="Your week. Momenties-shaped."
         subtitle="Free to start. Works with every calendar. Takes 90 seconds to set up."
         primary={{ label: 'Get started free', href: '/login' }}
         secondary={{ label: 'Read customer stories', href: '/customers' }}

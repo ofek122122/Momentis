@@ -16,10 +16,10 @@ function resolveArticleHref(categorySlug: string, title: string): string {
 
 export const metadata: Metadata = {
   title: 'Help Center — Guides & FAQ',
-  description: 'Everything you need to get the most out of Calendro. Searchable guides, clear answers, zero jargon.',
+  description: 'Everything you need to get the most out of Momenties. Searchable guides, clear answers, zero jargon.',
   alternates: { canonical: '/help' },
   openGraph: {
-    title: 'Calendro Help Center',
+    title: 'Momenties Help Center',
     description: 'Guides and answers — zero jargon.',
     url: '/help',
   },
@@ -37,11 +37,11 @@ export const CATEGORIES: HelpCategory[] = [
   {
     slug: 'getting-started',
     label: 'Getting Started',
-    desc: 'Your first 10 minutes with Calendro.',
+    desc: 'Your first 10 minutes with Momenties.',
     Icon: Rocket,
     articles: [
       { title: 'Creating your first event', excerpt: 'Type "coffee with mom saturday 10am" and watch it land on your calendar.' },
-      { title: 'Connecting Google Calendar', excerpt: 'The 30-second OAuth flow and what Calendro does (and doesn\'t) access.' },
+      { title: 'Connecting Google Calendar', excerpt: 'The 30-second OAuth flow and what Momenties does (and doesn\'t) access.' },
       { title: 'Voice input setup', excerpt: 'Browser permissions, best-practice phrasing, and troubleshooting silence.' },
       { title: 'Snapping a photo of a schedule', excerpt: 'How Gemini Vision reads your photo and what it expects.' },
       { title: 'Themes and personalization', excerpt: 'Choose among five themes and tune density, color, and timezone display.' },
@@ -55,9 +55,9 @@ export const CATEGORIES: HelpCategory[] = [
     articles: [
       { title: 'How Google Calendar sync works', excerpt: 'Two-way sync, refresh cadence, and how we handle conflicts.' },
       { title: 'Connecting Apple Calendar (CalDAV)', excerpt: 'App passwords, iCloud, and why Apple requires one extra step.' },
-      { title: 'Managing multiple accounts', excerpt: 'Sync two Google accounts plus one Apple account in one Calendro view.' },
+      { title: 'Managing multiple accounts', excerpt: 'Sync two Google accounts plus one Apple account in one Momenties view.' },
       { title: 'Sync errors — and fixes', excerpt: 'What to do when events stop flowing. Usually it\'s a token. Occasionally it\'s TZID.' },
-      { title: 'Unsyncing / disconnecting', excerpt: 'Remove Calendro\'s access cleanly. Nothing is deleted on your calendar.' },
+      { title: 'Unsyncing / disconnecting', excerpt: 'Remove Momenties\'s access cleanly. Nothing is deleted on your calendar.' },
     ],
   },
   {
@@ -69,7 +69,7 @@ export const CATEGORIES: HelpCategory[] = [
       { title: 'How the parser understands you', excerpt: 'chrono-node first, Gemini second — and when we use which.' },
       { title: 'Voice: saying multiple events at once', excerpt: 'A cadence trick that unlocks multi-event dictation.' },
       { title: 'Photos: getting the best OCR results', excerpt: 'Lighting, angle, and why handwritten schedules still work.' },
-      { title: 'Smart time suggestions', excerpt: 'Why Calendro picks the gap it does — and how to nudge it.' },
+      { title: 'Smart time suggestions', excerpt: 'Why Momenties picks the gap it does — and how to nudge it.' },
       { title: 'Turning off AI features entirely', excerpt: 'For the parser-purists. Everything works manually too.' },
     ],
   },

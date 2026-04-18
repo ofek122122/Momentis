@@ -5,13 +5,13 @@ import { CalendarGrid } from '@/components/calendar/CalendarGrid'
 import { InputBar } from '@/components/input/InputBar'
 import { KeyboardShortcuts } from '@/components/calendar/KeyboardShortcuts'
 import { redirect } from 'next/navigation'
-import type { CalendroEvent } from '@/types'
+import type { MomentiesEvent } from '@/types'
 
 export default async function CalendarPage() {
   const session = await auth()
   if (!session?.user) redirect('/login')
 
-  let events: CalendroEvent[] = []
+  let events: MomentiesEvent[] = []
 
   // Fetch Google Calendar events
   try {
