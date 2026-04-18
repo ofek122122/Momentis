@@ -5,7 +5,20 @@ import { Check, Crown, Sparkles, BarChart3, Palette, Users, Zap, Calendar, Focus
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Pricing — Simple, honest plans',
+  description:
+    'Free to start. Pro at $4.99/month. Team and Enterprise options for larger organisations. No hidden fees, no dark patterns, cancel anytime.',
+  alternates: { canonical: '/pricing' },
+  openGraph: {
+    title: 'Momenties Pricing',
+    description: 'Free to start. Upgrade when you\'re ready. No tricks.',
+    url: '/pricing',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Momenties Pricing',
+    description: 'Free, Pro, Team, and Enterprise. Honest pricing for calm software.',
+  },
 }
 
 const FAQ = [
@@ -138,6 +151,35 @@ export default async function PricingPage() {
           </footer>
         </blockquote>
       </div>
+
+      {/* Enterprise callout */}
+      <section className="max-w-4xl mx-auto px-6 pb-12">
+        <div className="rounded-2xl border border-border bg-gradient-to-r from-[#131318] to-[#0f0f14] p-8 flex flex-col md:flex-row md:items-center gap-6">
+          <div className="flex-1">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/70 mb-2">Enterprise</p>
+            <h2 className="font-display text-xl font-bold text-foreground mb-2">
+              Need SSO, audit logs, or a custom SLA?
+            </h2>
+            <p className="text-sm text-muted-foreground max-w-lg">
+              Momenties Enterprise includes SAML 2.0, SCIM provisioning, dedicated infrastructure, DPA within 48 hours, and a named success manager.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <Link
+              href="/enterprise"
+              className="inline-flex items-center justify-center h-10 px-5 text-sm font-medium rounded-full bg-gold text-[#0c0c0f] hover:bg-gold/90 transition-all press"
+            >
+              See Enterprise
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center h-10 px-5 text-sm text-foreground border border-border rounded-full hover:border-gold/30 transition-colors"
+            >
+              Contact sales
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="max-w-2xl mx-auto px-6 pb-24" aria-label="FAQ">

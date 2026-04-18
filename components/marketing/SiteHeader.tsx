@@ -54,6 +54,7 @@ const NAV: NavGroup[] = [
     label: 'Resources',
     items: [
       { label: 'Blog', href: '/blog', desc: 'Ideas on time & AI' },
+      { label: 'Newsletter', href: '/newsletter', desc: 'The Quiet Hours · 12k readers' },
       { label: 'Use cases', href: '/use-cases', desc: 'For founders, students, parents' },
       { label: 'Help Center', href: '/help', desc: 'Guides & FAQs' },
       { label: 'Learn', href: '/learn', desc: 'An hour to power user' },

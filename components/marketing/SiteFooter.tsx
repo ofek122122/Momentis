@@ -69,6 +69,7 @@ const COLUMNS: FooterColumn[] = [
     title: 'Resources',
     links: [
       { label: 'Blog', href: '/blog' },
+      { label: 'Newsletter', href: '/newsletter', badge: 'New' },
       { label: 'Use cases', href: '/use-cases' },
       { label: 'Help Center', href: '/help' },
       { label: 'Learn', href: '/learn', badge: 'New' },
