@@ -1,20 +1,40 @@
 'use client'
 
-import { useState } from 'react'
-import { Check, Loader2 } from 'lucide-react'
+import { useState, useTransition } from 'react'
+import { Check, Loader2, AlertCircle } from 'lucide-react'
+import { submitContact } from '@/app/(marketing)/_actions/contact'
 
-const SUBJECTS = ['General question', 'Support', 'Sales / Enterprise', 'Press', 'Partnership', 'Something else'] as const
+const SUBJECTS = [
+  'General question',
+  'Support',
+  'Sales / Enterprise',
+  'Press',
+  'Partnership',
+  'Something else',
+] as const
 type Subject = (typeof SUBJECTS)[number]
 
 export function ContactForm() {
-  const [state, setState] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [state, setState] = useState<'idle' | 'sent'>('idle')
   const [subject, setSubject] = useState<Subject>('General question')
+  const [error, setError] = useState<{ message: string; field?: string } | null>(null)
+  const [pending, startTransition] = useTransition()
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setState('sending')
-    await new Promise((r) => setTimeout(r, 900))
-    setState('sent')
+    setError(null)
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    formData.set('subject', subject)
+
+    startTransition(async () => {
+      const result = await submitContact(formData)
+      if (result.ok) {
+        setState('sent')
+      } else {
+        setError({ message: result.error, field: result.field })
+      }
+    })
   }
 
   if (state === 'sent') {
@@ -32,10 +52,34 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      {/* Honeypot — hidden from real users, visible to bots */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        className="sr-only"
+        aria-hidden="true"
+      />
+
       <div className="grid sm:grid-cols-2 gap-4">
-        <Field label="Name" name="name" type="text" required placeholder="Your name" />
-        <Field label="Email" name="email" type="email" required placeholder="you@work.com" />
+        <Field
+          label="Name"
+          name="name"
+          type="text"
+          required
+          placeholder="Your name"
+          invalid={error?.field === 'name'}
+        />
+        <Field
+          label="Email"
+          name="email"
+          type="email"
+          required
+          placeholder="you@work.com"
+          invalid={error?.field === 'email'}
+        />
       </div>
 
       <div>
@@ -72,10 +116,21 @@ export function ContactForm() {
           name="message"
           required
           rows={6}
+          minLength={10}
+          maxLength={4000}
           placeholder="Tell us what's on your mind..."
-          className="w-full rounded-xl bg-white/[0.03] border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold/40 focus:bg-white/[0.05] focus:outline-none transition-colors resize-none"
+          className={`w-full rounded-xl bg-white/[0.03] border ${
+            error?.field === 'message' ? 'border-rose-400/60' : 'border-border'
+          } px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold/40 focus:bg-white/[0.05] focus:outline-none transition-colors resize-none`}
         />
       </div>
+
+      {error && (
+        <div className="rounded-xl border border-rose-400/30 bg-rose-500/5 p-4 flex items-start gap-3">
+          <AlertCircle className="h-4 w-4 text-rose-400 mt-0.5 shrink-0" />
+          <p className="text-sm text-rose-100/90">{error.message}</p>
+        </div>
+      )}
 
       <div className="flex items-center justify-between gap-4 pt-2">
         <p className="text-xs text-muted-foreground">
@@ -87,10 +142,10 @@ export function ContactForm() {
         </p>
         <button
           type="submit"
-          disabled={state === 'sending'}
+          disabled={pending}
           className="inline-flex items-center gap-2 h-10 px-6 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 disabled:opacity-60 transition-colors"
         >
-          {state === 'sending' ? (
+          {pending ? (
             <>
               <Loader2 className="h-4 w-4 animate-spin" /> Sending...
             </>
@@ -109,12 +164,14 @@ function Field({
   type,
   placeholder,
   required,
+  invalid,
 }: {
   label: string
   name: string
   type: string
   placeholder?: string
   required?: boolean
+  invalid?: boolean
 }) {
   return (
     <div>
@@ -130,7 +187,9 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full h-11 rounded-lg bg-white/[0.03] border border-border px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold/40 focus:bg-white/[0.05] focus:outline-none transition-colors"
+        className={`w-full h-11 rounded-lg bg-white/[0.03] border ${
+          invalid ? 'border-rose-400/60' : 'border-border'
+        } px-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-gold/40 focus:bg-white/[0.05] focus:outline-none transition-colors`}
       />
     </div>
   )

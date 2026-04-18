@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { NewsletterForm } from './NewsletterForm'
 
 function Icon({ d, viewBox = '0 0 24 24' }: { d: string; viewBox?: string }) {
   return (
@@ -104,21 +105,7 @@ export function SiteFooter() {
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
               The zero-friction AI calendar. Type it, speak it, snap it — it&apos;s scheduled.
             </p>
-            <form className="flex gap-2 max-w-xs" aria-label="Newsletter signup">
-              <input
-                type="email"
-                required
-                placeholder="you@work.com"
-                className="flex-1 h-9 px-3 rounded-lg bg-white/5 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:border-gold/40 focus:outline-none"
-                aria-label="Email address"
-              />
-              <button
-                type="submit"
-                className="h-9 px-4 rounded-lg bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
-              >
-                Join
-              </button>
-            </form>
+            <NewsletterForm source="footer" />
             <div className="flex gap-3 pt-1" aria-label="Social media">
               {[
                 { d: SOCIAL_ICONS.twitter, href: 'https://twitter.com', label: 'X / Twitter' },

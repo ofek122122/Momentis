@@ -5,6 +5,7 @@ import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
 import { BLOG_POSTS, formatDate } from '@/lib/blog-posts'
 import { ItemListJsonLd } from '@/components/marketing/StructuredData'
+import { NewsletterForm } from '@/components/marketing/NewsletterForm'
 import { ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -162,21 +163,9 @@ export default function BlogPage() {
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
             New essays, quietly delivered. No tricks, no upsell, no sponsored links. Unsubscribe in one click.
           </p>
-          <form className="mt-8 flex gap-2 max-w-md mx-auto">
-            <input
-              type="email"
-              required
-              placeholder="you@work.com"
-              className="flex-1 h-11 px-4 rounded-lg bg-white/5 border border-border text-sm text-foreground placeholder:text-muted-foreground focus:border-gold/40 focus:outline-none"
-              aria-label="Email"
-            />
-            <button
-              type="submit"
-              className="h-11 px-5 rounded-lg bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
+          <div className="mt-8">
+            <NewsletterForm source="blog" variant="blog" />
+          </div>
           <p className="mt-5 text-xs font-mono text-muted-foreground/70">
             Prefer an RSS reader? <a href="/feed.xml" className="text-gold hover:underline">/feed.xml</a>
           </p>
