@@ -48,6 +48,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'About', href: '/about' },
       { label: 'Manifesto', href: '/manifesto' },
       { label: 'Method', href: '/method' },
+      { label: 'Uses', href: '/uses' },
       { label: 'Customers', href: '/customers' },
       { label: 'Wall of love', href: '/wall-of-love' },
       { label: 'Careers', href: '/careers', badge: 'Hiring' },
