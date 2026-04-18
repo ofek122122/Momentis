@@ -53,3 +53,8 @@
 - **Task:** Build `/launch-week-1` — a Raycast / Linear-style launch week recap page.
 - **Status:** Completed
 - **Summary:** Added `lib/launch-week.ts` with 5 days of shipped features (smarter hybrid parser, voice in 28 languages, image parser 2.0, keyboard kit + command palette, workspaces + SSO), each with icon, tone, 3 shipped items, per-day stats, and a team or user quote. Built `app/(marketing)/launch-week-1/page.tsx` with an immersive gradient hero, sticky-style day navigation grid, alternating-band day sections with oversized numeral, scroll-reveal shipped-item cards, per-day stats strip, featured quote of the week, subscribe-for-next-launch hookup using the NewsletterForm, and a closing CTA. Colored tone per day (gold/violet/emerald/sky/rose) via a TONE_CLASSES map. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.
+
+### Iteration 17
+- **Task:** Build `/method` — an essay-style "how we work" page as the execution companion to `/manifesto`.
+- **Status:** Completed
+- **Summary:** Built `app/(marketing)/method/page.tsx` as a long-form essay with four numbered sections (Decide, Write, Ship, Measure), each with italic lede + 3 paragraphs + 3 principle cards. Also added: weekly cadence strip (5-day grid with Mon/Tue/Wed/Thu/Fri and short notes), "a small stack used deliberately" tool list (6 items), an anti-method section with rose-accent header listing six things we deliberately don't do, and a signed-by-the-team closing quote. Alternating-band layout, icons per section (Compass / PenLine / Ship / LineChart), scroll-reveal. Linked from header (Company), footer (Company), HTML sitemap, and sitemap.xml. Build clean.
