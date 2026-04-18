@@ -31,6 +31,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Pricing', href: '/pricing' },
       { label: 'Pricing calculator', href: '/pricing/calculator' },
       { label: 'Integrations', href: '/integrations' },
+      { label: 'For teams', href: '/teams' },
       { label: 'Enterprise', href: '/enterprise' },
       { label: 'Demo', href: '/demo' },
       { label: 'AI', href: '/ai' },
