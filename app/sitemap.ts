@@ -232,6 +232,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/calendar-for-creatives', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/energy-management-calendar', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/for/accountants-cpa', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/for/emergency-physicians', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
