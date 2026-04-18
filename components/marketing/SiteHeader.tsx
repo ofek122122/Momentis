@@ -69,6 +69,7 @@ const NAV: NavGroup[] = [
       { label: 'Status', href: '/status', desc: 'Live uptime' },
       { label: 'Community', href: '/community', desc: 'Join the conversation' },
       { label: 'Affiliates', href: '/affiliates', desc: 'Earn by referring' },
+      { label: 'Ambassadors', href: '/ambassadors', desc: '50 quiet evangelists · no payouts' },
     ],
   },
 ]

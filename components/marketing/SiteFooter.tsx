@@ -61,6 +61,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Investors', href: '/investors' },
       { label: 'Contact', href: '/contact' },
       { label: 'Affiliates', href: '/affiliates' },
+      { label: 'Ambassadors', href: '/ambassadors' },
       { label: 'Partners', href: '/partners' },
     ],
   },

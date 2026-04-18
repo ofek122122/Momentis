@@ -46,6 +46,7 @@ const SECTIONS: Section[] = [
       { href: '/startups', label: 'For startups' },
       { href: '/education', label: 'For students' },
       { href: '/affiliates', label: 'Affiliate program' },
+      { href: '/ambassadors', label: 'Ambassadors', note: 'Capped at 50' },
       { href: '/partners', label: 'Partner program' },
     ],
   },

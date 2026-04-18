@@ -58,6 +58,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/press', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/brand', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/affiliates', priority: 0.5, changeFrequency: 'monthly' },
+  { path: '/ambassadors', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/partners', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/investors', priority: 0.4, changeFrequency: 'monthly' },
   { path: '/open', priority: 0.6, changeFrequency: 'monthly' },
