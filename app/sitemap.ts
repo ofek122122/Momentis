@@ -142,6 +142,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/for/musicians', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/daily-schedule-app', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/time-management-app', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/google-calendar-vs-outlook', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/for/project-managers', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
