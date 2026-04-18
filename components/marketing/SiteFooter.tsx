@@ -73,6 +73,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Help Center', href: '/help' },
       { label: 'Learn', href: '/learn', badge: 'New' },
       { label: 'Keyboard reference', href: '/keyboard' },
+      { label: 'Developers', href: '/developers' },
       { label: 'API Docs', href: '/api-docs' },
       { label: 'Community', href: '/community' },
       { label: 'Webinars', href: '/webinars' },

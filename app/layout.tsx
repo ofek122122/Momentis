@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans, JetBrains_Mono } from 'next/font/google'
 import { OrganizationJsonLd, WebsiteJsonLd } from '@/components/marketing/StructuredData'
+import { NavigationProgress } from '@/components/marketing/NavigationProgress'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -90,6 +91,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-background text-foreground">
         <a href="#main-content" className="skip-link">Skip to content</a>
+        <NavigationProgress />
         <OrganizationJsonLd />
         <WebsiteJsonLd />
         {children}

@@ -97,6 +97,29 @@ export default async function Home() {
 
         <LogoMarquee />
 
+        {/* PRESS QUOTES */}
+        <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
+          <div className="max-w-6xl mx-auto">
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/40 text-center mb-8">
+              As seen in
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { pub: 'The Verge', quote: '"The first calendar app that respects your attention."' },
+                { pub: 'TechCrunch', quote: '"A rare piece of calm, confident consumer AI."' },
+                { pub: 'Wired', quote: '"Momenties made me fall back in love with my calendar."' },
+              ].map((q) => (
+                <Reveal key={q.pub}>
+                  <div className="rounded-xl border border-border p-5 lux-card">
+                    <p className="text-sm text-foreground/80 italic leading-relaxed mb-3">{q.quote}</p>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-gold/70">{q.pub}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* HOW IT WORKS */}
         <section className="py-24 px-5 md:px-8 border-t border-border">
           <div className="max-w-6xl mx-auto">
@@ -223,6 +246,83 @@ export default async function Home() {
                 See every feature <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* FEATURE DEEP DIVE — alternating layout */}
+        <section className="py-24 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
+          <div className="max-w-6xl mx-auto space-y-24">
+            {[
+              {
+                eyebrow: 'Natural language',
+                title: 'Talk the way you think.\nWe handle the calendar.',
+                desc: 'No form fields. No date pickers. Just type "lunch with Maya tuesday noon" and watch Momenties create the event — with title, time, attendee, and a smart end time — in under a second.',
+                side: 'right' as const,
+                demo: (
+                  <div className="rounded-2xl border border-border bg-[#0f0f14] p-6 font-mono text-sm space-y-4">
+                    <div className="space-y-1.5">
+                      <div className="text-muted-foreground text-xs">You typed</div>
+                      <div className="text-foreground px-3 py-2 rounded-lg border border-gold/20 bg-gold/5">
+                        lunch with Maya tuesday noon at her office
+                      </div>
+                    </div>
+                    <div className="hairline" />
+                    <div className="space-y-1.5">
+                      <div className="text-muted-foreground text-xs">Momenties parsed</div>
+                      <div className="text-xs leading-relaxed space-y-1">
+                        <div><span className="text-gold">title</span> <span className="text-foreground/80">Lunch with Maya</span></div>
+                        <div><span className="text-gold">when </span> <span className="text-foreground/80">Tuesday 12:00 – 13:00</span></div>
+                        <div><span className="text-gold">where</span> <span className="text-foreground/80">Maya&apos;s office</span></div>
+                        <div><span className="text-gold">with  </span> <span className="text-foreground/80">Maya (from contacts)</span></div>
+                        <div className="pt-1"><span className="text-emerald-400 text-[10px]">✓ Added to Google Calendar</span></div>
+                      </div>
+                    </div>
+                  </div>
+                ),
+              },
+              {
+                eyebrow: 'Smart scheduling',
+                title: 'Finds the slot.\nYou just say when.',
+                desc: 'Tell Momenties "I need 2 hours of deep work this week" and it scans your calendar, avoids your blocked focus windows, and suggests three open slots — ranked by quality, not just availability.',
+                side: 'left' as const,
+                demo: (
+                  <div className="rounded-2xl border border-border bg-[#0f0f14] p-6 space-y-3">
+                    <div className="text-xs font-mono text-muted-foreground mb-2">Suggested slots for &ldquo;2h deep work&rdquo;</div>
+                    {[
+                      { time: 'Tue 7:00 – 9:00 AM', quality: '★ Best', note: 'Before any meetings. Peak focus window.' },
+                      { time: 'Wed 2:00 – 4:00 PM', quality: 'Good', note: 'After lunch. No adjacent meetings.' },
+                      { time: 'Thu 6:00 – 8:00 AM', quality: 'Good', note: 'Early start. Uninterrupted.' },
+                    ].map((s, i) => (
+                      <div key={i} className={`flex items-start gap-3 rounded-xl border p-3.5 transition-colors ${i === 0 ? 'border-gold/30 bg-gold/5' : 'border-border hover:border-gold/15'}`}>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-sm font-medium text-foreground">{s.time}</span>
+                            <span className={`text-[10px] font-mono ${i === 0 ? 'text-gold' : 'text-muted-foreground'}`}>{s.quality}</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground">{s.note}</p>
+                        </div>
+                        {i === 0 && (
+                          <span className="text-xs text-gold border border-gold/25 bg-gold/8 rounded px-2 py-0.5 flex-shrink-0 font-mono">Use this</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ),
+              },
+            ].map((f) => (
+              <Reveal key={f.eyebrow}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${f.side === 'left' ? 'md:[&>*:first-child]:order-2' : ''}`}>
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">{f.eyebrow}</p>
+                    <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-foreground whitespace-pre-line mb-4">
+                      {f.title}
+                    </h2>
+                    <p className="text-base text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
+                  <div>{f.demo}</div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </section>
 
