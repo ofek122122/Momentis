@@ -83,6 +83,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Developers', href: '/developers' },
       { label: 'CLI', href: '/cli' },
       { label: 'API Docs', href: '/api-docs' },
+      { label: 'Feedback', href: '/feedback' },
       { label: 'Community', href: '/community' },
       { label: 'Webinars', href: '/webinars' },
       { label: 'Podcast', href: '/podcast' },
@@ -99,6 +100,7 @@ const COLUMNS: FooterColumn[] = [
     links: [
       { label: 'Privacy', href: '/privacy' },
       { label: 'Refund policy', href: '/refund' },
+      { label: 'Cancel subscription', href: '/cancel' },
       { label: 'Terms', href: '/terms' },
       { label: 'Security', href: '/security' },
       { label: 'Report vulnerability', href: '/security/report' },

@@ -79,6 +79,7 @@ const NAV: NavGroup[] = [
       { label: 'Podcast', href: '/podcast', desc: 'The Quiet Hours · 8 episodes' },
       { label: 'Glossary', href: '/glossary', desc: 'Calendar terminology defined' },
       { label: 'Status', href: '/status', desc: 'Live uptime' },
+      { label: 'Feedback', href: '/feedback', desc: 'Vote on features, report bugs' },
       { label: 'Community', href: '/community', desc: 'Join the conversation' },
       { label: 'Affiliates', href: '/affiliates', desc: 'Earn by referring' },
       { label: 'Ambassadors', href: '/ambassadors', desc: '50 quiet evangelists · no payouts' },

@@ -71,6 +71,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/design', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/refund', priority: 0.5, changeFrequency: 'yearly' },
   { path: '/free', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/feedback', priority: 0.7, changeFrequency: 'weekly' },
+  { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/why', priority: 0.8, changeFrequency: 'yearly' },
   { path: '/teams', priority: 0.85, changeFrequency: 'monthly' },
