@@ -79,6 +79,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/daily-brief', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/compare/price', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/features/voice', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/google-calendar-alternative', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
