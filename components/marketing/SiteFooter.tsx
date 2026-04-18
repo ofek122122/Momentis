@@ -38,6 +38,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'For students', href: '/education' },
       { label: 'Compare', href: '/compare' },
       { label: 'Changelog', href: '/changelog' },
+      { label: 'Launch Week 01', href: '/launch-week-1', badge: 'New' },
       { label: 'Roadmap', href: '/roadmap' },
     ],
   },

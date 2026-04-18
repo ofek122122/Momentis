@@ -70,6 +70,7 @@ const SECTIONS: Section[] = [
       { href: '/api-docs', label: 'API docs' },
       { href: '/community', label: 'Community' },
       { href: '/changelog', label: 'Changelog' },
+      { href: '/launch-week-1', label: 'Launch Week 01', note: 'Five days, five upgrades' },
       { href: '/roadmap', label: 'Roadmap' },
       { href: '/webinars', label: 'Webinars' },
       { href: '/glossary', label: 'Glossary' },

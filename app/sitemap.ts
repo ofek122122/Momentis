@@ -35,6 +35,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/security', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/changelog', priority: 0.6, changeFrequency: 'weekly' },
+  { path: '/launch-week-1', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/roadmap', priority: 0.6, changeFrequency: 'weekly' },
   { path: '/help', priority: 0.6, changeFrequency: 'weekly' },
   { path: '/learn', priority: 0.7, changeFrequency: 'monthly' },

@@ -48,3 +48,8 @@
 - **Task:** Build `/learn` — a premium learning hub in the Linear / Notion style.
 - **Status:** Completed
 - **Summary:** Added `lib/learn.ts` with 4 tracks (Quickstart 7m, Voice 10m, AI 15m, Power User 30m), 13 lessons across read/try/watch kinds, and 3 curated learning paths (brand-new-to-Calendro, founder-workflow, ops-and-chief-of-staff). Built `app/(marketing)/learn/page.tsx` with: hero + 4-stat strip, track overview cards (icon + tag + lesson preview), a 13-card lesson grid with scroll-reveal and new/popular/short badges, a curated-paths section with numbered ordered list and per-lesson minute/kind metadata, and a manifesto pullquote. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.
+
+### Iteration 16
+- **Task:** Build `/launch-week-1` — a Raycast / Linear-style launch week recap page.
+- **Status:** Completed
+- **Summary:** Added `lib/launch-week.ts` with 5 days of shipped features (smarter hybrid parser, voice in 28 languages, image parser 2.0, keyboard kit + command palette, workspaces + SSO), each with icon, tone, 3 shipped items, per-day stats, and a team or user quote. Built `app/(marketing)/launch-week-1/page.tsx` with an immersive gradient hero, sticky-style day navigation grid, alternating-band day sections with oversized numeral, scroll-reveal shipped-item cards, per-day stats strip, featured quote of the week, subscribe-for-next-launch hookup using the NewsletterForm, and a closing CTA. Colored tone per day (gold/violet/emerald/sky/rose) via a TONE_CLASSES map. Linked from site header (Resources), footer (Resources, badged "New"), HTML sitemap, and sitemap.xml. Build clean.
