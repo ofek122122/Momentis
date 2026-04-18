@@ -65,6 +65,7 @@ const NAV: NavGroup[] = [
       { label: 'Roadmap', href: '/roadmap', desc: 'What\'s coming next' },
       { label: 'Labs', href: '/labs', desc: 'Experiments, in plain sight' },
       { label: 'Developers', href: '/developers', desc: 'API, SDKs, and webhooks' },
+      { label: 'CLI', href: '/cli', desc: 'Momenties from your terminal' },
       { label: 'API Docs', href: '/api-docs', desc: 'Full API reference' },
       { label: 'Webinars', href: '/webinars', desc: 'Live sessions with the team' },
       { label: 'Podcast', href: '/podcast', desc: 'The Quiet Hours · 8 episodes' },
