@@ -263,6 +263,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/focus-blocks', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/for/physical-therapists-assistants', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/calendar-review', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/for/registered-nurses', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
