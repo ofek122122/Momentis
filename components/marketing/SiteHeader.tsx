@@ -14,6 +14,7 @@ const NAV: NavGroup[] = [
     label: 'Product',
     items: [
       { label: 'Features', href: '/features', desc: 'Everything Momenties can do' },
+      { label: 'Product tour', href: '/product', desc: 'See how it actually works' },
       { label: 'Integrations', href: '/integrations', desc: 'Google, Apple, Slack & more' },
       { label: 'Demo', href: '/demo', desc: 'Try the AI in your browser' },
       { label: 'AI in Momenties', href: '/ai', desc: 'How we use AI (quietly)' },

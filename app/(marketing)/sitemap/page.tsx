@@ -29,6 +29,7 @@ const SECTIONS: Section[] = [
     links: [
       { href: '/', label: 'Home' },
       { href: '/features', label: 'Features' },
+      { href: '/product', label: 'Product tour' },
       { href: '/pricing', label: 'Pricing' },
       { href: '/pricing/calculator', label: 'Pricing calculator', note: 'Live ROI' },
       { href: '/switch', label: 'Switch to Momenties', note: 'Concierge migration' },
