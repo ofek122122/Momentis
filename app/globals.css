@@ -331,6 +331,41 @@
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
+/* ROI calculator slider */
+.roi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.08);
+  outline: none;
+  cursor: pointer;
+}
+.roi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #c5a35c;
+  border: 2px solid #0c0c0f;
+  box-shadow: 0 0 0 1px rgba(197,163,92,0.35);
+  cursor: grab;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.roi-slider::-webkit-slider-thumb:hover { transform: scale(1.08); box-shadow: 0 0 0 4px rgba(197,163,92,0.18); }
+.roi-slider::-webkit-slider-thumb:active { cursor: grabbing; }
+.roi-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #c5a35c;
+  border: 2px solid #0c0c0f;
+  box-shadow: 0 0 0 1px rgba(197,163,92,0.35);
+  cursor: grab;
+}
+.roi-slider::-moz-range-track { background: rgba(255,255,255,0.08); height: 4px; border-radius: 2px; }
+
 /* Noise texture overlay */
 .noise {
   position: relative;

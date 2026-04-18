@@ -30,6 +30,7 @@ const SECTIONS: Section[] = [
       { href: '/', label: 'Home' },
       { href: '/features', label: 'Features' },
       { href: '/pricing', label: 'Pricing' },
+      { href: '/pricing/calculator', label: 'Pricing calculator', note: 'Live ROI' },
       { href: '/demo', label: 'Live demo' },
       { href: '/templates', label: 'Templates' },
       { href: '/downloads', label: 'Downloads' },

@@ -20,6 +20,7 @@ const NAV: NavGroup[] = [
       { label: 'Templates', href: '/templates', desc: 'Ready-made weekly rhythms' },
       { label: 'Downloads', href: '/downloads', desc: 'Web, desktop, mobile, CLI' },
       { label: 'Pricing', href: '/pricing', desc: 'Simple, transparent plans' },
+      { label: 'Pricing calculator', href: '/pricing/calculator', desc: 'Live ROI, transparent math' },
       { label: 'Enterprise', href: '/enterprise', desc: 'For teams & organizations' },
       { label: 'For startups', href: '/startups', desc: 'Free for seed-stage teams' },
       { label: 'For students', href: '/education', desc: 'Free with a .edu email' },
