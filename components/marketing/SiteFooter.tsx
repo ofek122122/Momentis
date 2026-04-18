@@ -41,6 +41,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Switch to Calendro', href: '/switch' },
       { label: 'Changelog', href: '/changelog' },
       { label: 'Launch Week 01', href: '/launch-week-1', badge: 'New' },
+      { label: 'Year in review', href: '/year-in-review' },
       { label: 'Roadmap', href: '/roadmap' },
       { label: 'Labs', href: '/labs', badge: 'Beta' },
     ],

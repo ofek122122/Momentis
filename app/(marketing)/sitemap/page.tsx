@@ -75,6 +75,7 @@ const SECTIONS: Section[] = [
       { href: '/community', label: 'Community' },
       { href: '/changelog', label: 'Changelog' },
       { href: '/launch-week-1', label: 'Launch Week 01', note: 'Five days, five upgrades' },
+      { href: '/year-in-review', label: '2026 in review', note: 'Annual report' },
       { href: '/roadmap', label: 'Roadmap' },
       { href: '/labs', label: 'Labs', note: 'Active experiments' },
       { href: '/webinars', label: 'Webinars' },
