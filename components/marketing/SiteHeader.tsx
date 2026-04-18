@@ -73,6 +73,7 @@ const NAV: NavGroup[] = [
       { label: 'Year in review', href: '/year-in-review', desc: '2026 — a quiet annual report' },
       { label: 'Roadmap', href: '/roadmap', desc: 'What\'s coming next' },
       { label: 'Labs', href: '/labs', desc: 'Experiments, in plain sight' },
+      { label: 'API', href: '/api', desc: 'Build calendar-aware applications' },
       { label: 'Developers', href: '/developers', desc: 'API, SDKs, and webhooks' },
       { label: 'CLI', href: '/cli', desc: 'Momenties from your terminal' },
       { label: 'API Docs', href: '/api-docs', desc: 'Full API reference' },

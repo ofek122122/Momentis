@@ -81,6 +81,7 @@ const COLUMNS: FooterColumn[] = [
       { label: 'Getting started', href: '/getting-started' },
       { label: 'Learn', href: '/learn', badge: 'New' },
       { label: 'Keyboard reference', href: '/keyboard' },
+      { label: 'API', href: '/api', badge: 'Q3' },
       { label: 'Developers', href: '/developers' },
       { label: 'CLI', href: '/cli' },
       { label: 'API Docs', href: '/api-docs' },
