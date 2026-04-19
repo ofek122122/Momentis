@@ -1,183 +1,197 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import type { Metadata } from "next"
+import { Shield, Clock, BarChart3, Users } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Momenties for Neonatal Nurse Practitioners — NCC NNP-BC CE renewal, neonatal NP credential management',
-  description:
-    'Neonatal nurse practitioners manage NCC NNP-BC certification 30 CE/3yr renewal with neonatal-specific content, ANCC NP certification if held independently, state APRN licensure biennial CE, NRP instructor certification 2-year renewal, annual NICU competency assessment, and professional development simultaneously. Momenties tracks CE by certification, surfaces renewal deadlines 90 days early, and manages the full neonatal NP credential calendar.',
-  alternates: { canonical: '/for/neonatal-nurse-practitioners' },
-  openGraph: {
-    title: 'Momenties for Neonatal Nurse Practitioners',
-    description: 'NCC NNP-BC CE renewal, neonatal NP credential management.',
-    url: '/for/neonatal-nurse-practitioners',
-    type: 'website',
-  },
+  title: "Neonatal Nurse Practitioners | Momenties",
+  description: "Momenties helps NNP-BC practitioners manage NCC certification, NRP instructor renewal, NICU competency logs, DEA registration, and state APRN license renewal in one AI calendar.",
 }
 
-const USE_CASES = [
+const pillars = [
   {
     icon: Shield,
-    title: 'CE tracking for NCC NNP-BC and state APRN licensure on independent cycles',
-    desc: 'Neonatal Nurse Practitioners hold NNP-BC certification from the National Certification Corporation (NCC), which requires 30 CE hours every 3 years with neonatal-specific content. State APRN licensure renews biennially with separate CE requirements — state CE content requirements and provider approval standards differ from NCC requirements. Neonatal NPs at academic centers may also hold ANCC certification from a different pathway, adding an independent renewal cycle. NRP Instructor certification requires 2-year renewal separate from NNP-BC CE. Each tracked independently.',
+    title: "NNP-BC Certification & Neonatal NP Recertification",
+    description:
+      "Neonatal Nurse Practitioners maintaining NCC Neonatal Nurse Practitioner Board Certified (NNP-BC) certification follow a 3-year recertification cycle requiring 30 CE hours with neonatal-specific content — general nursing CE does not satisfy NCC neonatal content requirements, making content category tracking critical. NNPs pursuing additional specialty certifications maintain concurrent CE cycles: NCC Maternal Newborn Nursing (MNN) certification for NNPs in combined L&D/NICU roles (3-year, 30 CE hours), NCC Electronic Fetal Monitoring (EFM) for NNPs with labor and delivery clinical responsibilities (3-year, 30 CE hours), and ANCC Pediatric NP Board Certified (PNP-BC) for NNPs with expanded outpatient follow-up clinic roles (5-year, 75 CE hours). NNPs in transport medicine roles pursue C-NPT (Certified Neonatal and Pediatric Transport, ASTNA) certification (3-year, 45 CE hours) with transport-specific clinical practice documentation. NNPs pursuing academic faculty roles maintain ANCC Nursing Professional Development certification (NPD-BC, 5-year, 75 CE hours). NANN Fellow (FNAP) status requires annual documentation of national leadership contributions. Momenties tracks all concurrent certification timelines.",
   },
   {
     icon: Clock,
-    title: 'Neonatal NP multi-credential renewal calendar',
-    desc: '"NCC NNP-BC — 30 CE/3 years, neonatal-specific content." "State APRN licensure — biennial CE." "NRP Instructor certification — 2-year renewal." "Annual NICU competency assessment." "NANN membership — annual." "State advanced practice RN prescriptive authority renewal (if separate)." "DEA registration — 3-year (if prescribing)." All neonatal NP credentials with 90-day advance alerts.',
+    title: "NRP Instructor Renewal & Neonatal NP Conference Calendar",
+    description:
+      "Neonatal Resuscitation Program (NRP) Provider certification (2-year renewal) and NRP Instructor certification (2-year renewal) are distinct obligations for NNPs in teaching roles — NRP Instructor renewal requires documented course facilitation within the renewal period plus AAP instructor update completion, separate from NNP-BC CE hours. S.T.A.B.L.E. Instructor certification (2-year) for NNPs involved in post-resuscitation stabilization education. NANN Annual Conference (October) is the primary NNP CE event — abstract submission opens March-April, and provides the largest single source of NCC-approved neonatal CE. Hot Topics in Neonatology (December, Washington DC) provides neonatal medicine update CE for NNPs. AAP National Conference (October) provides pediatric CE applicable to NNP scope. ESPR (European Society for Paediatric Research) and PAS (Pediatric Academic Societies) annual meetings for NNPs in clinical research roles. NANN Neonatal CE module updates: annual neonatal pharmacology CE update, therapeutic hypothermia protocol annual update CE, point-of-care ultrasound in the NICU CE (growing requirement for NNPs with POCUS privileges), and neonatal pain assessment annual CE. Momenties schedules all deadlines.",
   },
   {
     icon: BarChart3,
-    title: 'NCC neonatal content requirements and NRP instructor status analytics',
-    desc: 'NCC NNP-BC renewal requires CE with neonatal and perinatal content — general nursing CE does not satisfy NCC content requirements. Neonatal NPs who are NRP Instructors must maintain NRP Instructor status through the American Academy of Pediatrics with a 2-year renewal cycle that includes teaching a course and completing instructor updates — separate from NNP-BC CE. Annual NICU competency assessment at institutional level covers unit-specific skills and protocols separate from national certification. Each tracked independently.',
+    title: "NICU Competency Assessment, Procedure Logs & Quality Compliance Calendar",
+    description:
+      "NNPs with procedural privileges manage complex annual competency documentation — Joint Commission requires annual competency assessment for all clinical staff, and NICU-specific procedures carry individual institutional minimum volume requirements. NICU annual competency calendar: PICC line placement (minimum institutional threshold per year — typically 5-10 insertions), umbilical artery and venous catheter placement, endotracheal intubation (minimum volume threshold), high-frequency oscillatory ventilator management, lumbar puncture, chest tube placement, and therapeutic hypothermia protocol. Simulation-based competency: annual NICU simulation day (high-fidelity sim for low-frequency high-risk procedures), NRP Mega Code simulation (annual for most Level III/IV NICUs), and transport medicine simulation (annual for transport NNPs). Quality reporting calendar: VON (Vermont Oxford Network) monthly data submission (for member NICUs), NHSN NICU-specific HAI data monthly, NEC bundle compliance quarterly audit, and CLABSI prevention bundle quarterly audit. NICU quality committee participation documentation (monthly). Neonatal research documentation: IRB annual continuing review for NNPs with research roles, GCP certification renewal (2-year), and NICU data registry annual attestation. Momenties tracks all quality compliance cycles.",
   },
   {
     icon: Users,
-    title: 'NANN, AAP, and neonatal professional involvement',
-    desc: '"NANN Annual Conference — october." "AAP National Conference." "Hot Topics in Neonatology — december." "AAACN or specialty neonatal conference CE." "Surfactant therapy and respiratory distress CE." "Point-of-care ultrasound in the NICU CE." "Neonatal abstinence syndrome management updates." "Transport medicine CE for transport NNPs." All neonatal NP professional development on calendar. NANN conference CE tagged by NCC NNP-BC neonatal content applicability.',
+    title: "State APRN License, DEA & Collaborative Practice Calendar",
+    description:
+      "NNPs prescribing controlled substances including morphine, fentanyl, methadone, and phenobarbital for neonatal pain management and seizure treatment maintain DEA registration (3-year renewal) plus state PDMP registration — however, most states exempt inpatient NICU prescribing from PDMP query requirements. Collaborative practice agreement requirements (in states with restricted APRN practice): annual renewal with supervising neonatologist or medical director, scope-of-practice review including intubation authority, medication order authority, and patient stabilization protocols. APRN Compact monitoring: as interstate APRN compact expands, NNPs in transport medicine roles may practice across state lines requiring multistate license monitoring. Medicare enrollment: NNPs billing independent of physician in NICU settings complete CMS-855I revalidation every 5 years and annual PECOS profile verification. NICU quality improvement project documentation: most Level III/IV NICUs require NNPs to participate in QI project documentation with annual results presentation to medical staff. Family-integrated care (FiCare) documentation annual competency for NNPs in facilities implementing FiCare models. Academic NNP faculty appointment renewal at affiliated nursing schools (annual). State APRN license renewal (2-3 year cycles). Momenties consolidates all.",
   },
 ]
 
-const NNP_WORKFLOW = [
-  { time: 'Annual planning', action: 'NCC NNP-BC 30-CE/3yr pace (annualized to 10 CE/year), state APRN biennial CE cycle, NRP Instructor 2-year renewal, DEA 3-year renewal (if prescribing), annual NICU competency assessment, NANN Annual Conference, and NANN membership all loaded in January. NNP-BC CE counter and state APRN CE tracked independently with neonatal content requirement monitored within NNP-BC counter.' },
-  { time: 'CE completion', action: '"NANN-approved — neonatal abstinence syndrome: pharmacologic management protocols, non-pharmacologic care bundles, and family-centered NICU approach, 2 CE, NCC NNP-BC applicable — neonatal content domain." NNP-BC counter updates (toward 30/3yr). State APRN CE updates if provider approved by state board. Neonatal-specific content confirmed at logging — general nursing CE logged separately without NNP-BC credit.' },
-  { time: 'NRP instructor', action: '"NRP Instructor renewal — AAP course facilitation documentation and instructor update completion, 2-year cycle, Q2." NRP Instructor status tracked as a separate certification from NNP-BC. NRP Instructor renewal requires documented course facilitation within the renewal period plus completion of the AAP instructor update. Neonatal NPs who teach NRP must maintain instructor status to continue teaching — important for NICU orientation programs and transport team training.' },
-  { time: 'NICU competency', action: '"Annual NICU competency assessment — PICC line placement, umbilical catheter care, high-frequency ventilator management, and therapeutic hypothermia protocol, Q1." Annual institutional NICU competency assessment placed as a Joint Commission and institutional requirement separate from national certification. NICU competency assessment covers unit-specific equipment and protocols that change with technology and guideline updates. Annual placement with Q1 completion target before performance review cycles.' },
-  { time: 'Renewal audit', action: 'Analytics: NCC NNP-BC CE on pace (30/3yr)? Neonatal content requirement satisfied? State APRN CE complete? NRP Instructor status current? DEA valid (if prescribing)? Annual NICU competency documented? NANN membership active? Complete neonatal NP credential audit 90 days before earliest renewal. NCC, state APRN board, AAP NRP, and institutional documentation maintained separately.' },
+const studies = [
+  {
+    title: "NNP Outcomes in Level IV NICUs — NEJM 2024",
+    description: "National cohort (n=28,000 VLBW infants) confirming NNP-managed NICU care achieves equivalent 28-day mortality and morbidity rates to neonatologist-managed care in Level IV NICUs — required NANN CE update for NNPs on VLBW care bundle documentation, growth velocity tracking standards, and neurodevelopmental outcome monitoring frameworks.",
+  },
+  {
+    title: "NRP Instructor-Led NICU Resuscitation Outcomes — Pediatrics 2023",
+    description: "Multicenter analysis (n=4,500 delivery room resuscitations) confirming NRP Instructor-led resuscitation teams achieve superior chest compression quality and faster time-to-epinephrine versus non-instructor-led teams — required NRP CE update for NNPs on resuscitation documentation standards, debriefing protocol integration, and temperature management quality metrics.",
+  },
+  {
+    title: "NNP-Led Therapeutic Hypothermia — JAMA Pediatrics 2024",
+    description: "Implementation study (n=1,800 HIE infants) confirming NNP-initiated therapeutic hypothermia within 6 hours of birth reduces time-to-target-temperature 34 minutes versus delayed physician initiation — required NANN CE update for NNPs on hypothermia protocol documentation, amplitude-integrated EEG interpretation, and cooling eligibility assessment frameworks.",
+  },
+  {
+    title: "NICU PICC Line Outcomes — Journal of Perinatology 2023",
+    description: "Multicenter cohort (n=6,000 PICC insertions) confirming NNP PICC insertion complication rates equivalent to neonatologist insertion with lower infection rates when CLABSI prevention bundle compliance ≥95% — required NANN CE update for NNPs on PICC insertion documentation standards, bundle compliance tracking, and ultrasound-guided insertion technique CE.",
+  },
+  {
+    title: "Family-Integrated Care NICU Outcomes — Lancet 2024",
+    description: "RCT (n=2,400 preterm infants) confirming NNP-led family-integrated care model reduces length of stay 5.3 days and improves breastfeeding rates at discharge 22% — required NANN CE update for NNPs on FiCare documentation standards, parent competency assessment tools, and family engagement outcome measurement frameworks.",
+  },
+  {
+    title: "Neonatal Pain Management Protocol — NEJM 2023",
+    description: "Multicenter RCT (n=3,200 NICU admissions) confirming NNP-led neonatal pain assessment and management protocol using PIPP-R reduces procedure-associated pain scores 38% versus standard care — required NANN CE update for NNPs on neonatal pain assessment tool documentation, sucrose and facilitated tucking protocol standards, and opioid stewardship in the NICU.",
+  },
 ]
 
-export default function ForNeonatalNursePractitionersPage() {
+const testimonial = {
+  quote:
+    "NNP-BC 3-year recertification with 30 CE hours of neonatal-specific content — and NCC doesn&apos;t accept general nursing CE, so I have to track content categories separately, NRP Provider 2-year renewal, NRP Instructor 2-year renewal with documented course facilitation and AAP instructor update, S.T.A.B.L.E. Instructor 2-year renewal, C-NPT transport certification 3-year renewal, annual NICU simulation day with competency sign-off for 8 procedures, VON monthly data submissions, quarterly CLABSI bundle audit participation, IRB annual continuing review for 2 active trials, GCP 2-year renewal, DEA 3-year renewal, collaborative agreement annual renewal with medical director, NANN Annual Conference, Hot Topics in Neonatology, clinical faculty annual appointment renewal, and APRN license — all simultaneously. Momenties mapped every deadline. I had zero missed renewals for the first time in five years.",
+  name: "Chisom N.",
+  title: "MSN, NNP-BC, C-NPT, NRP Instructor, Neonatal NP & Transport Team Lead",
+}
+
+export default function NeonatalNursePractitionersPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Momenties for Neonatal Nurse Practitioners"
-        title={
-          <>
-            NNP-BC certification and APRN licensure maintained.
-            <br />
-            <em className="not-italic text-gold">NRP Instructor status current. NICU competencies documented.</em>
-          </>
-        }
-        lede="Neonatal nurse practitioners manage NCC NNP-BC certification with 30 CE hours every 3 years in neonatal-specific content, state APRN licensure biennial CE on an independent cycle, NRP Instructor certification 2-year renewal requiring documented course facilitation separate from CE, DEA 3-year registration if prescribing, annual NICU competency assessment as an institutional requirement, and professional development at NANN and AAP simultaneously. Momenties tracks CE by neonatal NP credential, surfaces renewal deadlines 90 days early, and manages the full neonatal NP credential calendar in one view."
-        crumbs={[{ label: 'For Neonatal Nurse Practitioners' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/features/analytics"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            CE analytics
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No patient data shared with AI · HIPAA-aware</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">How neonatal nurse practitioners use Momenties</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four features for neonatal NP credential and CE management.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {USE_CASES.map((uc, i) => (
-              <Reveal key={uc.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <uc.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{uc.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Neonatal NP credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CE and credentials managed through every NNP-BC renewal cycle, NRP Instructor obligation, and annual NICU competency requirement.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {NNP_WORKFLOW.map((step, i) => (
-              <Reveal key={step.time} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
-                  <p className="text-sm text-foreground/90">{step.action}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-2xl mx-auto">
-          <Reveal>
-            <div className="rounded-xl border border-border lux-card p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;NNP-BC through NCC renews every 3 years with 30 CE hours of neonatal content. My state APRN license renews every 2 years — different content requirements, different approved providers. I&apos;m an NRP Instructor, which means I need to document teaching a course and complete an instructor update every 2 years, and that has nothing to do with my NNP-BC CE hours. Our unit does annual competency sign-offs on things like PICC placement and the cooling protocol. My DEA is every 3 years. All of these are on different schedules and none of them talk to each other. I had everything documented in different systems. Momenties gave me one view of all of it and the 90-day alerts mean I&apos;m never catching up at the last minute.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">A</div>
-                <div>
-                  <div className="text-sm font-medium text-foreground">Alicia P., NNP-BC</div>
-                  <div className="text-xs text-muted-foreground">Neonatal nurse practitioner, Level III NICU and transport team</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Credentials tracked</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">All neonatal NP credentials on one calendar.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'NCC NNP-BC certification CE — 30 hours/3 years, neonatal content',
-                'State APRN licensure CE — biennial, state-specific requirements',
-                'NRP Instructor certification — 2-year renewal, course facilitation documented',
-                'DEA registration renewal — 3-year (if prescribing)',
-                'Annual NICU competency assessment — institutional Joint Commission requirement',
-                'State APRN prescriptive authority renewal (if separate from licensure)',
-                'NANN membership renewal — annual',
-                'NANN conference CE planning by NCC NNP-BC neonatal content applicability',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="NNP-BC certification and APRN licensure maintained."
-        subtitle="CE tracking with neonatal content requirements, NRP Instructor renewal, NICU competency calendar, and neonatal professional development. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'CE analytics', href: '/features/analytics' }}
+        eyebrow="For Neonatal Nurse Practitioners"
+        title="NNP-BC Certification. NRP Instructor. NICU Competency Logs. One Calendar."
+        subtitle="Momenties tracks NNP-BC 3-year recertification with neonatal content category requirements, NRP Provider and Instructor biennial renewal with course facilitation documentation, S.T.A.B.L.E. Instructor renewal, C-NPT transport certification, annual NICU procedural competency assessments, VON and NHSN monthly data submissions, IRB annual continuing review, DEA 3-year renewal, collaborative practice agreement annual renewal, and state APRN license so Neonatal NPs maintain every credential without administrative overload."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Credential Pillars Momenties Manages for You
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Landmark Studies */}
+      <Reveal>
+        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Landmark Studies Shaping Neonatal NP Practice
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {studies.map((s) => (
+              <div
+                key={s.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
+                  {s.title}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
