@@ -32,7 +32,7 @@ const FEATURES = [
   {
     icon: BarChart3,
     title: 'Distribution window placed 24 hours after publish, not left open-ended',
-    desc: '"Distribution — within 24 hours of publish." Distribution window placed as a calendar event within 24 hours of each publish date. Distribution includes: email newsletter inclusion, social distribution sequence, newsletter partner outreach, republication to relevant communities. Content distributed within 24 hours of publish enters the audience conversation while the piece is current. Content distributed after the week's newsletter is already sent misses the highest-reach distribution window of the publish cycle.',
+    desc: '"Distribution — within 24 hours of publish." Distribution window placed as a calendar event within 24 hours of each publish date. Distribution includes: email newsletter inclusion, social distribution sequence, newsletter partner outreach, republication to relevant communities. Content distributed within 24 hours of publish enters the audience conversation while the piece is current. Content distributed after the week\'s newsletter is already sent misses the highest-reach distribution window of the publish cycle.',
   },
   {
     icon: Shield,

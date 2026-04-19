@@ -34,7 +34,7 @@ const TIPS = [
   {
     n: '03',
     title: 'Measure your meeting ratio weekly',
-    body: 'Look at your meeting-to-focus ratio once a week. Most people don't know theirs. Most people who look at it once change something. The target varies by role, but 50% or above is usually worth addressing.',
+    body: 'Look at your meeting-to-focus ratio once a week. Most people don\'t know theirs. Most people who look at it once change something. The target varies by role, but 50% or above is usually worth addressing.',
     tag: 'Analytics',
   },
   {
@@ -70,7 +70,7 @@ const TIPS = [
   {
     n: '09',
     title: 'Protect one morning per week from all meetings',
-    body: '"No-meeting Friday morning" is a cliché because it works. Use Focus mode to enforce it. Once it holds for a month, you'll never voluntarily schedule over it again.',
+    body: '"No-meeting Friday morning" is a cliché because it works. Use Focus mode to enforce it. Once it holds for a month, you\'ll never voluntarily schedule over it again.',
     tag: 'Focus',
   },
   {
@@ -82,13 +82,13 @@ const TIPS = [
   {
     n: '11',
     title: 'Review the week on Friday, not Monday',
-    body: 'A 15-minute end-of-week review (what actually happened, what moved, what's held over) is more valuable than Monday morning scramble. Look at your analytics: how did the week compare to what you planned?',
+    body: 'A 15-minute end-of-week review (what actually happened, what moved, what\'s held over) is more valuable than Monday morning scramble. Look at your analytics: how did the week compare to what you planned?',
     tag: 'Review',
   },
   {
     n: '12',
     title: 'Treat your calendar as a commitment device',
-    body: 'A calendar event is a commitment to yourself, not a request. "Research: 2 hours Tuesday" means you're doing research on Tuesday. Say it to yourself that way. If you wouldn't cancel a meeting with a colleague for that reason, don't cancel the block.',
+    body: 'A calendar event is a commitment to yourself, not a request. "Research: 2 hours Tuesday" means you\'re doing research on Tuesday. Say it to yourself that way. If you wouldn\'t cancel a meeting with a colleague for that reason, don\'t cancel the block.',
     tag: 'Mindset',
   },
 ]

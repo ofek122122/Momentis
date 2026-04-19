@@ -50,7 +50,7 @@ const REVIEW_STEPS = [
 ]
 
 const REVIEW_QUESTIONS = [
-  { category: 'This week', questions: ['What shipped vs. what was planned?', 'Where did time actually go?', 'What got less attention than it deserved?', 'What's still open from last week?'] },
+  { category: 'This week', questions: ['What shipped vs. what was planned?', 'Where did time actually go?', 'What got less attention than it deserved?', 'What\'s still open from last week?'] },
   { category: 'Next week', questions: ['What must be done, no matter what?', 'What deep work blocks does next week need?', 'What meetings should be prepped for?', 'What one thing would make each day successful?'] },
 ]
 

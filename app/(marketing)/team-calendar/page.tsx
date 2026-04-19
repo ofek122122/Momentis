@@ -6,9 +6,9 @@ import { CTA } from '@/components/marketing/CTA'
 import { Users, Eye, Layers, Shield, ArrowRight, CheckCircle2, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Team calendar — See your whole team's schedule in one view',
+  title: 'Team calendar — See your whole team\'s schedule in one view',
   description:
-    'Momenties team calendar overlays every member's availability on a single shared view, shows overloaded people, and lets you schedule with context — without sharing individual events.',
+    'Momenties team calendar overlays every member\'s availability on a single shared view, shows overloaded people, and lets you schedule with context — without sharing individual events.',
   alternates: { canonical: '/team-calendar' },
   openGraph: {
     title: 'Team calendar — One view. Real availability.',
