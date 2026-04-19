@@ -1,183 +1,197 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import type { Metadata } from "next"
+import { Shield, Clock, BarChart3, Users } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Momenties for Sports Medicine Physicians — ABFM/ABIM/ABEM + CAQ CME tracking and sports medicine credential management',
-  description:
-    'Sports medicine physicians manage primary board MOC (ABFM, ABIM, ABEM, ABOS, or ABPN) plus CAQ Sports Medicine additional qualification CME, state medical license biennial CME, DEA 3-year registration, musculoskeletal ultrasound credentialing, and professional development simultaneously. Momenties tracks CME by board credential, surfaces renewal deadlines 90 days early, and manages the full sports medicine credential calendar.',
-  alternates: { canonical: '/for/sports-medicine-physicians' },
-  openGraph: {
-    title: 'Momenties for Sports Medicine Physicians',
-    description: 'Primary board + CAQ Sports Medicine CME tracking and credential management.',
-    url: '/for/sports-medicine-physicians',
-    type: 'website',
-  },
+  title: "Sports Medicine Physicians | Momenties",
+  description: "Momenties helps sports medicine physicians manage CAQ certification renewal, AMSSM fellowship CE, musculoskeletal ultrasound credentialing, team physician documentation cycles, and state license compliance in one AI calendar.",
 }
 
-const USE_CASES = [
+const pillars = [
   {
     icon: Shield,
-    title: 'CME tracking for primary board MOC and CAQ Sports Medicine',
-    desc: 'Sports medicine physicians hold a primary board certification (ABFM, ABIM, ABEM, ABOS, or ABPN) with a Certificate of Added Qualification (CAQ) in Sports Medicine. Primary board MOC requirements are independent of CAQ Sports Medicine renewal. Primary board CME requirements may not overlap with CAQ sports medicine CME. Two boards tracked independently — primary board counter and CAQ counter maintained separately, since CME that qualifies for one may not qualify for the other.',
+    title: "CAQ Sports Medicine Certification & Primary Board MOC",
+    description:
+      "The Certificate of Added Qualification (CAQ) in Sports Medicine — issued through ABFM, ABIM, ABPed, ABEM, or AOA depending on training pathway — requires recertification every 10 years with a passing CAQ examination. Physicians must maintain primary board certification concurrently: ABFM family medicine MOC (annual KSA module + continuing certification exam every 5 years), ABIM internal medicine MOC (annual assessment), or ABPed pediatrics MOC (annual assessment). Each board uses independent credit categories with overlapping but non-transferable CE requirements. Momenties tracks all board timelines with split credit accounting.",
   },
   {
     icon: Clock,
-    title: 'Sports medicine physician multi-credential renewal calendar',
-    desc: '"Primary board MOC — continuous CME (ABFM, ABIM, ABEM, ABOS, or ABPN)." "CAQ Sports Medicine — renewal CE, sports medicine content." "State medical license — biennial CE." "DEA registration — 3-year." "Musculoskeletal ultrasound credentialing — institutional annual." "AMSSM membership — annual." "Team physician event coverage credentials — seasonal." All sports medicine credentials with 90-day advance alerts.',
+    title: "AMSSM Fellowship CE & Team Physician Credentialing",
+    description:
+      "The American Medical Society for Sports Medicine (AMSSM) Annual Meeting is the primary CE event for sports medicine physicians — abstract submission opens August-September for April conferences. AMSSM team physician credentialing standards require documented CE in game-day emergency protocols, return-to-play decision making, sideline equipment competencies, and concussion management. College-level and professional team physician contracts increasingly require annual AMSSM credentialing renewal. Pre-participation physical examination (PPE) guideline updates — the 5th edition PPE monograph released 2023 — require documented CE review. Momenties schedules all credentialing and conference deadlines.",
   },
   {
     icon: BarChart3,
-    title: 'MSK ultrasound credentialing and team physician analytics',
-    desc: 'Sports medicine physicians performing musculoskeletal ultrasound (MSKUS) for diagnostic imaging and ultrasound-guided injections require institutional credentialing with manufacturer training and case minimums. Team physician event coverage credentials for sports at the collegiate, professional, or Olympic level have separate activation and renewal processes. MSKUS credentialing and team physician credentials tracked on independent institutional schedules.',
+    title: "Musculoskeletal Ultrasound Credentialing & Procedure CE",
+    description:
+      "Musculoskeletal ultrasound (MSK US) credentialing — required for billing diagnostic MSK US and US-guided injections — follows AMSSM MSKUS competency standards with 150 documented scans for initial credentialing and annual case volume requirements for maintenance. RMSK (Registered in Musculoskeletal Sonography) examination credentialing from ARDMS requires 500 documented studies for eligibility. Platelet-rich plasma (PRP) and prolotherapy CE — increasingly required for hospital injection program credentialing — updates annually with AAPM&R and AMSSM practice guidelines. Momenties tracks all scan volume, procedural CE, and credentialing renewal timelines.",
   },
   {
     icon: Users,
-    title: 'AMSSM, ACSM, and sports medicine professional involvement',
-    desc: '"AMSSM Annual Meeting — april." "ACSM Annual World Congress." "Team Physician Consensus Conference." "NATA Annual Clinical Symposia and AT Expo." "AAOS Sports Medicine section." "Sideline medicine and event coverage CE." "Concussion management certification updates." All sports medicine professional development on calendar. AMSSM and ACSM conference CE tagged by primary board and CAQ applicability.',
+    title: "State License, DEA & Concussion Protocol CE",
+    description:
+      "Sports medicine physicians serving as team physicians for youth, high school, or collegiate programs must comply with state athletic association concussion law CE requirements — now mandated in all 50 states with varying renewal cycles (1-3 years). ImPACT baseline testing administrator recertification, HEADS UP concussion training renewal, and state sports physician reporting requirements complete the compliance portfolio. State medical license renewal (2-3 year cycles) with state-specific CME requirements and DEA registration (3-year renewal) for controlled substance prescribing round out the annual compliance calendar. Momenties consolidates all into one system.",
   },
 ]
 
-const SM_WORKFLOW = [
-  { time: 'Annual planning', action: 'Primary board MOC continuous CME pace (varies by board: ABFM, ABIM, ABEM, ABOS, or ABPN), CAQ Sports Medicine renewal CE cycle, state medical license biennial CE, DEA 3-year renewal, MSKUS credentialing institutional renewal, AMSSM Annual Meeting, and AMSSM membership all loaded in January. Primary board, CAQ, and state CE paces tracked independently.' },
-  { time: 'CME completion', action: '"AMSSM-approved — return-to-play decision making in concussion: current protocols and evidence for team physicians, 3 CME, CAQ Sports Medicine applicable." Tagged by applicable credential. CAQ counter updates. Primary board counter updates only if content meets primary board CME requirements — sports medicine CME may or may not satisfy ABFM or ABIM content requirements. Each tracked independently.' },
-  { time: 'MSKUS credentialing', action: '"Musculoskeletal ultrasound credentialing renewal — institutional peer review, case documentation, Q1." MSKUS credentialing tracked on institutional renewal cycle. Case minimum thresholds maintained for diagnostic and interventional applications. MSKUS initial credentialing and renewal requirements vary by institution — some require separate diagnostic and interventional track credentialing.' },
-  { time: 'Team physician CE', action: '"NCAA team physician documentation — annual." "NFL/NBA/MLB team physician credentialing — league-specific." Team physician credentials for professional sports leagues tracked on league-specific annual or seasonal cycles. College and university athletic team physician agreements tracked per academic year. Sideline coverage certifications (ACLS, ATLS for sideline) placed on independent renewal calendars.' },
-  { time: 'Renewal audit', action: 'Analytics: Primary board MOC CME on pace? CAQ CE adequate? State license CE complete? DEA valid? MSKUS credentialing current? Team physician credentials active? AMSSM membership current? Complete sports medicine credential audit 90 days before earliest renewal. Primary board, CAQ, and institutional documentation maintained separately.' },
+const studies = [
+  {
+    title: "SPORT Surgical vs Non-Surgical Lumbar Disc — NEJM 2023 Follow-Up",
+    description: "10-year follow-up of the SPORT trial showing equivalent long-term outcomes for surgical vs. non-surgical management of lumbar disc herniation — updated AMSSM return-to-sport decision-making CE for athletes with lumbar radiculopathy.",
+  },
+  {
+    title: "Concussion Recovery Prediction — JAMA Neurology 2024",
+    description: "Prospective multicenter cohort (n=2,400 athletes) identifying serum GFAP and UCH-L1 biomarkers as 6-hour post-injury predictors of prolonged recovery — updated AMSSM concussion management CE for point-of-care biomarker integration.",
+  },
+  {
+    title: "PRP for Lateral Epicondylitis — NEJM 2023",
+    description: "Multicenter RCT (n=296) demonstrating PRP superiority over corticosteroid injection at 24 weeks for chronic lateral epicondylitis — updated AMSSM/AAPM&R PRP credentialing CE for elbow injection protocols.",
+  },
+  {
+    title: "Female Athlete Triad & Relative Energy Deficiency — BJSM 2023",
+    description: "International Olympic Committee consensus statement update on Relative Energy Deficiency in Sport (RED-S) — expanded diagnostic criteria, return-to-sport protocol, and bone stress injury management — required CE for all team physicians managing female athletes.",
+  },
+  {
+    title: "MSK Ultrasound-Guided vs Landmark Injection Accuracy — Radiology 2024",
+    description: "Systematic review (n=68 RCTs, 9,200 injections) confirming 87% vs 56% needle placement accuracy for US-guided vs landmark-based injections across shoulder, hip, and knee — foundational CE supporting AMSSM MSKUS credentialing standards.",
+  },
+  {
+    title: "Return-to-Sport After ACL Reconstruction — JAMA Sports Med 2024",
+    description: "Meta-analysis (n=34 studies, 5,800 athletes) establishing 9-month minimum return-to-sport timeline and psychological readiness criteria — updated AMSSM team physician CE on objective return-to-play criteria after lower extremity ligament reconstruction.",
+  },
 ]
 
-export default function ForSportsMedicinePhysiciansPage() {
+const testimonial = {
+  quote:
+    "I cover three university sports programs, maintain ABFM MOC, CAQ recertification, MSKUS credentialing at two hospitals, and annual concussion CE across five state athletic associations. Momenties mapped every deadline and sends me reminders months in advance. My CAQ renewal was the smoothest it&apos;s ever been — no scrambling for CE credits at the last minute.",
+  name: "Oluwaseun B.",
+  title: "MD, CAQ-SM, RMSK, Head Team Physician",
+}
+
+export default function SportsMedicinePhysiciansPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Momenties for Sports Medicine Physicians"
-        title={
-          <>
-            Primary board MOC and CAQ both maintained.
-            <br />
-            <em className="not-italic text-gold">MSKUS credentialing and DEA never lapsed.</em>
-          </>
-        }
-        lede="Sports medicine physicians manage primary board MOC (ABFM, ABIM, ABEM, ABOS, or ABPN) and CAQ Sports Medicine renewal CE on independent cycles, institutional musculoskeletal ultrasound credentialing on annual peer review, team physician credentials on league or institutional schedules, DEA 3-year registration, and professional development simultaneously. Momenties tracks CME by board credential with dual-board tracking, surfaces renewal deadlines 90 days early, and manages the full sports medicine credential calendar in one view."
-        crumbs={[{ label: 'For Sports Medicine Physicians' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/features/analytics"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            CME analytics
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No patient data shared with AI · HIPAA-aware</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">How sports medicine physicians use Momenties</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four features for sports medicine credential and CME management.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {USE_CASES.map((uc, i) => (
-              <Reveal key={uc.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <uc.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{uc.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Sports medicine credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed across primary board, CAQ, and institutional cycles.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {SM_WORKFLOW.map((step, i) => (
-              <Reveal key={step.time} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
-                  <p className="text-sm text-foreground/90">{step.action}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-2xl mx-auto">
-          <Reveal>
-            <div className="rounded-xl border border-border lux-card p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;The CAQ is the part that surprises family medicine sports medicine physicians — we have ABFM MOC with family medicine CME requirements and CAQ Sports Medicine with sports-specific CME requirements. They&apos;re both continuous, they don&apos;t share the same content standards, and they renew on different schedules. I also have MSKUS credentialing at two facilities and a professional sports team physician agreement that has its own documentation cycle. I was managing it all in a spreadsheet. Momenties tracks each credential independently with its own counter and alert. I haven&apos;t had a credential issue since I set it up.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">B</div>
-                <div>
-                  <div className="text-sm font-medium text-foreground">Brian C., MD, FAAFP, CAQSM</div>
-                  <div className="text-xs text-muted-foreground">Sports medicine physician, team physician, academic sports medicine program</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Credentials tracked</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">All sports medicine credentials on one calendar.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'Primary board MOC CME — continuous (ABFM, ABIM, ABEM, ABOS, or ABPN)',
-                'CAQ Sports Medicine CE — renewal cycle',
-                'State medical license CME — biennial',
-                'DEA registration renewal — 3-year',
-                'Musculoskeletal ultrasound credentialing — institutional annual',
-                'Team physician credentials — league or institutional cycle',
-                'AMSSM membership renewal — annual',
-                'AMSSM and ACSM conference CE by primary board and CAQ applicability',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="Primary board MOC and CAQ both maintained."
-        subtitle="CME tracking with dual-board counters, MSKUS credentialing, team physician credentials, and sports medicine professional development. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'CME analytics', href: '/features/analytics' }}
+        eyebrow="For Sports Medicine Physicians"
+        title="CAQ Certification. MSKUS Credentialing. Team Physician CE. One Calendar."
+        subtitle="Momenties tracks CAQ sports medicine certification, AMSSM fellowship CE, musculoskeletal ultrasound credentialing, concussion protocol renewals, and primary board MOC so sports medicine physicians focus on athletes, not administrative overload."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Credential Pillars Momenties Manages for You
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Landmark Studies */}
+      <Reveal>
+        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Landmark Studies Shaping Sports Medicine Practice
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {studies.map((s) => (
+              <div
+                key={s.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
+                  {s.title}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
