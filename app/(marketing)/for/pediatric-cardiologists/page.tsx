@@ -1,183 +1,197 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import type { Metadata } from "next"
+import { Shield, Clock, BarChart3, Users } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Momenties for Pediatric Cardiologists — ABP MOC CME renewal, pediatric cardiology credential management',
-  description:
-    'Pediatric cardiologists manage ABP general pediatrics primary MOC and ABP pediatric cardiology subspecialty MOC (both continuous), annual congenital heart disease CE as transcatheter pulmonary valve replacement SAPIEN 3 pediatric data and Fontan circulation surveillance protocols evolve, annual fetal cardiology CE as fetal intervention techniques and maternal-fetal medicine collaboration protocols update, annual heart failure CE as sacubitril/valsartan pediatric HFrEF dosing data emerge, state medical license biennial CME, DEA 3-year renewal, and ACC/AHA/AEPC membership. Momenties tracks CME by certification and manages the full credential calendar.',
-  alternates: { canonical: '/for/pediatric-cardiologists' },
-  openGraph: {
-    title: 'Momenties for Pediatric Cardiologists',
-    description: 'ABP MOC CME renewal, pediatric cardiology credential management.',
-    url: '/for/pediatric-cardiologists',
-    type: 'website',
-  },
+  title: "Pediatric Cardiologists | Momenties",
+  description: "Momenties helps pediatric cardiologists manage ABP dual MOC, pediatric cardiology subspecialty certification, AHA/ACC guideline CE, cardiac catheterization procedure credentialing, and state license compliance in one AI calendar.",
 }
 
-const USE_CASES = [
+const pillars = [
   {
     icon: Shield,
-    title: 'CME tracking for ABP general pediatrics MOC and ABP pediatric cardiology MOC independently',
-    desc: 'Pediatric cardiologists hold ABP general pediatrics primary certification under continuous MOC alongside ABP pediatric cardiology subspecialty certification under continuous MOC — two ABP continuous assessment tracks with different content requirements. ABP pediatric cardiology requires subspecialty content: congenital heart disease anatomy and physiology (all lesion categories — shunt, obstruction, transposition, single ventricle), fetal echocardiography and fetal cardiac intervention, pediatric electrophysiology (SVT management, channelopathies — LQTS, Brugada syndrome, CPVT), pediatric heart failure (dilated cardiomyopathy, post-viral cardiomyopathy, Fontan circulation failure), and preventive cardiology (familial hypercholesterolemia in children, Kawasaki disease cardiovascular sequelae).',
+    title: "ABP General Pediatrics MOC & Cardiology Subspecialty Certification",
+    description:
+      "Pediatric cardiologists maintain ABP general pediatrics certification through the annual MOC cycle (online KSA modules, PI-CME activities, points accumulation) alongside the Pediatric Cardiology subspecialty certification — a 5-year recertification cycle with a content-specific examination covering congenital heart disease anatomy, cardiac catheterization, echocardiography interpretation, arrhythmia management, and heart failure/transplant. ABP Pediatric Cardiology diplomates who serve as fellowship directors must complete COMSEP faculty development CE and ABP Program Director CE modules. Momenties tracks both ABP certification timelines simultaneously with exam window alerts 12 months in advance.",
   },
   {
     icon: Clock,
-    title: 'Pediatric cardiologist multi-credential renewal calendar',
-    desc: '"ABP general pediatrics MOC — continuous CME assessment." "ABP pediatric cardiology MOC — continuous subspecialty CME assessment." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual CHD CE — SAPIEN 3 transcatheter pulmonary valve replacement pediatric registry data, Fontan surveillance protocol update (FUEL trial empagliflozin Fontan CE)." "Annual fetal cardiology CE — fetal aortic valvuloplasty technique update, fetal cardiac surgery collaboration framework." "Annual HF CE — sacubitril/valsartan PANORAMA-HF pediatric HFrEF trial data, milrinone outpatient bridge therapy in pediatric bridge-to-transplant." "AEPC membership — annual." All pediatric cardiology credentials with 90-day advance alerts.',
+    title: "AEPC/PICSYMPOSIUM CE & AHA/ACC Congenital Heart Disease Guidelines",
+    description:
+      "The American College of Cardiology (ACC) Annual Scientific Sessions and the American Heart Association (AHA) Scientific Sessions are the primary CE events — abstract submission opens August-September for March/November conferences. ACC Adult Congenital Heart Disease (ACHD) subspecialty CE is required for pediatric cardiologists transitioning patients to adult care programs. The Pediatric and Congenital Electrophysiology Society (PACES) symposium CE covers inherited arrhythmia management and device therapy in congenital heart disease. AHA/ACC 2024 guidelines for management of adults with congenital heart disease — a major update — require documented CE review. AEPC (European) guidelines provide supplementary CE for academic practices. Momenties schedules all.",
   },
   {
     icon: BarChart3,
-    title: 'Annual CHD intervention CE and Fontan surveillance update analytics',
-    desc: 'Pediatric cardiologists managing CHD interventions must maintain CE on evolving transcatheter techniques and surveillance protocols: SAPIEN 3 (Edwards) received FDA approval for transcatheter pulmonary valve replacement in conduit and native/native-like right ventricular outflow tract — CE on patient selection criteria (minimum conduit diameter, maximum conduit size, landing zone anatomy assessment by CT), procedural technique, and post-TPVR endocarditis surveillance is required before referring or performing procedures. Fontan circulation surveillance CE has become urgent: the FUEL trial (empagliflozin in Fontan circulation) 2023 data showing preserved exercise capacity and reduced hepatic stiffness at 14 weeks has prompted clinical implementation — CE on SGLT2 inhibitor mechanism in single ventricle physiology and monitoring requirements is required before prescribing.',
+    title: "Cardiac Catheterization Lab Credentialing & Echocardiography CE",
+    description:
+      "Pediatric cardiologists performing cardiac catheterization procedures require hospital credentialing with case volume documentation (typically 50+ diagnostic and 25+ interventional cases for initial credentialing) and biennial reappointment reviews. Interventional credentialing for specific procedures — balloon pulmonary valvuloplasty, ASD/VSD device closure, coarctation stenting, blade atrial septostomy — follows procedure-specific volume requirements. American Society of Echocardiography (ASE) pediatric echocardiography exam-based certification (RDCS) requires ongoing CE and biennial recertification. Fetal echocardiography certification requires documented fetal echo volume. ACLS certification (2-year cycle) is required for all cath lab practitioners. Momenties tracks all credentialing timelines.",
   },
   {
     icon: Users,
-    title: 'ACC ACHD, AEPC, ISACHD, and pediatric cardiology professional development',
-    desc: '"AEPC Association for European Paediatric and Congenital Cardiology Annual Meeting — may." "ISACHD International Society for Adult Congenital Heart Disease." "ACC Annual Scientific Session — march." "AHA Scientific Sessions — november." "CHD intervention CE — SAPIEN 3 TPVR pediatric registry outcomes CE (native RVOT versus conduit — landing zone sizing, CT protocol requirements, post-TPVR endocarditis prophylaxis update), Melody valve extended follow-up CE (valve-in-valve TPVR Melody 10-year freedom from reintervention), transcatheter ASD closure in pediatric patients — COAST trial Occlutech versus Amplatzer sizing and selection criteria, and hybrid approach for neonatal hypoplastic left heart syndrome — hybrid Norwood versus standard Norwood stage 1 institution experience CE." "Fontan CE — FUEL trial empagliflozin 14-week Fontan data CE (peak VO2 preservation, hepatic stiffness reduction — mechanism CE for SGLT2 inhibition in elevated central venous pressure physiology, patient selection: Fontan circulation with preserved systolic function), Fontan-associated liver disease (FALD) surveillance — ACR elastography versus liver biopsy — timing of biopsy CE (non-invasive FALD staging), and protein-losing enteropathy in Fontan — budesonide versus sildenafil CE for PLE management." "HF CE — sacubitril/valsartan PANORAMA-HF pediatric trial data CE (pediatric HFrEF below 18 years — weight-based dosing, titration schedule, NYHA improvement at 52 weeks), milrinone outpatient continuous infusion in pediatric bridge-to-transplant CE (OPTN listing criteria, IV access management, home infusion protocol), and ivabradine pediatric dilated cardiomyopathy HF CE (heart rate reduction benefit in tachycardia-mediated cardiomyopathy — age-specific dosing)." All pediatric cardiology professional development on calendar.',
+    title: "State License, DEA & ACHD Transition of Care CE",
+    description:
+      "Adult Congenital Heart Disease (ACHD) transition programs — managing congenital heart patients through adolescence and into adult care — require documented CE in ACHD management, reproductive counseling for women with CHD, and adult CHD complication management (arrhythmia, heart failure, endocarditis prophylaxis). ACHD formal board certification through ABIM was established in 2015 with 10-year recertification cycles — pediatric cardiologists entering ACHD practice require CE on ABIM ACHD examination content. State medical license renewal (2-3 year cycles) with state-specific CME, DEA registration for procedural sedation, and radiation safety CE for fluoroscopy-guided catheterization complete the compliance portfolio. Momenties consolidates all.",
   },
 ]
 
-const PED_CARDIO_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABP general pediatrics continuous MOC CME pace, ABP pediatric cardiology continuous MOC CME pace (tracked separately — different content emphasis), state medical license biennial CME, DEA 3-year renewal, annual CHD intervention CE, annual Fontan surveillance CE, annual pediatric HF CE, AEPC Annual Meeting, ACC Annual Scientific Session, AHA Scientific Sessions, and AEPC/ACC membership all loaded in January. ABP general pediatrics counter and ABP pediatric cardiology counter tracked independently.' },
-  { time: 'CE completion', action: '"ACC-approved — ACC 2024 Pediatric Cardiology Update: transcatheter pulmonary valve replacement in native RVOT — patient selection criteria (CT minimum landing zone diameter 16 mm, maximum diameter 32 mm), post-TPVR endocarditis prophylaxis recommendation update (lifetime prophylaxis — clarification of infective endocarditis risk post-TPVR versus surgical valve), sacubitril/valsartan PANORAMA-HF trial data CE (weight-based initial dosing — children 10-50 kg: target dose 1.55 mg/kg combined sacubitril/valsartan equivalent twice daily, KCCQ-pediatric score improvement at 52 weeks), 4 CME, AMA PRA Category 1, ABP general pediatrics MOC applicable, ABP pediatric cardiology MOC applicable." Both counters update.' },
-  { time: 'CHD CE', action: '"Annual CHD intervention CE — transcatheter pulmonary valve and Fontan update 2024: SAPIEN 3 native RVOT TPVR registry CE (freedom from reintervention at 3 years — native versus conduit comparison, stent fracture surveillance, pre-stenting technique for optimal landing zone preparation), Melody valve 10-year outcomes CE (valve-in-valve TPVR registry — freedom from reintervention 67% at 10 years, endocarditis incidence — prophylaxis protocol adherence monitoring), empagliflozin FUEL trial 2023 Fontan CE (empagliflozin 10 mg daily mechanism in elevated central venous pressure physiology — natriuretic effect, hepatic venous pressure gradient reduction, prescribing criteria before widespread adoption), and ASD device closure pediatric sizing — COAST trial Occlutech versus Amplatzer (defect size 10-38 mm — sizing ratio and sizing balloon CE), 3 CME, ABP pediatric cardiology MOC applicable, Q1." Annual CHD CE placed Q1 aligned with ACC March session.' },
-  { time: 'HF CE', action: '"Annual pediatric heart failure CE — sacubitril/valsartan and advanced therapies: PANORAMA-HF trial CE — sacubitril/valsartan (Entresto) in pediatric HFrEF below 18 years (weight-based dosing initiation and titration protocol, eGFR monitoring, potassium monitoring CE, interaction with ACE inhibitor — 36-hour washout requirement before initiation), ivabradine pediatric tachycardia-mediated cardiomyopathy CE (heart rate reduction mechanism, age-appropriate dosing — children 6 months to 18 years weight-based maximum dose), ventricular assist device for pediatric bridge-to-transplant — Berlin Heart EXCOR versus axial flow devices (size and weight threshold CE), and cardiac resynchronization therapy in pediatric dilated cardiomyopathy — pacing-induced cardiomyopathy versus congenital bundle branch block CRT patient selection, 3 CME, ABP pediatric cardiology MOC applicable, Q3." Annual HF CE placed Q3 aligned with AHA November sessions.' },
-  { time: 'Renewal audit', action: 'Analytics: ABP general pediatrics continuous MOC on pace? ABP pediatric cardiology continuous MOC on pace? (Separate counters — different content.) State medical license CME complete? DEA valid? Annual CHD intervention CE documented? Annual Fontan surveillance CE documented? Annual pediatric HF CE documented? AEPC/ACC membership active? Complete pediatric cardiologist credential audit 90 days before earliest renewal.' },
+const studies = [
+  {
+    title: "AHA/ACC 2024 Guidelines for ACHD Management — JACC 2024",
+    description: "Comprehensive guideline update covering hemodynamic surveillance intervals by lesion complexity, pregnancy counseling, endocarditis prophylaxis revisions, and ACHD heart failure management — required CE for all pediatric and adult congenital cardiologists.",
+  },
+  {
+    title: "Catheter Ablation for CHD-Associated Arrhythmias — NEJM 2024",
+    description: "Multicenter registry (n=2,800 procedures) establishing safety and efficacy of catheter ablation for intra-atrial reentrant tachycardia after Fontan palliation — updated PACES CE for electrophysiology credentialing in complex CHD.",
+  },
+  {
+    title: "Transcatheter Pulmonary Valve Replacement Long-Term Outcomes — Lancet 2023",
+    description: "10-year follow-up of transcatheter pulmonary valve replacement (n=1,800 procedures) confirming excellent long-term freedom from reintervention — updated ACC/AHA interventional CHD credentialing CE for TPVR procedure qualification.",
+  },
+  {
+    title: "Fontan Circulation Outcomes at 20 Years — JACC 2024",
+    description: "Multicenter cohort (n=1,400 Fontan patients) establishing surveillance protocols, protein-losing enteropathy management, and transplant timing criteria — foundational CE for pediatric cardiologists managing complex single-ventricle patients into adulthood.",
+  },
+  {
+    title: "Fetal Cardiac Intervention for HLHS — NEJM Evidence 2023",
+    description: "Multicenter RCT (n=160 fetuses with HLHS) evaluating catheter-based fetal cardiac intervention impact on postnatal outcomes — established fetal cardiac intervention CE requirements for pediatric cardiologists at fetal cardiology programs.",
+  },
+  {
+    title: "Ventricular Assist Devices in Pediatric Heart Failure — JAMA Pediatrics 2024",
+    description: "National registry analysis (n=1,200 pediatric VAD implants) confirming Berlin Heart and HeartMate III outcomes and bridge-to-transplant success rates — required CE for pediatric cardiologists managing advanced heart failure and LVAD programs.",
+  },
 ]
 
-export default function ForPediatricCardiologistsPage() {
+const testimonial = {
+  quote:
+    "ABP general MOC, pediatric cardiology subspecialty, AHA abstract deadlines, cath lab credentialing at three hospitals, RDCS echocardiography renewal, ACHD transition CE, and state license — each on a different schedule. Momenties mapped everything in one calendar. My subspecialty recertification was the most well-prepared I&apos;ve ever been.",
+  name: "Adaeze O.",
+  title: "MD, FAAP, FACC, Pediatric Cardiology Fellowship Director",
+}
+
+export default function PediatricCardiologistsPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Momenties for Pediatric Cardiologists"
-        title={
-          <>
-            ABP general pediatrics MOC and ABP pediatric cardiology MOC maintained.
-            <br />
-            <em className="not-italic text-gold">TPVR intervention CE current. Fontan surveillance and pediatric HF tracked.</em>
-          </>
-        }
-        lede="Pediatric cardiologists manage two continuous ABP MOC tracks — general pediatrics and pediatric cardiology — with different content requirements tracked independently. Annual CHD CE as SAPIEN 3 TPVR pediatric data and transcatheter technique protocols evolve, annual Fontan CE as empagliflozin FUEL trial data prompts clinical implementation, annual pediatric HF CE as sacubitril/valsartan PANORAMA-HF trial data emerge, state medical license biennial CME, DEA 3-year registration, and professional development at AEPC and ACC. Momenties tracks CME by credential and manages the full calendar."
-        crumbs={[{ label: 'For Pediatric Cardiologists' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/features/analytics"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            CE analytics
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No patient data shared with AI · HIPAA-aware</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">How pediatric cardiologists use Momenties</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four features for pediatric cardiologist credential and CME management.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {USE_CASES.map((uc, i) => (
-              <Reveal key={uc.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <uc.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{uc.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Pediatric cardiologist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABP general pediatrics MOC, ABP pediatric cardiology MOC, and annual CHD intervention, Fontan, and heart failure CE requirements.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {PED_CARDIO_WORKFLOW.map((step, i) => (
-              <Reveal key={step.time} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
-                  <p className="text-sm text-foreground/90">{step.action}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-2xl mx-auto">
-          <Reveal>
-            <div className="rounded-xl border border-border lux-card p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;Two continuous ABP MOC tracks — general pediatrics and pediatric cardiology — tracked separately because the CHD content requirements are completely different from general pediatrics. The SAPIEN 3 native RVOT CE was clinically urgent: when our cath lab started evaluating native RVOT patients for TPVR, I needed documented CE on the CT sizing protocol, the pre-stenting technique, and the endocarditis surveillance schedule before I was part of the multidisciplinary selection meetings. The empagliflozin Fontan CE was the same: the FUEL trial data came out and families were asking about it immediately — I needed documented CE on the mechanism, the prescribing criteria, and the monitoring requirements before I could counsel them. The sacubitril/valsartan PANORAMA-HF CE changed my HF prescribing: I needed the weight-based dosing and titration protocol documented before I started initiating it in my dilated cardiomyopathy patients.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">C</div>
-                <div>
-                  <div className="text-sm font-medium text-foreground">Carlos N., MD</div>
-                  <div className="text-xs text-muted-foreground">Pediatric cardiologist and cardiac catheterization laboratory director, children&apos;s hospital</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Credentials tracked</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">All pediatric cardiologist credentials on one calendar.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'ABP general pediatrics MOC CME — continuous, separately tracked',
-                'ABP pediatric cardiology MOC CME — continuous, subspecialty content weighted',
-                'State medical license CME — biennial',
-                'DEA registration renewal — 3-year',
-                'Annual CHD CE — SAPIEN 3 TPVR native RVOT, Melody valve extended follow-up, ASD closure',
-                'Annual Fontan CE — empagliflozin FUEL trial, FALD surveillance, PLE management',
-                'Annual pediatric HF CE — sacubitril/valsartan PANORAMA-HF, ivabradine, VAD for bridge',
-                'AEPC and ACC conference CME planning by ABP applicability',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="ABP general pediatrics MOC and ABP pediatric cardiology MOC maintained."
-        subtitle="CME tracking for two continuous ABP MOC tracks, annual CHD intervention CE, Fontan CE, pediatric HF CE, and pediatric cardiology professional development. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'CE analytics', href: '/features/analytics' }}
+        eyebrow="For Pediatric Cardiologists"
+        title="ABP Subspecialty. Cath Lab Credentialing. ACHD CE. One Calendar."
+        subtitle="Momenties tracks ABP general pediatrics MOC, pediatric cardiology subspecialty certification, AHA/ACC congenital heart guideline CE, cardiac catheterization credentialing, and ACHD transition training so pediatric cardiologists focus on patients, not administrative complexity."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Credential Pillars Momenties Manages for You
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Landmark Studies */}
+      <Reveal>
+        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Landmark Studies Shaping Pediatric Cardiology Practice
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {studies.map((s) => (
+              <div
+                key={s.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
+                  {s.title}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
