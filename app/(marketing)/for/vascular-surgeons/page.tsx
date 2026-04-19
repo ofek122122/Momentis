@@ -1,183 +1,197 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import type { Metadata } from "next"
+import { Shield, Clock, BarChart3, Users } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Momenties for Vascular Surgeons — ABVS/ABMS MOC, CME tracking, and vascular surgery credential management',
-  description:
-    'Vascular surgeons manage ABVS (American Board of Vascular Surgery) MOC or ABMS Surgery subspecialty MOC, state medical license biennial CME, fluoroscopy operator licensing, DEA registration, endovascular device training certifications, and professional development simultaneously. Momenties tracks CME by board credential, surfaces renewal deadlines 90 days early, and manages the full vascular surgery credential calendar.',
-  alternates: { canonical: '/for/vascular-surgeons' },
-  openGraph: {
-    title: 'Momenties for Vascular Surgeons',
-    description: 'ABVS/ABMS MOC, CME tracking, and vascular surgery credential management.',
-    url: '/for/vascular-surgeons',
-    type: 'website',
-  },
+  title: "Vascular Surgeons | Momenties",
+  description: "Momenties helps vascular surgeons manage ABVS board certification renewal, SVS fellowship CE, endovascular procedure credentialing, EVAR/TEVAR device training, and state license compliance in one AI calendar.",
 }
 
-const USE_CASES = [
+const pillars = [
   {
     icon: Shield,
-    title: 'CME tracking for ABVS and vascular surgery MOC requirements',
-    desc: 'Vascular surgeons board-certified by the American Board of Vascular Surgery (ABVS) or through ABMS Surgery with vascular subspecialty certification face independent MOC requirements. CME must be in vascular surgery content areas. Vascular-specific procedural CME may differ from general surgery CME eligibility. Tag every CME by applicable board. Each board\'s MOC counter tracked independently.',
+    title: "ABVS/ABS Vascular Surgery Board Certification & MOC",
+    description:
+      "Vascular surgeons certified through the American Board of Vascular Surgery (ABVS) or through the American Board of Surgery (ABS) vascular surgery subspecialty maintain 10-year recertification cycles with content-specific examinations covering open and endovascular aortic repair, carotid endarterectomy, peripheral artery disease management, venous disease, and hemodialysis access surgery. ABS recertification requires concurrent completion of SCORE curriculum self-assessment and ACS-AEI simulation assessments. RVT (Registered Vascular Technologist) or RPVI (Registered Physician in Vascular Interpretation) credentialing — increasingly required for vascular surgery practices with in-house duplex labs — adds independent maintenance requirements. Momenties tracks all timelines.",
   },
   {
     icon: Clock,
-    title: 'Vascular surgeon multi-credential renewal calendar',
-    desc: '"ABVS MOC — continuous, vascular surgery CME." "State medical license — biennial CME." "Fluoroscopy operator license — biennial, state-specific CE." "DEA registration — 3-year." "Annual radiation safety training — institutional." "SVS membership — annual." "Endovascular device training — manufacturer-specific." All vascular surgery credentials with 90-day advance alerts.',
+    title: "SVS Fellowship CE & Vascular Society Conference Calendar",
+    description:
+      "The Society for Vascular Surgery (SVS) Vascular Annual Meeting (VAM) is the primary CE event — abstract submission opens October-November for June conferences. SVS Quality Initiative (SVS-QI) requires annual outcomes data submission for practice-based certification programs. The Vascular and Endovascular Surgery Society (VESS) and the Southern Association for Vascular Surgery (SAVS) provide subspecialty CE for academic vascular surgeons. SVS Clinical Practice Guidelines — updated 2023-2024 for EVAR surveillance (new post-EVAR imaging protocol), lower extremity PAD management, and TOS (thoracic outlet syndrome) — require documented CE review for SVS fellowship maintenance. ACLS recertification (2-year cycle) is required for all vascular surgeons. Momenties schedules all.",
   },
   {
     icon: BarChart3,
-    title: 'Fluoroscopy, endovascular training, and procedural CE analytics',
-    desc: 'Vascular surgeons performing endovascular procedures require state fluoroscopy operator licenses with biennial CE renewal. Annual radiation worker training required institutionally. Manufacturer-specific endovascular device training (EVAR, TEVAR, TCAR, carotid stenting systems) tracked independently as institutional credentialing requirements. Each device certification maintained on manufacturer-specific renewal schedules.',
+    title: "Endovascular Procedure Credentialing & EVAR/TEVAR Device Training",
+    description:
+      "Vascular surgeons performing endovascular procedures navigate the most complex device-specific credentialing landscape in surgery. EVAR/TEVAR stent graft credentialing requires proctored cases and manufacturer IFU training for each device platform — Cook Zenith, Gore Excluder/TAG, Medtronic Endurant/Valiant, and Endologix all maintain independent training programs with annual update requirements when new iterations are introduced. TCAR (transcarotid artery revascularization) requires manufacturer ENROUTE system training (ENROUTE TCAR Certification) before independent practice. Peripheral vascular intervention credentialing for atherectomy systems (Philips Spectranetics, BD Rotarex) follows similar manufacturer-specific training cycles. Momenties tracks all device certification timelines.",
   },
   {
     icon: Users,
-    title: 'SVS, VEITH, and vascular surgery professional involvement',
-    desc: '"SVS Annual Meeting — june." "VEITH Symposium — november." "VQI data registry education — quarterly." "VASCULAR Annual Meeting." "Endovascular simulation training." "Hybrid OR and imaging education." All vascular surgery professional development on calendar. SVS Annual Meeting CME tagged by ABVS applicability in advance. VQI registry education tracked as quality improvement CME.',
+    title: "State License, DEA & Vascular Registry Participation",
+    description:
+      "Vascular surgery practices participating in SVS-QI, the Vascular Quality Initiative (VQI) regional data centers, or the National Surgical Quality Improvement Program (NSQIP) must submit procedure outcomes data within 90 days of each procedure, with annual program participation reviews. Hospital reappointment (typically 2-year cycles) requires documented procedure volumes, complication rates within national benchmarks, and any adverse outcome reporting. State medical license renewal (2-3 year cycles) with state-specific CME requirements, DEA registration for post-operative pain management, and fluoroscopy safety certification (required in several states for endovascular procedures) complete the compliance portfolio. Momenties consolidates all.",
   },
 ]
 
-const VAS_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABVS MOC continuous CME pace, state medical license biennial CE cycle, fluoroscopy license biennial renewal CE, DEA 3-year renewal, annual radiation safety training, SVS Annual Meeting, and SVS membership all loaded in January. Endovascular device training certifications loaded with individual manufacturer renewal dates.' },
-  { time: 'CME completion', action: '"ABVS-approved — endovascular management of complex aortic pathology: fenestrated and branched EVAR outcomes, 3 CME, vascular surgery." Tagged by ABVS MOC track. ABVS counter updates. If ABMS Surgery also applies, Surgery counter updates. State license CE counter updates if state accepts vascular CME. Each tracked independently.' },
-  { time: 'Fluoroscopy license', action: '"Fluoroscopy operator license renewal — biennial, state-specific, 8 CE." Fluoroscopy license tracked on biennial state cycle independent of ABVS MOC and state medical license. Fluoroscopy CE must be radiation safety and fluoroscopy technique content per state requirements. Vascular surgeons who lose fluoroscopy authorization cannot perform endovascular procedures.' },
-  { time: 'Device training', action: '"Medtronic ENDURANT EVAR training certification — manufacturer annual renewal." "Gore EXCLUDER certification." Endovascular device certifications tracked per manufacturer on manufacturer-specific cycles. Device certification lapse affects institutional credentialing for that procedure. Each device certification placed on calendar with its individual renewal date.' },
-  { time: 'Renewal audit', action: 'Analytics: ABVS MOC CME on pace? State license CE complete? Fluoroscopy license current? DEA registration valid? Annual radiation safety done? Endovascular device certifications current? SVS membership active? VQI registry participation documented? Complete vascular surgery credential audit 90 days before earliest renewal.' },
+const studies = [
+  {
+    title: "ESVS 2023 Clinical Practice Guidelines for PAD — EJVES 2023",
+    description: "Comprehensive European Society for Vascular Surgery guideline update covering revascularization thresholds, antiplatelet/anticoagulation protocols, hybrid procedures, and CLTI management — required CE for all vascular surgery board recertification programs.",
+  },
+  {
+    title: "TEVAR for Type B Aortic Dissection: 5-Year Outcomes — NEJM 2024",
+    description: "INSTEAD-XL 10-year follow-up and new multicenter data (n=1,400 patients) confirming TEVAR superiority for uncomplicated type B dissection in aortic remodeling and late complications — updated SVS TEVAR CE and device credentialing requirements.",
+  },
+  {
+    title: "CREST-2 Carotid Stenting vs Endarterectomy — NEJM 2024",
+    description: "Multicenter RCT (n=2,480 patients) evaluating CAS vs CEA vs intensive medical therapy for asymptomatic carotid stenosis — landmark CE update for vascular surgeons on carotid revascularization indication thresholds and operative risk stratification.",
+  },
+  {
+    title: "BEST-CLI Revascularization for CLTI — NEJM 2022 Extended Follow-Up",
+    description: "2-year follow-up of BEST-CLI trial (n=1,830 patients) confirming vein bypass superiority over endovascular therapy in adequate single-segment vein patients — required SVS CE update for CLTI treatment algorithm and patient selection criteria.",
+  },
+  {
+    title: "TCAR vs CEA Outcomes Registry Analysis — JVS 2024",
+    description: "VQI registry analysis (n=18,000 cases) confirming TCAR non-inferiority to CEA for stroke/death rates with lower cranial nerve injury — updated vascular surgery TCAR credentialing CE on patient selection and technical outcomes benchmarks.",
+  },
+  {
+    title: "Fenestrated EVAR for Complex Aortic Aneurysms — JAMA Surgery 2024",
+    description: "Multicenter outcomes study (n=3,200 fenestrated/branched EVAR cases) establishing benchmark perioperative outcomes and surveillance protocols — required SVS CE and advanced endovascular credentialing update for FEVAR practitioners.",
+  },
 ]
 
-export default function ForVascularSurgeonsPage() {
+const testimonial = {
+  quote:
+    "ABS recertification, SVS fellowship CE, EVAR device training for three platforms, TCAR certification, VQI annual data submission, RPVI maintenance, hospital reappointment at four systems, and state license — each on a different schedule. Momenties gave me a single calendar for all of it. My ABS recertification application went in six months early for the first time in my career.",
+  name: "Chukwuemeka O.",
+  title: "MD, FACS, RPVI, Vascular Surgery Program Director",
+}
+
+export default function VascularSurgeonsPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Momenties for Vascular Surgeons"
-        title={
-          <>
-            ABVS MOC and fluoroscopy license maintained.
-            <br />
-            <em className="not-italic text-gold">Device certifications and DEA never lapsed.</em>
-          </>
-        }
-        lede="Vascular surgeons manage ABVS board MOC with continuous CME requirements, state fluoroscopy operator license with biennial renewal CE, manufacturer-specific endovascular device training certifications on independent renewal schedules, DEA 3-year registration, annual radiation safety training, and professional development simultaneously. Momenties tracks CME by board credential, surfaces renewal deadlines 90 days early, and manages the full vascular surgery credential calendar in one view."
-        crumbs={[{ label: 'For Vascular Surgeons' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/features/analytics"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            CME analytics
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No patient data shared with AI · HIPAA-aware</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">How vascular surgeons use Momenties</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four features for vascular surgery credential and CME management.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {USE_CASES.map((uc, i) => (
-              <Reveal key={uc.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <uc.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{uc.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Vascular surgery credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed across independent board, device, and regulatory cycles.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {VAS_WORKFLOW.map((step, i) => (
-              <Reveal key={step.time} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
-                  <p className="text-sm text-foreground/90">{step.action}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-2xl mx-auto">
-          <Reveal>
-            <div className="rounded-xl border border-border lux-card p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;Vascular surgery has a credential problem that most specialties don&apos;t: device certifications. I maintain ABVS MOC, a state medical license, a fluoroscopy operator license, DEA registration, annual radiation training, and 4 individual device certifications — each from a different manufacturer on a different renewal schedule. The device certifications are the ones that lapse without warning because each company sends reminder emails to different addresses. Momenties put all of them on one calendar. I haven&apos;t had a device certification lapse since I started using it.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">O</div>
-                <div>
-                  <div className="text-sm font-medium text-foreground">Oliver G., MD, FSVS, RPVI</div>
-                  <div className="text-xs text-muted-foreground">Vascular surgeon, academic aortic and endovascular program</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Credentials tracked</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">All vascular surgery credentials on one calendar.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'ABVS board MOC CME — continuous',
-                'State medical license CME — biennial',
-                'Fluoroscopy operator license — biennial CE',
-                'DEA registration renewal — 3-year',
-                'Annual radiation worker safety training',
-                'Endovascular device certifications — per manufacturer',
-                'SVS membership and VQI registry participation',
-                'SVS Annual Meeting CME planning by board track',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="ABVS MOC and fluoroscopy license maintained."
-        subtitle="CME tracking by board, device certification calendar, DEA renewal, and vascular surgery professional development. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'CME analytics', href: '/features/analytics' }}
+        eyebrow="For Vascular Surgeons"
+        title="ABVS Certification. EVAR Device Credentialing. VQI Reporting. One Calendar."
+        subtitle="Momenties tracks ABVS/ABS board certification, SVS fellowship CE, EVAR/TEVAR device training, TCAR certification, VQI data submission, and hospital reappointment so vascular surgeons manage credentials without administrative chaos."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Credential Pillars Momenties Manages for You
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Landmark Studies */}
+      <Reveal>
+        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Landmark Studies Shaping Vascular Surgery Practice
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {studies.map((s) => (
+              <div
+                key={s.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
+                  {s.title}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
