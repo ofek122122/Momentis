@@ -25,7 +25,7 @@ type App = {
   aiParsing: boolean | string
   appleSync: boolean
   voiceAdd: boolean
-  analytics: boolean
+  analytics: boolean | string
   smartSchedule: boolean
   note?: string
 }
