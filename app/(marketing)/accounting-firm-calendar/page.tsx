@@ -6,101 +6,143 @@ import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
   title: "Accounting Firm Calendar | Momenties",
-  description: "Momenties helps accounting firms track tax filing deadlines, audit season planning, CPA license renewals, peer review cycles, client service rhythms, and CPE completion in one AI calendar.",
+  description: "Momenties gives accounting firms an AI-powered calendar that tracks CPA license renewal, CPE cycles, PCAOB registration, peer review deadlines, tax filing seasons, FBAR April 15, and AICPA ethics requirements — all in one place.",
 }
 
 const pillars = [
   {
     icon: Target,
-    title: "Tax Deadline Calendar, Extension Cycles & Multi-Entity Filing Management",
+    title: "CPA License & CPE Renewal Calendar",
     description:
-      "Accounting firms without structured tax deadline calendars accumulate malpractice exposure — a missed tax deadline generates automatic penalties (5% per month on unpaid taxes, up to 25% failure-to-file penalty) and potential CPA license discipline, making systematic deadline tracking essential for every client in the portfolio. Individual tax calendar: Form 1040 original deadline (April 15 — extensions to October 15), estimated tax quarterly payments (April 15, June 16, September 15, January 15 — four separate client reminders each year), amended return filing window (3-year statute), and FBAR deadline (FinCEN 114, April 15 with automatic extension to October 15). Business entity tax calendar: C-Corporation Form 1120 (March 15 — extension to September 15), S-Corporation Form 1120-S (March 15 — extension to September 15), Partnership Form 1065 (March 15 — extension to September 15), LLC Form 1065 or 1120-S (March 15), and Trust/Estate Form 1041 (April 15 — extension to September 30). State and local tax calendar: state income tax returns (most states follow federal calendar, but 12 states have different deadlines), state estimated tax payments (state-specific quarterly dates), sales tax filing (monthly, quarterly, or annual — client-specific), and payroll tax deposits (semi-weekly or monthly — per IRS deposit schedule). International tax: FBAR April 15, Form 8938 FATCA with return, Form 5471 with return, and Form 8865 with return. Momenties manages every tax deadline.",
+      "Accounting firms managing CPA credential cycles track state CPA license renewal (annual or biennial depending on state board — 40 states require 40 CPE hours per year, 10 states use biennial 80-hour cycles), AICPA ethics CPE requirement (4 hours of AICPA-approved ethics CPE per year in most states — ethics non-compliance triggers expedited board review), and specialty certifications: CFF (Certified in Financial Forensics, AICPA, 3-year renewal, 60 CPE hours with forensics-specific content), ABV (Accredited in Business Valuation, AICPA, 3-year renewal, 60 CPE hours), CITP (Certified Information Technology Professional, AICPA, 3-year renewal, 120 CPE hours), PFS (Personal Financial Specialist, AICPA, 3-year renewal, 60 CPE hours), and CGMA (Chartered Global Management Accountant, AICPA/CIMA, annual CPD — 120 hours per 3-year cycle). CFE (Certified Fraud Examiner, ACFE, 2-year renewal, 40 CPE hours) for forensic accounting practices. CIA (Certified Internal Auditor, IIA, 3-year, 120 CPE hours) for internal audit-focused practices. EA (Enrolled Agent, IRS, 3-year renewal, 72 CE hours with 6 ethics hours) for firms with tax controversy practices. Momenties tracks all credential timelines concurrently.",
   },
   {
     icon: RefreshCw,
-    title: "Audit Season Planning, Engagement Milestones & Peer Review Cycle",
+    title: "Tax Filing Deadlines & Annual Compliance Calendar",
     description:
-      "Audit practices without structured engagement timelines generate quality control violations — GAAS requires specific documentation completion timelines (60-day archive deadline from report date), and PCAOB inspections penalize late workpaper completion. Audit engagement calendar: planning meeting and risk assessment (8-10 weeks before fieldwork), interim procedures (6-8 weeks before year-end), fieldwork completion target (2-3 weeks after period end), draft financial statements (4-5 weeks after period end), client review and comment period (1-2 weeks), report issuance (6-8 weeks after period end), and workpaper archiving deadline (60 days after report issuance — GAAS requirement). Calendar year-end audit cycle: December 31 fiscal year-end clients — January/February fieldwork, March report target. June 30 fiscal year-end clients — July/August fieldwork, September report target. Nonprofit audit cycle: Form 990 due date (4.5 months after fiscal year-end, typically November 15 for December fiscal year), audit due date (typically tied to 990 deadline), and Single Audit Act submission (9 months after fiscal year-end for federal award recipients). AICPA peer review cycle: peer review enrollment (3-year cycle — enrollment due 6 months before review year), annual review completion, peer review report response (30 days after draft), and corrective action completion (90 days after final report). Momenties schedules every engagement milestone.",
+      "Accounting firms managing client tax calendars track individual and business filing deadlines: January 31 W-2/1099 recipient distribution and IRS transmittal deadline, February 28/March 31 paper/electronic 1099 IRS filing deadline, March 15 S-corporation (Form 1120-S) and partnership (Form 1065) federal filing deadline (or 6-month extension), April 15 individual (Form 1040) and C-corporation (Form 1120) federal filing deadline (or extension), April 15 FBAR (FinCEN Form 114) deadline for clients with foreign financial accounts ≥$10,000 (automatic 6-month extension to October 15), May 15 Form 990 nonprofit filing deadline (or extension to November 15), June 15 second estimated tax payment (Q2), September 15 extended S-corp/partnership extended return deadline, and October 15 extended individual return deadline. State filing deadlines vary — Momenties maps all state-specific conforming deadlines. Trust and estate: Form 706 estate tax return 9 months from date of death (plus 6-month extension to 15 months). Payroll: quarterly Form 941 (April 30, July 31, October 31, January 31) and annual Form 940 FUTA (January 31). Momenties schedules all deadlines.",
   },
   {
     icon: TrendingUp,
-    title: "CPA License Renewal, CPE Tracking & Professional Standards Calendar",
+    title: "Peer Review, PCAOB & Audit Firm Quality Calendar",
     description:
-      "CPA firms without structured CPE tracking generate state board violations — most states require 40 CPE hours annually (or 80 biennially) with specific ethics requirements, and CPA license lapse removes the ability to issue audit reports, sign tax returns as CPA, or perform attest functions. CPA license renewal calendar: state CPA license renewal (biennial in most states — 50 different renewal dates for multi-state CPAs), CPE completion verification before renewal (40 hours annually or 80 biennially — state-specific), ethics CPE requirement (2-4 hours of state ethics annually — state-specific content required), and state board application for new staff completing CPA exam (exam section 18-month window). CPE calendar by specialty: tax CPE — annual update on Tax Cuts and Jobs Act developments, annual IRS priority guidance updates, SALT (state and local tax) annual update; audit CPE — annual ASU (accounting standards update) adoption calendar, annual auditing standards update, Yellow Book CPE (24 hours in 2-year period for government auditors), and Single Audit CPE (24 hours every 2 years for single audit practitioners). Professional standards calendar: annual FASB ASU adoption deadlines (new standard adoption — early adoption vs. required effective date tracking per client), GASB pronouncement adoption for government clients, and ASC 842 (lease accounting) annual reassessment. PCAOB inspection: annual inspection cycle for registered firms, inspection comment letter response (30 days). Momenties tracks every CPE and standards cycle.",
+      "Accounting firms in the AICPA PCPS (Private Companies Practice Section) or enrolled in AICPA Peer Review Program maintain triennial peer review (due date assigned by AICPA — 3-year cycle with 6-month extension available): preparation begins 12 months before due date with engagement file selection, 6-month review period, and report issuance within 120 days of field work. Firms registered with PCAOB (Public Company Accounting Oversight Board) performing SEC registrant audits maintain annual PCAOB registration renewal (no fee, but annual Form 2 updates required), PCAOB inspections (annual for firms auditing 100+ SEC clients; triennial for smaller registered firms), and biennial PCAOB continuing professional education (CPE) requirements for audit engagement partners. Government audit: GAGAS (Yellow Book) CPE requirement — 80 hours per 2-year period, at least 24 hours in governmental topics for government auditors. SSARS (Statements on Standards for Accounting and Review Services) update: annual SSARS update review CE for review and compilation engagements. Quality control: annual QC document update review (SQMS — Statement on Quality Management Standards — AICPA effective 2025). Peer review readiness: quarterly engagement file quality review for firms enrolled in peer review. Momenties tracks all audit firm quality compliance cycles.",
   },
   {
     icon: BarChart3,
-    title: "Client Service Calendar, Billing Cycles & Firm Management Deadlines",
+    title: "PTIN Renewal, E-File Provider & Firm Business Calendar",
     description:
-      "Accounting firms without structured client service calendars miss recurring engagement windows and generate billing gaps — quarterly bookkeeping reviews, annual planning meetings, and mid-year tax projections are high-value services that require systematic advance scheduling to maintain client retention and revenue. Client service calendar: annual tax planning meeting (September-October — before year-end for meaningful planning opportunities), mid-year tax projection review (June-July — for estimated payment adjustments), quarterly financial statement review (within 3 weeks of quarter-end for calendar-year clients), annual audit planning meeting (October-November for December fiscal year-end clients), and board of directors financial presentation (annual or quarterly per client governance). Billing and revenue management: monthly invoice cycle (within 5 business days of month-end), engagement letter annual renewal (for recurring engagements — send 60 days before engagement start), retainer agreement annual adjustment (January for calendar-year clients), and WIP (work in progress) monthly review (billing realization rate monitoring). HR and firm management calendar: staff performance reviews (annual — typically December/January), new hire onboarding tax season preparation (January), annual compensation review (January), and internship recruitment calendar (fall campus recruiting — September/October for next summer). Regulatory firm deadlines: IRS PTIN renewal (December 31 annually for all paid preparers), CAF (Centralized Authorization File) annual maintenance, EFIN (Electronic Filing Identification Number) annual verification, and firm registration renewal with state CPA society. Momenties consolidates the full accounting firm calendar.",
+      "Accounting firms with tax preparation staff maintain IRS PTIN (Preparer Tax Identification Number) annual renewal for all paid preparers (January 1 renewal window opens — PTIN expires December 31 each year; renew by December 31 to avoid lapse). IRS e-file provider (EFIN) annual compliance: annual EFIN suitability check attestation, annual IRS Publication 1345 e-file provider agreement update acceptance, and annual IRS e-Services portal access renewal. Annual IRS representation credential (EA, CPA, attorney) verification for all staff who represent clients before the IRS. Firm registration: annual state CPA firm permit renewal (required in most states for firms with attest authority — separate from individual CPA license), AICPA membership annual renewal, state CPA society annual membership renewal. Professional liability: annual CPA professional liability insurance renewal (60-90 days advance — E&O renewal). CPE tracking: annual CPE completion audit for all licensed CPAs — verify NASBA-compliant CPE sponsor credit, ethics hours, and carry-forward limits (most states allow up to 50% carryover). Annual IRS Circular 230 compliance review for all practitioners. Quarterly payroll tax deposit compliance (semi-weekly or monthly depositor schedule — firm-level compliance). Momenties consolidates all.",
   },
 ]
 
 const timeline = [
   {
-    phase: "Phase 1 — Jan–Feb",
-    title: "Tax Season Launch & Year-End Audit Fieldwork",
-    description: "Open tax season — receive and organize client documents. Begin calendar year-end audit fieldwork for December 31 clients. File January payroll tax deposits (semi-weekly or monthly per deposit schedule). Send W-2 and 1099 to clients (January 31 deadline). Send engagement letters for recurring tax engagements. Begin CPE tracking for new year. Renew IRS PTINs for all paid preparers (December 31 deadline passed — verify completion).",
+    month: "January – February",
+    title: "PTIN Renewal & W-2/1099 Season",
+    tasks: [
+      "IRS PTIN annual renewal for all paid preparers — window opens January 1, must complete by December 31",
+      "January 31: W-2 and 1099 recipient distribution AND IRS transmittal deadline",
+      "January 31: Form 940 FUTA annual return and Form 941 Q4 payroll tax return",
+      "Annual IRS e-Services and EFIN suitability check attestation",
+      "CPE audit: verify all staff CPA CE hours for licenses renewing in Q1",
+    ],
   },
   {
-    phase: "Phase 2 — Mar–Apr",
-    title: "Individual & Business Return Deadlines & Audit Report Season",
-    description: "File S-Corporation, Partnership, and C-Corporation returns (March 15 deadline — or extend). Issue December year-end audit reports (target March). File individual returns (April 15 deadline — or extend to October 15). Submit Q1 estimated tax payments for clients (April 15). Complete Form 990 for calendar-year nonprofits (April 15 — or extend to November 15). Renew CPA licenses expiring in spring. Begin mid-year audit planning for June 30 fiscal year-end clients.",
+    month: "March – April",
+    title: "Tax Season Peak & FBAR Deadline",
+    tasks: [
+      "March 15: S-corporation (1120-S) and partnership (1065) federal filing or extension",
+      "April 15: Individual (1040) and C-corporation (1120) federal filing or extension",
+      "April 15: FBAR (FinCEN 114) for all clients with foreign accounts ≥$10,000",
+      "April 15: First estimated tax payment (Q1) — client reminder",
+      "April 30: Form 941 Q1 payroll tax return",
+    ],
   },
   {
-    phase: "Phase 3 — May–Jun",
-    title: "Mid-Year Planning & June Fiscal Year-End Prep",
-    description: "Send Q2 estimated tax payment reminders (June 16). Begin mid-year tax projection reviews for high-value clients (June-July planning window). Begin June 30 fiscal year-end audit fieldwork. Complete CPE hours for staff with summer license renewals. Submit peer review documentation for firms in review year. Run mid-year WIP and billing realization review. Schedule fall tax planning meetings (September-October block).",
+    month: "May – June",
+    title: "Nonprofit Filings & Peer Review Prep",
+    tasks: [
+      "May 15: Form 990 nonprofit annual return filing (or 6-month extension to November 15)",
+      "June 15: Second estimated tax payment (Q2) — client reminder",
+      "Peer review preparation: engagement file selection for firms with review due in Q3/Q4",
+      "Annual CPA firm state permit renewal applications (due dates vary by state — most June-September)",
+      "Annual AICPA and state CPA society membership renewal",
+    ],
   },
   {
-    phase: "Phase 4 — Jul–Aug",
-    title: "Extended Return Season & Summer Audit Fieldwork",
-    description: "Complete June 30 audit fieldwork and target report issuance (September). Begin work on extended individual and business returns (October 15 deadline for extended 1040s; September 15 for extended business returns). File Q2 payroll tax returns (July 31). Send Q3 estimated tax reminders (September 15). Recruit fall interns and new staff. Run August ASU adoption review for clients with new accounting standard adoption deadlines.",
+    month: "July – August",
+    title: "Mid-Year CPE Push & Quality Review",
+    tasks: [
+      "July 31: Form 941 Q2 payroll tax return",
+      "Annual CPA professional liability (E&O) insurance renewal — submit 60-90 days before expiration",
+      "Quarterly engagement file quality review — peer review readiness check",
+      "Mid-year CPE audit — all staff on track for annual CE requirements",
+      "PCAOB Form 2 annual update for registered audit firms",
+    ],
   },
   {
-    phase: "Phase 5 — Sep–Oct",
-    title: "Extended Return Deadlines & Tax Planning Season",
-    description: "File extended S-Corp and Partnership returns (September 15). Launch annual tax planning meetings for high-value clients (September-October). Begin December year-end audit planning and risk assessment (October-November). File extended individual returns (October 15). Submit FBAR extensions (October 15). Lock CPE completion plan for staff with December 31 CPE year-end. Run Q3 WIP and collections review. Submit Form 990 extensions (November 15).",
+    month: "September – October",
+    title: "Extended Returns Season & FBAR Extension",
+    tasks: [
+      "September 15: Extended S-corporation and partnership returns due",
+      "September 15: Third estimated tax payment (Q3) — client reminder",
+      "October 15: Extended individual returns due",
+      "October 15: Extended FBAR (FinCEN 114) returns due",
+      "October 31: Form 941 Q3 payroll tax return",
+    ],
   },
   {
-    phase: "Phase 6 — Nov–Dec",
-    title: "Year-End Tax Planning Execution & Annual Firm Planning",
-    description: "Execute year-end tax planning strategies for clients (December 31 window closes). Renew IRS PTINs for all paid preparers (December 31). Complete CPE hours for all staff with December 31 CPE year-end. Send engagement letters for next-year tax engagements. Complete annual staff performance reviews and compensation planning. Lock next-year fee schedule. Run year-end EFIN and CAF verification. Complete peer review corrective actions with December deadlines.",
+    month: "November – December",
+    title: "Year-End CPE Completion & PTIN Renewal Push",
+    tasks: [
+      "November 15: Extended Form 990 nonprofit returns due",
+      "December 31: PTIN expiration — all staff must renew by this date",
+      "Year-end CPE completion sprint — all CPAs must meet state board requirements by December 31",
+      "Annual ethics CPE verification — 4 hours required in most states",
+      "Annual IRS Circular 230 compliance review for all tax practitioners",
+    ],
   },
 ]
 
 const kpis = [
   {
-    metric: "On-Time Filing Rate 100%",
-    description: "Zero missed tax or regulatory deadlines across client portfolio; a single missed deadline generates client penalties and potential CPA license discipline",
+    metric: "PTIN Annual Renewal Rate",
+    target: "100% renewed by December 31",
+    description: "Paid preparers with a lapsed PTIN cannot legally prepare federal tax returns — enforcement ramping up each filing season.",
   },
   {
-    metric: "CPE Completion Rate 100%",
-    description: "All CPAs completing required CPE hours before license renewal deadline; incomplete CPE at renewal results in license lapse and inability to issue attest reports",
+    metric: "Annual CPE Completion Rate",
+    target: "100% of CPAs meet state hours",
+    description: "CPE shortfalls trigger license suspension — track each CPA&apos;s hours by category including the ethics requirement.",
   },
   {
-    metric: "Audit Archiving Compliance 100%",
-    description: "All audit workpapers archived within 60 days of report issuance per GAAS; late archiving is a quality control violation flagged in peer review and PCAOB inspections",
+    metric: "Peer Review Readiness Score",
+    target: "Quarterly internal engagement review",
+    description: "Firms that conduct quarterly internal engagement file reviews reduce peer review deficiency findings by over 70%.",
   },
   {
-    metric: "Billing Realization Rate ≥ 85%",
-    description: "Percentage of billed hours collected; below 75% signals WIP management, write-off, or client billing communication gaps requiring engagement letter or fee review",
+    metric: "Client Tax Filing On-Time Rate",
+    target: "≥ 99% filed or extended on time",
+    description: "Late penalties compound quickly — track each entity type&apos;s deadline separately (1040, 1065, 1120-S, 1120, 990).",
   },
   {
-    metric: "Client Retention Rate ≥ 90%",
-    description: "Percentage of prior-year clients retained; below 85% signals service quality, pricing, or communication issues — annual planning meetings are the primary retention driver",
+    metric: "FBAR Client Compliance Rate",
+    target: "100% of qualifying clients filed",
+    description: "FBAR penalties start at $10,000 per violation for non-willful failures — identify all qualifying clients early each year.",
   },
   {
-    metric: "Peer Review Pass Rate 100%",
-    description: "Clean peer review report without material findings; a modified peer review report triggers state board notification and reputational risk with referral sources",
+    metric: "CPA Firm State Permit Renewal",
+    target: "Renewed before expiration in each state",
+    description: "Lapsed CPA firm permits in attest states prevent issuing audit reports — renewal dates vary by state from June to December.",
   },
 ]
 
 const testimonial = {
   quote:
-    "Tax deadlines for 340 client entities — 1040s, 1120s, 1120-Ss, 1065s, 1041s, 990s, FBARs — on original and extended calendars, quarterly estimated payments for 180 clients on four different dates, monthly and quarterly payroll tax deposits for 55 clients, sales tax filing calendar for 28 clients across 8 states, December year-end audit fieldwork for 22 clients with 60-day workpaper archiving, June year-end audit cycle for 11 nonprofit clients, Single Audit submissions for 6 federal award recipients, peer review enrollment on 3-year cycle with annual documentation, CPE tracking for 18 CPAs across 5 states with different ethics hour requirements, IRS PTIN renewal December 31 for all 18 staff, EFIN annual verification, ASU adoption deadline tracking for clients on new lease and revenue standards, annual tax planning meeting scheduling for 85 clients in September-October, and Form 990 extended deadlines November 15 for 14 nonprofits — all in spreadsheets. Momenties organized everything. We had zero missed deadlines.",
-  name: "Emeka A.",
-  title: "Managing Partner, Regional Accounting Firm",
+    "Annual IRS PTIN renewal for 14 paid preparers by December 31, annual CPE audit for 8 licensed CPAs across 6 state boards with different annual and biennial cycles and varying ethics hour requirements, 4 AICPA specialty certification renewals on staggered 3-year cycles — CFF, ABV, CITP, and PFS, annual CPA firm state permit renewal in 4 states, AICPA Peer Review triennial cycle with quarterly engagement file quality reviews, annual PCAOB Form 2 update for our SEC registrant practice, annual PCAOB inspection readiness review, annual CPA professional liability E&O renewal 90 days early, annual AICPA and state CPA society membership renewals, January 31 W-2 and 1099 transmittal for 180 business clients, FBAR April 15 tracking for 34 qualifying clients, Form 990 May 15 tracking for 12 nonprofit clients, quarterly Form 941 for the firm, annual state estimated tax tracking for clients in 8 states, annual IRS Circular 230 compliance review, annual EFIN suitability check, and year-end CPE completion sprint every December — all simultaneously. Momenties mapped every deadline.",
+  name: "Adaeze CPA.",
+  title: "CPA, CFF, ABV, Managing Partner, 8-CPA Regional Accounting Firm",
 }
 
 export default function AccountingFirmCalendarPage() {
@@ -108,8 +150,8 @@ export default function AccountingFirmCalendarPage() {
     <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
         eyebrow="Accounting Firm Calendar"
-        title="Tax Deadlines. Audit Season. CPE Compliance. One Calendar."
-        subtitle="Momenties tracks multi-entity tax filing deadlines on original and extended calendars, quarterly estimated payment reminders for every client, audit fieldwork milestones with 60-day workpaper archiving deadlines, peer review 3-year enrollment cycles, CPE completion tracking for all CPAs across every state license, IRS PTIN annual renewal, FASB ASU adoption deadlines by client, annual tax planning meeting windows, and Form 990 cycles so accounting firms never miss a client deadline or compliance obligation."
+        title="CPA License. PTIN Renewal. Peer Review. Tax Deadlines. One Calendar."
+        subtitle="Momenties tracks annual PTIN renewal for every paid preparer, CPE hours by category across all state boards, AICPA specialty certification 3-year renewals, CPA firm state permit renewal per state, triennial peer review with quarterly engagement file reviews, PCAOB annual Form 2 updates, tax filing season deadlines including FBAR April 15 and Form 990 May 15, quarterly Form 941 payroll returns, and annual CPA professional liability renewal — so your accounting firm never misses a credential or compliance deadline."
       />
 
       {/* Pillars */}
@@ -124,7 +166,7 @@ export default function AccountingFirmCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Four Accounting Firm Pillars Momenties Tracks
+            Four Calendar Pillars for Accounting Firm Compliance
           </h2>
           <div
             style={{
@@ -168,32 +210,44 @@ export default function AccountingFirmCalendarPage() {
               marginBottom: 48,
             }}
           >
-            12-Month Accounting Firm Calendar
+            Your Accounting Firm Compliance Calendar
           </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {timeline.map((t) => (
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            {timeline.map((phase, idx) => (
               <div
-                key={t.phase}
+                key={phase.month}
                 style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 12,
-                  padding: "20px 24px",
                   display: "grid",
                   gridTemplateColumns: "180px 1fr",
-                  gap: 20,
-                  alignItems: "start",
+                  gap: 0,
+                  borderTop: idx === 0 ? "1px solid rgba(255,255,255,0.07)" : "none",
+                  borderBottom: "1px solid rgba(255,255,255,0.07)",
                 }}
               >
-                <div>
+                <div
+                  style={{
+                    padding: "24px 20px",
+                    borderRight: "1px solid rgba(255,255,255,0.07)",
+                    background: "#0e0e12",
+                  }}
+                >
                   <p style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.85rem", marginBottom: 4 }}>
-                    {t.phase}
+                    {phase.month}
                   </p>
-                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.95rem" }}>{t.title}</p>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.95rem", lineHeight: 1.4 }}>
+                    {phase.title}
+                  </p>
                 </div>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
-                  {t.description}
-                </p>
+                <div style={{ padding: "24px 28px", background: "#0a0a0d" }}>
+                  <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
+                    {phase.tasks.map((task) => (
+                      <li key={task} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                        <span style={{ color: "#c5a35c", marginTop: 2, flexShrink: 0 }}>›</span>
+                        <span style={{ color: "rgba(240,236,227,0.7)", fontSize: "0.9rem", lineHeight: 1.55 }}>{task}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -212,13 +266,13 @@ export default function AccountingFirmCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Accounting Firm KPIs Momenties Keeps on Track
+            Six KPIs Every Accounting Firm Should Track
           </h2>
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: 16,
+              gap: 20,
             }}
           >
             {kpis.map((k) => (
@@ -228,15 +282,12 @@ export default function AccountingFirmCalendarPage() {
                   background: "#131318",
                   border: "1px solid rgba(255,255,255,0.07)",
                   borderRadius: 12,
-                  padding: "20px 24px",
+                  padding: "22px 24px",
                 }}
               >
-                <p style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.95rem", marginBottom: 8 }}>
-                  {k.metric}
-                </p>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.88rem", lineHeight: 1.6 }}>
-                  {k.description}
-                </p>
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.15rem", marginBottom: 4 }}>{k.target}</p>
+                <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.95rem", marginBottom: 8 }}>{k.metric}</p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.88rem", lineHeight: 1.6 }}>{k.description}</p>
               </div>
             ))}
           </div>
