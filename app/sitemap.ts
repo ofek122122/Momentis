@@ -480,6 +480,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/side-project-calendar', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/for/clinical-neurophysiologists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/launch-checklist-calendar', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/for/pediatric-neurodevelopmental-specialists', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/team-offsite-calendar', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
