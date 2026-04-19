@@ -5,135 +5,153 @@ import { Reveal } from "@/components/marketing/Reveal"
 import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: "Insurance Agency Calendar | Momenties",
-  description: "Momenties helps insurance agencies manage producer license renewals, E&O insurance renewal, carrier appointment renewals, open enrollment deadlines, and continuing education compliance in one AI calendar.",
+  title: "Insurance Agency Compliance Calendar | Momenties",
+  description: "Momenties helps insurance agencies track state P&C and life/health license CE renewals, FINRA annual registration, E&O insurance annual renewal, anti-fraud training, anti-money laundering certification, and surplus lines tax filings in one AI calendar.",
 }
 
 const pillars = [
   {
     icon: Target,
-    title: "Producer License, E&O Insurance & Carrier Appointment Calendar",
+    title: "State Insurance License CE & Producer License Renewal Calendar",
     description:
-      "Insurance producers operate under state licensing regimes requiring renewal every 1-2 years in all 50 states, with CE requirements that vary from 12-24 hours per renewal period and mandatory ethics CE in most states. Multi-state producers managing licenses across 10, 20, or 30+ states face a continuous renewal calendar — Sircon and NIPR non-resident license renewal windows differ by state, and CE requirements are not reciprocal. P&C license CE: state-specific requirements (California: 24 hours biennial including 3 hours ethics; Texas: 30 hours annual including 3 hours ethics; Florida: 24 hours biennial; New York: 15 hours biennial). Life/Health license CE: state-specific with LTC (Long-Term Care) training requirement (California: 8 hours LTC for new licensees; Texas: 8 hours LTC every 2 years) and annuity training CE (FINRA/NAIC model regulation requires product-specific training before annuity sales). Surplus lines broker license: separate annual or biennial renewal in states where maintained, with surplus lines CE requirements. E&O (Errors & Omissions) professional liability insurance: annual renewal with 60-90 day advance review — coverage limits affected by carrier appointments and book of business growth. Agency agreement and carrier appointment renewal: most carrier contracts are evergreen but subject to annual performance review — appointment renewal documentation and commission schedule updates. FINRA Series 6/7/63/65/66 for agents selling variable products: annual CE (FINRA Firm Element) plus regulatory element every 3 years. Momenties tracks every license and renewal cycle.",
+      "Insurance producers (agents and brokers) maintain state-issued property/casualty, life, health, and surplus lines licenses with CE requirements that vary significantly by state. Property &amp; Casualty CE: most states require 24 CE hours biennial (3 hours ethics mandatory), some states annual (California: 24 hours biennial including 3 hours ethics; Texas: 24 hours biennial; Florida: 24 hours biennial including 3 hours ethics and 4 hours law and regulation). Life &amp; Health CE: typically 24 CE hours biennial with mandatory ethics CE. Long-Term Care Partnership CE: LTC Partnership certification annual training update (required in all Partnership states for LTC Partnership policy sales). Medicare supplement CE: annual AHIP (America&apos;s Health Insurance Plans) Medicare training certification (annual — required for all producers selling Medicare Advantage and Part D plans; renewal due September 1 each year for October 1 annual election period). Variable products license: FINRA Series 6 (investment company products) or Series 7 (general securities) — annual U4 renewal December 31 via FINRA CRD; Series 63 (state securities) annual renewal. Annual FINRA CE Program: new FINRA continuing education program (annual — all registered representatives must complete annual FINRA CE by December 31). Designated Responsible Licensed Producer (DRLP) annual verification. Multi-state license management: NCI (National Producer Number) annual maintenance. Momenties tracks all staggered multi-state CE deadlines.",
   },
   {
     icon: RefreshCw,
-    title: "AEP/OEP, Medicare & Individual Market Enrollment Calendar",
+    title: "Anti-Fraud, AML & State Regulatory Compliance Training Calendar",
     description:
-      "The Medicare Annual Enrollment Period (AEP: October 15 through December 7) and Open Enrollment Period (OEP: January 1 through March 31) are the two highest-revenue windows for health insurance agents — 70% of Medicare Advantage and PDP enrollment activity occurs in AEP, requiring 8-12 weeks of preparation. AEP preparation calendar: CMS certifications for all Medicare Advantage and PDP carriers (typically available August-September — AHIP Medicare certification annual plus carrier-specific modules, all must be completed before October 15 marketing is permitted), carrier contracting and appointment renewals for following plan year (typically July-October), and Medicare marketing compliance annual review (CMS Medicare Marketing Guidelines update released annually — review required before AEP). Individual and family market enrollment: ACA Open Enrollment (November 1 through January 15 in most states) — state marketplace certification renewal required annually (Covered California, NY State of Health, etc.), and federally-facilitated marketplace (FFM) annual certification renewal. Special enrollment period (SEP) management: year-round SEP documentation calendar — qualifying life events require submission within 30-60 days. Group health annual renewal: employer group health plan renewal typically 60-120 days before anniversary date (January 1 anniversary groups: October-November renewal window). Annual benefit renewal campaign: broker of record letter renewal for group clients (annual documentation update). Life and annuity suitability: annual NAIC suitability regulation update training for annuity agents — most states require completion before sales. Momenties schedules all enrollment windows.",
+      "Annual anti-fraud training: state insurance department mandatory anti-fraud training (most states require annual completion by all licensed producers — typically 1–3 hours, certification submitted to state fraud bureau). Annual anti-money laundering (AML) certification: FINRA/ACAMS annual AML training for producers selling variable life or variable annuity products — FinCEN Customer Identification Program, SAR filing triggers, cash transaction reporting. Annual HIPAA training: annual HIPAA Privacy and Security Rule training for producers handling individual health insurance (PHI handling, minimum necessary standard, BAA compliance). Annual flood insurance CE: NFIP (National Flood Insurance Program) annual agent training update — Write-Your-Own program compliance, flood zone mapping annual update, elevation certificate review. Annual surplus lines compliance: annual surplus lines taxes and stamping fee payment calendar (state surplus lines filing deadlines vary — California SLSC quarterly, Texas SLTX monthly, Florida quarterly), annual surplus lines eligibility verification (diligent search documentation per state requirement). NAIC model regulation training: annual market conduct compliance training (state market conduct examination preparation, complaint ratio annual review). Annual state-specific compliance: California AB 2345 climate risk disclosure, New York Regulation 187 best interest training update. Annual data security program review: NAIC Insurance Data Security Model Law (annual information security program update required for licensed insurers and producers). Momenties schedules all deadlines.",
   },
   {
     icon: TrendingUp,
-    title: "Client Renewal Pipeline, Claims Advocacy & Policy Review Calendar",
+    title: "FINRA CRD, E&O Insurance & Financial Compliance Calendar",
     description:
-      "Insurance agency revenue is a renewal business — 85-95% of revenue comes from policy renewals, and systematic renewal pipeline management is the single most important practice management activity. P&C renewal pipeline calendar: 120-day renewal outreach for commercial lines (request loss runs, review coverage, market if needed), 90-day renewal for personal lines (proactive contact, coverage review, rate change preparation), and annual commercial lines account review (ACORD coverage checklist review, certificate of insurance updates, umbrella/excess adequacy review). Professional liability and specialty lines: annual D&O/EPLI/Cyber renewal timeline — Cyber insurance annual renewal requires current security questionnaire (typically released 90 days before expiration), updated data inventory, and MFA/EDR compliance documentation. Life insurance annual policy review: annual in-force illustration update for universal life policies (interest-sensitive policies require annual review to detect underfunded premium), annual term conversion window tracking, and annuity annual review and 1035 exchange evaluation. Medicare client annual review: annual Medicare plan comparison October 1 (plan data available for comparison before AEP), IRMAA income-related monthly adjustment amount annual assessment for high-income Medicare clients, and LIS/Extra Help application annual redetermination. Claims advocacy: annual claims review meeting for commercial clients, annual loss run analysis, and policy anniversary claims-made tail coverage assessment. Momenties tracks every renewal and review cycle.",
+      "E&O (Errors &amp; Omissions) insurance compliance calendar: annual professional liability E&O insurance renewal — begin 90 days before expiration; some states require minimum E&O coverage as condition of license (California $500,000 minimum; New York $100,000 minimum). Annual fidelity bond renewal. Annual cyber liability insurance renewal (state insurance department increasingly requires cyber coverage documentation for larger agencies). FINRA compliance calendar: annual Form U4 review and update (changes in residential history, criminal disclosures, customer complaints — promptly report within 30 days but annual comprehensive audit), annual FINRA CRD registration renewal December 31, annual FINRA CE compliance verification for all registered reps. Annual carrier appointments: annual carrier appointment renewal (many carriers require annual reappointment documentation with E&O certificate, license copy, FINRA registration) — staggered by carrier. Annual appointment reconciliation audit: quarterly review of active carrier appointments vs. licensed states (unauthorized insurance transaction risk). Annual binding authority audit: review of binding authority grants vs. actual policies placed (E&O exposure assessment). Annual premium trust account reconciliation: monthly three-way reconciliation with annual CPA audit for larger agencies. Annual state market conduct compliance review (complaint ratio analysis — state insurance department market conduct examination trigger threshold). Annual agency valuation and perpetuation planning review (buy-sell agreement annual review for multi-owner agencies). Momenties tracks all compliance cycles.",
   },
   {
     icon: BarChart3,
-    title: "Financial Compliance, Commission Reconciliation & Agency Tax Calendar",
+    title: "AHIP Medicare Certification, LTC Partnership & Producer Quality Calendar",
     description:
-      "Insurance agencies receive commission income from multiple carriers across multiple product lines — reconciling direct commissions, contingency bonuses, and override compensation creates a continuous accounting obligation with year-end tax complexity. Commission reconciliation calendar: monthly carrier statement reconciliation (direct bill vs. agency bill premium tracking), monthly contingency bonus progress tracking (carrier-specific written premium and loss ratio thresholds — typically Q3 reporting for year-end bonuses), and annual carrier profit sharing calculation (typically distributed February-March for prior year performance). Trust account management: in states requiring premium trust accounts (premium financing, surplus lines), monthly three-way reconciliation of trust account (agency bill collections vs. carrier remittances vs. ledger balance). State surplus lines tax: quarterly or annual surplus lines stamping office premium tax filing depending on state — deadlines vary from 30 to 90 days post-quarter. Producer payroll: annual producer W-2 and 1099 distribution (commission-only producers January 31), quarterly payroll tax deposits for employee producers, and annual DE 9/DE 9C filing. Carriers 1099: aggregate carrier 1099-MISC for agency fees over $600. Annual E&O audit: prepare complete files for E&O policy renewal with summary of any claims or reported incidents. FINRA annual compliance review: for agencies with registered representatives — annual compliance meeting documentation, annual fingerprint and background check renewal for variable license holders. Business entity renewal: annual LLC/corporation renewal report in state of domicile. Momenties consolidates all.",
+      "Medicare product compliance calendar: annual AHIP Medicare training certification by September 1 (required for all producers selling Medicare Advantage and Part D — CMS-mandated annual recertification through America&apos;s Health Insurance Plans); annual carrier-specific Medicare Advantage certification (each MA carrier — Humana, UnitedHealthcare, Aetna, BCBS — requires separate annual product training certification, typically July 1–September 1); annual CMS Marketing Guidelines review update (CMS Medicare Marketing Guidelines annual release — typically January, review required before AEP). Annual compliance for Medicare marketing rules: CMS Star Rating compliance in marketing materials, scope of appointment documentation, 48-hour rule compliance (48-hour advance appointment requirement for in-home presentations). Long-Term Care compliance: annual LTC Partnership program CE (state-specific annual update for Partnership-certified producers), annual LTC rate stability disclosure compliance review, annual LTC in-force policy service standards review. Annuity suitability: annual NAIC Suitability in Annuity Transactions Model Regulation training (Best Interest standard — annual training required for all annuity sales; NAIC model adopted in 40+ states). Annual replacement ratio documentation audit: life insurance and annuity replacement disclosure compliance (Form 1033 and Form 1035 documentation accuracy). Annual life settlement compliance (if applicable): state life settlement broker license annual CE. Annual continuing professional development: CPCU (3-year), CLU/ChFC (annual CE), CIC (annual CE). Momenties tracks all.",
   },
 ]
 
 const timeline = [
   {
-    phase: "Jan – Feb",
-    title: "Post-AEP Reconciliation & License Renewals",
-    tasks: [
-      "AEP enrollment reconciliation — confirm all December enrollments processed",
-      "OEP January 1 through March 31 activation",
-      "Producer W-2 and 1099 distribution (January 31)",
-      "Carrier annual profit sharing statements received and reconciled",
-      "Annual E&O renewal policy review (60-90 day advance)",
-      "State license CE audit — identify CE gaps for upcoming renewals",
+    phase: "Jan–Feb",
+    title: "New Year License Renewals & CMS Guidelines Review",
+    items: [
+      "Annual CMS Medicare Marketing Guidelines review (January CMS release)",
+      "Annual FINRA Form U4 comprehensive review and update",
+      "Annual state market conduct complaint ratio analysis",
+      "Annual premium trust account CPA reconciliation (prior year)",
+      "Annual annuity suitability replacement ratio documentation audit",
     ],
   },
   {
-    phase: "Mar – Apr",
-    title: "Group Renewal Season & Compliance",
-    tasks: [
-      "April 1 group health renewal pipeline — 90-day outreach begins January",
-      "Medicare OEP closes March 31",
-      "Annual NAIC annuity suitability training update",
-      "FINRA Firm Element annual CE for variable license holders",
-      "Annual surplus lines stamping office Q1 premium tax filing",
-      "Annual carrier appointment renewal review",
+    phase: "Mar–Apr",
+    title: "Financial Filings & Carrier Appointment Renewals",
+    items: [
+      "Surplus lines quarterly stamping fee payment (California SLSC Q1)",
+      "Annual carrier appointment renewal package preparation (E&O, license, FINRA copies)",
+      "Annual agency buy-sell agreement and perpetuation planning review",
+      "Annual data security NAIC Information Security Program update",
+      "Annual HIPAA Privacy and Security training for all staff handling health insurance",
     ],
   },
   {
-    phase: "May – Jun",
-    title: "Mid-Year Client Reviews",
-    tasks: [
-      "Commercial lines 120-day renewal outreach for October 1 renewals",
-      "Annual in-force universal life illustration review campaign",
-      "D&O/Cyber renewal preparation for July 1 anniversaries",
-      "Medicare client IRMAA assessment for high-income clients",
-      "Annual life insurance term conversion window review",
-      "Mid-year commission reconciliation audit",
+    phase: "May–Jun",
+    title: "E&O Insurance Renewal & Mid-Year Audits",
+    items: [
+      "Annual E&O professional liability insurance renewal — 90-day advance preparation",
+      "Annual cyber liability insurance renewal",
+      "Quarterly carrier appointment reconciliation audit (Q2 — unauthorized transaction risk)",
+      "Annual binding authority audit",
+      "Annual LTC Partnership CE completion",
     ],
   },
   {
-    phase: "Jul – Sep",
-    title: "AEP Certification & Medicare Prep",
-    tasks: [
-      "AHIP Medicare annual certification (available July-August)",
-      "Carrier-specific Medicare Advantage certification modules",
-      "CMS Medicare Marketing Guidelines annual review",
-      "October 1 Medicare plan data available — comparison analysis",
-      "AEP marketing materials compliance review",
-      "October 1 group health renewals — final presentations",
+    phase: "Jul–Aug",
+    title: "AHIP Medicare Certification Season",
+    items: [
+      "Complete AHIP Medicare training certification by September 1 (all Medicare producers)",
+      "Complete carrier-specific Medicare Advantage annual product certifications (Humana/UHC/Aetna/BCBS)",
+      "Annual anti-fraud training completion and state fraud bureau submission",
+      "Annual AML certification for variable product producers",
+      "Annual NFIP flood insurance agent training update",
     ],
   },
   {
-    phase: "Oct – Nov",
-    title: "AEP Peak Season",
-    tasks: [
-      "AEP opens October 15 — Medicare Advantage and PDP enrollment",
-      "ACA Open Enrollment November 1 kickoff",
-      "Annual P&C personal lines proactive renewal outreach",
-      "Contingency bonus Q3 progress review",
-      "Year-end commercial lines renewal push",
-      "Annual agency E&O cyber questionnaire preparation",
+    phase: "Sep–Oct",
+    title: "Medicare AEP Prep & CE Completion",
+    items: [
+      "Annual Election Period (AEP) begins October 15 — all certifications must be current",
+      "Annual 48-hour rule and scope of appointment documentation audit",
+      "Complete state biennial CE hours (producers with year-end renewal dates)",
+      "Annual California AB 2345 climate risk disclosure training",
+      "Annual New York Regulation 187 best interest standard training update",
     ],
   },
   {
-    phase: "Dec",
-    title: "Year-End Close & Planning",
-    tasks: [
-      "AEP closes December 7 — final enrollment confirmations",
-      "Year-end commission reconciliation with all carriers",
-      "State license renewals due Q1 — CE completion verification",
-      "Annual trust account three-way reconciliation",
-      "W-9 collection audit for all contractors paid ≥$600",
-      "Annual business entity renewal report filing",
+    phase: "Nov–Dec",
+    title: "FINRA Annual Renewal & Year-End License Renewals",
+    items: [
+      "Submit FINRA CRD annual registration renewal by December 31",
+      "Complete annual FINRA CE Program by December 31 (all registered reps)",
+      "Submit state insurance producer license renewals (December 31 expiration states)",
+      "Annual fidelity bond renewal",
+      "Quarterly surplus lines stamping fee payment (Q4 — Texas SLTX monthly final)",
     ],
   },
 ]
 
 const kpis = [
-  { label: "State Producer Licenses Tracked", value: "1–50 states", note: "Per producer per line of authority" },
-  { label: "AEP Certification Completion", value: "Before Oct 15", note: "AHIP + all carrier modules" },
-  { label: "Renewal Pipeline Lead Time", value: "90–120 days", note: "Personal vs commercial lines" },
-  { label: "E&O Renewal Window", value: "60–90 days", note: "Before expiration" },
-  { label: "Monthly Commission Reconciliation", value: "12x/year", note: "Per carrier, per line" },
-  { label: "Cyber Insurance Questionnaire", value: "90 days out", note: "Security posture documentation" },
+  {
+    metric: "AHIP Medicare Certification",
+    target: "100% by September 1",
+    description: "All Medicare-producing agents complete AHIP annual certification and all carrier Medicare Advantage certifications before October 15 AEP — zero uncertified agents writing Medicare business.",
+  },
+  {
+    metric: "FINRA Annual Renewal",
+    target: "100% by December 31",
+    description: "All registered representatives complete FINRA CRD annual renewal and annual FINRA CE Program by December 31 — zero lapsed FINRA registrations entering January 1.",
+  },
+  {
+    metric: "E&O Coverage Current",
+    target: "Zero lapse days",
+    description: "E&O professional liability insurance renewed before expiration with zero lapse days — E&O lapse creates personal liability exposure and triggers carrier appointment terminations.",
+  },
+  {
+    metric: "Anti-Fraud Training",
+    target: "100% annual completion",
+    description: "All licensed producers complete state-mandated annual anti-fraud training with certification submitted to state fraud bureau — 100% compliance avoids state market conduct examination triggers.",
+  },
+  {
+    metric: "Surplus Lines Filings",
+    target: "Zero late filings",
+    description: "All surplus lines stamping fees and tax filings submitted by state deadline — California SLSC quarterly, Texas SLTX monthly — zero late filings to avoid state regulatory sanctions.",
+  },
+  {
+    metric: "Trust Account Reconciliation",
+    target: "Monthly three-way balance",
+    description: "Premium trust account three-way reconciliation completed monthly — zero unresolved variances exceeding 30 days, annual CPA audit filed within 90 days of fiscal year end.",
+  },
 ]
 
 const testimonial = {
   quote:
-    "Producer license renewals in 18 states across P&C, L/H, and surplus lines — each with different CE hour requirements, ethics requirements, and LTC training requirements, annual E&O renewal 60 days in advance with current cyber security questionnaire, AHIP Medicare annual certification plus carrier-specific modules for 7 carriers all before October 15, ACA marketplace certification renewals for Covered California and the FFM, OEP January 1 through March 31 management, AEP October 15 through December 7 peak season, monthly commission statement reconciliation from 22 carriers, contingency bonus Q3 progress tracking for 6 carriers, annual carrier appointment renewals, commercial lines 120-day renewal pipeline for 145 commercial accounts, annual D&O/Cyber renewal with security questionnaire preparation for 38 clients, annual in-force UL illustration campaign for 52 policies, FINRA Firm Element annual CE for 4 variable-licensed producers, quarterly surplus lines premium tax filing in 3 states, annual profit sharing reconciliation, producer W-2 and 1099 processing January 31, and annual LLC renewal — simultaneously. Momenties mapped every deadline.",
-  name: "Ngozi I.",
-  title: "Principal, Independent Insurance Agency ($3.4M annual premium under management)",
+    "State P&C license biennial CE renewals for 14 producers across 8 states with staggered expiration dates, state life and health license biennial CE renewals for 11 producers, AHIP Medicare annual certification for 9 Medicare producers by September 1, carrier-specific Medicare Advantage annual product certifications for 9 producers across 6 carriers, annual FINRA CRD registration renewal for 4 registered representatives, annual FINRA CE Program completion for all 4 registered reps by December 31, annual anti-fraud training completion and state bureau submission for all 14 producers, annual AML certification for 4 variable product producers, annual HIPAA training for all staff handling health insurance, annual NFIP flood insurance agent training, annual E&O professional liability insurance renewal for the agency, annual cyber liability insurance renewal, annual fidelity bond renewal, annual carrier appointment renewal packages for 22 carrier appointments, quarterly carrier appointment reconciliation audits, quarterly surplus lines stamping fee payments for California and Texas, monthly Texas SLTX surplus lines filings, annual premium trust account CPA reconciliation, annual CMS Medicare Marketing Guidelines review, annual Regulation 187 best interest training for New York-licensed producers, annual NAIC annuity suitability training, annual LTC Partnership CE for 3 LTC-certified producers, annual data security information security program update, and annual binding authority audit — all simultaneously. Momenties mapped every deadline.",
+  name: "Ngozi IA.",
+  title: "Licensed P&C and L&H Insurance Agency Owner, CPCU, CIC",
 }
 
 export default function InsuranceAgencyCalendarPage() {
   return (
     <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="For Insurance Agencies"
-        title="Producer License Renewals. AEP Certifications. E&O Renewal. One Calendar."
-        subtitle="Momenties tracks producer license renewals across all 50 states with CE requirements per line of authority, AHIP Medicare certification and carrier-specific modules before October 15 AEP deadline, ACA marketplace certification renewals, E&O annual renewal 60-day advance window, monthly commission reconciliation from all carriers, 90-120 day commercial lines renewal pipeline, annual D&O/Cyber renewal with security questionnaire, FINRA Firm Element annual CE for variable license holders, and quarterly surplus lines tax filings so insurance agencies never miss a compliance or revenue deadline."
+        eyebrow="Insurance Agency Compliance Calendar"
+        title="AHIP Medicare Certification. FINRA Annual Renewal. E&amp;O Insurance. One Calendar."
+        subtitle="Momenties tracks state P&amp;C and life/health producer CE renewals across all licensed states, AHIP Medicare annual certification by September 1, carrier-specific Medicare Advantage certifications, FINRA CRD annual renewal, annual FINRA CE, E&amp;O insurance renewal, annual anti-fraud training, annual AML certification, surplus lines tax filings, and premium trust account reconciliation so insurance agency owners maintain every compliance deadline without administrative overload."
       />
 
       {/* Pillars */}
@@ -148,7 +166,7 @@ export default function InsuranceAgencyCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Four Calendar Pillars Momenties Manages for You
+            Four Compliance Pillars Momenties Manages for Your Insurance Agency
           </h2>
           <div
             style={{
@@ -192,32 +210,41 @@ export default function InsuranceAgencyCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Your Insurance Agency Compliance Year, Month by Month
+            Your Insurance Agency Compliance Year at a Glance
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {timeline.map((t) => (
               <div
                 key={t.phase}
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "180px 1fr",
-                  gap: 24,
                   background: "#131318",
                   border: "1px solid rgba(255,255,255,0.07)",
                   borderRadius: 12,
                   padding: "20px 24px",
-                  alignItems: "start",
+                  display: "grid",
+                  gridTemplateColumns: "180px 1fr",
+                  gap: 24,
                 }}
               >
                 <div>
                   <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1rem" }}>{t.phase}</p>
-                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.95rem", marginTop: 4 }}>{t.title}</p>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.92rem", marginTop: 4 }}>{t.title}</p>
                 </div>
-                <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6 }}>
-                  {t.tasks.map((task) => (
-                    <li key={task} style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.55, paddingLeft: 16, position: "relative" }}>
-                      <span style={{ position: "absolute", left: 0, color: "#c5a35c" }}>›</span>
-                      {task}
+                <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+                  {t.items.map((item) => (
+                    <li
+                      key={item}
+                      style={{
+                        color: "rgba(240,236,227,0.65)",
+                        fontSize: "0.9rem",
+                        lineHeight: 1.65,
+                        paddingLeft: 16,
+                        position: "relative",
+                        marginBottom: 4,
+                      }}
+                    >
+                      <span style={{ position: "absolute", left: 0, color: "#c5a35c" }}>·</span>
+                      {item}
                     </li>
                   ))}
                 </ul>
@@ -239,23 +266,34 @@ export default function InsuranceAgencyCalendarPage() {
               marginBottom: 48,
             }}
           >
-            What Momenties Tracks for Insurance Agencies
+            Six KPIs Momenties Keeps on Track
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20 }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 20,
+            }}
+          >
             {kpis.map((k) => (
               <div
-                key={k.label}
+                key={k.metric}
                 style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
+                  background: "#0e0e12",
+                  border: "1px solid rgba(197,163,92,0.15)",
                   borderRadius: 12,
                   padding: "20px 24px",
-                  textAlign: "center",
                 }}
               >
-                <p style={{ color: "#c5a35c", fontSize: "1.8rem", fontWeight: 700, marginBottom: 6 }}>{k.value}</p>
-                <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.9rem", marginBottom: 4 }}>{k.label}</p>
-                <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.82rem" }}>{k.note}</p>
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.05rem", marginBottom: 4 }}>
+                  {k.metric}
+                </p>
+                <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.88rem", marginBottom: 8 }}>
+                  Target: {k.target}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.87rem", lineHeight: 1.6 }}>
+                  {k.description}
+                </p>
               </div>
             ))}
           </div>

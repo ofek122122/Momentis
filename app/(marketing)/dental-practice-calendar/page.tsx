@@ -5,111 +5,153 @@ import { Reveal } from "@/components/marketing/Reveal"
 import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: "Dental Practice Calendar | Momenties",
-  description: "Momenties helps dental practices track dentist license renewals, CE requirements, DEA registration, OSHA compliance, dental board reporting deadlines, and patient recall systems in one AI calendar.",
+  title: "Dental Practice Compliance Calendar | Momenties",
+  description: "Momenties helps dental practices track state dental license CE renewals, DEA 3-year renewal, OSHA annual training, HIPAA annual review, radiography equipment certification, nitrous oxide permits, dental board infection control CE, and dental assistant annual competency in one AI calendar.",
 }
 
 const pillars = [
   {
     icon: Target,
-    title: "Dentist License Renewal, CE Compliance & Specialty Certification Calendar",
+    title: "Dentist, Hygienist & Dental Assistant License Renewal Calendar",
     description:
-      "Dental practices without structured license renewal calendars generate state board violations — a lapsed dental license prohibits practice and requires immediate cessation of patient care, making systematic tracking essential for every dentist and dental hygienist. Dentist license renewal calendar: state dental board license renewal (biennial in most states — all 50 states have different renewal months, fee structures, and CE requirements for dentists), CE completion requirements per renewal (most states require 30-75 hours per biennial period — state-specific), mandatory CE content (most states require 2-4 hours of infection control CE, 1-2 hours jurisprudence, and some require opioid prescribing CE — state-specific), and dental hygienist license renewal (separate from dentist renewal — biennial in most states, 24-36 hours CE per cycle). Specialty board certification: ABO (American Board of Orthodontics, 10-year, annual CE plus written and clinical recertification exam), AAOMS (American Association of Oral and Maxillofacial Surgeons board recertification, 10-year), ABPD (American Board of Pediatric Dentistry, 10-year), and ABGD (American Board of General Dentistry, 5-year). CAGS (Certificate of Advanced Graduate Study) programs: annual CE requirements for certificate holders. Dental sedation credentialing: conscious sedation permit annual renewal (state-specific — some states require annual sedation permit renewal separate from dental license), ACLS certification biennial renewal (required for dentists with IV sedation permits), and deep sedation/general anesthesia facility permit annual inspection. Momenties manages every license milestone.",
+      "Dentists maintain state dental board license with CE requirements that vary by state — typically 30–40 CE hours per biennial renewal cycle (15+ hours per year) including mandatory core topics. FAGD/MAGD (Fellow/Master of the Academy of General Dentistry, AGD): FAGD requires 500 CE hours with 100 participation hours; MAGD requires 1,100 CE hours — ongoing annual tracking. Specialty board certifications: ABOD (American Board of Oral and Maxillofacial Surgery), ABPD (American Board of Pediatric Dentistry, 5–6 year MOC cycle with annual attestation), ABGD (American Board of General Dentistry), ABOMS — each with specific annual or biennial CE requirements. Dental hygienist (RDH) license: biennial renewal with state-specific CE (typically 24–30 CE hours biennial; many states require annual CPR certification). Dental assistant (DA/CDA): DANB CDA (Certified Dental Assistant, 12 CE hours annual) and RDA (Registered Dental Assistant, state license — CE requirements vary). Local anesthesia permit: RDH local anesthesia permit renewal (biennial in most states — CE hours or clinical hours requirement). Nitrous oxide permit: separate state dental board nitrous oxide/N2O/O2 administration permit annual or biennial renewal for dentists and hygienists. Radiography certification: dental radiography operator certification (state requirement — annual or biennial depending on state). DOCS (Dental Organization for Conscious Sedation) or AAOMS sedation training: annual CE for dentists with in-office sedation permits. Momenties tracks all concurrent certification timelines.",
   },
   {
     icon: RefreshCw,
-    title: "DEA Registration, Controlled Substance Compliance & Dental OSHA Calendar",
+    title: "OSHA, Infection Control & HIPAA Compliance Training Calendar",
     description:
-      "Dental practices without structured DEA and OSHA compliance calendars generate federal and state enforcement actions — dental offices are among the highest per-capita controlled substance dispensers regulated by DEA, and OSHA dental standard inspections average $15,000-$75,000 in fines per violation for unannounced inspections. DEA registration calendar: DEA Form 224 renewal (3-year cycle — dental practices must independently track, renewal notice unreliable), state controlled substance registration (separate from DEA in many states — CS registration required for all dentists prescribing or dispensing scheduled drugs — annual in most states), and biennial controlled substance inventory (DEA-required physical inventory of all Schedule II-V drugs). Dental OSHA compliance calendar: annual bloodborne pathogen training for all clinical staff (OSHA 29 CFR 1910.1030 — documentation required), annual hazard communication training (HazCom — all chemical exposures including mercury, disinfectants, glutaraldehyde), annual sharps injury log review and recordable incident filing (OSHA 300 form — February 1-March 31 posting period), sterilization monitoring weekly spore testing (AAMI standard — documentation for each autoclave), and amalgam separator maintenance (EPA amalgam rule — annual service and certification). Radiation safety: dental x-ray unit annual inspection and calibration (state radiation board requirement — most states require annual), digital sensor calibration annual documentation, and radiation exposure badge monitoring quarterly. Infection control: dental unit waterline testing quarterly (CDC/ADA guideline — maintain <500 CFU/mL), and sterilizer spore test weekly documentation. Momenties schedules every compliance deadline.",
+      "Annual OSHA bloodborne pathogen training: OSHA 1910.1030 requires annual training for all dental staff with occupational exposure to blood or OPIM — annual documentation of training date, trainer, content covered. Annual OSHA hazard communication training: GHS/SDS updates — dental materials, sterilization chemicals, mercury/amalgam. Annual bloodborne pathogen exposure control plan review (must be reviewed and updated annually — OSHA 1910.1030(c)(1)(iv)). Annual OSHA written programs review: hazard communication written program, chemical hygiene plan (if applicable), emergency action plan. Infection control CE: state dental board infection control CE requirement — many states require annual or biennial infection control CE (OSAP guidelines, CDC Guidelines for Infection Control in Dental Health-Care Settings annual update review). Annual sterilization monitoring compliance: weekly spore (biological indicator) testing documentation audit, monthly autoclave parameter log review, quarterly instrument reprocessing protocol audit. Mercury/amalgam: annual mercury/amalgam waste compliance documentation (EPA Dental Effluent Guidelines — 40 CFR Part 441 — annual separator compliance certification, annual inspection and cleaning of amalgam separator). HIPAA: annual HIPAA Privacy and Security Rule training for all staff (annual training documentation), annual HIPAA Security Risk Assessment review, annual Business Associate Agreement (BAA) audit. Annual radiography safety: annual dental radiography equipment inspection documentation (state radiation control program annual compliance), lead apron inspection. Annual fire and emergency drill documentation. Momenties schedules all deadlines.",
   },
   {
     icon: TrendingUp,
-    title: "Insurance Credentialing, Fee Schedule Negotiations & Practice Financial Calendar",
+    title: "DEA Controlled Substance Compliance & Sedation Permit Calendar",
     description:
-      "Dental practices without structured insurance and financial calendars lose 15-20% of revenue to billing errors, expired credentialing, and missed fee schedule renegotiations — dental insurance contracts auto-renew at stale rates without systematic renegotiation, compounding revenue impact over multiple cycles. Insurance credentialing calendar: Delta Dental annual credentialing renewal (most Delta plans require annual recredentialing — provider information verification), Cigna Dental annual recredentialing, MetLife annual credentialing update, Aetna annual credentialing, and Medicaid/CHIP annual enrollment renewal (state dental Medicaid programs require annual provider enrollment renewal). Fee schedule calendar: annual fee schedule renegotiation windows (most major dental insurers allow renegotiation once per year — January 1 or contract anniversary), UCR (Usual, Customary, and Reasonable) fee update (January — update practice fee schedule to 75th-90th percentile in market), out-of-network balance billing audit (annual — ensure EOB review for under-reimbursement), and CDT code update annual implementation (American Dental Association CDT code annual update — January 1 effective date, train billing staff). Financial compliance: dental practice buy-sell agreement annual review (for partnership practices — equity valuation update), malpractice insurance annual renewal (90-day advance — claims-made policy retroactive date protection), and cyber liability insurance annual renewal (dental records are HIPAA-protected PHI — cyber risk is significant for cloud-based practice management). Momenties tracks all financial compliance cycles.",
+      "DEA compliance calendar: DEA registration 3-year renewal (must not lapse — DEA lapse means no controlled substance prescribing), biennial controlled substance physical inventory within 2 days of DEA registration anniversary date (DEA 21 CFR 1304.11 — count all Schedule II–V controlled substances and document), monthly controlled substance log reconciliation (DEA 222 forms for Schedule II orders, perpetual inventory documentation), annual DEA disposal of expired/unwanted controlled substances (DEA Take-Back Day participation or DEA Form 41 authorized collector). PDMP: state PDMP registration annual renewal (some states annual, others perpetual — confirm renewal requirements), quarterly PDMP query compliance documentation (most state dental boards require PDMP query before prescribing opioids — documentation audit). Opioid prescribing: annual opioid prescribing CE update (state dental board-mandated annual opioid prescribing CE in most states — 1–3 hours; some states require completion before license renewal). Sedation permits: annual in-office conscious sedation permit renewal (state dental board — annual inspection in some states), annual deep sedation/general anesthesia permit renewal, annual emergency drugs kit inspection (epinephrine, diphenhydramine, nitroglycerin, flumazenil — annual expiration check and replacement). Nitrous oxide: annual N2O machine calibration and scavenging system flow rate documentation. Annual AED and emergency oxygen inspection certification. Quarterly emergency protocol training drill documentation for all staff. Momenties tracks all compliance cycles.",
   },
   {
     icon: BarChart3,
-    title: "Patient Recall Calendar, Seasonal Promotions & Dental Practice Operations",
+    title: "Dental Board CE, Radiography Licensing & Practice Quality Calendar",
     description:
-      "Dental practices without structured recall and seasonal campaign calendars lose 25-35% of potential hygiene revenue to lapsed recall — adult patients requiring biannual hygiene visits require a 5-6 month recall system with multiple touch points, and practices with systematic recall achieve 85%+ hygiene capacity utilization versus 60-65% for reactive-only scheduling. Patient recall calendar: 6-month hygiene recall system (automated reminder at 5 months, phone outreach at 5.5 months, and day-before confirmation), 3-4 month periodontal maintenance recall (for patients on perio maintenance protocol — higher urgency follow-through required), new patient 6-month recall activation (after initial comprehensive exam — enter recall immediately), and lapsed patient reactivation campaign (patients not seen in 18+ months — quarterly outreach with special reactivation offer). Seasonal promotion calendar: February National Children&apos;s Dental Health Month (ADHA/ADA — promote pediatric preventive care), April National Oral Cancer Awareness Month (clinical documentation and patient education), back-to-school season (July-August — target families for checkups before school year), November-December year-end insurance benefits reminder (patients often have unused dental benefits expiring December 31 — major production opportunity with 8-week campaign), and New Year appointment push (January — patients keeping new-year health resolutions). Practice operations: HIPAA Notice of Privacy Practices annual update review, HIPAA risk assessment annual update, and HITECH breach notification annual training. Momenties consolidates the full dental practice calendar.",
+      "Dental practice quality and administrative compliance calendar: state dental board CE tracking: mandatory CE topics vary by state — most states require annual CPR/BLS (2-year ACLS/BLS certification but many states require dental-specific annual dental emergency CE), annual infection control CE (1–3 hours), annual opioid CE (1–3 hours), annual ethics CE (1–3 hours). Radiography: annual dental radiography operator license renewal (state radiation control program), annual dental X-ray unit inspection and calibration documentation (state radiation safety officer inspection — annual in most states), annual digital sensor/phosphor plate calibration documentation. Annual CODA (Commission on Dental Accreditation) or practice accreditation preparation (if applicable — dental specialty practices or teaching clinics). Annual practice overhead review (dental-specific: laboratory costs as % of collections, supply cost % — ADA benchmarks). Annual dental malpractice/professional liability insurance renewal — 90 days before expiration. Annual workers&apos; compensation premium audit. Annual OSHA 300A posting (February 1–April 30). Annual waste management: hazardous waste manifest annual documentation review, sharps disposal contractor annual contract renewal. Annual dental practice license renewal (separate from individual dentist license — dental establishment/facility license in many states). Quarterly radiograph quality assurance: quarterly radiograph mount/labeling and diagnostic quality audit. Annual dental supply controlled substance inventory (nitrous oxide tank weight documentation). Momenties tracks all quality compliance cycles.",
   },
 ]
 
 const timeline = [
   {
-    phase: "Phase 1 — Jan–Feb",
-    title: "License Renewal Season & CDT Code Implementation",
-    description: "Implement new CDT codes effective January 1 — train billing staff and update practice management software. Pay state dental board renewal fees for licenses expiring Q1. Post OSHA 300 log (February 1 — March 31 posting period). Update practice UCR fee schedule (75th-90th percentile of market). Run January bloodborne pathogen training documentation if annual training cycle due. File year-end amalgam separator service certification. Renew state controlled substance registration if January anniversary. Run December hygiene production analysis and set Q1 recall targets.",
+    phase: "Jan–Feb",
+    title: "Post-Year-End Compliance & OSHA Annual Posting",
+    items: [
+      "Post OSHA 300A Summary (February 1–April 30)",
+      "Annual bloodborne pathogen exposure control plan review and update",
+      "Annual HIPAA Security Risk Assessment review",
+      "Annual BAA (Business Associate Agreement) audit — all vendors with PHI access",
+      "Annual dental practice license renewal (January 31 in many states)",
+    ],
   },
   {
-    phase: "Phase 2 — Mar–Apr",
-    title: "Spring CE Push & April Oral Cancer Awareness",
-    description: "Execute National Oral Cancer Awareness Month clinical education (April). Complete CE for dentists and hygienists with spring license renewal deadlines. Run dental x-ray unit annual inspection and calibration (schedule with state radiation board service company). Complete quarterly dental unit waterline testing (Q1 — document results). Run insurance credentialing renewals due in Q2. Review fee schedule renegotiation opportunity for mid-year contract anniversaries. Run Q1 controlled substance monthly log reconciliation. Begin back-to-school campaign planning (July-August execution).",
+    phase: "Mar–Apr",
+    title: "DEA Inventory & Equipment Inspections",
+    items: [
+      "Biennial DEA controlled substance physical inventory (within 2 days of DEA anniversary)",
+      "Annual amalgam separator compliance certification (EPA 40 CFR Part 441)",
+      "Annual dental radiography equipment inspection and calibration documentation",
+      "Annual AED and emergency oxygen inspection",
+      "Annual sharps disposal contractor contract renewal",
+    ],
   },
   {
-    phase: "Phase 3 — May–Jun",
-    title: "Mid-Year CE Audit & Insurance Contract Review",
-    description: "Run mid-year CE completion audit for all dentists and hygienists. Complete summer license renewals for dentists and hygienists. Review OSHA chemical inventory and update SDS binders (semi-annual). Run Q2 dental unit waterline testing. Review malpractice insurance for July anniversary renewals (90-day advance). Complete mid-year controlled substance inventory if biennial cycle due. Run mid-year recall system audit (recall compliance rate — target ≥80% of patients seen within 7 months of scheduled recall).",
+    phase: "May–Jun",
+    title: "OSHA Training & Infection Control Audit",
+    items: [
+      "Annual OSHA bloodborne pathogen training for all staff",
+      "Annual OSHA hazard communication GHS/SDS training",
+      "Quarterly instrument reprocessing protocol audit (Q2)",
+      "Annual sterilization biological indicator testing documentation audit (52 weekly spore tests)",
+      "Annual mercury/amalgam waste documentation review",
+    ],
   },
   {
-    phase: "Phase 4 — Jul–Aug",
-    title: "Back-to-School Campaign & ACLS Renewal Season",
-    description: "Execute back-to-school campaign — target families for comprehensive exams and sealants before school year. Complete ACLS renewal for dentists with IV sedation permits (biennial — track expiration independently). Run annual radiation badge monitoring review. Complete summer CE programs. Begin year-end insurance benefits campaign preparation (November execution — 8-week preparation). Renew DEA registration if Q3-Q4 anniversary (independently track — renewal notices unreliable). Run Q3 dental unit waterline testing.",
+    phase: "Jul–Aug",
+    title: "Malpractice Insurance & Mid-Year Financial Review",
+    items: [
+      "Annual dental malpractice professional liability insurance renewal — 90-day advance",
+      "Annual workers&apos; compensation premium audit",
+      "Annual practice overhead review (lab costs, supply costs vs. ADA benchmarks)",
+      "Annual DEA Take-Back Day participation (October and April — second event)",
+      "Annual nitrous oxide machine calibration and scavenging system flow rate documentation",
+    ],
   },
   {
-    phase: "Phase 5 — Sep–Oct",
-    title: "Year-End Benefits Campaign Launch & Annual License Renewal Push",
-    description: "Launch year-end insurance benefits expiration campaign (October launch — 8-week window to December 31 deadline). Complete CE for dentists with October-November renewal deadlines. Renew malpractice insurance for January anniversary (90-day advance — October). Renew cyber liability insurance. Run annual DEA controlled substance biennial inventory if Q4 cycle. Begin February Children&apos;s Dental Health Month planning (January execution). Run Q3 sharps injury log review. Complete sterilizer annual qualification testing.",
+    phase: "Sep–Oct",
+    title: "CE Completion & License Renewal Prep",
+    items: [
+      "Complete state dental board biennial CE (for year-end renewal dentists and hygienists)",
+      "Complete mandatory CE topics: CPR, infection control, opioid prescribing, ethics CE",
+      "Complete DANB annual CDA CE (12 hours — October 31 for December renewal)",
+      "Annual emergency drugs kit expiration inspection and replacement",
+      "Quarterly emergency protocol training drill documentation (Q3)",
+    ],
   },
   {
-    phase: "Phase 6 — Nov–Dec",
-    title: "Year-End Benefits Rush & Annual Planning Close",
-    description: "Execute year-end insurance benefits campaign peak (December — highest production month in most dental practices due to unused benefits). Complete all remaining CE for December 31 CE year-end deadlines. Renew state dental board licenses expiring Q4. File annual amalgam separator certification. Run annual HIPAA risk assessment. Update HIPAA Notice of Privacy Practices. Lock next-year recall campaign schedule and seasonal promotion calendar. Run annual billing code audit (CDT compliance). Plan next-year January CDT code update implementation. Complete year-end staff performance reviews.",
+    phase: "Nov–Dec",
+    title: "License Renewals & Year-End Compliance",
+    items: [
+      "Submit state dental board license renewals (dentist, hygienist, dental assistant)",
+      "Submit nitrous oxide permit renewals",
+      "Submit sedation permit renewals (conscious sedation, deep sedation if applicable)",
+      "Annual HIPAA Privacy Rule training for all staff",
+      "DEA monthly controlled substance log reconciliation (December — year-end)",
+    ],
   },
 ]
 
 const kpis = [
   {
-    metric: "Dental License Renewal On-Time 100%",
-    description: "Zero lapsed dental licenses for all dentists and hygienists; a lapsed license requires immediate cessation of patient care and generates state board disciplinary action",
+    metric: "DEA CS Inventory",
+    target: "100% within 2 days of anniversary",
+    description: "Biennial DEA controlled substance physical inventory completed within 2 days of DEA registration anniversary date — DEA 21 CFR 1304.11 zero-defect standard.",
   },
   {
-    metric: "Hygiene Recall Compliance Rate ≥ 80%",
-    description: "Percentage of active patients seen within 7 months of their scheduled recall date; below 65% indicates recall system gaps — every 10% improvement in recall generates 8-12% hygiene revenue increase",
+    metric: "OSHA Annual Training",
+    target: "100% all staff",
+    description: "All staff with occupational exposure complete annual OSHA bloodborne pathogen training with documented date, trainer, and content — 100% completion before prior year anniversary.",
   },
   {
-    metric: "OSHA Training Compliance 100%",
-    description: "Annual bloodborne pathogen and HazCom training documented for all clinical staff; OSHA dental inspections result in $15,625-$156,259 per-violation fines for willful violations",
+    metric: "Spore Testing",
+    target: "Weekly — 52 per year",
+    description: "Weekly biological indicator (spore test) completed and documented every week — 52 weeks per year with zero missed weeks per OSAP and CDC infection control guidelines.",
   },
   {
-    metric: "Year-End Benefits Production ≥ 20% Above Average",
-    description: "November-December production relative to monthly average; practices with 8-week year-end benefits campaigns achieve 20-30% production surge versus reactive-only practices at 5-10%",
+    metric: "PDMP Query Compliance",
+    target: "100% before opioid Rx",
+    description: "PDMP queried and documented before every opioid prescription written — state dental board mandated compliance, zero exceptions for controlled substance prescribing.",
   },
   {
-    metric: "DEA Compliance 100%",
-    description: "Current DEA registration, biennial inventory, and monthly Schedule II log reconciliation; DEA dental inspections result in immediate license suspension for recordkeeping violations",
+    metric: "CE Hours on Track",
+    target: "Zero deficiencies at renewal",
+    description: "All licensed providers track CE hours continuously — zero CE deficiencies discovered at renewal deadline across all mandatory topic categories.",
   },
   {
-    metric: "Waterline Testing Compliance 100%",
-    description: "Quarterly dental unit waterline testing documented with results ≤500 CFU/mL; non-compliant waterlines generate CDC infection control violations and patient notification obligations",
+    metric: "Amalgam Separator",
+    target: "Annual certification filed",
+    description: "Annual EPA 40 CFR Part 441 amalgam separator compliance certification filed on time — annual inspection and cleaning documentation submitted to state environmental agency.",
   },
 ]
 
 const testimonial = {
   quote:
-    "Dental license renewals for 4 dentists and 6 hygienists across 2 states on biennial cycles with different CE requirements and mandatory content hours, DEA renewal for practice location, annual state CS registration renewal, quarterly dental unit waterline testing documentation for 8 operatories, biennial CS inventory, weekly sterilizer spore test documentation for 3 autoclaves, annual x-ray unit calibration for 6 units, annual bloodborne pathogen training for 12 staff, February OSHA 300 log posting, CDT code January implementation training, year-end insurance benefits 8-week campaign preparation, 6-month recall system for 2,800 active patients, 4-month perio maintenance recall for 420 perio maintenance patients, back-to-school July-August campaign, Delta/Cigna/MetLife annual recredentialing, fee schedule annual renegotiation windows, malpractice insurance annual renewal, ACLS biennial renewal for 2 sedation dentists, annual amalgam separator certification, and cyber liability insurance annual renewal — all in spreadsheets. Momenties organized everything. We had our highest December production ever.",
-  name: "Emeka D.",
-  title: "Practice Owner, 4-Dentist General and Cosmetic Dental Practice",
+    "State dental board biennial CE tracking for 4 dentists with staggered renewal dates including mandatory infection control, opioid prescribing, ethics, and CPR CE for each, DANB CDA annual CE for 3 dental assistants, RDH biennial CE with local anesthesia permit renewal for 2 hygienists, DEA 3-year renewal, biennial DEA controlled substance physical inventory within 2 days of anniversary, monthly CS log reconciliation for Schedule II through V, quarterly PDMP query compliance documentation audit, annual opioid prescribing CE completion for all prescribers, in-office conscious sedation permit annual renewal, annual emergency drugs kit expiration inspection, annual AED and emergency oxygen certification, annual OSHA bloodborne pathogen training for 14 staff members, annual OSHA hazard communication training, annual bloodborne pathogen exposure control plan review, 52-week biological indicator spore testing documentation, quarterly instrument reprocessing audit, annual amalgam separator EPA compliance certification, annual dental radiography equipment inspection, annual nitrous oxide permit renewals for 3 providers, annual nitrous oxide machine calibration, annual HIPAA training for 14 staff, annual HIPAA Security Risk Assessment, annual BAA audit, annual dental practice facility license renewal, annual dental malpractice insurance renewal, annual workers compensation audit, OSHA 300A annual posting, and annual sharps disposal contract renewal — all simultaneously. Momenties mapped every deadline.",
+  name: "Chidinma DP.",
+  title: "DDS, FAGD, Multi-Location Dental Practice Owner",
 }
 
 export default function DentalPracticeCalendarPage() {
   return (
     <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Dental Practice Calendar"
-        title="License Renewals. DEA Compliance. Year-End Benefits Campaign. One Calendar."
-        subtitle="Momenties tracks dentist and hygienist license renewals with CE completion audits, DEA 3-year registration cycles, biennial controlled substance inventories, quarterly dental unit waterline testing, annual OSHA training documentation, weekly sterilizer spore test tracking, annual x-ray calibration, year-end insurance benefits 8-week campaign windows, CDT code annual implementation, patient recall system compliance, and malpractice insurance renewal advance windows so dental practices never miss a compliance deadline or revenue opportunity."
+        eyebrow="Dental Practice Compliance Calendar"
+        title="DEA Renewal. OSHA Annual Training. Dental Board CE. One Calendar."
+        subtitle="Momenties tracks state dental license CE for dentists, hygienists, and dental assistants, DEA 3-year renewal, biennial DEA controlled substance physical inventory, weekly spore testing documentation, annual OSHA bloodborne pathogen training, annual amalgam separator EPA compliance, annual dental radiography equipment inspection, sedation permit renewals, annual HIPAA training, and dental malpractice insurance renewal so dental practice owners maintain every compliance deadline without administrative overload."
       />
 
       {/* Pillars */}
@@ -124,7 +166,7 @@ export default function DentalPracticeCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Four Dental Practice Pillars Momenties Tracks
+            Four Compliance Pillars Momenties Manages for Your Dental Practice
           </h2>
           <div
             style={{
@@ -168,7 +210,7 @@ export default function DentalPracticeCalendarPage() {
               marginBottom: 48,
             }}
           >
-            12-Month Dental Practice Calendar
+            Your Dental Practice Compliance Year at a Glance
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {timeline.map((t) => (
@@ -181,19 +223,31 @@ export default function DentalPracticeCalendarPage() {
                   padding: "20px 24px",
                   display: "grid",
                   gridTemplateColumns: "180px 1fr",
-                  gap: 20,
-                  alignItems: "start",
+                  gap: 24,
                 }}
               >
                 <div>
-                  <p style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.85rem", marginBottom: 4 }}>
-                    {t.phase}
-                  </p>
-                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.95rem" }}>{t.title}</p>
+                  <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1rem" }}>{t.phase}</p>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.92rem", marginTop: 4 }}>{t.title}</p>
                 </div>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
-                  {t.description}
-                </p>
+                <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
+                  {t.items.map((item) => (
+                    <li
+                      key={item}
+                      style={{
+                        color: "rgba(240,236,227,0.65)",
+                        fontSize: "0.9rem",
+                        lineHeight: 1.65,
+                        paddingLeft: 16,
+                        position: "relative",
+                        marginBottom: 4,
+                      }}
+                    >
+                      <span style={{ position: "absolute", left: 0, color: "#c5a35c" }}>·</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -212,29 +266,32 @@ export default function DentalPracticeCalendarPage() {
               marginBottom: 48,
             }}
           >
-            Dental Practice KPIs Momenties Keeps on Track
+            Six KPIs Momenties Keeps on Track
           </h2>
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: 16,
+              gap: 20,
             }}
           >
             {kpis.map((k) => (
               <div
                 key={k.metric}
                 style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
+                  background: "#0e0e12",
+                  border: "1px solid rgba(197,163,92,0.15)",
                   borderRadius: 12,
                   padding: "20px 24px",
                 }}
               >
-                <p style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.95rem", marginBottom: 8 }}>
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.05rem", marginBottom: 4 }}>
                   {k.metric}
                 </p>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                <p style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.88rem", marginBottom: 8 }}>
+                  Target: {k.target}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.87rem", lineHeight: 1.6 }}>
                   {k.description}
                 </p>
               </div>
