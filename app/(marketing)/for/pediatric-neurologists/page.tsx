@@ -6,13 +6,13 @@ import { CTA } from '@/components/marketing/CTA'
 import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Momenties for Pediatric Neurologists — ABP MOC CME renewal, pediatric neurology credential management',
+  title: 'Momenties for Pediatric Neurologists — ABP MOC CME renewal, child neurology credential management',
   description:
-    'Pediatric neurologists manage ABP pediatrics board MOC continuous CME with pediatric neurology subspecialty content, ABPN neurology primary certification independent cycle (if dual-trained), state medical license biennial CME, DEA 3-year renewal, annual epilepsy monitoring unit competency, and professional development simultaneously. Momenties tracks CME by certification, surfaces renewal deadlines 90 days early, and manages the full pediatric neurologist credential calendar.',
+    'Pediatric neurologists manage ABP general pediatrics primary MOC and ABP child neurology subspecialty MOC (both continuous), annual epilepsy CE as fenfluramine Fintepla FDA approval and cenobamate pediatric data update ASM selection in drug-resistant childhood epilepsy, annual neuromuscular CE as zolgensma gene therapy post-marketing and nusinersen pediatric monitoring CE evolve, annual neurodevelopmental CE as diagnostic criteria updates for ADHD late-onset presentation and autism diagnostic equity in females require annual documentation, state medical license biennial CME, DEA 3-year renewal, and CNS/AAN membership. Momenties tracks CME by certification and manages the full credential calendar.',
   alternates: { canonical: '/for/pediatric-neurologists' },
   openGraph: {
     title: 'Momenties for Pediatric Neurologists',
-    description: 'ABP MOC CME renewal, pediatric neurology credential management.',
+    description: 'ABP MOC CME renewal, child neurology credential management.',
     url: '/for/pediatric-neurologists',
     type: 'website',
   },
@@ -21,32 +21,32 @@ export const metadata: Metadata = {
 const USE_CASES = [
   {
     icon: Shield,
-    title: 'CME tracking for ABP pediatrics MOC and ABPN neurology independently',
-    desc: 'Pediatric neurologists certified through the ABP hold ABP general pediatrics primary certification and ABP pediatric neurology subspecialty certification — two ABP credentials with different CME content requirements. ABP general pediatrics MOC requires general pediatric CME; ABP pediatric neurology subspecialty requires pediatric neurology content including epilepsy and EEG interpretation, pediatric headache, neuromuscular disorders, neonatal neurology, and pediatric stroke. Pediatric neurologists who trained through adult neurology (ABPN pathway) hold ABPN neurology certification and ABP pediatric neurology on different cycles. State medical license biennial CME runs independently.',
+    title: 'CME tracking for ABP general pediatrics MOC and ABP child neurology MOC independently',
+    desc: 'Pediatric neurologists hold ABP general pediatrics primary certification under continuous MOC alongside ABP child neurology subspecialty certification under continuous MOC — two ABP continuous assessment tracks with different content requirements. ABP child neurology requires subspecialty content: epilepsy and seizure disorders (ASM pharmacology, EEG interpretation, ketogenic diet, epilepsy surgery evaluation), neuromuscular disorders (SMA, DMD, Charcot-Marie-Tooth, myopathies — muscle biopsy interpretation), headache and migraine in children (CGRP pathway, pediatric migraine prevention), neurodevelopmental disorders (ADHD, autism spectrum disorder, learning disabilities, intellectual disability — evaluation and management), and neonatal neurology.',
   },
   {
     icon: Clock,
     title: 'Pediatric neurologist multi-credential renewal calendar',
-    desc: '"ABP general pediatrics MOC — continuous CME." "ABP pediatric neurology subspecialty — pediatric neurology content." "ABPN neurology (if dual-trained) — independent cycle." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual epilepsy monitoring unit (EMU) competency (if applicable)." "CNS membership — annual." "AES membership — annual." All pediatric neurologist credentials with 90-day advance alerts.',
+    desc: '"ABP general pediatrics MOC — continuous CME assessment." "ABP child neurology MOC — continuous subspecialty CME assessment." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual epilepsy CE — fenfluramine Fintepla Dravet and LGS data, cenobamate pediatric drug-resistant focal epilepsy CE." "Annual neuromuscular CE — onasemnogene abeparvovec post-marketing monitoring CE, risdiplam Evrysdi pediatric dosing CE." "Annual neurodevelopmental CE — ADHD late-onset DSM-5-TR CE, autism diagnostic equity in females and underrepresented populations." "CNS membership — annual." All child neurology credentials with 90-day advance alerts.',
   },
   {
     icon: BarChart3,
-    title: 'Epilepsy monitoring unit competency and anti-seizure medication update CE analytics',
-    desc: 'Pediatric neurologists directing or working in an epilepsy monitoring unit (EMU) must maintain documented competency in EEG interpretation, seizure classification (ILAE criteria), and ictal-interictal continuum management. EMU credentialing at academic centers often requires annual competency documentation separate from ABP MOC CME. Anti-seizure medication (ASM) approvals have accelerated — five new ASMs approved in the last five years with pediatric indications requiring updated prescribing knowledge. Annual ASM update CE is a practice requirement for pediatric epileptologists managing medically refractory epilepsy.',
+    title: 'Annual epilepsy ASM CE and SMA gene therapy update analytics',
+    desc: 'Pediatric neurologists managing epilepsy must maintain CE on an expanding ASM landscape: fenfluramine (Fintepla) received FDA approval for Lennox-Gastaut syndrome in 2022 — CE on cardiac echocardiography monitoring requirement (echocardiogram at baseline and every 6 months for valvular disease and pulmonary arterial hypertension), REMS program requirements for prescriber and pharmacy certification, and drug-drug interaction CE (serotonin syndrome risk with MAO inhibitors, dose reduction with valproate) is required before prescribing. Onasemnogene abeparvovec (Zolgensma) post-marketing safety CE has become distinct from the original approval CE: the expanded post-marketing surveillance data on liver toxicity (aminotransferase elevation requiring prednisolone prophylaxis) and delayed adverse event timeline (up to 6 weeks post-infusion monitoring) requires annual update CE for centers managing post-Zolgensma SMA patients.',
   },
   {
     icon: Users,
-    title: 'CNS, AES, and pediatric neurology professional involvement',
-    desc: '"CNS Annual Meeting — october." "AES Annual Meeting — december." "Child Neurology Society Annual Meeting — october." "AANP Annual Meeting." "Pediatric epilepsy — ILAE seizure classification and precision medicine targets CE." "Pediatric stroke — acute management and secondary prevention CE." "Neonatal seizure — recognition and phenobarbital vs. levetiracetam evidence CE." "Pediatric headache — CGRP pathway treatment CE." All pediatric neurology professional development on calendar. CNS and AES conference CME tagged by ABP general and subspecialty applicability.',
+    title: 'CNS, CNPN, AES, and child neurology professional development',
+    desc: '"CNS Child Neurology Society Annual Meeting — october." "CNPN Child Neurology and Pediatric Neuroscience Annual Meeting." "AES American Epilepsy Society Annual Meeting — december." "AAN Annual Meeting — april." "Epilepsy CE — fenfluramine Fintepla LGS 2022 FDA approval CE (REMS prescriber certification CE, cardiac echo monitoring protocol — 6-month interval requirement, echocardiographic parameters for valvular disease and PAH surveillance), cenobamate pediatric drug-resistant focal epilepsy CE (pediatric pharmacokinetics — weight-based dosing, titration schedule CE, drug-drug interaction with valproate), CDKL5 deficiency disorder CE (ganaxolone Marvelus FDA 2022 approval — neurosteroid GABA-A modulator, CDKL5-specific trial data CE, plasma level monitoring requirement), and ketogenic diet CE in pediatric drug-resistant epilepsy (modified Atkins versus classic 4:1 ratio — GRADE data for each epilepsy syndrome, GI tolerability management CE)." "Neuromuscular CE — onasemnogene abeparvovec post-marketing safety update CE (aminotransferase elevation timeline CE — prednisolone protocol day 1 to day 30, acute liver injury surveillance beyond 6 weeks post-infusion), risdiplam Evrysdi CE — SMA type 1, 2, and 3 pediatric dosing by weight (0.15-0.25 mg/kg/day weight-based), retinal safety monitoring in neonates (retinal dystrophy preclinical signal — ophthalmology evaluation CE for infants under 2 months), duchenne muscular dystrophy CE (givinostat duvyzat FDA 2024 approval — histone deacetylase inhibitor CE, monthly liver enzyme monitoring, skin biopsy exon-skipping CE for casimersen, golodirsen, viltolarsen eligibility by exon deletion)." "Neurodevelopmental CE — ADHD DSM-5-TR late-onset criterion CE (several symptoms present before age 12 versus strict age-7 criterion — documentation CE for late-referred adolescents and adults), autism diagnostic equity CE (ADOS-2 calibrated severity score in females — female autism phenotype CE: masking, camouflaging behavior identification, later average diagnosis age in females versus males, underrepresentation in referral CE), and developmental delay evaluation CE (chromosomal microarray as first-line genetic test in unexplained DD/ID — yield CE versus karyotype, WES indication threshold CE)." All child neurology professional development on calendar.',
   },
 ]
 
-const PNEUROL_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABP general pediatrics MOC CME pace (pediatric neurology content weighted), ABP pediatric neurology subspecialty CE pace, ABPN neurology CME (if dual-trained, independent cycle), state medical license biennial CME, DEA 3-year renewal, annual EMU competency documentation (if applicable), CNS Annual Meeting, AES Annual Meeting, Child Neurology Society meeting, and CNS and AES memberships all loaded in January. ABP primary counter, ABP subspecialty counter, and state licensure CME tracked independently.' },
-  { time: 'CME completion', action: '"AES-approved — pediatric absence epilepsy: EEG hallmarks and differential from attention deficit, ethosuximide vs. valproate vs. lamotrigine efficacy comparison, and cognitive outcomes in medically managed vs. uncontrolled absence, 2 CME, AMA PRA Category 1, ABP MOC applicable, pediatric neurology subspecialty applicable — epilepsy domain." ABP primary counter updates. Pediatric neurology subspecialty counter updates. State licensure CME updates. Epilepsy content confirmed.' },
-  { time: 'EMU competency', action: '"Annual EMU competency documentation — ILAE seizure classification update, ictal-interictal continuum criteria, and critical EEG pattern recognition: NCSE, BIRDS, and GPD interpretation, 3 CME, Q1." Annual EMU competency placed as an institutional credentialing requirement for pediatric neurologists with EMU privileges. EMU competency CE separate from ABP MOC — institutional requirement that may or may not be tracked by ABP. Competency documentation maintained for Joint Commission and NAEC accreditation.' },
-  { time: 'ASM update', action: '"Annual anti-seizure medication CE — cenobamate mechanism and drug interaction profile in pediatric patients with CYP2C19 polymorphism, fenfluramine dosing in Dravet syndrome, and ganaxolone for CDKL5 deficiency disorder, 2 CME, pediatric neurology subspecialty applicable — epilepsy pharmacotherapy domain, Q2." Annual ASM update placed for pediatric neurologists managing refractory epilepsy. New ASMs with pediatric indications change prescribing practice — CE placed mid-year to capture approvals from the prior FDA approval cycle.' },
-  { time: 'Renewal audit', action: 'Analytics: ABP general pediatrics MOC CME on pace? ABP pediatric neurology subspecialty content requirements satisfied? ABPN neurology MOC current (if dual-trained)? State medical license CME complete? DEA valid? EMU competency documented? CNS and AES memberships active? Complete pediatric neurologist credential audit 90 days before earliest renewal. ABP, ABPN, state board, DEA, and institutional documentation maintained separately.' },
+const PED_NEURO_WORKFLOW = [
+  { time: 'Annual planning', action: 'ABP general pediatrics continuous MOC CME pace, ABP child neurology continuous MOC CME pace (tracked separately — different content emphasis), state medical license biennial CME, DEA 3-year renewal, annual epilepsy ASM CE, annual neuromuscular CE, annual neurodevelopmental CE, CNS Annual Meeting, AES Annual Meeting, AAN Annual Meeting, and CNS membership all loaded in January. ABP general pediatrics counter and ABP child neurology counter tracked independently.' },
+  { time: 'CE completion', action: '"CNS-approved — CNS 2024 Child Neurology Update: fenfluramine Fintepla REMS prescriber certification CE (cardiac echocardiography monitoring protocol — baseline, 3 months, 6 months CE — valvular disease PAH surveillance parameters), cenobamate pediatric drug-resistant focal epilepsy CE (weight-based titration schedule CE — starting dose and escalation interval), and onasemnogene abeparvovec post-marketing liver safety update (prednisolone prophylaxis protocol revision — day 1 start CE, aminotransferase monitoring at day 14, 30, 60, 90 post-infusion), 4 CME, AMA PRA Category 1, ABP general pediatrics MOC applicable, ABP child neurology MOC applicable." Both counters update.' },
+  { time: 'Epilepsy CE', action: '"Annual pediatric epilepsy ASM CE — fenfluramine and novel mechanisms 2024: fenfluramine Fintepla LGS 2022 FDA data CE (REMS program CE — prescriber certification, pharmacy certification, echocardiogram monitoring protocol including PAH surveillance, valproate interaction — 50% dose reduction CE), CDKL5 deficiency disorder ganaxolone CE (Marvelus FDA 2022 approval — neurosteroid GABA-A receptor modulator, CDKL5-specific versus general anti-seizure mechanism CE, plasma level monitoring for concentration-response CE), cenobamate drug-resistant focal epilepsy pediatric extrapolation CE (sodium channel and GABA-A PAM dual mechanism — titration CE, drug-drug interaction with other sodium channel blockers), and dravet syndrome gene therapy TANGO trial CE (antisense oligonucleotide ASO targeting SCN1A — phase 2 design CE), 3 CME, ABP child neurology MOC applicable, Q1." Annual epilepsy CE placed Q1 aligned with AES December meeting.' },
+  { time: 'Neuromuscular CE', action: '"Annual neuromuscular CE — SMA and DMD 2024 update: onasemnogene abeparvovec post-marketing update CE (10-month post-infusion liver injury case series CE — risk factors: baseline liver enzyme elevation and high anti-AAV9 titer, extended monitoring protocol CE for late-presenting aminotransferase elevation), risdiplam pediatric monitoring CE (retinal dystrophy preclinical signal — ophthalmology evaluation protocol for infants under 2 months, weight-based dose calculation CE), givinostat duvyzat FDA 2024 DMD approval CE (histone deacetylase inhibitor mechanism — DMD regardless of mutation CE, monthly ALT monitoring protocol, 6-minute walk test as efficacy endpoint CE), and exon-skipping eligibility CE (casimersen exon 45, golodirsen exon 53, viltolarsen exon 53 — genetic report interpretation CE for eligible exon deletions), 3 CME, ABP child neurology MOC applicable, Q3." Annual neuromuscular CE placed Q3 aligned with CNS October meeting.' },
+  { time: 'Renewal audit', action: 'Analytics: ABP general pediatrics continuous MOC on pace? ABP child neurology continuous MOC on pace? (Separate counters — different content.) State medical license CME complete? DEA valid? Annual epilepsy ASM CE documented? Annual neuromuscular CE documented? Annual neurodevelopmental CE documented? CNS membership active? Complete pediatric neurologist credential audit 90 days before earliest renewal.' },
 ]
 
 export default function ForPediatricNeurologistsPage() {
@@ -56,12 +56,12 @@ export default function ForPediatricNeurologistsPage() {
         eyebrow="Momenties for Pediatric Neurologists"
         title={
           <>
-            ABP MOC and pediatric neurology subspecialty maintained.
+            ABP general pediatrics MOC and ABP child neurology MOC maintained.
             <br />
-            <em className="not-italic text-gold">EMU competency documented. ASM updates tracked.</em>
+            <em className="not-italic text-gold">Fenfluramine REMS CE current. SMA gene therapy post-marketing tracked.</em>
           </>
         }
-        lede="Pediatric neurologists manage ABP general pediatrics continuous MOC with pediatric neurology subspecialty content requirements, ABPN neurology certification on a separate cycle for dual-trained physicians, state medical license biennial CME, DEA 3-year registration, annual epilepsy monitoring unit competency documentation for EMU-credentialed neurologists, annual anti-seizure medication updates as pediatric epilepsy pharmacotherapy expands, and professional development at CNS and AES simultaneously. Momenties tracks CME by pediatric neurologist credential, surfaces renewal deadlines 90 days early, and manages the full credential calendar in one view."
+        lede="Pediatric neurologists manage two continuous ABP MOC tracks — general pediatrics and child neurology — with different content requirements tracked independently. Annual epilepsy CE as fenfluramine REMS cardiac monitoring and cenobamate pediatric data update ASM selection, annual neuromuscular CE as onasemnogene post-marketing liver safety updates and givinostat DMD approval require procedure-specific documentation, annual neurodevelopmental CE as ADHD late-onset criteria and autism diagnostic equity evolve, state medical license biennial CME, DEA 3-year registration, and professional development at CNS and AES. Momenties tracks CME by credential and manages the full calendar."
         crumbs={[{ label: 'For Pediatric Neurologists' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -107,10 +107,10 @@ export default function ForPediatricNeurologistsPage() {
         <div className="max-w-3xl mx-auto">
           <Reveal className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Pediatric neurologist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through every ABP MOC cycle, pediatric neurology subspecialty window, and annual EMU competency requirement.</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABP general pediatrics MOC, ABP child neurology MOC, and annual epilepsy, neuromuscular, and neurodevelopmental CE requirements.</h2>
           </Reveal>
           <div className="space-y-3">
-            {PNEUROL_WORKFLOW.map((step, i) => (
+            {PED_NEURO_WORKFLOW.map((step, i) => (
               <Reveal key={step.time} delay={i * 40}>
                 <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
                   <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
@@ -130,13 +130,13 @@ export default function ForPediatricNeurologistsPage() {
                 {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
               </div>
               <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;I trained through pediatrics so my primary board is ABP with a pediatric neurology subspecialty. My colleague trained through adult neurology so they have ABPN as their primary. We have different boards and different renewal cycles but we work in the same epilepsy program. The EMU competency documentation is an institutional requirement that neither of our boards tracks — it exists because our NAEC accreditation requires it. Anti-seizure medications are moving fast: three new approvals with pediatric indications in the past 24 months. I need annual CE just to maintain prescribing currency. My state license is biennial. DEA is 3 years. Momenties is the first system where I could set up my ABP primary and my ABP pediatric neurology subspecialty as two separate credential tracks with separate CE counters.&rdquo;
+                &ldquo;Two continuous ABP MOC tracks — general pediatrics and child neurology — tracked separately because the neurology content requirements are completely different. The fenfluramine REMS CE was required before I could prescribe: the prescriber certification needs documented CE on the cardiac monitoring protocol, and the echocardiography timing — baseline, 3 months, 6 months — is a clinical obligation that has nothing to do with my board calendar. The onasemnogene post-marketing CE was urgent: we had patients in our SMA clinic who received gene therapy and the post-marketing liver safety data changed the monitoring timeline. I needed documented CE on the extended aminotransferase monitoring protocol before I could update our SMA post-infusion surveillance. The givinostat DMD CE was the same: FDA approval came and I needed CE on the mechanism, the ALT monitoring protocol, and the eligibility regardless of mutation type before my first prescription.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">S</div>
+                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">W</div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Sarah N., MD</div>
-                  <div className="text-xs text-muted-foreground">Pediatric neurologist and epileptologist, academic pediatric epilepsy and EMU program</div>
+                  <div className="text-sm font-medium text-foreground">Wei L., MD, PhD</div>
+                  <div className="text-xs text-muted-foreground">Pediatric neurologist and SMA program director, children&apos;s hospital neuromuscular center</div>
                 </div>
               </div>
             </div>
@@ -153,14 +153,14 @@ export default function ForPediatricNeurologistsPage() {
           <Reveal>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'ABP general pediatrics MOC CME — continuous, pediatric neurology content weighted',
-                'ABP pediatric neurology subspecialty — epilepsy, stroke, neuromuscular domains',
-                'ABPN neurology MOC — independent cycle (if dual-trained)',
+                'ABP general pediatrics MOC CME — continuous, separately tracked',
+                'ABP child neurology MOC CME — continuous, subspecialty content weighted',
                 'State medical license CME — biennial',
                 'DEA registration renewal — 3-year',
-                'Annual EMU competency documentation — NAEC/Joint Commission requirement',
-                'Annual anti-seizure medication update CE — new ASM prescribing currency',
-                'CNS and AES conference CME planning by ABP primary and subspecialty applicability',
+                'Annual epilepsy CE — fenfluramine REMS, cenobamate pediatric, CDKL5 ganaxolone',
+                'Annual neuromuscular CE — Zolgensma post-marketing, risdiplam monitoring, givinostat DMD',
+                'Annual neurodevelopmental CE — ADHD late-onset DSM-5-TR, autism diagnostic equity',
+                'CNS and AES conference CME planning by ABP applicability',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
                   <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
@@ -173,8 +173,8 @@ export default function ForPediatricNeurologistsPage() {
       </section>
 
       <CTA
-        title="ABP MOC and pediatric neurology subspecialty maintained."
-        subtitle="CME tracking for ABP dual certification, EMU competency documentation, annual ASM updates, and pediatric neurology professional development. Free to start."
+        title="ABP general pediatrics MOC and ABP child neurology MOC maintained."
+        subtitle="CME tracking for two continuous ABP MOC tracks, annual epilepsy ASM CE, SMA/DMD neuromuscular CE, neurodevelopmental CE, and child neurology professional development. Free to start."
         primary={{ label: 'Start free', href: '/login' }}
         secondary={{ label: 'CE analytics', href: '/features/analytics' }}
       />
