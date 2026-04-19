@@ -8,7 +8,7 @@ import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 
 export const metadata: Metadata = {
   title: 'Momenties for Pediatric Rheumatologists — ABP MOC CME renewal, pediatric rheumatology credential management',
   description:
-    'Pediatric rheumatologists manage ABP general pediatrics primary MOC with pediatric rheumatology subspecialty content, ABP pediatric rheumatology subspecialty certification on a separate cycle, annual biologic therapy CE for pediatric JIA and systemic lupus, ACLS and PALS 2-year renewals, state medical license biennial CME, DEA 3-year renewal, and professional development simultaneously. Momenties tracks CME by certification, surfaces renewal deadlines 90 days early, and manages the full pediatric rheumatologist credential calendar.',
+    'Pediatric rheumatologists manage ABP general pediatrics primary MOC and ABP pediatric rheumatology subspecialty MOC (both continuous), annual JIA CE as abatacept and secukinumab biosimilar approvals and treat-to-target protocols evolve, annual SLE CE as belimumab pediatric FDA approval data and anifrolumab TULIP trials update childhood SLE management, annual vasculitis CE as childhood IgA vasculitis and Kawasaki disease IVIG-resistant protocols update, state medical license biennial CME, DEA 3-year renewal, and ACR/SPA membership. Momenties tracks CME by certification and manages the full credential calendar.',
   alternates: { canonical: '/for/pediatric-rheumatologists' },
   openGraph: {
     title: 'Momenties for Pediatric Rheumatologists',
@@ -21,32 +21,32 @@ export const metadata: Metadata = {
 const USE_CASES = [
   {
     icon: Shield,
-    title: 'CME tracking for ABP pediatrics MOC and pediatric rheumatology subspecialty independently',
-    desc: 'Pediatric rheumatologists hold ABP general pediatrics primary certification under continuous MOC and ABP pediatric rheumatology subspecialty certification on a separate cycle — two ABP credentials with different content requirements. ABP pediatric rheumatology subspecialty requires rheumatology-specific content including juvenile idiopathic arthritis classification and biologic treatment algorithms, pediatric systemic lupus erythematosus, juvenile dermatomyositis, pediatric vasculitis syndromes, autoinflammatory disorders (PFAPA, CAPS, sJIA with MAS), and musculoskeletal ultrasound. ABP general pediatrics MOC runs on a continuous cycle with different content requirements.',
+    title: 'CME tracking for ABP general pediatrics MOC and ABP pediatric rheumatology MOC independently',
+    desc: 'Pediatric rheumatologists hold ABP general pediatrics primary certification under continuous MOC alongside ABP pediatric rheumatology subspecialty certification under continuous MOC — two ABP continuous assessment tracks with different content requirements. ABP pediatric rheumatology requires subspecialty content: juvenile idiopathic arthritis (JIA) classification (ILAR categories — oligoarticular, polyarticular RF+/-, systemic, psoriatic, enthesitis-related), systemic lupus erythematosus (SLE) in children, juvenile dermatomyositis, scleroderma, vasculitis (Kawasaki disease, IgA vasculitis, ANCA vasculitis), autoinflammatory syndromes, and periodic fever syndromes.',
   },
   {
     icon: Clock,
     title: 'Pediatric rheumatologist multi-credential renewal calendar',
-    desc: '"ABP general pediatrics MOC — continuous CME." "ABP pediatric rheumatology subspecialty — rheumatology content." "State medical license — biennial CME." "DEA registration — 3-year renewal." "ACLS — 2-year renewal." "PALS — 2-year renewal." "Annual biologic therapy prescribing CE — JIA and pSLE treatments." "Annual musculoskeletal ultrasound CE (if MSUS program)." "ACR/PRSYM membership — annual." All pediatric rheumatologist credentials with 90-day advance alerts.',
+    desc: '"ABP general pediatrics MOC — continuous CME assessment." "ABP pediatric rheumatology MOC — continuous subspecialty CME assessment." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual JIA CE — abatacept biosimilar approvals, secukinumab IL-17A in enthesitis-related JIA data, treat-to-target protocol implementation in polyarticular JIA." "Annual SLE CE — belimumab pediatric PLUTO trial 52-week extension data, anifrolumab type I interferon pathway CE for childhood SLE." "Annual vasculitis CE — IVIG-resistant Kawasaki disease infliximab salvage therapy CE, IgA vasculitis nephritis treatment protocol update." "ACR membership — annual." All pediatric rheumatology credentials with 90-day advance alerts.',
   },
   {
     icon: BarChart3,
-    title: 'Annual JIA biologic CE and pediatric SLE treatment update analytics',
-    desc: 'Pediatric rheumatologists managing juvenile idiopathic arthritis must maintain CE on biologic and JAK inhibitor therapy — the landscape has changed dramatically with approvals of abatacept, tocilizumab, secukinumab, ixekizumab, and tofacitinib across JIA categories with pediatric indications. Annual biologic CE ensures current knowledge of treatment sequencing, contraindication screening (TB and hepatitis B before TNF inhibitors), and monitoring protocols. Pediatric SLE management CE: belimumab and voclosporin approvals in adult lupus nephritis have driven updated practice guidelines for pediatric application — annual CE on pSLE management is essential as adult approvals create off-label pediatric prescribing questions.',
+    title: 'Annual JIA biologic CE and treat-to-target protocol update analytics',
+    desc: 'Pediatric rheumatologists managing JIA must maintain CE on expanding biologic options and treat-to-target strategies: secukinumab (Cosentyx) received FDA approval for enthesitis-related arthritis and psoriatic JIA in 2023 — CE on secukinumab dosing weight-based regimen in pediatric patients, IL-17A mechanism in SpA-spectrum JIA, and IUVENILE trial data is required before prescribing. Treat-to-target (T2T) in JIA has been formalized through ACR 2022 JIA recommendations — CE on JADAS-27 (Juvenile Arthritis Disease Activity Score) clinical measurement, T2T target definition by JIA subtype, and step-up timing from csDMARD to biologic is required for practices implementing T2T protocols.',
   },
   {
     icon: Users,
-    title: 'ACR, PRSYM, and pediatric rheumatology professional involvement',
-    desc: '"ACR Annual Meeting — november." "PRSYM Annual Scientific Meeting — march (Pediatric Rheumatology Symposium)." "EULAR Annual Congress — june." "JIA biologic CE — TNF inhibitor versus IL-6 inhibitor versus IL-17 inhibitor in polyarticular JIA, JAK inhibitor approval in JIA categories." "Pediatric lupus CE — belimumab evidence in pSLE, lupus nephritis class III/IV biopsy guidance, hydroxychloroquine dosing and retinal toxicity monitoring." "Autoinflammatory CE — Anakinra and canakinumab in sJIA with MAS, NLRP3 inhibitor therapy in CAPS." "Musculoskeletal ultrasound CE — power Doppler synovitis scoring, OMERACT pediatric MSUS definitions." All pediatric rheumatology professional development on calendar. ACR and PRSYM conference CME tagged by ABP primary and subspecialty applicability.',
+    title: 'ACR, SPA, PRINTO, and pediatric rheumatology professional development',
+    desc: '"ACR American College of Rheumatology Annual Meeting — november." "SPA Childhood Arthritis and Rheumatology Research Alliance — winter." "PRINTO Pediatric Rheumatology International Trials Organisation Annual Meeting." "PAS Pediatric Academic Societies Annual Meeting — april/may." "JIA CE — secukinumab IL-17A enthesitis-related JIA and psoriatic JIA FDA 2023 CE (IUVENILE trial design, weight-based dosing, monitoring parameters), abatacept biosimilar FDA approvals CE (originator versus biosimilar switch — immunogenicity monitoring protocol), treat-to-target JADAS-27 clinical implementation CE (JADAS-27 score components: physician global, parent/patient global, active joint count, ESR — how to operationalize T2T visits in clinic flow), and systemic JIA — IL-1 and IL-6 pathway inhibitors in MAS risk (anakinra versus canakinumab for macrophage activation syndrome treatment, IL-6 tocilizumab MAS threshold)." "SLE CE — belimumab pediatric PLUTO trial 52-week extension CE (SRI-4 response rate, anti-dsDNA antibody titer reduction, renal disease — SLE renal response at 52 weeks), anifrolumab pediatric data — TULIP adult data extrapolation to pediatric SLE management CE (type I IFN pathway significance in pediatric versus adult SLE), and childhood SLE damage accrual CE (SDI pediatric threshold — renal versus neuropsychiatric damage accrual prevention as long-term outcome target)." "Vasculitis CE — IVIG-resistant Kawasaki disease: infliximab salvage therapy KIDCARE trial CE (infliximab 5 mg/kg single dose versus second IVIG in IVIG-resistant KD — fever resolution and coronary artery outcomes at 2 weeks), IgA vasculitis nephritis CE (IgAN Classification Working Group 2020 histopathology — MEST-C scoring pediatric application, cyclophosphamide versus azathioprine in proliferative IgAVN), and ANCA vasculitis in children — rituximab maintenance therapy CE (RITUXVAS pediatric registry data, rituximab versus azathioprine relapse prevention)." All pediatric rheumatology professional development on calendar.',
   },
 ]
 
-const PEDRHEUM_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABP general pediatrics MOC CME pace (rheumatology content weighted), ABP pediatric rheumatology subspecialty CE pace, state medical license biennial CME, DEA 3-year renewal, ACLS 2-year cycle, PALS 2-year cycle, annual JIA biologic CE, annual pSLE CE, musculoskeletal ultrasound CE (if applicable), ACR Annual Meeting, PRSYM, and ACR membership all loaded in January. ABP primary counter, rheumatology subspecialty counter, and state licensure CME tracked independently.' },
-  { time: 'CE completion', action: '"ACR-approved — tofacitinib in polyarticular JIA: 2-year extension data from phase III trial, safety signals in adult RA versus pediatric JIA populations, contraindications in adolescent patients with history of malignancy, and monitoring for opportunistic infections and herpes zoster, 2 CME, AMA PRA Category 1, ABP MOC applicable, ABP pediatric rheumatology applicable — biologic therapy domain." ABP primary counter updates. Rheumatology subspecialty counter updates. State licensure CME updates.' },
-  { time: 'Biologic CE', action: '"Annual JIA biologic prescribing CE — ACR JIA treatment guideline 2021 update review with 2023 supplement: abatacept versus adalimumab in RF-negative polyarticular JIA, secukinumab in enthesitis-related arthritis and psoriatic JIA, IL-18 and IL-6 in sJIA with MAS risk stratification, 3 CME, ABP pediatric rheumatology applicable — treatment domain, Q2." Annual biologic CE placed Q2 after ACR supplement guidance updates. JAK inhibitor approvals in JIA categories are expanding — annual CE placed before late-summer starting school year when patients are seen for annual assessments.' },
-  { time: 'MSUS CE', action: '"Annual musculoskeletal ultrasound CE — OMERACT pediatric MSUS scoring module: synovial hypertrophy versus synovial effusion differentiation, power Doppler grade 2 versus 3 significance in JIA treatment decisions, and tenosynovitis assessment in polyarticular JIA, 2 CME, ABP pediatric rheumatology applicable — diagnostics domain, Q3." Annual MSUS CE placed for pediatric rheumatologists with active musculoskeletal ultrasound programs. OMERACT pediatric ultrasound scoring definitions are updated as evidence matures — annual CE placed Q3 before the academic year lupus and JIA follow-up season.' },
-  { time: 'Renewal audit', action: 'Analytics: ABP general pediatrics MOC CME on pace? ABP pediatric rheumatology subspecialty content satisfied? State medical license CME complete? DEA valid? ACLS current? PALS current? Annual JIA biologic CE documented? MSUS CE current (if applicable)? ACR membership active? Complete pediatric rheumatologist credential audit 90 days before earliest renewal.' },
+const PED_RHEUM_WORKFLOW = [
+  { time: 'Annual planning', action: 'ABP general pediatrics continuous MOC CME pace, ABP pediatric rheumatology continuous MOC CME pace (tracked separately — different content emphasis), state medical license biennial CME, DEA 3-year renewal, annual JIA biologic CE, annual SLE CE, annual vasculitis CE, ACR Annual Meeting, PAS Annual Meeting, SPA winter meeting, and ACR membership all loaded in January. ABP general pediatrics counter and ABP pediatric rheumatology counter tracked independently.' },
+  { time: 'CE completion', action: '"ACR-approved — ACR 2024 JIA guideline update: treat-to-target recommendations for polyarticular JIA (JADAS-27 clinical implementation — score calculation and T2T visit cadence), biologic initiation threshold for methotrexate-inadequate-responder polyarticular JIA (insufficient response at 3 months — abatacept versus TNFi selection framework based on RF status and uveitis risk), and secukinumab IL-17A in enthesitis-related JIA — axial versus peripheral disease response differences, 4 CME, AMA PRA Category 1, ABP general pediatrics MOC applicable, ABP pediatric rheumatology MOC applicable." Both counters update.' },
+  { time: 'JIA CE', action: '"Annual JIA biologic and treat-to-target CE — secukinumab 2024 update: IL-17A in enthesitis-related JIA and psoriatic JIA — weight-based dosing regimen CE (less than 50 kg: 75 mg subcutaneous every 4 weeks; 50 kg or above: 150 mg every 4 weeks), IBD risk in secukinumab-treated enthesitis-related JIA (Crohn disease caution — CE on IBD screening before initiating secukinumab in enthesitis-related JIA with gastrointestinal symptoms), treat-to-target JADAS-27 score threshold CE (JADAS-27 below 1 as inactive disease target, JADAS-27 below 3.8 for oligo JIA low disease activity), and uveitis screening protocol update in ANA-positive oligoarticular JIA (ILAR uveitis risk group — slit lamp frequency by ANA titer and disease duration), 3 CME, ABP pediatric rheumatology MOC applicable, Q1." Annual JIA CE placed Q1 aligned with SPA winter meeting.' },
+  { time: 'SLE CE', action: '"Annual childhood SLE CE — belimumab and anifrolumab update: belimumab PLUTO pediatric 52-week extension data CE (SRI-4 response 53.8% versus placebo 33.8% — immunogenicity monitoring for anti-belimumab antibodies in pediatric patients, SELENA-SLEDAI score calculation in children — age-appropriate scoring for neuropsychiatric manifestations), childhood SLE nephritis class transition CE (ISN/RPS 2003 versus 2018 pathology class update — class IIIa versus IVa activity indices in pediatric biopsy reporting), and mycophenolate versus cyclophosphamide induction for class III/IV pediatric LN (LUNAR trial pediatric subgroup CE — belimumab add-on to standard-of-care induction), 3 CME, ABP pediatric rheumatology MOC applicable, Q3." Annual SLE CE placed Q3 aligned with ACR November meeting.' },
+  { time: 'Renewal audit', action: 'Analytics: ABP general pediatrics continuous MOC on pace? ABP pediatric rheumatology continuous MOC on pace? (Separate counters — different content.) State medical license CME complete? DEA valid? Annual JIA biologic CE documented? Annual SLE CE documented? Annual vasculitis CE documented? ACR membership active? Complete pediatric rheumatologist credential audit 90 days before earliest renewal.' },
 ]
 
 export default function ForPediatricRheumatologistsPage() {
@@ -56,12 +56,12 @@ export default function ForPediatricRheumatologistsPage() {
         eyebrow="Momenties for Pediatric Rheumatologists"
         title={
           <>
-            ABP MOC and pediatric rheumatology subspecialty maintained.
+            ABP general pediatrics MOC and ABP pediatric rheumatology MOC maintained.
             <br />
-            <em className="not-italic text-gold">JIA biologic CE current. PALS and ACLS tracked.</em>
+            <em className="not-italic text-gold">JIA biologic CE current. Childhood SLE protocols tracked.</em>
           </>
         }
-        lede="Pediatric rheumatologists manage ABP general pediatrics continuous MOC with pediatric rheumatology subspecialty content, ABP rheumatology subspecialty certification on a separate cycle, state medical license biennial CME, DEA 3-year registration, ACLS and PALS 2-year renewals on potentially independent expiration dates, annual JIA biologic and JAK inhibitor CE as approvals expand into new pediatric categories, musculoskeletal ultrasound CE for OMERACT-trained programs, and professional development at ACR and PRSYM simultaneously. Momenties tracks CME by credential, surfaces renewal deadlines 90 days early, and manages the full calendar."
+        lede="Pediatric rheumatologists manage two continuous ABP MOC tracks — general pediatrics and pediatric rheumatology — with different content requirements tracked independently. Annual JIA CE as secukinumab IL-17A approval and treat-to-target JADAS-27 protocols update biologic selection, annual SLE CE as belimumab PLUTO pediatric data and anifrolumab type I IFN pathway evolve, annual vasculitis CE as IVIG-resistant Kawasaki disease infliximab protocols update, state medical license biennial CME, DEA 3-year registration, and professional development at ACR and PAS. Momenties tracks CME by credential and manages the full calendar."
         crumbs={[{ label: 'For Pediatric Rheumatologists' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -107,10 +107,10 @@ export default function ForPediatricRheumatologistsPage() {
         <div className="max-w-3xl mx-auto">
           <Reveal className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Pediatric rheumatologist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABP MOC cycles, pediatric rheumatology subspecialty, and annual JIA biologic and pSLE treatment CE requirements.</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABP general pediatrics MOC, ABP pediatric rheumatology MOC, and annual JIA, SLE, and vasculitis CE requirements.</h2>
           </Reveal>
           <div className="space-y-3">
-            {PEDRHEUM_WORKFLOW.map((step, i) => (
+            {PED_RHEUM_WORKFLOW.map((step, i) => (
               <Reveal key={step.time} delay={i * 40}>
                 <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
                   <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
@@ -130,13 +130,13 @@ export default function ForPediatricRheumatologistsPage() {
                 {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
               </div>
               <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;ABP tracks my general pediatrics and my pediatric rheumatology subspecialty separately — different content requirements, different counters. In pediatric rheumatology the biologic and JAK inhibitor treatment landscape changes every year. When tofacitinib got a JIA indication I needed CE before I started prescribing it in my patients — that CE is a practice requirement regardless of board timing. I do musculoskeletal ultrasound in my practice, and staying current with OMERACT pediatric scoring definitions requires annual CE. ACLS and PALS are both at 2 years — they expired 11 months apart because I got PALS during residency and then ACLS as an attending. DEA 3-year. State license biennial. The JIA biologic CE is the one that has a de facto seasonal deadline for me because I use the summer to update treatment plans before the school year — I need it current before the fall patient surge.&rdquo;
+                &ldquo;Two continuous ABP MOC tracks — general pediatrics and pediatric rheumatology — with different content requirements that I track independently. The secukinumab CE was clinically urgent: the FDA approval for enthesitis-related JIA came and I needed documented CE on the weight-based dosing, the IBD risk in patients with gastrointestinal symptoms, and the IL-17A mechanism before my first case. That CE had nothing to do with my board calendar. The treat-to-target JADAS-27 CE changed how I structure my clinic visits — operationalizing the score calculation at every appointment required CE before I updated my visit template. The belimumab PLUTO pediatric CE was needed for a specific reason: I had a 14-year-old with childhood SLE and her family was asking about belimumab — I needed current CE on the PLUTO trial data and the immunogenicity monitoring before that conversation. All on one calendar now.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">G</div>
+                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">S</div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Grace Y., MD</div>
-                  <div className="text-xs text-muted-foreground">Pediatric rheumatologist and JIA program director, academic children&apos;s hospital</div>
+                  <div className="text-sm font-medium text-foreground">Sasha V., MD, PhD</div>
+                  <div className="text-xs text-muted-foreground">Pediatric rheumatologist and JIA program director, children&apos;s hospital</div>
                 </div>
               </div>
             </div>
@@ -153,14 +153,14 @@ export default function ForPediatricRheumatologistsPage() {
           <Reveal>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'ABP general pediatrics MOC CME — continuous, rheumatology content weighted',
-                'ABP pediatric rheumatology subspecialty — JIA, pSLE, vasculitis, autoinflammatory domains',
+                'ABP general pediatrics MOC CME — continuous, separately tracked',
+                'ABP pediatric rheumatology MOC CME — continuous, subspecialty content weighted',
                 'State medical license CME — biennial',
                 'DEA registration renewal — 3-year',
-                'ACLS certification — 2-year renewal (independent expiration tracking)',
-                'PALS certification — 2-year renewal (independent expiration tracking)',
-                'Annual JIA biologic CE — ACR guideline updates, new approval monitoring',
-                'ACR and PRSYM conference CME planning by ABP primary and subspecialty applicability',
+                'Annual JIA CE — secukinumab IL-17A, treat-to-target JADAS-27, biologic step-up timing',
+                'Annual SLE CE — belimumab PLUTO pediatric data, anifrolumab, nephritis class transition',
+                'Annual vasculitis CE — IVIG-resistant Kawasaki infliximab, IgAVN nephritis, ANCA pediatric',
+                'ACR and PAS conference CME planning by ABP applicability',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
                   <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
@@ -173,8 +173,8 @@ export default function ForPediatricRheumatologistsPage() {
       </section>
 
       <CTA
-        title="ABP MOC and pediatric rheumatology subspecialty maintained."
-        subtitle="CME tracking for ABP dual certification, annual JIA biologic CE, ACLS and PALS independent renewal tracking, and pediatric rheumatology professional development. Free to start."
+        title="ABP general pediatrics MOC and ABP pediatric rheumatology MOC maintained."
+        subtitle="CME tracking for two continuous ABP MOC tracks, annual JIA biologic CE, childhood SLE CE, vasculitis CE, and pediatric rheumatology professional development. Free to start."
         primary={{ label: 'Start free', href: '/login' }}
         secondary={{ label: 'CE analytics', href: '/features/analytics' }}
       />

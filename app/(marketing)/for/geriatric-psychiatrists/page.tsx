@@ -8,7 +8,7 @@ import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 
 export const metadata: Metadata = {
   title: 'Momenties for Geriatric Psychiatrists — ABPN MOC CME renewal, geriatric psychiatry credential management',
   description:
-    'Geriatric psychiatrists manage ABPN psychiatry board MOC continuous CME with geriatric psychiatry subspecialty content, ABPN geriatric psychiatry subspecialty certification on an independent 10-year cycle, state medical license biennial CME, DEA 3-year renewal for psychotropic prescribing, and professional development simultaneously. Momenties tracks CME by certification, surfaces renewal deadlines 90 days early, and manages the full geriatric psychiatrist credential calendar.',
+    'Geriatric psychiatrists manage ABPN psychiatry primary MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year cycle, annual dementia CE as lecanemab Leqembi and donanemab Kisunla FDA approvals update Alzheimer disease treatment selection and ARIA monitoring, annual late-life depression CE as ketamine and esketamine protocols in geriatric patients with cardiovascular comorbidities evolve, annual delirium CE as IQCODE and 4AT delirium assessment tools update inpatient protocols, state medical license biennial CME, DEA 3-year renewal, and AAGP membership. Momenties tracks CME by certification and manages the full credential calendar.',
   alternates: { canonical: '/for/geriatric-psychiatrists' },
   openGraph: {
     title: 'Momenties for Geriatric Psychiatrists',
@@ -21,32 +21,32 @@ export const metadata: Metadata = {
 const USE_CASES = [
   {
     icon: Shield,
-    title: 'CME tracking for ABPN psychiatry MOC and geriatric psychiatry subspecialty independently',
-    desc: 'Geriatric psychiatrists hold ABPN psychiatry board certification under continuous MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle — two separate ABPN credentials with different renewal structures. ABPN geriatric psychiatry subspecialty certification requires an examination every 10 years and CME with geriatric psychiatry-specific content between examination cycles. State medical license biennial CME runs on a third independent cycle. DEA registration 3-year cycle critical for psychotropic and behavioral medication prescribing in older adults.',
+    title: 'CME tracking for ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty independently',
+    desc: 'Geriatric psychiatrists hold ABPN psychiatry primary certification under continuous MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle with a 24-month preparation window. ABPN geriatric psychiatry requires geriatric-specific content: dementia evaluation and management (Alzheimer disease, Lewy body dementia, frontotemporal dementia, vascular dementia — diagnostic criteria and behavioral symptom management), late-life depression (pharmacokinetic changes with aging, ECT in geriatric patients), late-life anxiety and psychosis, delirium assessment and management (CAM, 4AT, IQCODE tools), and psychopharmacology in the context of polypharmacy and reduced renal/hepatic clearance.',
   },
   {
     icon: Clock,
     title: 'Geriatric psychiatrist multi-credential renewal calendar',
-    desc: '"ABPN psychiatry MOC — continuous CME." "ABPN geriatric psychiatry subspecialty — 10-year examination cycle, CE between exams." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual dementia and behavioral health competency." "AAGP membership — annual." "APA membership — annual." All geriatric psychiatrist credentials with 90-day advance alerts.',
+    desc: '"ABPN psychiatry MOC — continuous CME." "ABPN geriatric psychiatry subspecialty — 10-year examination cycle, 24-month prep window." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual dementia CE — lecanemab Leqembi FDA 2023 traditional approval (CLARITY AD 18-month CDR-SB data), donanemab Kisunla FDA 2024 approval (TRAILBLAZER-ALZ 2), ARIA-E and ARIA-H monitoring protocol and MRI surveillance schedule." "Annual depression CE — esketamine Spravato geriatric safety data, ketamine IV protocol in cardiovascular-comorbid geriatric patients." "Annual delirium CE — 4AT delirium assessment tool validation, non-pharmacological delirium prevention bundle update." "AAGP membership — annual." All geriatric psychiatry credentials with 90-day advance alerts.',
   },
   {
     icon: BarChart3,
-    title: 'ABPN geriatric subspecialty examination preparation and CME content analytics',
-    desc: 'ABPN geriatric psychiatry subspecialty certification requires examination every 10 years — the 10-year cycle is long enough that the examination deadline can move from active awareness to background planning risk. CME between examination cycles should map to geriatric psychiatry content domains: late-life depression and anxiety, dementia behavioral symptoms management, psychopharmacology in older adults (polypharmacy, anticholinergic burden), and delirium assessment and management. Content tracking between examinations prevents end-of-decade scramble for geriatric-specific CE.',
+    title: 'Annual dementia CE and anti-amyloid therapy monitoring update analytics',
+    desc: 'Geriatric psychiatrists prescribing anti-amyloid therapies must maintain CE on rapidly evolving protocols: lecanemab (Leqembi) received FDA traditional approval in July 2023 based on CLARITY AD 18-month data showing CDR-SB slowing of 0.45 points versus placebo, with ARIA-E in 12.6% and ARIA-H microhemorrhages in 17.3% requiring pre-treatment MRI and serial MRI surveillance (weeks 4, 12, and 24 after treatment initiation). Donanemab (Kisunla) received FDA approval in July 2024 based on TRAILBLAZER-ALZ 2 — ARIA-H cerebral microhemorrhages in 31.4% at 76 weeks. CE on ARIA risk stratification (APOE4 carrier status, prior microhemorrhages, anticoagulation use) and MRI surveillance scheduling is required before prescribing either agent.',
   },
   {
     icon: Users,
-    title: 'AAGP, APA, and geriatric psychiatry professional involvement',
-    desc: '"AAGP Annual Meeting — march." "APA Annual Meeting — may." "Alzheimer\'s Association International Conference." "American Geriatrics Society Annual Meeting." "Dementia behavioral symptom management CE." "Late-life bipolar disorder management CE." "Psychopharmacology in frail older adults — polypharmacy and CYP interactions." "Capacity assessment and guardianship documentation CE." All geriatric psychiatry professional development on calendar. AAGP conference CME tagged by ABPN primary and geriatric subspecialty domain applicability.',
+    title: 'AAGP, AAIC, and geriatric psychiatry professional development',
+    desc: '"AAGP American Association for Geriatric Psychiatry Annual Meeting — march." "AAIC Alzheimer\'s Association International Conference — july." "APA Annual Meeting — may." "GPS Geriatric Psychiatry Summit." "Dementia CE — lecanemab CLARITY AD 18-month CDR-SB data CE (prescribing criteria: confirmed amyloid by PET or CSF, MCI or mild dementia stage, APOE4 carrier versus non-carrier ARIA risk stratification), donanemab TRAILBLAZER-ALZ 2 CE (low/medium versus high tau PET stratification, dosing discontinuation at amyloid clearance threshold), ARIA management protocol CE (asymptomatic ARIA-E — continue versus pause versus discontinue decision tree, MRI surveillance schedule weeks 4/12/24), and lewy body dementia 2023 DLB Consortium criteria update (biomarker stratification — amyloid PET, dopamine transporter SPECT, polysomnography as indicative biomarkers)." "Late-life depression CE — esketamine Spravato geriatric safety data (cardiovascular monitoring requirements in patients above 65, dissociation monitoring parameters), ECT optimization in late-life depression with cognitive comorbidity (brief pulse versus ultra-brief pulse parameters in patients with baseline cognitive impairment), late-life treatment-resistant depression — augmentation with lithium, aripiprazole, or brexpiprazole — renal monitoring in elderly patients, and pharmacokinetic CE for geriatric psychopharmacology (renal function dose adjustment — citalopram 20 mg ceiling, lithium target level reduction, mirtazapine sedation risk at higher doses in elderly)." "Delirium CE — 4AT tool validation in hospitalized elderly versus CAM — sensitivity and specificity comparison in emergency department and inpatient settings, non-pharmacological delirium prevention bundle (HELP Hospital Elder Life Program components — cognitive stimulation, early mobility, sleep hygiene), and haloperidol versus quetiapine for delirium-related agitation — pharmacokinetic comparison in elderly patients with polypharmacy." All geriatric psychiatry professional development on calendar.',
   },
 ]
 
-const GP_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABPN psychiatry MOC CME pace (geriatric content weighted), ABPN geriatric subspecialty CE pace with 10-year examination target date tracked, state medical license biennial CME, DEA 3-year renewal, AAGP Annual Meeting, APA Annual Meeting, and AAGP membership all loaded in January. ABPN MOC counter, geriatric subspecialty CE counter, and state licensure CME tracked independently. 10-year examination countdown displayed in credential dashboard.' },
-  { time: 'CME completion', action: '"AAGP-approved — behavioral and psychological symptoms of dementia: non-pharmacologic intervention hierarchy, antipsychotic prescribing in dementia (black box warning framework), and caregiver-mediated behavioral strategies, 2 CME, AMA PRA Category 1, ABPN MOC applicable, geriatric subspecialty applicable." ABPN MOC counter updates. Geriatric subspecialty CE counter updates. State licensure CME updates. Geriatric-specific content confirmed.' },
-  { time: 'Subspecialty exam', action: '"ABPN geriatric psychiatry subspecialty examination — 10-year cycle countdown." 10-year examination cycle placed with 24-month advance alert for preparation. ABPN geriatric psychiatry subspecialty examination requires preparation: geriatric psychiatry board review, content domain study, and examination registration. 24-month alert is the preparation window — not the exam date. Subspecialty examinations approached without preparation windows are approached with compressed study time that could have been distributed over 24 months of clinical CE.' },
-  { time: 'Dementia CE', action: '"Annual dementia management CE update — new Alzheimer\'s disease disease-modifying therapy monitoring protocols, lecanemab and donanemab safety surveillance, and amyloid-related imaging abnormalities (ARIA) assessment, 1 CE, Q1." Annual dementia treatment update placed as a practice requirement for geriatric psychiatrists managing patients with Alzheimer\'s disease and related dementias. New disease-modifying therapies change monitoring requirements annually. CE placed at Q1 to align with FDA approval and guideline update cycles.' },
-  { time: 'Renewal audit', action: 'Analytics: ABPN psychiatry MOC CME on pace? Geriatric subspecialty CE current and content-appropriate? State medical license CME complete? DEA valid? ABPN geriatric examination date tracked? AAGP membership active? Complete geriatric psychiatrist credential audit 90 days before earliest renewal. ABPN, state board, and DEA documentation maintained separately.' },
+const GERI_WORKFLOW = [
+  { time: 'Annual planning', action: 'ABPN psychiatry MOC CME pace (geriatric psychiatry content weighted), ABPN geriatric psychiatry subspecialty CE pace (10-year cycle — 24-month prep window alert calculated), state medical license biennial CME, DEA 3-year renewal, annual dementia CE (anti-amyloid therapy protocol CE critical), annual late-life depression CE, annual delirium CE, AAGP Annual Meeting, AAIC Conference, APA Annual Meeting, and AAGP membership all loaded in January. ABPN psychiatry counter and ABPN geriatric psychiatry counter tracked independently.' },
+  { time: 'CE completion', action: '"AAGP-approved — AAGP 2024 Anti-Amyloid Therapy update: lecanemab CLARITY AD 18-month data CE (CDR-SB 0.45-point slowing — clinical meaningfulness threshold discussion), donanemab TRAILBLAZER-ALZ 2 CE (tau PET stratification — low/medium versus high baseline tau responder analysis), ARIA monitoring protocol CE (ARIA-E versus ARIA-H differentiation — clinical symptoms versus MRI finding management, APOE4 homozygous carrier contraindication), and insurance prior authorization requirements for anti-amyloid therapies — CMS coverage decision documentation requirements, 4 CME, AMA PRA Category 1, ABPN psychiatry MOC applicable, ABPN geriatric psychiatry applicable." Both counters update.' },
+  { time: 'Dementia CE', action: '"Annual dementia CE — anti-amyloid prescribing protocol 2024: lecanemab ARIA risk stratification (APOE4 homozygous — ARIA-E 32.6% versus APOE4 heterozygous 9.9% versus non-carrier 5.4% — contraindication threshold CE), donanemab treatment discontinuation criteria (amyloid PET clearance threshold — when to stop active dosing), post-ARIA retreatment criteria CE (asymptomatic ARIA-E — 12-week MRI resolution criterion for retreatment), and late-onset Alzheimer disease differential — LBD/DLB versus AD — DaTscan timing for differential diagnosis before anti-amyloid eligibility determination, 3 CME, ABPN geriatric psychiatry applicable, Q1." Annual dementia CE placed Q1 aligned with AAGP March meeting.' },
+  { time: 'Depression CE', action: '"Annual late-life depression and geriatric psychopharmacology CE — esketamine Spravato geriatric safety 2024: cardiovascular monitoring protocol for geriatric patients on esketamine (blood pressure monitoring — pre-dose, 40 minutes, 60 minutes post-dose, sitting and standing in patients on antihypertensives), dissociation monitoring in patients with baseline cognitive impairment — CADSS score interpretation, ECT ultra-brief pulse parameters in late-life depression with cognitive comorbidity (1.0 ms versus 0.5 ms pulse width — cognitive side effect comparison in patients with baseline mild cognitive impairment), and pharmacokinetic CE — citalopram/escitalopram cardiac QTc prolongation risk in elderly (citalopram 20 mg ceiling in patients above 60, QTc monitoring interval), 3 CME, ABPN geriatric psychiatry applicable, Q3." Annual depression CE placed Q3 aligned with AAIC July Conference.' },
+  { time: 'Renewal audit', action: 'Analytics: ABPN psychiatry MOC CME on pace? ABPN geriatric psychiatry subspecialty content satisfied? (24-month prep window calculated for 10-year exam?) State medical license CME complete? DEA valid? Annual dementia CE documented? Annual late-life depression CE documented? Annual delirium CE documented? AAGP membership active? Complete geriatric psychiatry credential audit 90 days before earliest renewal.' },
 ]
 
 export default function ForGeriatricPsychiatristsPage() {
@@ -56,12 +56,12 @@ export default function ForGeriatricPsychiatristsPage() {
         eyebrow="Momenties for Geriatric Psychiatrists"
         title={
           <>
-            ABPN MOC and geriatric subspecialty maintained.
+            ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty maintained.
             <br />
-            <em className="not-italic text-gold">10-year examination tracked. Dementia CE documented.</em>
+            <em className="not-italic text-gold">Anti-amyloid therapy ARIA monitoring CE current. Late-life depression protocols tracked.</em>
           </>
         }
-        lede="Geriatric psychiatrists manage ABPN psychiatry continuous MOC with geriatric psychiatry-specific content, ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle with content-specific CE between exams, state medical license biennial CME, DEA 3-year registration for psychotropic and behavioral medication prescribing in older adults, annual dementia treatment updates as a practice requirement for disease-modifying therapy monitoring, and professional development at AAGP and APA simultaneously. Momenties tracks CME by geriatric psychiatrist credential, surfaces renewal deadlines 90 days early, and manages the full geriatric psychiatrist credential calendar in one view."
+        lede="Geriatric psychiatrists manage ABPN psychiatry continuous MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle with 24-month preparation window alerts. Annual dementia CE as lecanemab and donanemab prescribing criteria and ARIA monitoring protocols require documentation before anti-amyloid therapy initiation, annual late-life depression CE as esketamine geriatric safety data and ECT parameters evolve, annual delirium CE, state medical license biennial CME, DEA 3-year registration, and professional development at AAGP and AAIC. Momenties tracks CME by credential and manages the full calendar."
         crumbs={[{ label: 'For Geriatric Psychiatrists' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -107,10 +107,10 @@ export default function ForGeriatricPsychiatristsPage() {
         <div className="max-w-3xl mx-auto">
           <Reveal className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Geriatric psychiatrist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through every ABPN MOC cycle, geriatric subspecialty window, and 10-year examination preparation timeline.</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABPN MOC, ABPN 10-year geriatric psychiatry examination, and annual dementia, late-life depression, and delirium CE requirements.</h2>
           </Reveal>
           <div className="space-y-3">
-            {GP_WORKFLOW.map((step, i) => (
+            {GERI_WORKFLOW.map((step, i) => (
               <Reveal key={step.time} delay={i * 40}>
                 <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
                   <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
@@ -130,13 +130,13 @@ export default function ForGeriatricPsychiatristsPage() {
                 {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
               </div>
               <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;ABPN has my general psychiatry certification under continuous MOC and my geriatric psychiatry subspecialty on a 10-year examination cycle. The 10-year cycle is the one that catches people. It&apos;s long enough that you stop actively tracking it, and then suddenly you&apos;re 18 months from the exam with no preparation window. Between examinations I should be doing CME with geriatric psychiatry content — dementia, late-life depression, psychopharmacology in older adults — but that&apos;s not explicitly tracked by most CME logging systems. My state license is biennial. DEA is 3 years. The Alzheimer&apos;s disease space is moving fast right now so I do annual updates even when they aren&apos;t required. Momenties is the first system where the 10-year examination countdown is a real calendar item.&rdquo;
+                &ldquo;ABPN psychiatry continuous MOC and ABPN geriatric psychiatry on a 10-year cycle — tracked separately because the geriatric content requirements are different. The anti-amyloid therapy CE is where the clinical urgency is highest right now: lecanemab and donanemab both require documented CE on ARIA risk stratification and the MRI surveillance schedule before I can prescribe. My hospital credentialing committee requires documented CE before approval to prescribe anti-amyloid therapies. The APOE4 homozygous contraindication CE was urgent: I had a family pushing for lecanemab for their mother and I needed documented CE on the ARIA-E risk in APOE4 homozygous carriers before that conversation. The esketamine cardiovascular monitoring CE was the same: different monitoring protocol for patients above 65, and I needed that documented before my first geriatric Spravato patient. The 10-year board prep window and the annual clinical CE are on completely different timelines.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">E</div>
+                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">H</div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Eleanor F., MD</div>
-                  <div className="text-xs text-muted-foreground">Geriatric psychiatrist, academic memory disorders and late-life psychiatry program</div>
+                  <div className="text-sm font-medium text-foreground">Harriet C., MD</div>
+                  <div className="text-xs text-muted-foreground">Geriatric psychiatrist and memory disorders program director, academic medical center</div>
                 </div>
               </div>
             </div>
@@ -153,14 +153,14 @@ export default function ForGeriatricPsychiatristsPage() {
           <Reveal>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'ABPN psychiatry board MOC CME — continuous, geriatric content weighted',
-                'ABPN geriatric psychiatry subspecialty — 10-year examination cycle countdown',
+                'ABPN psychiatry MOC CME — continuous, geriatric psychiatry content weighted',
+                'ABPN geriatric psychiatry subspecialty — 10-year cycle, 24-month preparation window alert',
                 'State medical license CME — biennial',
                 'DEA registration renewal — 3-year',
-                'Annual dementia treatment update CE — disease-modifying therapy monitoring',
-                'Annual capacity assessment and legal/ethical CE — geriatric practice requirement',
-                'AAGP membership renewal — annual',
-                'AAGP and APA conference CME planning by ABPN primary and geriatric subspecialty applicability',
+                'Annual dementia CE — anti-amyloid ARIA protocol, lecanemab/donanemab prescribing criteria',
+                'Annual late-life depression CE — esketamine geriatric monitoring, ECT ultra-brief pulse',
+                'Annual delirium CE — 4AT tool, non-pharmacological prevention bundle, haloperidol/quetiapine',
+                'AAGP and AAIC conference CME planning by ABPN applicability',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
                   <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
@@ -173,8 +173,8 @@ export default function ForGeriatricPsychiatristsPage() {
       </section>
 
       <CTA
-        title="ABPN MOC and geriatric subspecialty maintained."
-        subtitle="CME tracking with geriatric content requirements, 10-year examination countdown, dementia CE calendar, and geriatric psychiatry professional development. Free to start."
+        title="ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty maintained."
+        subtitle="CME tracking for ABPN MOC and ABPN 10-year exam prep window, annual anti-amyloid therapy CE, late-life depression CE, delirium CE, and geriatric psychiatry professional development. Free to start."
         primary={{ label: 'Start free', href: '/login' }}
         secondary={{ label: 'CE analytics', href: '/features/analytics' }}
       />
