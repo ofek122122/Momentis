@@ -1,209 +1,287 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { TrendingUp, Clock, BarChart3, Shield, ArrowRight, CheckCircle2 } from 'lucide-react'
+import type { Metadata } from "next"
+import { FileText, RefreshCw, TrendingUp, BarChart3 } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Content Strategy Calendar — How to plan content so it compounds instead of starting from zero each month',
-  description:
-    'A content strategy calendar places the quarterly content pillar review before content production begins, builds the monthly publishing schedule as a standing commitment rather than a variable target, places distribution windows 24 hours after publish rather than left to when time permits, and schedules the content performance review before the next quarter\'s planning begins. Most content programs produce more content than they compound because the strategy calendar was never built.',
-  alternates: { canonical: '/content-strategy-calendar' },
-  openGraph: {
-    title: 'Content Strategy Calendar — Momenties',
-    description: 'Plan content so it compounds instead of starting from zero each month.',
-    url: '/content-strategy-calendar',
-    type: 'website',
-  },
+  title: "Content Strategy Calendar | Momenties",
+  description: "Build a systematic content strategy calendar — editorial planning cycles, content audit cadences, SEO refresh schedules, thought leadership production pipelines, and content performance review rhythms that turn content investment into compounding organic growth.",
 }
 
-const FEATURES = [
+const pillars = [
   {
-    icon: TrendingUp,
-    title: 'Quarterly content pillar review placed before production begins, not during it',
-    desc: '"Q3 content pillar review — June 15, before Q3 production begins." Content pillar review placed 2 weeks before the start of each quarter — not on the first day of production. 2-week lead time allows pillar adjustments to inform the production schedule. Pillar review during production changes briefs that are already being written. Pillar review before production changes the direction, not the document. Content programs without a quarterly pillar review drift toward producing content that was relevant when the strategy was written, not when it is being read.',
+    icon: FileText,
+    title: "Editorial Planning Cycles & Content Production Calendar",
+    description:
+      "Content strategy without an editorial calendar produces inconsistent publishing — which signals search engines and subscribers that you&apos;re not a reliable information source. Momenties schedules the full editorial planning cycle: quarterly content themes aligned to product roadmap and marketing campaign calendar, monthly editorial meetings to assign topics, writers, and publication dates, weekly production check-ins to manage draft and review stages, and publication day coordination for social amplification. Content briefing templates — including SEO target keywords, competitor gap analysis, and customer journey stage — are triggered automatically at assignment. No more last-minute scrambles to fill the blog.",
   },
   {
-    icon: Clock,
-    title: 'Monthly publishing commitment placed as a standing target, not a variable goal',
-    desc: '"Monthly publishing target: 8 pieces, week 1-2 long form, week 3-4 short form." Monthly publishing target placed as a fixed commitment — not "we will publish what we can complete this month." Fixed monthly targets create production discipline and audience expectation. Variable monthly targets produce variable output that makes audience building difficult. Fixed target with consistent rhythm builds the trust-through-reliability that is the foundation of audience growth. Fixed target missed by 2 pieces is still more consistent than a variable target hit perfectly.',
+    icon: RefreshCw,
+    title: "Content Audit, SEO Refresh & Decay Management Calendar",
+    description:
+      "Content decays. Pages that ranked on page 1 two years ago now rank on page 3 — not because of new competition, but because they haven&apos;t been updated. Momenties schedules quarterly content performance audits (identifying pages with declining CTR, impressions, or conversion), monthly SEO refresh assignments for top-20 organic traffic pages, and annual comprehensive content audits where low-traffic pages are consolidated, redirected, or deleted. Content decay monitoring — triggered when a page drops more than 30% in monthly traffic — creates automatic refresh assignments before rankings collapse past recovery threshold.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Thought Leadership Production Pipeline & Executive Content CE",
+    description:
+      "Thought leadership content — bylined executive articles, original research reports, industry benchmark studies, and conference keynote decks — requires a production calendar completely separate from blog content. Momenties schedules quarterly industry report production cycles (6-week production: research → analysis → design → promotion), executive byline placement calendars for tier-1 publications (pitch deadlines 2-4 months before publication windows), and conference speaking proposal calendars (CFP deadlines are 3-6 months before events for most major industry conferences). Podcast guesting, co-marketing webinars, and analyst Q&A calendars are managed in the same system.",
   },
   {
     icon: BarChart3,
-    title: 'Distribution window placed 24 hours after publish, not left open-ended',
-    desc: '"Distribution — within 24 hours of publish." Distribution window placed as a calendar event within 24 hours of each publish date. Distribution includes: email newsletter inclusion, social distribution sequence, newsletter partner outreach, republication to relevant communities. Content distributed within 24 hours of publish enters the audience conversation while the piece is current. Content distributed after the week\'s newsletter is already sent misses the highest-reach distribution window of the publish cycle.',
-  },
-  {
-    icon: Shield,
-    title: 'Quarterly content performance review placed before the next planning cycle begins',
-    desc: '"Q2 content performance review — June 1, before Q3 pillar review." Quarterly performance review placed 2 weeks before the quarterly pillar review — not after it. Performance data from Q2 informs Q3 pillar decisions. Pillar reviews conducted without performance data produce directional opinions. Pillar reviews conducted with performance data produce directional evidence. Q2 performance review placed at June 1, Q3 pillar review at June 15 — performance informs the review, not the other way around.',
+    title: "Content Performance Reviews & Content ROI Measurement Cadence",
+    description:
+      "Content ROI is invisible without a structured measurement cadence. Momenties schedules weekly content performance dashboards (new content published, top performers by traffic and conversion, content pipeline health), monthly content attribution analysis (which content pieces influenced pipeline and closed-won revenue), and quarterly content program ROI reviews comparing content investment to organic traffic value, lead volume, and influenced ARR. Annual content strategy reviews — where the content mix, channel allocation, and editorial mission are evaluated against business objectives — are calendared before budget planning cycles.",
   },
 ]
 
-const CONTENT_STEPS = [
+const timeline = [
   {
-    step: 'Place the annual content strategy review in January before any production planning',
-    detail: '"January: annual content strategy review — audience, pillar refresh, format audit." Annual strategy review placed before January production planning. Annual review: audience definition update (who are we writing for and has that changed?), content pillar refresh (are the pillars still the topics the audience cares about?), format audit (which formats compounded and which didn\'t?). Annual review completed before the first quarterly production schedule is built. Strategy built from last year\'s performance and this year\'s audience.',
+    month: "Month 1–2",
+    title: "Content Audit & Editorial Calendar Architecture",
+    description: "Complete content inventory and performance audit; identify top-20 highest-value pages for refresh; build editorial calendar system with quarterly themes; assign content owners; establish SEO baseline metrics.",
   },
   {
-    step: 'Place quarterly pillar reviews 2 weeks before each quarter begins',
-    detail: '"Q2 pillar review — March 15. Q3 pillar review — June 15. Q4 pillar review — September 15." Pillar review placed 2 weeks before the start of each production quarter. Pillar review: which pillars are performing (search volume, engagement, compounding traffic)? Which have been exhausted (covered the topic thoroughly)? Which should be added based on Q1 performance and audience signals? Pillar changes made at the review inform the production briefs for the quarter. Pillar changes made during production create rework.',
+    month: "Month 3",
+    title: "Production Pipeline Launch & Thought Leadership Kickoff",
+    description: "Launch editorial production pipeline with first quarterly theme; identify thought leadership opportunities and submit conference CFPs; begin first industry report or benchmark study; establish content performance dashboard.",
   },
   {
-    step: 'Build the monthly production schedule with specific titles and owners',
-    detail: '"Month 1: piece 1 — [title], brief by [date], draft by [date], publish [date], owner [name]." Monthly production schedule built with specific titles, briefs, draft deadlines, and publish dates — not "8 long-form pieces this month." Specific titles committed in advance allow brief development before the production window. Brief-first production produces better content because the brief captures the pillar alignment, audience intent, and SEO target before a word is written.',
+    month: "Month 4–5",
+    title: "SEO Refresh Sprint & Content Decay Remediation",
+    description: "Execute first quarterly SEO refresh for top-20 pages; consolidate or redirect bottom-quartile content; build internal linking structure across updated pages; launch first co-marketing webinar.",
   },
   {
-    step: 'Place distribution events as calendar events within 24 hours of each publish date',
-    detail: '"Publish [date]: distribution checklist due [date + 1 day]." Distribution placed as a separate calendar event 24 hours after each publish date. Distribution checklist: email newsletter inclusion date confirmed, social sequence scheduled (day 0, day 3, day 7 repurpose), relevant community sharing, partner outreach for republication, internal team share. Distribution placed before publish — the distribution plan exists before the content is live, not assembled after.',
+    month: "Month 6",
+    title: "Mid-Year Content Performance Review",
+    description: "Run mid-year content audit comparing traffic, leads, and attribution vs. baseline; assess editorial calendar performance; adjust Q3-Q4 content themes based on search demand and pipeline data.",
   },
   {
-    step: 'Place the quarterly performance review before the next pillar review',
-    detail: '"Q1 performance review: March 1. Q2 pillar review: March 15." Performance review placed 2 weeks before the pillar review. Performance review covers: which pieces drove the most search traffic, which pieces drove the most email signups, which pieces were shared most, which topics had the highest engagement per publish. Performance data assembled at the review meeting, not in advance — performance review meeting is an analysis session with data already collected.',
+    month: "Month 7–9",
+    title: "Thought Leadership Publication Cycle & Conference Season",
+    description: "Publish annual benchmark or industry report; execute fall conference speaking engagements; launch Q3 editorial theme content; complete second quarterly SEO refresh cycle; run content attribution analysis.",
   },
   {
-    step: 'Place the annual content audit in Q4 before the January strategy review',
-    detail: '"Annual content audit — November, before January strategy review." Annual content audit placed in November. Audit: identify the top 20% of pieces by search traffic (update and republish), identify the bottom 20% of pieces by traffic and engagement (archive or consolidate), map content gaps where the audience has questions the content program hasn\'t answered. Audit completed in November informs the January strategy review. January strategy built from an audit of what exists, not an aspirational plan for what should exist.',
+    month: "Month 10–12",
+    title: "Annual Content ROI Review & Next-Year Strategy",
+    description: "Present annual content program report (organic traffic growth, content-sourced leads, influenced ARR, content production efficiency); plan next-year editorial themes; set content investment budget; lock Q1 editorial calendar.",
   },
 ]
 
-const CONTENT_FAILURES = [
-  { failure: 'Content pillar review happens annually rather than quarterly', consequence: 'Annual pillar reviews allow a content program to spend 9 months producing content on topics that audience signals indicated were shifting 3 months into the year. Quarterly pillar reviews catch these signals at 3 months, when redirecting the production schedule costs 1 month of adjustment rather than 9 months of wrong-direction content. Content programs with annual pillar reviews produce consistently; content programs with quarterly pillar reviews compound consistently. The difference is whether the production effort is directed at the topics the audience currently cares about.' },
-  { failure: 'Distribution left as an open-ended post-publish task rather than a scheduled event', consequence: 'Content distribution intended for "after publish" competes with the production pressure for the next piece. The highest-traffic window for new content is the first 24-48 hours when newsletter inclusion, social distribution, and community sharing happen simultaneously. Content distributed in the first 24 hours reaches active audience members at peak attention. Content distributed 3 days later, after the newsletter has already gone, missed the email amplification window that drives the largest single distribution event in most content programs.' },
-  { failure: 'Monthly publishing target variable rather than standing commitment', consequence: 'Variable monthly publishing targets make audience building difficult because audience trust is built on consistency as much as quality. A content program that publishes 8 pieces one month, 3 the next, and 11 the third produces unpredictable audience expectations. Fixed monthly commitments with occasional misses produce better audience expectation management than variable targets met precisely. Audiences subscribe to consistent programs. Content programs without a standing monthly commitment default to producing what the production team can complete, which is determined by competing priorities rather than audience need.' },
-  { failure: 'Quarterly performance review happens after the next quarter\'s production has begun', consequence: 'Performance reviews conducted after next quarter\'s production has started cannot change the production schedule — the briefs are already written, the drafts are in progress, and changing direction costs rework rather than time. Performance reviews conducted 2 weeks before the quarterly pillar review can change the direction of the quarter\'s production before any brief is written. The 2-week gap between performance review and pillar review is not a scheduling preference — it is the window in which performance data converts to directional change rather than historical observation.' },
+const kpis = [
+  {
+    metric: "Organic Traffic Growth",
+    target: "≥ 30% YoY",
+    description: "Year-over-year organic search traffic growth — elite content programs compound at 30-50% annually; flat or declining organic traffic signals editorial quality, keyword targeting, or technical SEO issues.",
+  },
+  {
+    metric: "Content-Sourced MQLs",
+    target: "≥ 20% of total MQL volume",
+    description: "Percentage of marketing qualified leads with content as first-touch or influencing touchpoint — below 15% indicates content is not generating demand, only brand awareness.",
+  },
+  {
+    metric: "Content Publication Cadence",
+    target: "≥ 90% of planned pieces on time",
+    description: "Percentage of planned content pieces published on schedule — below 75% indicates production pipeline capacity or process issues that compound over time as editorial debt accumulates.",
+  },
+  {
+    metric: "Top-20 Page Refresh Cycle",
+    target: "100% refreshed quarterly",
+    description: "Percentage of top organic traffic pages receiving content refresh within the quarter — unrefreshed high-traffic pages decay an average of 8% in impressions per quarter without updates.",
+  },
+  {
+    metric: "Content-Influenced Revenue",
+    target: "≥ 3× content program cost",
+    description: "ARR closed where content was an influencing touchpoint — below 2× indicates content program is not supporting revenue and may require editorial direction change.",
+  },
+  {
+    metric: "Thought Leadership Placements",
+    target: "≥ 2 tier-1 placements/quarter",
+    description: "Executive bylined articles or research citations in tier-1 industry publications — consistent tier-1 placements drive analyst recognition, investor credibility, and enterprise buyer trust.",
+  },
 ]
+
+const testimonial = {
+  quote:
+    "We had a content team but not a content program — publishing was sporadic, our top pages decayed for months before anyone noticed, and thought leadership was whatever our CMO felt like writing that week. Momenties gave us an actual editorial calendar. Organic traffic grew 47% in 12 months and content-sourced pipeline tripled because we finally had a system.",
+  name: "Kolade F.",
+  title: "VP Content Marketing, Series B Enterprise SaaS",
+}
 
 export default function ContentStrategyCalendarPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
         eyebrow="Content Strategy Calendar"
-        title={
-          <>
-            Pillars reviewed before production begins.
-            <br />
-            <em className="not-italic text-gold">Content distributed within 24 hours. Performance informing strategy.</em>
-          </>
-        }
-        lede="Most content programs produce more content than they compound because the strategy calendar was never built. A content strategy calendar places quarterly pillar reviews before production begins, fixes monthly publishing targets as standing commitments, places distribution within 24 hours of each publish date, and ensures the quarterly performance review happens before the next pillar review — so each quarter's content is informed by what worked in the last, not by what was assumed to work at the start of the year."
-        crumbs={[{ label: 'Content Strategy Calendar' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/for/marketing-managers"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            Momenties for marketing managers
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No credit card</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Four principles</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">How Momenties structures content planning so strategy informs production and production informs strategy.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {FEATURES.map((f, i) => (
-              <Reveal key={f.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <f.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{f.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Six steps</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">How to build a content strategy calendar where quarterly performance informs the next quarter&apos;s direction.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {CONTENT_STEPS.map((item, i) => (
-              <Reveal key={item.step} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-6 shrink-0 pt-0.5 text-center">{i + 1}</span>
-                  <div>
-                    <p className="text-sm font-medium text-foreground mb-1">{item.step}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{item.detail}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Common failures</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four content strategy patterns that produce output without compounding.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {CONTENT_FAILURES.map((item, i) => (
-              <Reveal key={item.failure} delay={i * 40}>
-                <div className="rounded-xl border border-border lux-card p-5">
-                  <h3 className="text-sm font-medium text-foreground mb-1">{item.failure}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item.consequence}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Content analytics</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">What Momenties tracks for content strategy discipline.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'Monthly publishing target completion rate',
-                'Distribution completion within 24-hour window post-publish',
-                'Quarterly pillar review completion before production start',
-                'Performance review completion before next pillar review',
-                'Brief-to-publish cycle time (days)',
-                'Annual content audit completion in Q4',
-                'Content gap coverage rate from audit to production',
-                'Email distribution rate by publish date vs. newsletter cycle',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="Pillars reviewed before production begins."
-        subtitle="Quarterly pillar reviews, fixed monthly publishing targets, 24-hour distribution windows, and performance-informed strategy. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'Momenties for marketing managers', href: '/for/marketing-managers' }}
+        title="30% Organic Growth. Consistent Publishing. Zero Content Decay."
+        subtitle="A systematic content strategy calendar with quarterly editorial planning cycles, monthly SEO refresh schedules, thought leadership production pipelines, and content ROI measurement cadences that turn content investment into compounding organic growth."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Systems That Build Content Program Excellence
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* 12-Month Timeline */}
+      <Reveal>
+        <section style={{ maxWidth: 900, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Your 12-Month Content Strategy Roadmap
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {timeline.map((t, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "140px 1fr",
+                  gap: 24,
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                  alignItems: "start",
+                }}
+              >
+                <span style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.9rem", paddingTop: 2 }}>
+                  {t.month}
+                </span>
+                <div>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 6 }}>{t.title}</p>
+                  <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.6 }}>
+                    {t.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* KPIs */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            KPIs That Define Content Program Maturity
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 20,
+            }}
+          >
+            {kpis.map((k) => (
+              <div
+                key={k.metric}
+                style={{
+                  background: "#0a0a0d",
+                  border: "1px solid rgba(197,163,92,0.2)",
+                  borderRadius: 12,
+                  padding: 24,
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.1rem", marginBottom: 4 }}>
+                  {k.target}
+                </p>
+                <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 8 }}>{k.metric}</p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  {k.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
