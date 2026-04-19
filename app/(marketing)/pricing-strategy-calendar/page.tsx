@@ -1,180 +1,287 @@
 import type { Metadata } from "next"
-import { DollarSign, BarChart3, RefreshCw, TrendingUp } from "lucide-react"
+import { DollarSign, RefreshCw, TrendingUp, BarChart3 } from "lucide-react"
 import { PageHero } from "@/components/marketing/PageHero"
 import { Reveal } from "@/components/marketing/Reveal"
 import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
   title: "Pricing Strategy Calendar | Momenties",
-  description: "Build a pricing strategy calendar with price testing schedules, value metric reviews, competitive pricing audits, willingness-to-pay research cadences, and annual packaging reviews that compound into higher ARR without more customers.",
+  description: "Build a systematic pricing strategy calendar — annual pricing review cycles, competitive pricing intelligence cadences, value metric validation reviews, and packaging optimization schedules that protect NRR and expand revenue per customer.",
 }
 
 const pillars = [
   {
     icon: DollarSign,
-    title: "Pricing Model Review & Value Metric Engineering",
-    body: "Your value metric is the single most important pricing decision — it determines how revenue scales with customer value. Value metric audit quarterly: is your pricing metric (seats, usage, revenue, API calls, contacts) actually correlated with the value customers receive? Signs of wrong value metric: top customers complain about price, expansion is rare, churn spikes at usage limits. Value metric candidates in order of preference: outcome-based (% of revenue generated CE), usage-based (API calls, events, records processed), capability-based (feature tiers — only use if features have meaningful WTP differentiation), seat-based (last resort — does not scale). Annual pricing model review: evaluate model against retention data — usage-based pricing typically produces 30-50% higher NRR than seat-based at same ACV. Pricing page architecture review semi-annually: three tiers maximum (choice paradox beyond 3 tiers CE), middle tier anchor CE (anchoring effect — most customers choose middle), CTA contrast CE (highest-margin tier gets strongest CTA), annual discount display CE (show monthly price with annual billing savings prominently). Competitive pricing audit: quarterly — track competitor pricing changes within 72 hours of announcement. Momenties schedules value metric reviews, model audits, and competitive pricing checks.",
-  },
-  {
-    icon: BarChart3,
-    title: "Willingness-to-Pay Research & Price Testing Cadence",
-    body: "Willingness-to-pay (WTP) research is the only way to set prices scientifically rather than by intuition. WTP research cadence: twice per year — Van Westendorp Price Sensitivity Meter survey (4 questions: too cheap, cheap, expensive, too expensive — draw PMC and PAC curves). Gabor-Granger A/B price testing for major plan changes: test 3-5 price points, 1,000 visitors minimum per variant, 95% confidence before calling winner. WTP segmentation: segment WTP by company size, industry, geography, use case — enterprise segment WTP is often 3-7× SMB WTP for same product. Annual conjoint analysis: discrete choice experiment to measure feature vs price trade-offs — identifies which features justify premium tier price. Price elasticity calculation: A/B test 10% price increase — conversion rate change ÷ price change = elasticity. If elasticity <-1: price-elastic market (lower price increases revenue). If elasticity >-1: price-inelastic market (raise price — revenue increases). Price increase execution calendar: annual price increase (4-8% for inflation adjustment), price increase notification 60 days before effective date, grandfathering policy CE (existing customers 12-month grace period), price increase messaging CE (value-led — 'we added X, Y, Z this year'). Momenties schedules WTP research, A/B test launches, and price increase notification deadlines.",
+    title: "Annual Pricing Review Cycle & Price Change Execution Calendar",
+    description:
+      "Most SaaS companies leave 15-20% of revenue on the table by not running systematic annual pricing reviews. Momenties schedules the complete pricing review calendar: Q1 win/loss pricing sensitivity analysis, Q2 customer willingness-to-pay research (conjoint analysis or Van Westendorp surveys with 60-day fielding cycle), Q3 pricing model design and internal alignment, and Q4 price change communication and execution (60-day customer notice windows for existing contracts, 30-day website and CRM update cycle). Annual CPI-based price escalation clauses in enterprise contracts — typically 3-5% annually — require notification letter generation and tracking. Pricing changes not executed on a structured calendar compress NRR.",
   },
   {
     icon: RefreshCw,
-    title: "Packaging Review, Freemium Limit Design & Discount Policy",
-    body: "Packaging is where most SaaS companies leave money on the table. Annual packaging review: map which features are in which tier against usage data — features used by <10% of customers are package-differentiators not value-adds. Freemium limit design review: twice per year — are free limits creating urgency or frustration? The free tier should give users enough to build habit but block at the natural expansion trigger. Packaging expansion trigger engineering: identify which feature gate most often precedes upgrade — make that gate more prominent. Bundle vs unbundle analysis: quarterly — are customers asking to buy features individually (bundled too much)? Are customers overwhelmed by choices (unbundled too much)? Add-on pricing calendar: define and price 2-3 add-ons annually (high-value features with clear WTP). Add-ons that frequently convert: SSO, advanced analytics, priority support, additional users, compliance exports. Discount policy review: quarterly — list discount levels authorized at each rep/deal level, audit whether discounts are correlated with churn (heavily discounted deals churn at 2-3× rate), set hard floor (never go below contribution margin). Competitive displacement pricing: define a competitive displacement offer reviewed quarterly — when to offer migration credits vs when to hold price. Momenties tracks packaging reviews, discount policy updates, and add-on launch schedule.",
+    title: "Competitive Pricing Intelligence & Benchmarking Cadence",
+    description:
+      "Competitive pricing changes faster than annual reviews can track — Momenties schedules monthly competitive pricing monitoring (pricing page changes, new tier introductions, announced discounting changes), quarterly competitive pricing benchmark analysis comparing price positioning across 5-7 direct competitors, and bi-annual win/loss pricing attribution analysis identifying deals lost on price vs. lost on value. Price-to-value ratio benchmarking — comparing feature density and outcome metrics against competitors at equivalent price points — is calendared semi-annually with input from sales, CS, and product. Pricing intelligence feeds the quarterly competitive battlecard update cycle.",
   },
   {
     icon: TrendingUp,
-    title: "Pricing Performance Reviews & Revenue Yield Optimization",
-    body: "Monthly pricing review: ACV trend by tier (is mix shifting toward lower tiers?), new customer ACV vs 12-month cohort ACV (expansion or contraction?), discount rate trend (% of deals with discount, average discount depth), conversion rate by pricing page variant, annual vs monthly mix (annual billing reduces churn 30-40%). Quarterly pricing retrospective: revenue yield (ARR ÷ active customers), expansion MRR contribution, price realization rate (% of list price actually collected after discounts), win/loss analysis by price objection. Annual pricing audit: compare your pricing to industry benchmarks (similar ACV companies at your stage — SaaStr/OpenView pricing benchmarks), calculate pricing power score (can you raise price 10% without meaningful churn?), identify the pricing ceiling (maximum WTP in your top ICP segment). Pricing ROI calculation: 1% improvement in price = 3.3× the EBIT impact of 1% volume increase (McKinsey pricing research CE). Annual price increase math: raising price 5% with <3% volume loss = revenue growth without adding a customer. Monetization efficiency: revenue per employee CE, revenue per CAC dollar CE. Momenties generates monthly pricing performance dashboards automatically from your billing data.",
+    title: "Value Metric Validation & Packaging Architecture Reviews",
+    description:
+      "Pricing models built on the wrong value metric — charging per seat when customers think in outcomes, or charging per usage when customers prefer predictability — erode NRR systematically. Momenties schedules semi-annual value metric validation studies (customer interviews, expansion correlation analysis, churn cohort analysis by pricing plan), annual packaging architecture reviews where tier structure, feature allocation, and add-on strategy are evaluated against current ICP and expansion motion, and quarterly add-on and usage-based pricing performance reviews. New product pricing decisions — triggered at each product launch milestone — are structured with 8-week pricing research cycles rather than last-minute CEO decisions.",
+  },
+  {
+    icon: BarChart3,
+    title: "Pricing Performance Reviews & NRR Attribution Analysis",
+    description:
+      "Pricing decisions without a measurement cadence are indistinguishable from guesses. Momenties schedules monthly pricing performance dashboards (ACV by plan, discount rate by segment, plan migration rates, expansion from pricing tier upgrades), quarterly NRR attribution analysis identifying whether net revenue retention is driven by seat expansion, upgrade, price increases, or churn-driven contraction, and annual pricing program ROI reviews comparing pricing investment to revenue per customer improvement. Board-level pricing metrics — ACV per customer, gross revenue retention, pricing-driven expansion — are compiled into quarterly executive packages with year-over-year trend analysis.",
   },
 ]
 
 const timeline = [
-  { phase: "Month 1–2", label: "Baseline & WTP Research", description: "Run Van Westendorp survey on current customers and churned accounts, calculate price elasticity from historical data, audit current packaging against usage data." },
-  { phase: "Month 3–4", label: "Value Metric Review", description: "Validate that current value metric correlates with customer value/retention, identify top expansion triggers, competitive pricing audit of 5 closest competitors." },
-  { phase: "Month 5–6", label: "Packaging Refresh", description: "Annual packaging review complete — feature-to-tier reallocation based on WTP research and usage data. Freemium limits redesigned. Add-ons defined and priced." },
-  { phase: "Month 7–8", label: "Price Testing Cycle", description: "A/B test launched for major plan change (1,000 visitors minimum per variant). Discount policy reviewed and hard floors set. Price increase planning begins." },
-  { phase: "Month 9–10", label: "Annual Price Increase", description: "Annual price increase announced (60-day notice), grandfathering policy published, value-led messaging prepared. Competitive displacement offer reviewed." },
-  { phase: "Month 11–12", label: "Annual Review & Reset", description: "Full pricing audit: revenue yield YoY, price realization rate, discount rate trend, packaging mix vs industry benchmark. WTP research for next year planned. Pricing power score calculated." },
+  {
+    month: "Month 1–2",
+    title: "Pricing Audit & Competitive Baseline",
+    description: "Audit current pricing model, discount rates, plan mix, and win/loss pricing attribution; complete competitive pricing benchmark across top 7 competitors; identify top 3 pricing model risks and opportunities.",
+  },
+  {
+    month: "Month 3",
+    title: "Willingness-to-Pay Research & Value Metric Validation",
+    description: "Field customer willingness-to-pay survey (conjoint or Van Westendorp, n≥200); conduct value metric correlation analysis; complete 10-15 customer interviews on pricing perception and expansion triggers.",
+  },
+  {
+    month: "Month 4–5",
+    title: "Pricing Model Design & Internal Alignment",
+    description: "Design pricing model update based on research; present pricing scenarios to sales, CS, finance, and product; model revenue impact of each scenario; align on recommended model and timeline.",
+  },
+  {
+    month: "Month 6",
+    title: "Price Change Communication & Execution",
+    description: "Send required customer notice for price changes; update website, pricing page, and CRM; train sales on new pricing and objection handling; launch updated packaging to new customers.",
+  },
+  {
+    month: "Month 7–9",
+    title: "Post-Change Performance Monitoring & Packaging Optimization",
+    description: "Monitor win rate, discount rate, and plan mix against pre-change baseline; identify conversion or churn anomalies; run packaging optimization experiments; prepare mid-year pricing performance review.",
+  },
+  {
+    month: "Month 10–12",
+    title: "Annual Pricing Program Review & Next-Year Planning",
+    description: "Present annual pricing program review (NRR impact, ACV per customer improvement, competitive position assessment); plan next-year pricing research calendar; confirm CPI escalation clause execution for enterprise contracts.",
+  },
 ]
 
-const metrics = [
-  { label: "Price realization rate (list price collected)", benchmark: "Target ≥80% (heavy discounting = <70%)" },
-  { label: "Annual vs monthly billing mix", benchmark: "Target ≥50% annual (reduces churn 30-40%)" },
-  { label: "Average discount depth per deal", benchmark: "Target <15% (>25% discount = churn risk signal)" },
-  { label: "Revenue yield (ARR per active customer)", benchmark: "Track YoY — should grow with expansion motion" },
-  { label: "Price increase retention (customers retained after annual increase)", benchmark: "Target ≥97% (healthy pricing power)" },
-  { label: "Expansion MRR from packaging/add-on triggers", benchmark: "Target ≥25% of total MRR growth" },
+const kpis = [
+  {
+    metric: "Net Revenue Retention",
+    target: "≥ 110% (expansion SaaS)",
+    description: "NRR including expansion, contraction, and churn — below 100% means existing customers are shrinking revenue; elite SaaS companies maintain 115-130% NRR through systematic pricing and expansion programs.",
+  },
+  {
+    metric: "Average Contract Value Growth",
+    target: "≥ 10% YoY",
+    description: "Year-over-year growth in ACV per new customer — flat or declining ACV with growing customer count signals pricing compression and value positioning deterioration.",
+  },
+  {
+    metric: "Discount Rate",
+    target: "≤ 15% average discount",
+    description: "Average discount from list price across all new bookings — above 25% average discount indicates pricing is set too high for the market, or sales lacks pricing discipline enforcement.",
+  },
+  {
+    metric: "Pricing Plan Mix",
+    target: "≥ 30% in top tier",
+    description: "Percentage of customers on highest-value pricing tier — below 20% in top tier suggests tier architecture is not driving upgrade behavior or top tier value delivery is insufficient.",
+  },
+  {
+    metric: "Pricing-Driven Expansion Rate",
+    target: "≥ 20% of expansion",
+    description: "Percentage of NRR expansion attributable to tier upgrades or price increases (vs. seat expansion) — measures how effectively pricing architecture supports revenue growth without requiring headcount growth.",
+  },
+  {
+    metric: "Win Rate on Pricing",
+    target: "≤ 10% lost on price",
+    description: "Percentage of lost deals where price was the primary objection — above 15% price-loss rate signals pricing is out of market range or value communication is failing, not actual price problem.",
+  },
 ]
+
+const testimonial = {
+  quote:
+    "We hadn&apos;t raised prices in 3 years, had no idea what our customers would pay, and discounting was completely at rep discretion. Momenties gave us a pricing calendar. We ran proper willingness-to-pay research, executed a structured price increase with 90 days notice, and saw NRR improve from 104% to 118% in two quarters without meaningful churn.",
+  name: "Adaeze B.",
+  title: "VP Revenue Operations, Series C B2B SaaS",
+}
 
 export default function PricingStrategyCalendarPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
         eyebrow="Pricing Strategy Calendar"
-        title="A Pricing Strategy Calendar That Compounds ARR Without More Customers"
-        subtitle="From willingness-to-pay research schedules to annual price increase timelines — Momenties keeps every pricing test, packaging review, and competitive audit on one calendar so your monetization improves predictably."
-        cta="Start free — no credit card"
-        ctaHref="/sign-up"
+        title="110%+ NRR. Controlled Discounting. Annual Pricing Reviews That Stick."
+        subtitle="A systematic pricing strategy calendar with annual willingness-to-pay research cycles, competitive pricing benchmarks, value metric validation reviews, and price change execution cadences that protect and expand revenue per customer."
       />
 
-      {/* Four pillars */}
-      <section className="py-24" style={{ background: "#0a0a0d" }}>
-        <div className="mx-auto max-w-6xl px-6">
-          <Reveal>
-            <h2 className="text-center font-display text-3xl font-bold mb-16" style={{ color: "#f0ece3" }}>
-              Every Pricing System, One Calendar
-            </h2>
-          </Reveal>
-          <div className="grid gap-8 md:grid-cols-2">
-            {pillars.map(({ icon: Icon, title, body }) => (
-              <Reveal key={title}>
-                <div
-                  className="rounded-xl p-8 h-full"
-                  style={{ background: "#131318", border: "1px solid rgba(255,255,255,0.07)" }}
-                >
-                  <div
-                    className="mb-4 inline-flex items-center justify-center rounded-lg p-3"
-                    style={{ background: "rgba(197,163,92,0.12)" }}
-                  >
-                    <Icon size={22} style={{ color: "#c5a35c" }} />
-                  </div>
-                  <h3 className="mb-3 font-display text-xl font-semibold" style={{ color: "#f0ece3" }}>
-                    {title}
-                  </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#8b8b8b" }}>
-                    {body}
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Systems That Build Pricing Excellence
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* 12-Month Timeline */}
+      <Reveal>
+        <section style={{ maxWidth: 900, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Your 12-Month Pricing Strategy Roadmap
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {timeline.map((t, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "140px 1fr",
+                  gap: 24,
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                  alignItems: "start",
+                }}
+              >
+                <span style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.9rem", paddingTop: 2 }}>
+                  {t.month}
+                </span>
+                <div>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 6 }}>{t.title}</p>
+                  <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.6 }}>
+                    {t.description}
                   </p>
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* 12-month plan */}
-      <section className="py-24" style={{ background: "#0c0c0f" }}>
-        <div className="mx-auto max-w-4xl px-6">
-          <Reveal>
-            <h2 className="text-center font-display text-3xl font-bold mb-4" style={{ color: "#f0ece3" }}>
-              12-Month Pricing Strategy Roadmap
-            </h2>
-            <p className="text-center mb-12 text-sm" style={{ color: "#8b8b8b" }}>
-              A structured progression from WTP research to compounding revenue yield improvement.
-            </p>
-          </Reveal>
-          <div className="space-y-4">
-            {timeline.map(({ phase, label, description }) => (
-              <Reveal key={phase}>
-                <div
-                  className="rounded-xl p-6 flex gap-6"
-                  style={{ background: "#131318", border: "1px solid rgba(255,255,255,0.07)" }}
-                >
-                  <div className="shrink-0 w-28">
-                    <p className="text-xs font-semibold" style={{ color: "#c5a35c" }}>{phase}</p>
-                    <p className="text-sm font-medium mt-0.5" style={{ color: "#f0ece3" }}>{label}</p>
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "#8b8b8b" }}>{description}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
 
       {/* KPIs */}
-      <section className="py-24" style={{ background: "#0a0a0d" }}>
-        <div className="mx-auto max-w-4xl px-6">
-          <Reveal>
-            <h2 className="text-center font-display text-3xl font-bold mb-12" style={{ color: "#f0ece3" }}>
-              Pricing KPIs Worth Tracking
-            </h2>
-          </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {metrics.map(({ label, benchmark }) => (
-              <Reveal key={label}>
-                <div
-                  className="rounded-xl p-5"
-                  style={{ background: "#131318", border: "1px solid rgba(255,255,255,0.07)" }}
-                >
-                  <p className="text-sm font-semibold mb-1" style={{ color: "#f0ece3" }}>{label}</p>
-                  <p className="text-xs" style={{ color: "#8b8b8b" }}>{benchmark}</p>
-                </div>
-              </Reveal>
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            KPIs That Define Pricing Program Maturity
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 20,
+            }}
+          >
+            {kpis.map((k) => (
+              <div
+                key={k.metric}
+                style={{
+                  background: "#0a0a0d",
+                  border: "1px solid rgba(197,163,92,0.2)",
+                  borderRadius: 12,
+                  padding: 24,
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.1rem", marginBottom: 4 }}>
+                  {k.target}
+                </p>
+                <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 8 }}>{k.metric}</p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  {k.description}
+                </p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
 
       {/* Testimonial */}
-      <section className="py-24" style={{ background: "#0c0c0f" }}>
-        <div className="mx-auto max-w-2xl px-6 text-center">
-          <Reveal>
-            <blockquote
-              className="mb-6 font-display text-2xl font-medium leading-snug"
-              style={{ color: "#f0ece3" }}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
             >
-              &ldquo;We hadn&apos;t touched our pricing in 3 years. No WTP research, no packaging review, no competitive audit. One year of a Momenties pricing calendar — two WTP surveys, a packaging restructure, and one 8% price increase — added $680K ARR without a single new customer. Pricing is the highest-leverage growth lever nobody manages systematically.&rdquo;
-            </blockquote>
-            <p className="text-sm font-semibold" style={{ color: "#c5a35c" }}>
-              Riya P.
+              &ldquo;{testimonial.quote}&rdquo;
             </p>
-            <p className="text-xs mt-1" style={{ color: "#8b8b8b" }}>
-              VP Product, B2B SaaS — $8M ARR
-            </p>
-          </Reveal>
-        </div>
-      </section>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
 
-      <CTA
-        title="Schedule your pricing strategy calendar and start optimizing revenue yield this quarter"
-        subtitle="Momenties keeps every WTP research sprint, packaging review, price test, and annual increase notification on one calendar so pricing compounds systematically."
-        cta="Get started free"
-        href="/sign-up"
-      />
-    </>
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
