@@ -473,6 +473,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/for/geriatric-cardiologists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/for/pediatric-infectious-disease-specialists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/job-search-calendar', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/for/pediatric-allergists', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/habit-formation-calendar', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/features/photo', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/cancel', priority: 0.4, changeFrequency: 'yearly' },
   { path: '/ai/policy', priority: 0.6, changeFrequency: 'monthly' },
