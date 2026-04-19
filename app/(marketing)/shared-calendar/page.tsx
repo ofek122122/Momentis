@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { PageHero } from '@/components/marketing/PageHero'
 import { Reveal } from '@/components/marketing/Reveal'
 import { CTA } from '@/components/marketing/CTA'
-import { Users, Calendar, Eye, Zap, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Users, Calendar, Eye, Zap, ArrowRight, CheckCircle2, XCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Shared Calendar — Team availability, overlays, and coordination at a glance',
