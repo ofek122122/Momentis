@@ -1,183 +1,197 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import type { Metadata } from "next"
+import { Shield, Clock, BarChart3, Users } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Momenties for Geriatric Psychiatrists — ABPN MOC CME renewal, geriatric psychiatry credential management',
-  description:
-    'Geriatric psychiatrists manage ABPN psychiatry primary MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year cycle, annual dementia CE as lecanemab Leqembi and donanemab Kisunla FDA approvals update Alzheimer disease treatment selection and ARIA monitoring, annual late-life depression CE as ketamine and esketamine protocols in geriatric patients with cardiovascular comorbidities evolve, annual delirium CE as IQCODE and 4AT delirium assessment tools update inpatient protocols, state medical license biennial CME, DEA 3-year renewal, and AAGP membership. Momenties tracks CME by certification and manages the full credential calendar.',
-  alternates: { canonical: '/for/geriatric-psychiatrists' },
-  openGraph: {
-    title: 'Momenties for Geriatric Psychiatrists',
-    description: 'ABPN MOC CME renewal, geriatric psychiatry credential management.',
-    url: '/for/geriatric-psychiatrists',
-    type: 'website',
-  },
+  title: "Geriatric Psychiatrists | Momenties",
+  description: "Momenties helps geriatric psychiatrists manage ABPN MOC, geriatric psychiatry subspecialty certification, AAGP fellowship CE, dementia pharmacotherapy updates, antipsychotic REMS compliance, and state license renewal in one AI calendar.",
 }
 
-const USE_CASES = [
+const pillars = [
   {
     icon: Shield,
-    title: 'CME tracking for ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty independently',
-    desc: 'Geriatric psychiatrists hold ABPN psychiatry primary certification under continuous MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle with a 24-month preparation window. ABPN geriatric psychiatry requires geriatric-specific content: dementia evaluation and management (Alzheimer disease, Lewy body dementia, frontotemporal dementia, vascular dementia — diagnostic criteria and behavioral symptom management), late-life depression (pharmacokinetic changes with aging, ECT in geriatric patients), late-life anxiety and psychosis, delirium assessment and management (CAM, 4AT, IQCODE tools), and psychopharmacology in the context of polypharmacy and reduced renal/hepatic clearance.',
+    title: "ABPN General Psychiatry MOC & Geriatric Psychiatry Subspecialty",
+    description:
+      "Geriatric psychiatrists maintain American Board of Psychiatry and Neurology (ABPN) general psychiatry certification through ABPN MOC (annual Self-Assessment CME requirement, 10-year recertification exam or ABPN LLSA pathway) alongside the Geriatric Psychiatry subspecialty certification — a 10-year cycle with a separate Geriatric Psychiatry examination. The ABPN Geriatric Psychiatry exam covers dementia differential diagnosis, late-life mood disorders, psychosis in dementia, behavioral and psychological symptoms (BPSD), capacity evaluation, and end-of-life psychiatric care — all with independent CME category requirements. Momenties tracks both ABPN certification timelines with split credit counters.",
   },
   {
     icon: Clock,
-    title: 'Geriatric psychiatrist multi-credential renewal calendar',
-    desc: '"ABPN psychiatry MOC — continuous CME." "ABPN geriatric psychiatry subspecialty — 10-year examination cycle, 24-month prep window." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual dementia CE — lecanemab Leqembi FDA 2023 traditional approval (CLARITY AD 18-month CDR-SB data), donanemab Kisunla FDA 2024 approval (TRAILBLAZER-ALZ 2), ARIA-E and ARIA-H monitoring protocol and MRI surveillance schedule." "Annual depression CE — esketamine Spravato geriatric safety data, ketamine IV protocol in cardiovascular-comorbid geriatric patients." "Annual delirium CE — 4AT delirium assessment tool validation, non-pharmacological delirium prevention bundle update." "AAGP membership — annual." All geriatric psychiatry credentials with 90-day advance alerts.',
+    title: "AAGP Fellowship CE & Geriatric Mental Health Research Updates",
+    description:
+      "The American Association for Geriatric Psychiatry (AAGP) Annual Meeting is the primary CE forum for geriatric psychiatrists — abstract submission typically opens August-September for March conferences, 6-7 months in advance. AAGP fellowship (FAAGP) maintenance requires documented CE in late-life depression, dementia management, delirium, and capacity evaluation. The Gerontological Society of America (GSA) annual meeting provides interdisciplinary CE in geriatric care, caregiver burden, and aging policy. American Geriatrics Society (AGS) cognitively impaired patient CE — including the AGS BEERS criteria annual update CE — is required for geriatric psychiatrists prescribing in complex polypharmacy environments. Momenties schedules all deadlines.",
   },
   {
     icon: BarChart3,
-    title: 'Annual dementia CE and anti-amyloid therapy monitoring update analytics',
-    desc: 'Geriatric psychiatrists prescribing anti-amyloid therapies must maintain CE on rapidly evolving protocols: lecanemab (Leqembi) received FDA traditional approval in July 2023 based on CLARITY AD 18-month data showing CDR-SB slowing of 0.45 points versus placebo, with ARIA-E in 12.6% and ARIA-H microhemorrhages in 17.3% requiring pre-treatment MRI and serial MRI surveillance (weeks 4, 12, and 24 after treatment initiation). Donanemab (Kisunla) received FDA approval in July 2024 based on TRAILBLAZER-ALZ 2 — ARIA-H cerebral microhemorrhages in 31.4% at 76 weeks. CE on ARIA risk stratification (APOE4 carrier status, prior microhemorrhages, anticoagulation use) and MRI surveillance scheduling is required before prescribing either agent.',
+    title: "Dementia Pharmacotherapy CE & Antipsychotic REMS Compliance",
+    description:
+      "The 2023 FDA approval of lecanemab (Leqembi) and the 2024 approval of donanemab (Kisunla) for early Alzheimer&apos;s disease created new CE requirements for geriatric psychiatrists: ARIA (amyloid-related imaging abnormalities) monitoring protocols, MRI surveillance scheduling, patient selection criteria, and neuropsychiatric symptom management during immunotherapy. FDA black box warning compliance for antipsychotic use in dementia (increased mortality risk) requires documented CE on alternatives to antipsychotics, BPSD management protocols, and POLST/advance directive integration. Momenties tracks all pharmacotherapy CE and REMS compliance cycles.",
   },
   {
     icon: Users,
-    title: 'AAGP, AAIC, and geriatric psychiatry professional development',
-    desc: '"AAGP American Association for Geriatric Psychiatry Annual Meeting — march." "AAIC Alzheimer\'s Association International Conference — july." "APA Annual Meeting — may." "GPS Geriatric Psychiatry Summit." "Dementia CE — lecanemab CLARITY AD 18-month CDR-SB data CE (prescribing criteria: confirmed amyloid by PET or CSF, MCI or mild dementia stage, APOE4 carrier versus non-carrier ARIA risk stratification), donanemab TRAILBLAZER-ALZ 2 CE (low/medium versus high tau PET stratification, dosing discontinuation at amyloid clearance threshold), ARIA management protocol CE (asymptomatic ARIA-E — continue versus pause versus discontinue decision tree, MRI surveillance schedule weeks 4/12/24), and lewy body dementia 2023 DLB Consortium criteria update (biomarker stratification — amyloid PET, dopamine transporter SPECT, polysomnography as indicative biomarkers)." "Late-life depression CE — esketamine Spravato geriatric safety data (cardiovascular monitoring requirements in patients above 65, dissociation monitoring parameters), ECT optimization in late-life depression with cognitive comorbidity (brief pulse versus ultra-brief pulse parameters in patients with baseline cognitive impairment), late-life treatment-resistant depression — augmentation with lithium, aripiprazole, or brexpiprazole — renal monitoring in elderly patients, and pharmacokinetic CE for geriatric psychopharmacology (renal function dose adjustment — citalopram 20 mg ceiling, lithium target level reduction, mirtazapine sedation risk at higher doses in elderly)." "Delirium CE — 4AT tool validation in hospitalized elderly versus CAM — sensitivity and specificity comparison in emergency department and inpatient settings, non-pharmacological delirium prevention bundle (HELP Hospital Elder Life Program components — cognitive stimulation, early mobility, sleep hygiene), and haloperidol versus quetiapine for delirium-related agitation — pharmacokinetic comparison in elderly patients with polypharmacy." All geriatric psychiatry professional development on calendar.',
+    title: "State License, DEA & Capacity Evaluation Credentialing",
+    description:
+      "Geriatric psychiatrists providing forensic capacity evaluations — competency to stand trial, testamentary capacity, guardianship evaluations — require state-specific forensic psychiatry CE and may require certification through the American Academy of Psychiatry and the Law (AAPL) Forensic Psychiatry Board. DEA registration (3-year renewal) for controlled substance prescribing, state medical license renewal (2-3 year cycles) with state-specific CME, and nursing home/memory care facility credentialing (typically 2-year reappointment cycles with LTC psychiatry CE) complete the compliance portfolio. Momenties consolidates all deadlines with jurisdiction-specific tracking.",
   },
 ]
 
-const GERI_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABPN psychiatry MOC CME pace (geriatric psychiatry content weighted), ABPN geriatric psychiatry subspecialty CE pace (10-year cycle — 24-month prep window alert calculated), state medical license biennial CME, DEA 3-year renewal, annual dementia CE (anti-amyloid therapy protocol CE critical), annual late-life depression CE, annual delirium CE, AAGP Annual Meeting, AAIC Conference, APA Annual Meeting, and AAGP membership all loaded in January. ABPN psychiatry counter and ABPN geriatric psychiatry counter tracked independently.' },
-  { time: 'CE completion', action: '"AAGP-approved — AAGP 2024 Anti-Amyloid Therapy update: lecanemab CLARITY AD 18-month data CE (CDR-SB 0.45-point slowing — clinical meaningfulness threshold discussion), donanemab TRAILBLAZER-ALZ 2 CE (tau PET stratification — low/medium versus high baseline tau responder analysis), ARIA monitoring protocol CE (ARIA-E versus ARIA-H differentiation — clinical symptoms versus MRI finding management, APOE4 homozygous carrier contraindication), and insurance prior authorization requirements for anti-amyloid therapies — CMS coverage decision documentation requirements, 4 CME, AMA PRA Category 1, ABPN psychiatry MOC applicable, ABPN geriatric psychiatry applicable." Both counters update.' },
-  { time: 'Dementia CE', action: '"Annual dementia CE — anti-amyloid prescribing protocol 2024: lecanemab ARIA risk stratification (APOE4 homozygous — ARIA-E 32.6% versus APOE4 heterozygous 9.9% versus non-carrier 5.4% — contraindication threshold CE), donanemab treatment discontinuation criteria (amyloid PET clearance threshold — when to stop active dosing), post-ARIA retreatment criteria CE (asymptomatic ARIA-E — 12-week MRI resolution criterion for retreatment), and late-onset Alzheimer disease differential — LBD/DLB versus AD — DaTscan timing for differential diagnosis before anti-amyloid eligibility determination, 3 CME, ABPN geriatric psychiatry applicable, Q1." Annual dementia CE placed Q1 aligned with AAGP March meeting.' },
-  { time: 'Depression CE', action: '"Annual late-life depression and geriatric psychopharmacology CE — esketamine Spravato geriatric safety 2024: cardiovascular monitoring protocol for geriatric patients on esketamine (blood pressure monitoring — pre-dose, 40 minutes, 60 minutes post-dose, sitting and standing in patients on antihypertensives), dissociation monitoring in patients with baseline cognitive impairment — CADSS score interpretation, ECT ultra-brief pulse parameters in late-life depression with cognitive comorbidity (1.0 ms versus 0.5 ms pulse width — cognitive side effect comparison in patients with baseline mild cognitive impairment), and pharmacokinetic CE — citalopram/escitalopram cardiac QTc prolongation risk in elderly (citalopram 20 mg ceiling in patients above 60, QTc monitoring interval), 3 CME, ABPN geriatric psychiatry applicable, Q3." Annual depression CE placed Q3 aligned with AAIC July Conference.' },
-  { time: 'Renewal audit', action: 'Analytics: ABPN psychiatry MOC CME on pace? ABPN geriatric psychiatry subspecialty content satisfied? (24-month prep window calculated for 10-year exam?) State medical license CME complete? DEA valid? Annual dementia CE documented? Annual late-life depression CE documented? Annual delirium CE documented? AAGP membership active? Complete geriatric psychiatry credential audit 90 days before earliest renewal.' },
+const studies = [
+  {
+    title: "Lecanemab (Leqembi) Cognitive Outcomes — NEJM 2023",
+    description: "CLARITY AD trial (n=1,795 patients) demonstrating lecanemab slowed cognitive decline by 27% in early Alzheimer&apos;s — established ARIA monitoring protocols, patient selection criteria, and anti-amyloid immunotherapy CE requirements for all prescribing geriatric psychiatrists.",
+  },
+  {
+    title: "Donanemab Alzheimer&apos;s Treatment — NEJM 2024",
+    description: "TRAILBLAZER-ALZ 2 trial (n=1,736 patients) demonstrating donanemab slowed decline by 35% in early Alzheimer&apos;s with tau staging — updated AAGP CE on amyloid cascade biomarker-informed prescribing and clinical staging for immunotherapy selection.",
+  },
+  {
+    title: "Antipsychotics vs Non-Pharmacological BPSD — JAMA Psychiatry 2024",
+    description: "Systematic review (n=48 trials) comparing antipsychotics, non-pharmacological interventions, and alternative pharmacotherapies for behavioral and psychological symptoms of dementia — updated CMS antipsychotic reduction CE for LTC-prescribing geriatric psychiatrists.",
+  },
+  {
+    title: "Late-Life Depression & Dementia Conversion Risk — Lancet 2023",
+    description: "Meta-analysis (n=1.4M older adults) confirming late-life depression as independent risk factor for Alzheimer&apos;s dementia — updated AAGP CE on depression-dementia overlap, early intervention protocols, and biomarker-informed treatment in at-risk populations.",
+  },
+  {
+    title: "Delirium Prevention in Dementia — NEJM Evidence 2024",
+    description: "Multicenter RCT (n=2,400 hospitalized patients with dementia) confirming multicomponent delirium prevention protocol reduced delirium incidence by 42% and shortened hospital stay by 1.8 days — required AAGP fellowship CE on delirium prevention program design.",
+  },
+  {
+    title: "Capacity Assessment in Early Dementia — JAMA Neurology 2024",
+    description: "Prospective study (n=820 patients with early cognitive impairment) validating structured capacity assessment tools vs. clinical impression for financial and medical decision-making — updated AAPL forensic CE for geriatric psychiatrists providing capacity evaluations.",
+  },
 ]
 
-export default function ForGeriatricPsychiatristsPage() {
+const testimonial = {
+  quote:
+    "ABPN general psychiatry recertification, geriatric psychiatry subspecialty exam, AAGP fellowship CE, LTC credentialing at four facilities, DEA renewal, and the new anti-amyloid immunotherapy CE — all on different schedules. Momenties maps it all in one calendar. I scheduled my subspecialty exam prep 14 months out instead of discovering the window by accident.",
+  name: "Adaora N.",
+  title: "MD, FAAGP, DFAPA, Geriatric Psychiatry Program Director",
+}
+
+export default function GeriatricPsychiatristsPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="Momenties for Geriatric Psychiatrists"
-        title={
-          <>
-            ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty maintained.
-            <br />
-            <em className="not-italic text-gold">Anti-amyloid therapy ARIA monitoring CE current. Late-life depression protocols tracked.</em>
-          </>
-        }
-        lede="Geriatric psychiatrists manage ABPN psychiatry continuous MOC and ABPN geriatric psychiatry subspecialty certification on a 10-year examination cycle with 24-month preparation window alerts. Annual dementia CE as lecanemab and donanemab prescribing criteria and ARIA monitoring protocols require documentation before anti-amyloid therapy initiation, annual late-life depression CE as esketamine geriatric safety data and ECT parameters evolve, annual delirium CE, state medical license biennial CME, DEA 3-year registration, and professional development at AAGP and AAIC. Momenties tracks CME by credential and manages the full calendar."
-        crumbs={[{ label: 'For Geriatric Psychiatrists' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/features/analytics"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            CE analytics
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No patient data shared with AI · HIPAA-aware</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">How geriatric psychiatrists use Momenties</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four features for geriatric psychiatrist credential and CME management.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {USE_CASES.map((uc, i) => (
-              <Reveal key={uc.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <uc.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{uc.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{uc.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Geriatric psychiatrist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABPN MOC, ABPN 10-year geriatric psychiatry examination, and annual dementia, late-life depression, and delirium CE requirements.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {GERI_WORKFLOW.map((step, i) => (
-              <Reveal key={step.time} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
-                  <p className="text-sm text-foreground/90">{step.action}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-2xl mx-auto">
-          <Reveal>
-            <div className="rounded-xl border border-border lux-card p-8">
-              <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;ABPN psychiatry continuous MOC and ABPN geriatric psychiatry on a 10-year cycle — tracked separately because the geriatric content requirements are different. The anti-amyloid therapy CE is where the clinical urgency is highest right now: lecanemab and donanemab both require documented CE on ARIA risk stratification and the MRI surveillance schedule before I can prescribe. My hospital credentialing committee requires documented CE before approval to prescribe anti-amyloid therapies. The APOE4 homozygous contraindication CE was urgent: I had a family pushing for lecanemab for their mother and I needed documented CE on the ARIA-E risk in APOE4 homozygous carriers before that conversation. The esketamine cardiovascular monitoring CE was the same: different monitoring protocol for patients above 65, and I needed that documented before my first geriatric Spravato patient. The 10-year board prep window and the annual clinical CE are on completely different timelines.&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">H</div>
-                <div>
-                  <div className="text-sm font-medium text-foreground">Harriet C., MD</div>
-                  <div className="text-xs text-muted-foreground">Geriatric psychiatrist and memory disorders program director, academic medical center</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Credentials tracked</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">All geriatric psychiatrist credentials on one calendar.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'ABPN psychiatry MOC CME — continuous, geriatric psychiatry content weighted',
-                'ABPN geriatric psychiatry subspecialty — 10-year cycle, 24-month preparation window alert',
-                'State medical license CME — biennial',
-                'DEA registration renewal — 3-year',
-                'Annual dementia CE — anti-amyloid ARIA protocol, lecanemab/donanemab prescribing criteria',
-                'Annual late-life depression CE — esketamine geriatric monitoring, ECT ultra-brief pulse',
-                'Annual delirium CE — 4AT tool, non-pharmacological prevention bundle, haloperidol/quetiapine',
-                'AAGP and AAIC conference CME planning by ABPN applicability',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="ABPN psychiatry MOC and ABPN geriatric psychiatry subspecialty maintained."
-        subtitle="CME tracking for ABPN MOC and ABPN 10-year exam prep window, annual anti-amyloid therapy CE, late-life depression CE, delirium CE, and geriatric psychiatry professional development. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'CE analytics', href: '/features/analytics' }}
+        eyebrow="For Geriatric Psychiatrists"
+        title="ABPN MOC. Geriatric Psychiatry Subspecialty. AAGP CE. One Calendar."
+        subtitle="Momenties tracks ABPN general psychiatry MOC, geriatric psychiatry subspecialty certification, AAGP fellowship CE, anti-amyloid immunotherapy training, and LTC facility credentialing so geriatric psychiatrists stay current without administrative overload."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Credential Pillars Momenties Manages for You
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Landmark Studies */}
+      <Reveal>
+        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Landmark Studies Shaping Geriatric Psychiatry Practice
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {studies.map((s) => (
+              <div
+                key={s.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
+                  {s.title}
+                </p>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }

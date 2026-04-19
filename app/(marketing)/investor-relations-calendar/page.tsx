@@ -1,209 +1,287 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { PageHero } from '@/components/marketing/PageHero'
-import { Reveal } from '@/components/marketing/Reveal'
-import { CTA } from '@/components/marketing/CTA'
-import { TrendingUp, Clock, BarChart3, Shield, ArrowRight, CheckCircle2 } from 'lucide-react'
+import type { Metadata } from "next"
+import { TrendingUp, Users, FileText, BarChart3 } from "lucide-react"
+import { PageHero } from "@/components/marketing/PageHero"
+import { Reveal } from "@/components/marketing/Reveal"
+import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
-  title: 'Investor Relations Calendar — How to run a proactive investor cadence so capital conversations happen on your timeline',
-  description:
-    'An investor relations calendar places quarterly update emails before the quarter ends, schedules portfolio company check-ins before founder re-engagement windows close, builds the annual LP meeting into the fundraising planning cycle, and places warm reconnect outreach before the next raise begins. Most founders arrive at fundraising with cold investor relationships because the IR calendar was never built.',
-  alternates: { canonical: '/investor-relations-calendar' },
-  openGraph: {
-    title: 'Investor Relations Calendar — Momenties',
-    description: 'Run a proactive investor cadence so capital conversations happen on your timeline.',
-    url: '/investor-relations-calendar',
-    type: 'website',
-  },
+  title: "Investor Relations Calendar | Momenties",
+  description: "Build a systematic investor relations calendar — earnings call preparation cycles, investor conference schedules, shareholder communication cadences, and SEC filing deadline management that keeps public and private company IR programs current.",
 }
 
-const FEATURES = [
+const pillars = [
   {
-    icon: TrendingUp,
-    title: 'Quarterly investor updates sent before the quarter ends, not after',
-    desc: '"Q3 investor update — September 25." Quarterly investor updates placed at the last week of each quarter — not early in the following quarter. Updates sent at the end of Q3 arrive while the period is still current. Updates sent in mid-October arrive when investors are reading Q3 reports from 15 other portfolio companies. End-of-quarter update placement is not a timing preference — it is a signal that you manage proactively. Late updates signal reactive management regardless of the content.',
+    icon: FileText,
+    title: "Earnings Call Preparation & SEC Filing Calendar",
+    description:
+      "Earnings call preparation begins 6 weeks before announcement — not the week of. Momenties schedules the complete earnings preparation calendar: CFO/IR alignment on guidance framework (6 weeks out), investor Q&A prep sessions (4 weeks out), script drafts and legal review (3 weeks out), quiet period start (calendar blocked with automated notifications to executives), and earnings release coordination (wire timing, 8-K filing, investor call dial-in logistics). SEC filing deadlines — 10-Q within 40 days of quarter end (large accelerated filers), 10-K within 60 days, 8-K within 4 business days of material events — are tracked with compliance owner alerts before windows close.",
   },
   {
-    icon: Clock,
-    title: 'Investor reconnect outreach placed 6 months before anticipated raise',
-    desc: '"Investor warm-up outreach — 6 months before raise open." Investor reconnect outreach placed 6 months before the anticipated raise window. Cold investor relationships opened at T-30 days before a raise close on worse terms than warm relationships opened at T-6 months. 6-month warm-up: 2-3 progress updates, one milestone shared proactively, one informal meeting before the formal process begins. Investors who have been watching progress for 6 months invest faster and with less diligence overhead than investors meeting the company for the first time.',
+    icon: TrendingUp,
+    title: "Investor Conference & Non-Deal Roadshow Calendar",
+    description:
+      "Institutional investor conference slots — J.P. Morgan, Goldman Sachs, Morgan Stanley, Needham, and sector-specific conferences — fill 6-12 months in advance. Conference submission windows open months before the event; missing the window means no slot. Momenties tracks all major investor conference submission deadlines, manages non-deal roadshow scheduling (targeting buy-side analysts and portfolio managers 2-3 times annually), and coordinates management availability against earnings blackout periods and acquisition quiet windows. Analyst day planning — typically annual, 3-4 months of preparation — is calendared with content production milestones and venue logistics.",
+  },
+  {
+    icon: Users,
+    title: "Shareholder Communication Cadence & Proxy Season Calendar",
+    description:
+      "Shareholder communication outside of earnings creates the ongoing narrative that institutional investors hold through volatility. Momenties schedules quarterly investor letters (2-3 weeks after earnings), annual report production (12-week production calendar ending at proxy filing), and proxy season management: record date establishment, proxy statement filing (DEF 14A at least 40 days before annual meeting), shareholder meeting logistics, and vote solicitation campaigns for contested matters. Activist investor monitoring — 13D/13G filing alerts, shareholder engagement policy review annually — is part of the proactive IR calendar.",
   },
   {
     icon: BarChart3,
-    title: 'Portfolio company milestone sharing placed before the board meeting',
-    desc: '"Major milestone — shared with investors 48 hours before board." Major milestones — new contracts, product launches, leadership hires — shared with investors before the board meeting, not at it. Investors who learn milestones at board meetings experience the company as reactive. Investors who receive milestone updates between board meetings experience the company as proactive. Same milestone, different relationship. Proactive milestone sharing placed as a calendar event before the board meeting, not as an agenda item at it.',
-  },
-  {
-    icon: Shield,
-    title: 'Annual LP or investor meeting placed in the planning calendar with 3-month prep window',
-    desc: '"Annual LP meeting — Q3 planning begins Q1." Annual investor meeting placed in the January planning calendar with a 3-month prep window. Investor meetings prepared in 3 weeks produce a different experience than ones prepared in 3 months. 3-month prep: financial narrative built from the year, portfolio/company highlights curated, slide deck drafted and refined, key questions anticipated and answered. Annual meeting placed in January planning means the prep window exists before the annual review period begins.',
+    title: "Analyst Coverage Management & IR Performance Metrics",
+    description:
+      "Analyst coverage management is an active calendar program — not a passive outcome. Momenties schedules quarterly analyst model update calls (2 weeks after earnings, when models are being rebuilt), initiation of coverage target management, and annual sell-side analyst day participation decisions. IR website content updates — investor presentations, factsheets, ESG reports — are calendared quarterly with legal review. IR performance metrics reviews: stock performance vs. peer group, short interest trend, institutional ownership changes from 13F filings (reported 45 days after each quarter end), and consensus estimate accuracy — are reviewed monthly before board reporting.",
   },
 ]
 
-const IR_STEPS = [
+const timeline = [
   {
-    step: 'Place quarterly investor updates as standing calendar events in January',
-    detail: '"Q1 update: March 25. Q2 update: June 24. Q3 update: September 24. Q4 update: December 17." All 4 quarterly update deadlines placed in January. Standing placement gives 12 weeks between updates — not discovered as approaching but visible as fixed anchors. End-of-quarter placement keeps updates current. Q4 update placed slightly earlier to avoid holiday windows. Update drafted 3-5 days before send date — not started the day it is due.',
+    month: "Month 1–2",
+    title: "IR Calendar Build & Analyst Relationship Mapping",
+    description: "Map full annual IR calendar including all SEC filing deadlines, earnings dates, conference submission windows, and quiet periods; audit analyst coverage and model accuracy; identify target institutional investors for non-deal roadshow program.",
   },
   {
-    step: 'Build the investor update format and maintain it across quarters',
-    detail: '"Update format: metrics snapshot, milestone achieved, milestone missed + why, next quarter focus, specific ask." Consistent update format maintained across quarters. Investors who receive consistent format updates extract information faster and remember more. Quarterly format: revenue/ARR snapshot, one milestone achieved since last update, one miss with explanation, one focus for next quarter, one specific ask. Specific ask converts the update from a communication to a collaboration request. Updates without a specific ask produce replies of "great update!" — updates with a specific ask produce replies with answers.',
+    month: "Month 3",
+    title: "First Earnings Cycle & Investor Messaging Refresh",
+    description: "Execute first structured earnings preparation cycle; update investor presentation; conduct post-earnings analyst calls; calibrate guidance communication strategy based on market reaction.",
   },
   {
-    step: 'Place milestone outreach to investors within 48 hours of major events',
-    detail: '"Product launch milestone — investor outreach within 48 hours." Major milestones shared with investors within 48 hours: significant customer wins, product launches, key hires, revenue milestones, partnerships. Milestone outreach placed as a post-event action in the calendar. Investors who learn milestones from quarterly updates (2-3 months after the event) have a different perception of company velocity than ones who receive a brief milestone note within 48 hours. Same milestone, 10x different impact based on timing.',
+    month: "Month 4–5",
+    title: "Investor Conference Season & Non-Deal Roadshow",
+    description: "Execute spring investor conference program; complete non-deal roadshow targeting top 20 institutional holders; update IR website with refreshed materials; conduct shareholder composition analysis.",
   },
   {
-    step: 'Place investor warm-up outreach 6 months before anticipated raise',
-    detail: '"T-6 months before raise: reconnect outreach to target list." Investor warm-up placed 6 months before the anticipated raise window. Warm-up sequence: month 1 reconnect with company update, month 2 share a notable milestone, month 3 request an informal call, months 4-5 continue update cadence, month 6 raise opens with investors who have context. Investors entering a raise process with 6 months of context require less pitch time and close faster than cold investors entering the same process.',
+    month: "Month 6",
+    title: "Annual Meeting & Proxy Season Close",
+    description: "Execute annual shareholder meeting; certify proxy results; update governance disclosures; review activist monitoring program; assess ESG reporting calendar for next proxy cycle.",
   },
   {
-    step: 'Place the annual LP/investor meeting with a 3-month prep milestone',
-    detail: '"Annual investor meeting: Q3. Prep start: Q1 week 1." Annual investor meeting placed in Q3 with a Q1 prep start. 3-month prep sequence: January — identify key narratives and metrics for the year, February — draft slide structure, March — full deck draft with financial narrative, May — final prep and rehearsal. Annual meeting with 3-month prep produces a document-quality narrative. Annual meeting with 3-week prep produces a status update.',
+    month: "Month 7–9",
+    title: "Analyst Day Planning & Fall Conference Program",
+    description: "Launch analyst day content planning (if annual); execute fall investor conference program; complete 13F ownership analysis for Q2; update peer group comparison and relative valuation narrative.",
   },
   {
-    step: 'Place board meeting prep to include proactive investor communication plan',
-    detail: '"Board meeting prep: T-5 days. Investor milestone update: T-2 days before board." Board meeting prep includes a review of what to share proactively with investors before the board meeting. Any significant development discussed at the board meeting that investors should know — shared with investors 48 hours before the board meeting, not at it. Board meeting prep placed as a T-5 day milestone with investor communication review as a T-2 day sub-milestone.',
+    month: "Month 10–12",
+    title: "Year-End IR Program Review & Next-Year Planning",
+    description: "Present annual IR program review to board (investor mix, analyst coverage, conference ROI, stock liquidity); plan next-year IR budget; lock conference calendar for following year; begin annual report production.",
   },
 ]
 
-const IR_FAILURES = [
-  { failure: 'Quarterly updates sent reactively after the quarter closes rather than proactively at end of quarter', consequence: 'Investor updates sent 4-6 weeks after the quarter closes arrive when investors are processing Q1 reports from 15+ other portfolio companies. Updates sent at the end of Q3 arrive while the period is still current and while the investor&apos;s attention is on portfolio activity. End-of-quarter placement is not a minor timing preference — it signals that the company manages proactively. Mid-quarter-following-quarter updates are received as reactive signals regardless of their content.' },
-  { failure: 'Investor relationships go cold between raises and are warmed only when capital is needed', consequence: 'Investor relationships that see activity only at raise time are experienced by investors as transactional. Investors who receive quarterly updates, milestone outreach, and occasional check-ins between raises have a fundamentally different relationship with the company than those who hear from the company only when a term sheet is being assembled. Cold-to-raise conversion rates are materially lower than warm-to-raise conversion rates. The 6-month warm-up outreach is not a courtesy — it is the difference between a process that takes 90 days and one that takes 45.' },
-  { failure: 'Major milestones shared at the next board meeting rather than proactively', consequence: 'Sharing milestones at board meetings rather than proactively between them communicates that the company\'s relationship with its investors is a quarterly reporting relationship, not an ongoing collaboration. Investors who learn about a major contract at the board meeting 8 weeks after signing have a different experience than investors who receive a brief note within 48 hours of signing. The note does not need to be long — two paragraphs with the context and significance is sufficient. What matters is the timing, not the length.' },
-  { failure: 'Annual LP meeting prepared in the month before rather than the quarter before', consequence: 'Annual investor meetings prepared in 3-4 weeks are status updates. Annual investor meetings prepared over 3 months are narratives. The difference is not effort — it is the time required to identify what matters from the year, build a financial narrative that explains performance in context, anticipate the questions that investors will ask, and practice the delivery until it is fluent. One-month prep produces first-draft quality. Three-month prep produces final-quality work because there were multiple drafts.' },
+const kpis = [
+  {
+    metric: "Consensus Estimate Accuracy",
+    target: "Revenue ±3%, EPS ±5%",
+    description: "Variance between company guidance and sell-side consensus — consistent misses above 5% signal guidance calibration issues that erode institutional investor trust and increase stock volatility.",
+  },
+  {
+    metric: "Analyst Coverage",
+    target: "Maintained or growing",
+    description: "Number of sell-side analysts providing active coverage — declining coverage reduces liquidity and institutional discovery; target 1 new initiator per year for growing companies.",
+  },
+  {
+    metric: "Investor Meeting Conversion",
+    target: "≥ 15% NDR → follow-on",
+    description: "Percentage of non-deal roadshow meetings resulting in follow-on investor engagement or position building — below 10% suggests investor messaging or targeting misalignment.",
+  },
+  {
+    metric: "SEC Filing On-Time Rate",
+    target: "100% by statutory deadline",
+    description: "Percentage of SEC filings (10-K, 10-Q, 8-K, DEF 14A) filed by statutory deadline — any late filing triggers SEC notice, analyst commentary, and potential institutional investor concern.",
+  },
+  {
+    metric: "Institutional Ownership Stability",
+    target: "≤ 5% net change/quarter",
+    description: "Net change in institutional ownership per quarter from 13F analysis — above 10% net outflow for two consecutive quarters signals institutional conviction breakdown requiring narrative assessment.",
+  },
+  {
+    metric: "IR Website Currency",
+    target: "Updated within 5 days of earnings",
+    description: "Recency of investor presentation, factsheet, and financial data on IR website — outdated materials (more than 2 weeks post-earnings) signal IR program under-investment to active investors.",
+  },
 ]
+
+const testimonial = {
+  quote:
+    "Our quiet periods overlapped with conference submission windows, analyst day prep started 3 weeks before the event instead of 3 months, and our 13F analysis happened when someone thought to run it. Momenties gave our IR program its first real calendar. Our last earnings cycle had zero surprises, and we secured the Needham Growth conference slot for the first time in three years.",
+  name: "Seun T.",
+  title: "VP Investor Relations, Nasdaq-Listed SaaS",
+}
 
 export default function InvestorRelationsCalendarPage() {
   return (
-    <>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
         eyebrow="Investor Relations Calendar"
-        title={
-          <>
-            Updates sent before the quarter ends.
-            <br />
-            <em className="not-italic text-gold">Relationships warm before the raise opens.</em>
-          </>
-        }
-        lede="Most founders arrive at fundraising with cold investor relationships because the investor relations calendar was never built. An investor relations calendar places quarterly update emails at the end of each quarter (not after), shares major milestones with investors within 48 hours, places warm-up outreach 6 months before the anticipated raise, and builds the annual LP meeting prep into the January planning cycle — so capital conversations happen on your timeline, not the market's."
-        crumbs={[{ label: 'Investor Relations Calendar' }]}
-      >
-        <div className="flex flex-wrap gap-3">
-          <Link
-            href="/login"
-            className="inline-flex items-center gap-2 h-11 px-7 rounded-full bg-gold text-[#0c0c0f] text-sm font-medium hover:bg-gold/90 transition-all press shadow-lg shadow-gold/10"
-          >
-            Try free <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href="/for/founders"
-            className="inline-flex items-center h-11 px-5 text-sm text-muted-foreground hover:text-foreground border border-border rounded-full transition-colors"
-          >
-            Momenties for founders
-          </Link>
-        </div>
-        <p className="text-xs text-muted-foreground mt-2">Free forever · No credit card</p>
-      </PageHero>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-4xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Four principles</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">How Momenties structures investor relations so relationships stay warm and capital conversations happen proactively.</h2>
-          </Reveal>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {FEATURES.map((f, i) => (
-              <Reveal key={f.title} delay={(i % 2) * 60}>
-                <div className="rounded-xl border border-border lux-card p-6 h-full">
-                  <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/10 flex items-center justify-center mb-4">
-                    <f.icon className="h-4 w-4 text-gold" />
-                  </div>
-                  <h3 className="text-sm font-medium text-foreground mb-2">{f.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Six steps</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">How to build an investor relations calendar where relationships are warm before the raise begins.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {IR_STEPS.map((item, i) => (
-              <Reveal key={item.step} delay={i * 40}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
-                  <span className="font-mono text-[10px] text-gold/60 w-6 shrink-0 pt-0.5 text-center">{i + 1}</span>
-                  <div>
-                    <p className="text-sm font-medium text-foreground mb-1">{item.step}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{item.detail}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-5 md:px-8 border-t border-border bg-[#0a0a0d]">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Common failures</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">Four investor relations patterns that produce cold raises and reactive relationships.</h2>
-          </Reveal>
-          <div className="space-y-3">
-            {IR_FAILURES.map((item, i) => (
-              <Reveal key={item.failure} delay={i * 40}>
-                <div className="rounded-xl border border-border lux-card p-5">
-                  <h3 className="text-sm font-medium text-foreground mb-1">{item.failure}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item.consequence}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-5 md:px-8 border-t border-border">
-        <div className="max-w-3xl mx-auto">
-          <Reveal className="mb-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">IR analytics</p>
-            <h2 className="font-display text-xl font-bold tracking-tight text-foreground">What Momenties tracks for investor relations discipline.</h2>
-          </Reveal>
-          <Reveal>
-            <div className="grid sm:grid-cols-2 gap-3">
-              {[
-                'Quarterly update send date vs. end-of-quarter target',
-                'Milestone outreach completion within 48-hour window',
-                'Investor warm-up outreach at T-6 months before raise',
-                'Annual LP meeting prep start vs. 3-month target',
-                'Board meeting pre-communication completion rate',
-                'Investor response rate to quarterly updates',
-                'Update cadence consistency (quarterly gaps)',
-                'Raise open date vs. warm-up outreach start date',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
-                  <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <CTA
-        title="Updates sent before the quarter ends."
-        subtitle="Quarterly update cadence, proactive milestone sharing, 6-month raise warm-up, and annual LP meeting prep. Free to start."
-        primary={{ label: 'Start free', href: '/login' }}
-        secondary={{ label: 'Momenties for founders', href: '/for/founders' }}
+        title="On-Time Filings. Secured Conference Slots. Zero Earnings Surprises."
+        subtitle="A systematic investor relations calendar with earnings preparation cycles, conference submission deadlines, shareholder communication cadences, and SEC filing management that keeps your IR program credible and your investors informed."
       />
-    </>
+
+      {/* Pillars */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Four Systems That Build IR Program Excellence
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {pillars.map((p) => (
+              <div
+                key={p.title}
+                style={{
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 16,
+                  padding: 28,
+                }}
+              >
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
+                  {p.title}
+                </h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
+                  {p.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* 12-Month Timeline */}
+      <Reveal>
+        <section style={{ maxWidth: 900, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            Your Annual Investor Relations Calendar
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            {timeline.map((t, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "140px 1fr",
+                  gap: 24,
+                  background: "#131318",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                  borderRadius: 12,
+                  padding: "20px 24px",
+                  alignItems: "start",
+                }}
+              >
+                <span style={{ color: "#c5a35c", fontWeight: 600, fontSize: "0.9rem", paddingTop: 2 }}>
+                  {t.month}
+                </span>
+                <div>
+                  <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 6 }}>{t.title}</p>
+                  <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.6 }}>
+                    {t.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* KPIs */}
+      <Reveal>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+              fontWeight: 700,
+              color: "#f0ece3",
+              marginBottom: 48,
+            }}
+          >
+            KPIs That Define IR Program Maturity
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: 20,
+            }}
+          >
+            {kpis.map((k) => (
+              <div
+                key={k.metric}
+                style={{
+                  background: "#0a0a0d",
+                  border: "1px solid rgba(197,163,92,0.2)",
+                  borderRadius: 12,
+                  padding: 24,
+                }}
+              >
+                <p style={{ color: "#c5a35c", fontWeight: 700, fontSize: "1.1rem", marginBottom: 4 }}>
+                  {k.target}
+                </p>
+                <p style={{ color: "#f0ece3", fontWeight: 600, marginBottom: 8 }}>{k.metric}</p>
+                <p style={{ color: "rgba(240,236,227,0.6)", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  {k.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      {/* Testimonial */}
+      <Reveal>
+        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote
+            style={{
+              background: "#131318",
+              border: "1px solid rgba(197,163,92,0.25)",
+              borderRadius: 16,
+              padding: "36px 40px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(240,236,227,0.85)",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                fontStyle: "italic",
+                marginBottom: 24,
+              }}
+            >
+              &ldquo;{testimonial.quote}&rdquo;
+            </p>
+            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
+            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
+          </blockquote>
+        </section>
+      </Reveal>
+
+      <div style={{ padding: "80px 0 0" }}>
+        <CTA />
+      </div>
+    </main>
   )
 }
