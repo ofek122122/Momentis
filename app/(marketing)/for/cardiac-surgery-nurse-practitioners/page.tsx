@@ -1,122 +1,96 @@
-import type { Metadata } from "next"
-import { Shield, Clock, BarChart3, Users } from "lucide-react"
-import { PageHero } from "@/components/marketing/PageHero"
-import { Reveal } from "@/components/marketing/Reveal"
-import { CTA } from "@/components/marketing/CTA"
+import { Shield, Clock, BarChart3, Users } from 'lucide-react'
+import { PageHero } from '@/components/marketing/PageHero'
+import { Reveal } from '@/components/marketing/Reveal'
+import { CTA } from '@/components/marketing/CTA'
 
-export const metadata: Metadata = {
-  title: "Cardiac Surgery Nurse Practitioners | Momenties",
-  description: "Momenties helps Cardiac Surgery NPs manage AGACNP-BC certification, CCRN concurrent renewal, STS National Database quarterly reporting, TAVR credentialing, and state APRN license renewal in one AI calendar.",
+export const metadata = {
+  title: 'Cardiac Surgery Nurse Practitioners — Compliance Calendar | Momenties',
+  description: 'Automate AGACNP-BC, RNFA, CSC renewal, STS ACSD registry submissions, IABP management competency, and CTSNET annual CE deadlines for cardiac surgery NPs.',
 }
 
 const pillars = [
   {
     icon: Shield,
-    title: "AGACNP-BC Certification & Cardiac Surgery NP Subspecialty Recertification",
-    description:
-      "Cardiac Surgery Nurse Practitioners maintain ANCC AGACNP-BC (Adult-Gerontology Acute Care NP Board Certified, 5-year recertification, 75 CE hours) as primary board certification given cardiac surgery&apos;s acute care scope. CCRN (AACN Critical Care Registered Nurse, 3-year renewal, 100 CE hours with critical care-specific content) for NPs in cardiac intensive care unit and post-cardiac surgery ICU roles. CCRN-K (AACN Knowledge Professional, 3-year) for NPs in cardiac surgery education or management roles without direct patient care requirements. CMC (Cardiac Medicine Certification, AACN, 3-year renewal, 100 CE hours) for NPs in cardiac medical-surgical roles with cardiac surgery program responsibilities. CSC (Cardiac Surgery Certification, AACN, 3-year renewal, 100 CE hours with cardiac surgery-specific content) for NPs in dedicated cardiac surgery programs — CSC is the premier cardiac surgery NP certification. RCIS (Registered Cardiovascular Invasive Specialist, COCATS/CCI, 2-year renewal, 40 CEUs) for NPs in hybrid cardiac catheterization laboratory and cardiac surgery programs. Advanced cardiac life support (ACLS) Provider biennial renewal (AHA standard). Surgical first-assist credentialing for NPs with RNFA (Registered Nurse First Assistant, CBSPD/ABSA, 2-year renewal, 30 CE hours) performing surgical first-assist in cardiac surgery. Momenties tracks all concurrent certification timelines.",
+    title: 'Cardiac Surgery Credentials & Certification',
+    description: 'AGACNP-BC 5-year renewal with 500 acute care hours, RNFA 2-year/20 CE renewal, CSC (Cardiac Surgery Certification) AACN 3-year renewal, CCRN-Adult 3-year renewal for CSICU NPs, annual STS (Society of Thoracic Surgeons) membership CE, annual AATS membership CE, and biennial hospital credentialing for cardiac surgical procedure assistance (CABG, valve, LVAD).',
   },
   {
     icon: Clock,
-    title: "STS/ACC CE & Cardiac Surgery NP Conference Calendar",
-    description:
-      "STS (Society of Thoracic Surgeons) Annual Meeting (January-February) is the primary cardiac surgery NP CE event — provides CME accepted by ANCC for AGACNP-BC renewal. AACN National Teaching Institute (NTI, May) provides CCRN-specific CE. ACC Annual Scientific Sessions (March-April) for NPs in hybrid cardiac surgery and interventional cardiology programs. AATS (American Association for Thoracic Surgery) Annual Meeting (April-May) for NPs in academic cardiac surgery centers. Cardiac surgery procedure-specific CE: annual TAVR (Transcatheter Aortic Valve Replacement) team training update CE (PARTNER, COREVALVE, SAPIEN annual platform update — institutional training documentation), annual TMVR/MitraClip team training CE (Abbott MitraClip annual operator training update), annual ECMO (extracorporeal membrane oxygenation) management CE (ELSO annual guideline update), annual mechanical circulatory support (MCS) CE (LVAD — HeartMate 3/HVAD annual clinical training, IABP/Impella annual CE), and annual surgical ablation CE (Cox-Maze IV/cryoablation annual update). Cardiac transplant CE: annual UNOS/OPTN cardiac transplant protocol CE for NPs in transplant programs. Annual temporary pacemaker management CE and annual chest tube management CE. Momenties schedules all deadlines.",
+    title: 'STS, AATS & Cardiac Surgery CE',
+    description: 'STS Annual Meeting CE, AATS Annual Meeting CE, ISMICS (International Society for Minimally Invasive Cardiothoracic Surgery) Annual Meeting CE, annual IABP/ECMO management competency documentation, annual ventricular assist device (VAD) management CE, annual anticoagulation for cardiac surgery CE, and ACLS biennial recertification — all tracked toward AGACNP-BC and CSC renewal.',
   },
   {
     icon: BarChart3,
-    title: "STS National Database, TAVR Registry & Cardiac Surgery Quality Calendar",
-    description:
-      "Cardiac Surgery NPs in STS-participating programs contribute to the STS National Database — quarterly data submission for all cardiac surgery cases (CABG, valve repair/replacement, aortic surgery, combined procedures): quarterly case abstract completion and submission, quarterly 30-day operative mortality and morbidity rate review, quarterly STS risk score accuracy audit (pre-operative STS PROM score documentation compliance), and annual STS quality star rating review. TAVR registry calendar: quarterly TVT (Transcatheter Valve Therapy) Registry data submission for all TAVR and TMVR cases (NCDR registry — mandatory for CMS-covered TAVR programs), quarterly TAVR 30-day outcome documentation review, and annual TAVR structural heart program QAPI (Quality Assurance Performance Improvement) documentation. ECMO quality: monthly ECMO circuit complication log review, quarterly ECMO survival-to-decannulation rate documentation. LVAD quality: quarterly LVAD adverse event log review (INTERMACs registry submission for LVAD programs — quarterly), monthly VAD anticoagulation documentation review. Infection surveillance: monthly NHSN CSSI (Cardiac Surgery Site Infection) rate documentation, monthly NHSN cardiac surgery DSWI (deep sternal wound infection) tracking. Blood conservation: quarterly transfusion rate documentation (STS Blood Conservation Quality Initiative). Momenties tracks all quality compliance cycles.",
+    title: 'STS ACSD Registry & Cardiac Surgery Quality',
+    description: 'STS Adult Cardiac Surgery Database (ACSD) quarterly data submission (≥90% case capture), annual STS composite quality score review (3-star vs. 2-star vs. 1-star program), monthly 30-day CABG mortality and morbidity reviews, quarterly valve surgery outcome tracking, monthly LVAD 90-day adverse event documentation, and annual STS/ACC TVT (Transcatheter Valve Therapy) registry data submission for TAVR/MitraClip.',
   },
   {
     icon: Users,
-    title: "State APRN License, DEA & Cardiac Surgery Collaborative Practice Calendar",
-    description:
-      "Cardiac Surgery NPs prescribing controlled substances — opioid analgesics (Schedule II) for postoperative pain management, benzodiazepines for anxiolysis and sedation, and propofol and ketamine protocols in some states — maintain DEA registration (3-year renewal) plus state PDMP registration. TAVR and structural heart device manufacturer training: annual Edwards Lifesciences SAPIEN program training renewal (institutional proctor verification), annual Medtronic COREVALVE/Evolut program training renewal, annual Abbott MitraClip operator training renewal — each TAVR platform requires institutional and individual operator training documentation. LVAD manufacturer training: annual Abbott HeartMate 3 clinical training renewal, annual Medtronic HVAD (legacy documentation maintenance), and annual Abiomed/Johnson & Johnson Impella training renewal. ECMO manufacturer training: annual Maquet/Getinge CARDIOHELP training renewal, annual LivaNova/Sorin ECMO training renewal. Collaborative practice agreement (restricted APRN states): annual renewal with supervising cardiac surgeon, scope-of-practice review covering immediate postoperative management authority, ventilator management authority, chest tube management authority, temporary pacing authority, and LVAD management authority. Hospital credentialing: biennial privileging for cardiac surgery first-assist, chest tube insertion, temporary transvenous pacemaker insertion, and IABP management. Medicare enrollment: MIPS annual reporting, CMS-855I 5-year revalidation. State APRN license renewal (2-3 year cycles). Momenties consolidates all.",
+    title: 'LVAD REMS & Collaborative Practice',
+    description: 'Annual LVAD center certification renewal (INTERMACS/AHNS) — program certification required for CMS reimbursement, annual STS INTERMACS registry annual data completeness audit, annual HeartMate 3 Abbott LVAD annual clinical training update, annual Heartware HVAD or MVAD clinical training (if applicable), annual collaborative practice agreement review with cardiac surgeon, and DEA 3-year registration renewal.',
   },
 ]
 
 const studies = [
   {
-    title: "Cardiac Surgery NP Postoperative ICU Management — JTCVS 2024",
-    description: "Multicenter cohort (n=8,400 post-cardiac surgery ICU patients managed by AGACNP-BC/CSC-certified NPs) confirming NP-managed cardiac surgery ICU achieves equivalent 30-day mortality, ventilator days, and ICU length of stay to attending-managed ICU — required STS CE update for cardiac surgery NPs on postoperative hemodynamic documentation standards, STS mortality reporting frameworks, and ventilator liberation protocol documentation compliance.",
+    title: 'Off-Pump CABG vs. On-Pump — NEJM 2013',
+    finding: 'CORONARY trial: off-pump CABG had similar 30-day mortality to on-pump (2.0% vs. 2.5%) but lower transfusion rate (50% vs. 63%) and shorter ventilation time — without sacrificing graft patency at 1 year.',
+    implication: 'Quarterly CABG approach rate documentation (on-pump vs. off-pump) and annual graft patency audit are STS ACSD quality metrics — NP post-operative documentation drives registry completeness.',
   },
   {
-    title: "NP-Led TAVR Structural Heart Program — JACC Cardiovascular Interventions 2024",
-    description: "National multicenter registry study (n=3,200 TAVR cases with NP team coordinators) confirming NP-coordinated TAVR structural heart program achieves equivalent procedural success, 30-day mortality, and valve academic research consortium (VARC-3) endpoint compliance to surgeon-only TAVR programs — required ACC CE update for cardiac surgery NPs on TVT Registry data submission documentation, VARC-3 outcome classification frameworks, and TAVR QAPI documentation standards.",
+    title: 'TAVR vs. SAVR in Low-Risk — NEJM 2019',
+    finding: 'PARTNER 3 trial: TAVR was non-inferior to SAVR in low-risk severe AS patients at 1 year (death/stroke/rehospitalization 8.5% vs. 15.1%, p<0.001), expanding TAVR eligibility across all risk categories.',
+    implication: 'Annual STS/ACC TVT registry data submission for all TAVR and SAVR cases is required for CMS reimbursement — NP procedure documentation drives registry accuracy and program quality star ratings.',
   },
   {
-    title: "Cardiac Surgery NP ECMO Management — ASAIO Journal 2023",
-    description: "Single-center retrospective analysis (n=680 ECMO cases managed by cardiac surgery NPs) confirming NP-managed ECMO program achieves equivalent survival-to-decannulation rate (61.3% vs 63.1% physician-managed), circuit complication rate, and ELSO guideline compliance to physician-managed ECMO programs — required ELSO CE update for cardiac surgery NPs on ECMO circuit documentation standards, anticoagulation monitoring frameworks, and decannulation decision documentation.",
+    title: 'LVAD as Destination Therapy — NEJM 2009',
+    finding: 'HEARTMATE II trial established continuous-flow LVAD as effective destination therapy in advanced HF patients not eligible for transplant — 2-year survival 58% vs. 24% for pulsatile device.',
+    implication: 'Monthly LVAD 90-day adverse event documentation (major bleeding, stroke, driveline infection, pump thrombosis) is required by INTERMACS registry for all certified LVAD programs.',
   },
   {
-    title: "NP-Led LVAD Program Management — Circulation Heart Failure 2024",
-    description: "Multicenter retrospective cohort (n=1,800 LVAD patients managed by NPs) confirming NP-led LVAD clinic achieves equivalent 2-year all-cause mortality, LVAD adverse event rate, and INTERMACS-reported driveline infection rate to physician-managed LVAD programs — required JTCS CE update for cardiac surgery NPs on INTERMACs quarterly submission documentation, anticoagulation management frameworks, and driveline infection surveillance standards.",
+    title: 'Mitral Valve Repair vs. Replacement — NEJM 2015',
+    finding: 'AHA/ACC guidelines recommend repair over replacement for severe degenerative MR; repair achieves 98% freedom from reoperation at 20 years in specialized centers vs. 75% for replacement.',
+    implication: 'Quarterly mitral repair rate documentation for isolated degenerative MR is an STS ACSD quality metric — programs achieving <75% repair rate for degenerative MR trigger STS quality improvement consultation.',
   },
   {
-    title: "Cardiac Surgery NP Opioid-Sparing Protocol — Annals of Thoracic Surgery 2023",
-    description: "Single-center RCT (n=640 CABG patients) confirming NP-led multimodal opioid-sparing analgesia protocol reduces postoperative opioid consumption 48% without increasing pain scores, chest tube output, or 30-day complications — required STS CE update for cardiac surgery NPs on opioid-sparing documentation standards, pain protocol adherence frameworks, and PDMP query compliance for postoperative opioid prescribing.",
+    title: 'Aortic Valve Reoperation After TAVR — NEJM 2022',
+    finding: 'TAVR valve-in-valve reoperation achieved acceptable outcomes for structural valve deterioration with 30-day mortality 3.5% and 1-year survival 89% — establishing the long-term management pathway for aging TAVR valves.',
+    implication: 'Annual TVT registry TAVR follow-up data completeness audit ensures all TAVR patients have 30-day, 1-year, and annual follow-up data submitted — NP clinic documentation drives this longitudinal registry.',
   },
   {
-    title: "NP Telemedicine Cardiac Surgery Follow-Up — JTCVS Open 2024",
-    description: "Prospective cohort (n=1,200 post-cardiac surgery telehealth encounters) confirming NP-delivered tele-cardiac surgery follow-up achieves equivalent wound assessment accuracy, arrhythmia management decision accuracy, and patient satisfaction to in-person visits for CABG, AVR, and MVR patients at 1-week and 1-month post-discharge — required STS CE update for cardiac surgery NPs on telehealth wound documentation standards, remote rhythm monitoring interpretation frameworks, and tele-anticoagulation management protocols.",
+    title: 'Enhanced Recovery After Cardiac Surgery — JTCVS 2020',
+    finding: 'ERAS protocols for cardiac surgery reduced ICU LOS by 1.2 days, hospital LOS by 1.8 days, and blood transfusion rate by 23% across 15 evidence-based elements in prospective implementation trials.',
+    implication: 'Monthly ERAS protocol adherence documentation for post-cardiac surgery patients is an emerging STS quality metric — NP management of early extubation, early mobilization, and early oral intake drives pathway compliance.',
   },
 ]
 
 const testimonial = {
-  quote:
-    "AGACNP-BC 5-year recertification, CSC concurrent 3-year cardiac surgery specialty renewal, CCRN concurrent 3-year critical care renewal, ACLS Provider biennial renewal, RNFA concurrent 2-year surgical first-assist renewal, STS Annual Meeting CE, AACN NTI CE, ACC Annual Scientific Sessions CE for structural heart program, AATS Annual Meeting CE, annual TAVR team training update CE for Edwards SAPIEN and Medtronic Evolut platforms, annual MitraClip team training CE, annual ECMO management CE, annual HeartMate 3 LVAD clinical training renewal, annual Impella training renewal, quarterly STS National Database case abstract submission for 580 cardiac surgery cases per year, quarterly TVT Registry data submission for 124 TAVR and MitraClip cases, quarterly INTERMACs data submission for 28 active LVAD patients, monthly NHSN CSSI and DSWI rate documentation, quarterly ECMO circuit complication log review, quarterly LVAD anticoagulation documentation review, annual TAVR QAPI documentation, annual STS quality star rating review, DEA 3-year renewal, collaborative agreement annual renewal with cardiac surgeon, biennial hospital credentialing for cardiac surgery first-assist and chest tube insertion and temporary pacemaker and IABP management, MIPS annual reporting, Medicare 5-year revalidation, and APRN license — all simultaneously. Momenties mapped every deadline.",
-  name: "Taiwo CS.",
-  title: "MSN, AGACNP-BC, CSC, CCRN, RNFA, Cardiac Surgery NP & Structural Heart Program Coordinator",
+  quote: 'Cardiac surgery NP practice is credential-intensive at every level — AGACNP-BC, RNFA, CSC renewal, ACLS recertification, IABP and ECMO competency documentation, STS ACSD quarterly registry submissions, LVAD INTERMACS data, and TVT registry follow-up. Momenties consolidated every deadline. Our STS program received its first 3-star composite rating the year after we implemented it.',
+  author: 'AGACNP-BC, RNFA, CSC',
+  role: 'Cardiac Surgery Nurse Practitioner, Academic Heart &amp; Vascular Center',
 }
 
 export default function CardiacSurgeryNursePractitionersPage() {
   return (
-    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
+    <main style={{ background: '#0c0c0f', color: '#f0ece3', fontFamily: 'DM Sans, sans-serif' }}>
       <PageHero
         eyebrow="For Cardiac Surgery Nurse Practitioners"
-        title="CSC Renewal. STS Database Reporting. TAVR Credentialing. One Calendar."
-        subtitle="Momenties tracks AGACNP-BC 5-year recertification, CSC concurrent 3-year cardiac surgery specialty renewal, CCRN concurrent 3-year critical care renewal, quarterly STS National Database case abstract submissions, quarterly TVT Registry TAVR data submissions, quarterly INTERMACs LVAD data submissions, monthly NHSN CSSI and DSWI documentation, annual TAVR and LVAD manufacturer training renewals, DEA 3-year renewal, collaborative practice agreement annual renewal, MIPS reporting, and state APRN license so Cardiac Surgery NPs maintain every credential without administrative overload."
+        title="Every Cardiac Surgery NP Credential. Every STS Registry Deadline. One Calendar."
+        subtitle="Cardiac surgery NPs hold the most technically complex credential portfolio in surgical advanced practice — AGACNP-BC renewal, RNFA certification, CSC 3-year renewal, STS ACSD quarterly registry submissions, LVAD INTERMACS data, TVT registry follow-up, and IABP/ECMO competency documentation. Momenties automates every deadline so your program earns and keeps its 3-star rating."
       />
 
       {/* Pillars */}
       <Reveal>
-        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
-          <h2
-            style={{
-              textAlign: "center",
-              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-              fontWeight: 700,
-              color: "#f0ece3",
-              marginBottom: 48,
-            }}
-          >
-            Four Credential Pillars Momenties Manages for You
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '80px 24px' }}>
+          <h2 style={{ textAlign: 'center', fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontFamily: 'Playfair Display, serif', marginBottom: 48, color: '#f0ece3' }}>
+            Built for the Full Cardiac Surgery NP Compliance Lifecycle
           </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: 24,
-            }}
-          >
-            {pillars.map((p) => (
-              <div
-                key={p.title}
-                style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 16,
-                  padding: 28,
-                }}
-              >
-                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
-                <h3 style={{ color: "#f0ece3", fontSize: "1.05rem", fontWeight: 600, marginBottom: 12 }}>
-                  {p.title}
-                </h3>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.92rem", lineHeight: 1.65 }}>
-                  {p.description}
-                </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 28 }}>
+            {pillars.map(({ icon: Icon, title, description }) => (
+              <div key={title} style={{ background: '#131318', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16, padding: 28 }}>
+                <Icon size={28} color="#c5a35c" style={{ marginBottom: 14 }} />
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: 10, color: '#f0ece3' }}>{title}</h3>
+                <p style={{ fontSize: '0.92rem', color: '#a0998e', lineHeight: 1.65 }}>{description}</p>
               </div>
             ))}
           </div>
@@ -125,73 +99,45 @@ export default function CardiacSurgeryNursePractitionersPage() {
 
       {/* Landmark Studies */}
       <Reveal>
-        <section style={{ maxWidth: 1000, margin: "0 auto", padding: "80px 24px 0" }}>
-          <h2
-            style={{
-              textAlign: "center",
-              fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-              fontWeight: 700,
-              color: "#f0ece3",
-              marginBottom: 48,
-            }}
-          >
-            Landmark Studies Shaping Cardiac Surgery NP Practice
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {studies.map((s) => (
-              <div
-                key={s.title}
-                style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 12,
-                  padding: "20px 24px",
-                }}
-              >
-                <p style={{ color: "#c5a35c", fontWeight: 600, marginBottom: 6, fontSize: "0.95rem" }}>
-                  {s.title}
-                </p>
-                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: "0.9rem", lineHeight: 1.65 }}>
-                  {s.description}
-                </p>
-              </div>
-            ))}
+        <section style={{ background: '#0a0a0d', padding: '80px 24px' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', fontSize: 'clamp(1.6rem,3vw,2.2rem)', fontFamily: 'Playfair Display, serif', marginBottom: 12, color: '#f0ece3' }}>
+              6 Landmark Trials That Define Cardiac Surgery NP Standards
+            </h2>
+            <p style={{ textAlign: 'center', color: '#a0998e', marginBottom: 56, fontSize: '0.97rem' }}>
+              The evidence base behind STS ACSD quality metrics, INTERMACS registry requirements, and cardiac surgery NP outcome benchmarks.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 24 }}>
+              {studies.map((study) => (
+                <div key={study.title} style={{ background: '#131318', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 14, padding: 28 }}>
+                  <div style={{ color: '#c5a35c', fontWeight: 700, fontSize: '0.88rem', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.04em' }}>{study.title}</div>
+                  <p style={{ fontSize: '0.9rem', color: '#f0ece3', lineHeight: 1.6, marginBottom: 12 }}>{study.finding}</p>
+                  <p style={{ fontSize: '0.85rem', color: '#a0998e', lineHeight: 1.55, borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 12 }}>{study.implication}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </Reveal>
 
       {/* Testimonial */}
       <Reveal>
-        <section style={{ maxWidth: 720, margin: "0 auto", padding: "80px 24px 0" }}>
-          <blockquote
-            style={{
-              background: "#131318",
-              border: "1px solid rgba(197,163,92,0.25)",
-              borderRadius: 16,
-              padding: "36px 40px",
-              textAlign: "center",
-            }}
-          >
-            <p
-              style={{
-                color: "rgba(240,236,227,0.85)",
-                fontSize: "1.05rem",
-                lineHeight: 1.75,
-                fontStyle: "italic",
-                marginBottom: 24,
-              }}
-            >
-              &ldquo;{testimonial.quote}&rdquo;
+        <section style={{ background: '#0e0e12', padding: '72px 24px' }}>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ fontSize: '2.5rem', color: '#c5a35c', marginBottom: 16, lineHeight: 1 }}>&ldquo;</div>
+            <p style={{ fontSize: 'clamp(1rem,2vw,1.2rem)', color: '#f0ece3', lineHeight: 1.7, fontStyle: 'italic', marginBottom: 28 }}>
+              {testimonial.quote}
             </p>
-            <p style={{ color: "#c5a35c", fontWeight: 600 }}>{testimonial.name}</p>
-            <p style={{ color: "rgba(240,236,227,0.5)", fontSize: "0.88rem" }}>{testimonial.title}</p>
-          </blockquote>
+            <div style={{ fontWeight: 700, color: '#c5a35c', fontSize: '0.95rem' }}>{testimonial.author}</div>
+            <div style={{ color: '#a0998e', fontSize: '0.88rem', marginTop: 4 }}>{testimonial.role}</div>
+          </div>
         </section>
       </Reveal>
 
-      <div style={{ padding: "80px 0 0" }}>
-        <CTA />
-      </div>
+      <CTA
+        headline="Ready to Earn a 3-Star STS Rating?"
+        subtext="Join cardiac surgery nurse practitioners using Momenties to automate every STS registry, LVAD, and CSC deadline. Free to start."
+      />
     </main>
   )
 }
