@@ -6,13 +6,13 @@ import { CTA } from '@/components/marketing/CTA'
 import { Shield, Clock, BarChart3, Users, ArrowRight, CheckCircle2, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Momenties for Clinical Neurophysiologists — ABPN MOC CME renewal, clinical neurophysiology credential management',
+  title: 'Momenties for Clinical Neurophysiologists — ABPN/ABIM MOC CME renewal, clinical neurophysiology credential management',
   description:
-    'Clinical neurophysiologists manage ABPN neurology primary MOC and ABPN clinical neurophysiology subspecialty certification on a 10-year examination cycle, annual cEEG monitoring CE for neuro-ICU programs, annual intraoperative neurophysiological monitoring CE, ACNS accreditation requirements, state medical license biennial CME, and professional development simultaneously. Momenties tracks CME by certification, surfaces renewal deadlines 90 days early, and manages the full credential calendar.',
+    'Clinical neurophysiologists manage ABPN neurology or ABIM internal medicine primary MOC and ABPN clinical neurophysiology subspecialty certification on a 10-year cycle, annual EEG CE as high-density EEG and machine learning seizure detection update interpretation standards, annual EMG/nerve conduction CE as ultrasound-guided electrodiagnosis and neuromuscular junction transmission testing protocols evolve, annual intraoperative neuromonitoring CE as MEP and SSEP alert criteria update, state medical license biennial CME, DEA 3-year renewal, and ACNS membership. Momenties tracks CME by certification and manages the full credential calendar.',
   alternates: { canonical: '/for/clinical-neurophysiologists' },
   openGraph: {
     title: 'Momenties for Clinical Neurophysiologists',
-    description: 'ABPN MOC CME renewal, clinical neurophysiology credential management.',
+    description: 'ABPN/ABIM MOC CME renewal, clinical neurophysiology credential management.',
     url: '/for/clinical-neurophysiologists',
     type: 'website',
   },
@@ -21,32 +21,32 @@ export const metadata: Metadata = {
 const USE_CASES = [
   {
     icon: Shield,
-    title: 'CME tracking for ABPN neurology MOC and clinical neurophysiology subspecialty independently',
-    desc: 'Clinical neurophysiologists hold ABPN neurology primary certification under continuous MOC and ABPN clinical neurophysiology subspecialty certification on a 10-year examination cycle — two ABPN credentials with different content requirements and a 24-month preparation window for the subspecialty examination. ABPN clinical neurophysiology subspecialty requires neurophysiology-specific content including electroencephalography (EEG) interpretation in epilepsy and critical illness, nerve conduction studies (NCS) and electromyography (EMG), evoked potentials (VEP, BAER, SSEP), intraoperative neurophysiological monitoring (IONM), and continuous EEG (cEEG) monitoring in neuro-ICU settings.',
+    title: 'CME tracking for primary board MOC and ABPN clinical neurophysiology subspecialty independently',
+    desc: 'Clinical neurophysiologists hold ABPN neurology or ABIM internal medicine primary board certification under continuous MOC alongside ABPN clinical neurophysiology subspecialty certification on a 10-year examination cycle with a 24-month preparation window. ABPN clinical neurophysiology requires modality-specific content: electroencephalography (EEG) including interictal and ictal pattern recognition, electromyography and nerve conduction studies (EMG/NCS) including neuromuscular junction testing, evoked potentials (SSEP, VEP, BAEP, MEP), long-term EEG monitoring including ambulatory EEG, and intraoperative neurophysiological monitoring (IONM) methodology and alert criteria.',
   },
   {
     icon: Clock,
     title: 'Clinical neurophysiologist multi-credential renewal calendar',
-    desc: '"ABPN neurology MOC — continuous CME." "ABPN clinical neurophysiology subspecialty — 10-year examination cycle, 24-month prep window." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual cEEG monitoring CE — ACNS Standardized Critical Care EEG Terminology updates." "Annual IONM CE — neuromonitoring technique updates, position statement compliance." "ACNS membership — annual." "AANEM membership — annual (for NCS/EMG)." All clinical neurophysiologist credentials with 90-day advance alerts.',
+    desc: '"Primary board MOC (ABPN/ABIM) — continuous CME." "ABPN clinical neurophysiology subspecialty — 10-year examination cycle, 24-month prep window." "State medical license — biennial CME." "DEA registration — 3-year renewal." "Annual EEG CE — ACNS 2021 standardized critical care EEG terminology update, machine learning automated seizure detection clinical validation." "Annual EMG/NCS CE — ultrasound-guided electrodiagnosis (UGNE) technique, AAEM consensus on distal symmetric polyneuropathy workup update." "Annual IONM CE — MEP alert criteria ACNS 2023 update, D-wave monitoring technique." "ACNS membership — annual." All clinical neurophysiology credentials with 90-day advance alerts.',
   },
   {
     icon: BarChart3,
-    title: 'Annual cEEG monitoring CE and IONM technique update analytics',
-    desc: 'Clinical neurophysiologists directing cEEG monitoring programs must maintain CE on ACNS Standardized Critical Care EEG Terminology — the 2021 update introduced the Critical Care EEG Terminology (CCEMRC) framework with specific criteria for periodic discharges, rhythmic patterns, and electrographic seizures in ICU patients. Annual cEEG CE ensures current interpretation of ictal-interictal continuum patterns and lateralized periodic discharges (LPDs, formerly PLEDs) as management implications evolve. Annual IONM CE: ACNS/ASNM position statement on intraoperative neurophysiological monitoring requires annual CE on multimodality monitoring (SSEP, MEP, free-run EMG, D-wave recording) for spinal cord surgery, cerebrovascular surgery, and posterior fossa procedures.',
+    title: 'Annual EEG interpretation CE and IONM protocol update analytics',
+    desc: 'Clinical neurophysiologists must maintain CE on evolving interpretation standards and monitoring protocols: the ACNS 2021 Critical Care EEG Terminology (CCET) standardized the classification of ictal-interictal continuum patterns — CE on the updated CCET is required for clinical neurophysiologists supervising critical care EEG services and signing out continuous EEG reports. Machine learning seizure detection CE has become relevant as FDA-cleared automated seizure detection algorithms (Persyst 14, Natus NeuroWorks) are deployed in clinical cEEG services — CE on algorithm limitations, false positive rate management, and human verification workflow requirements is now required for supervisors implementing automated detection.',
   },
   {
     icon: Users,
-    title: 'ACNS, AANEM, and clinical neurophysiology professional involvement',
-    desc: '"ACNS Annual Meeting — february." "AANEM Annual Meeting — october." "AES Annual Meeting — december." "EAN European Academy of Neurology." "cEEG CE — ACNS 2024 Standardized Critical Care EEG Terminology update, seizure detection algorithm validation in ICU patients (Persyst P16 versus CNN models), non-convulsive status epilepticus treatment protocol updates in critically ill patients." "EMG/NCS CE — AANEM practice guidelines for electrodiagnosis in polyneuropathy, radiculopathy localization in cervical versus lumbosacral disease, EDX in neuromuscular junction disorders." "IONM CE — ACNS/ASNM position statement updates, MEP monitoring in prone positioning, high-risk spinal cord surgery alert criteria." All clinical neurophysiology professional development on calendar.',
+    title: 'ACNS, AANEM, and clinical neurophysiology professional development',
+    desc: '"ACNS American Clinical Neurophysiology Society Annual Meeting — february." "AANEM American Association of Neuromuscular and Electrodiagnostic Medicine Annual Meeting — october." "AAN Annual Meeting — april." "EEG CE — ACNS standardized critical care EEG terminology CCET 2021 update (ictal-interictal continuum classification, brief potentially ictal rhythmic discharges BIRDs definition and clinical significance), machine learning seizure detection clinical deployment CE (Persyst 14 algorithm sensitivity/specificity in cEEG, human-in-the-loop verification protocol), pediatric EEG interpretation update (neonatal EEG background classification — Hellstrom-Westas scoring versus ACNS neonatal criteria), and high-density EEG source localization CE (hdEEG pre-surgical epilepsy workup: 256-channel versus 128-channel spatial resolution)." "EMG/NCS CE — ultrasound-guided nerve conduction (UGNE) technique CE (ulnar nerve at elbow sonography combined with NCS — localization accuracy versus standard segmental studies), AAEM update on distal symmetric polyneuropathy electrodiagnostic evaluation (skin biopsy intraepidermal nerve fiber density versus nerve conduction in small fiber neuropathy), and neuromuscular junction transmission testing CE (single-fiber EMG jitter threshold update for myasthenia gravis — low-jitter cutoff recalibration versus SFEMG fiber density as independent predictor)." "IONM CE — ACNS 2023 MEP alert criteria update (amplitude decrement threshold — 50% versus 80% in cortical versus subcortical surgeries), D-wave monitoring technique CE (direct epidural recording technique in intramedullary spinal cord tumor resection), and somatosensory evoked potential baseline variability CE (SSEP amplitude drift correction in long spine cases — technique CE for IONM professionals)." All clinical neurophysiology professional development on calendar.',
   },
 ]
 
-const CLINNEURO_WORKFLOW = [
-  { time: 'Annual planning', action: 'ABPN neurology MOC CME pace (neurophysiology content weighted), ABPN clinical neurophysiology subspecialty CE pace (10-year cycle — 24-month prep window alert calculated from examination date), state medical license biennial CME, DEA 3-year renewal, annual cEEG monitoring CE, annual IONM CE, ACNS Annual Meeting, AANEM Annual Meeting, and ACNS membership all loaded in January. ABPN neurology counter and clinical neurophysiology subspecialty counter tracked independently.' },
-  { time: 'CE completion', action: '"ACNS-approved — ACNS 2024 Standardized Critical Care EEG Terminology: ictal-interictal continuum (IIC) classification framework, lateralized periodic discharges (LPDs) with and without superimposed riding rhythm, stimulus-induced rhythmic periodic or ictal discharges (SIRPIDs) management in post-cardiac arrest monitoring, and seizure detection algorithm performance benchmarks against gold-standard human reviewer, 3 CME, AMA PRA Category 1, ABPN MOC applicable, ABPN clinical neurophysiology applicable — cEEG domain." Both ABPN counters update.' },
-  { time: 'cEEG CE', action: '"Annual cEEG monitoring CE — ICU seizure management: non-convulsive status epilepticus (NCSE) treatment escalation protocol in post-cardiac arrest encephalopathy, continuous EEG monitoring duration guidelines for cardiac arrest survivors (72 hours), benzodiazepine dose and timing in NCSE versus prophylactic use in ICU seizures, and quantitative EEG trending (compressed spectral array, amplitude-integrated EEG) for seizure detection in high-acuity ICU patients, 2 CME, ABPN clinical neurophysiology applicable, Q1." Annual cEEG CE placed Q1 aligned with ACNS February annual meeting.' },
-  { time: 'IONM CE', action: '"Annual intraoperative neurophysiological monitoring CE — spinal cord surgery monitoring: ACNS/ASNM position statement 2024 update for high-risk spinal cord surgery, transcranial electrical MEP alert criteria (>50% amplitude decrease versus >10% latency increase), SSEP combined with MEP and free-run EMG multimodality monitoring in anterior and posterior spinal procedures, and D-wave recording indications for intramedullary tumor resection, 3 CME, ABPN clinical neurophysiology applicable, Q3." Annual IONM CE placed Q3 aligned with AANEM October meeting.' },
-  { time: 'Renewal audit', action: 'Analytics: ABPN neurology MOC CME on pace? ABPN clinical neurophysiology subspecialty content satisfied? (24-month prep window calculated?) State medical license CME complete? DEA valid? Annual cEEG monitoring CE documented? Annual IONM CE documented? ACNS and AANEM memberships active? Complete clinical neurophysiologist credential audit 90 days before earliest renewal.' },
+const CNP_WORKFLOW = [
+  { time: 'Annual planning', action: 'Primary board MOC CME pace (clinical neurophysiology content weighted), ABPN clinical neurophysiology subspecialty CE pace (10-year cycle — 24-month prep window alert calculated), state medical license biennial CME, DEA 3-year renewal, annual EEG CE, annual EMG/NCS CE, annual IONM CE, ACNS Annual Meeting, AANEM Annual Meeting, AAN Annual Meeting, and ACNS membership all loaded in January. Primary board counter and ABPN clinical neurophysiology counter tracked independently.' },
+  { time: 'CE completion', action: '"ACNS-approved — ACNS 2024 Critical Care EEG update: ictal-interictal continuum management protocol (treatment threshold for highly ictal BIRD patterns in acute brain injury — clinical trial evidence for aggressive versus conservative management), automated seizure detection clinical deployment CE (machine learning algorithm validation against expert EEG reader — sensitivity-specificity tradeoff in ICU cEEG service), and pediatric critical care EEG terminology update (neonatal ictal pattern classification — electrographic seizure versus sharp waves in preterm brain), 4 CME, AMA PRA Category 1, primary board MOC applicable, ABPN clinical neurophysiology applicable." Both counters update.' },
+  { time: 'EEG CE', action: '"Annual EEG CE — machine learning and high-density EEG update 2024: Persyst 14 automated seizure detection clinical validation in prospective multicenter cEEG study (sensitivity 87% versus expert review, false positive rate 0.8/hour requiring human verification), 256-channel hdEEG source localization versus 64-channel in pre-surgical epilepsy (concordance with intracranial EEG — clinical utility CE for epilepsy monitoring unit programs), sleep EEG staging update — AASM 2023 rule update for arousals in N2 sleep (K-complex scoring CE), and neonatal EEG burst-suppression ratio CE (amplitude-integrated EEG aEEG versus standard EEG for continuous neonatal monitoring in newborn ICU), 3 CME, ABPN clinical neurophysiology applicable, Q1." Annual EEG CE placed Q1 aligned with ACNS February meeting.' },
+  { time: 'EMG CE', action: '"Annual EMG/NCS CE — ultrasound-guided electrodiagnosis 2024: UGNE ulnar nerve at elbow sonography combined with segmental NCS — localization accuracy in ulnar neuropathy (cross-sectional area cutoff at 10 mm2 with 85% sensitivity), AAEM polyneuropathy workup update (skin biopsy IENFD for small fiber neuropathy CE — indication when NCS normal and clinical suspicion remains), SFEMG jitter threshold recalibration CE (voluntary versus stimulated SFEMG jitter cutoffs in myasthenia gravis — age-adjusted reference ranges), and repetitive nerve stimulation decrement threshold CE (3 Hz RNS 10% decrement versus 15% — false positive rate in Lambert-Eaton versus myasthenia gravis differentiation), 3 CME, ABPN clinical neurophysiology applicable, Q3." Annual EMG CE placed Q3 aligned with AANEM October meeting.' },
+  { time: 'Renewal audit', action: 'Analytics: Primary board MOC CME on pace? ABPN clinical neurophysiology subspecialty content satisfied? (24-month prep window calculated for 10-year exam?) State medical license CME complete? DEA valid? Annual EEG CE documented? Annual EMG/NCS CE documented? Annual IONM CE documented? ACNS membership active? Complete clinical neurophysiology credential audit 90 days before earliest renewal.' },
 ]
 
 export default function ForClinicalNeurophysiologistsPage() {
@@ -56,12 +56,12 @@ export default function ForClinicalNeurophysiologistsPage() {
         eyebrow="Momenties for Clinical Neurophysiologists"
         title={
           <>
-            ABPN neurology MOC and clinical neurophysiology subspecialty maintained.
+            Primary board MOC and ABPN clinical neurophysiology subspecialty maintained.
             <br />
-            <em className="not-italic text-gold">cEEG monitoring CE current. IONM technique knowledge tracked.</em>
+            <em className="not-italic text-gold">EEG interpretation CE current. IONM alert criteria tracked.</em>
           </>
         }
-        lede="Clinical neurophysiologists manage ABPN neurology continuous MOC with neurophysiology subspecialty content, ABPN clinical neurophysiology subspecialty certification on a 10-year examination cycle with 24-month preparation window alerts, state medical license biennial CME, DEA 3-year registration, annual continuous EEG monitoring CE as ACNS Critical Care EEG Terminology evolves, annual intraoperative neurophysiological monitoring CE on ACNS/ASNM position statement updates, and professional development at ACNS and AANEM. Momenties tracks CME by credential and manages the full calendar."
+        lede="Clinical neurophysiologists manage primary board MOC (ABPN or ABIM) and ABPN clinical neurophysiology subspecialty certification on a 10-year examination cycle with 24-month preparation window alerts. Annual EEG CE as ACNS critical care terminology updates and machine learning seizure detection deploys in clinical cEEG services, annual EMG/NCS CE as ultrasound-guided electrodiagnosis and SFEMG threshold recalibrations update practice standards, annual IONM CE as MEP alert criteria evolve, state medical license biennial CME, DEA 3-year registration, and professional development at ACNS and AANEM. Momenties tracks CME by credential and manages the full calendar."
         crumbs={[{ label: 'For Clinical Neurophysiologists' }]}
       >
         <div className="flex flex-wrap gap-3">
@@ -107,10 +107,10 @@ export default function ForClinicalNeurophysiologistsPage() {
         <div className="max-w-3xl mx-auto">
           <Reveal className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gold/70 mb-3">Clinical neurophysiologist credential rhythm</p>
-            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through ABPN MOC cycles, clinical neurophysiology 10-year subspecialty examination, and annual cEEG and IONM CE requirements.</h2>
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground">CME and credentials managed through primary board MOC, ABPN 10-year subspecialty examination, and annual EEG, EMG/NCS, and IONM CE requirements.</h2>
           </Reveal>
           <div className="space-y-3">
-            {CLINNEURO_WORKFLOW.map((step, i) => (
+            {CNP_WORKFLOW.map((step, i) => (
               <Reveal key={step.time} delay={i * 40}>
                 <div className="flex items-start gap-4 rounded-xl border border-border/50 p-4">
                   <span className="font-mono text-[10px] text-gold/60 w-24 shrink-0 pt-0.5 uppercase tracking-wide leading-relaxed">{step.time}</span>
@@ -130,13 +130,13 @@ export default function ForClinicalNeurophysiologistsPage() {
                 {[0,1,2,3,4].map((s) => <Star key={s} className="h-4 w-4 fill-gold text-gold" />)}
               </div>
               <p className="font-display text-xl text-foreground/90 leading-snug mb-5">
-                &ldquo;ABPN neurology continuous MOC and ABPN clinical neurophysiology subspecialty on a 10-year examination cycle — both tracked separately. The cEEG work in our neuro-ICU is where the terminology matters most: ACNS updated the Critical Care EEG Terminology and the clinical implications for LPDs changed meaningfully. I needed CE on the new framework before I could supervise fellows interpreting ICU EEGs under the new criteria. The IONM work has its own CE track — ACNS/ASNM position statements are binding for program accreditation and I need annual CE before I update our monitoring protocols. The 10-year subspecialty cycle means I have to think about my preparation window 24 months before the exam, not 6 months before. State license biennial. DEA 3-year. All of it on one calendar now.&rdquo;
+                &ldquo;Primary board continuous MOC and ABPN clinical neurophysiology on a 10-year cycle — tracked separately because the modality-specific content requirements are different from general neurology CME. The ACNS critical care EEG terminology CE was clinically urgent: when our hospital deployed Persyst automated seizure detection in the cEEG service, I needed documented CE on the algorithm validation, false positive rate, and human verification protocol before I could supervise the service. The SFEMG jitter threshold recalibration CE changed how I interpret borderline myasthenia cases — I needed current evidence before I could justify my interpretation on a new patient. The EMG ultrasound CE is where I spend the most time now because the technique changes my actual procedural workflow at the bedside. All on one calendar.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">Y</div>
+                <div className="w-10 h-10 rounded-full bg-gold/20 border border-gold/20 flex items-center justify-center text-sm font-bold text-gold">L</div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Yolanda F., MD, PhD</div>
-                  <div className="text-xs text-muted-foreground">Clinical neurophysiologist and neuro-ICU EEG program director, academic neurology department</div>
+                  <div className="text-sm font-medium text-foreground">Leila N., MD, PhD</div>
+                  <div className="text-xs text-muted-foreground">Clinical neurophysiologist and epilepsy monitoring unit director, academic neurology department</div>
                 </div>
               </div>
             </div>
@@ -153,14 +153,14 @@ export default function ForClinicalNeurophysiologistsPage() {
           <Reveal>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'ABPN neurology MOC CME — continuous, neurophysiology content weighted',
+                'Primary board MOC CME (ABPN/ABIM) — continuous, clinical neurophysiology content weighted',
                 'ABPN clinical neurophysiology subspecialty — 10-year cycle, 24-month preparation window alert',
                 'State medical license CME — biennial',
                 'DEA registration renewal — 3-year',
-                'Annual cEEG monitoring CE — ACNS Critical Care EEG Terminology updates',
-                'Annual IONM CE — ACNS/ASNM position statement compliance, multimodality monitoring',
-                'ACNS membership renewal — annual',
-                'ACNS and AANEM conference CME planning by ABPN neurology and neurophysiology applicability',
+                'Annual EEG CE — ACNS CCET update, machine learning detection deployment, hdEEG',
+                'Annual EMG/NCS CE — ultrasound-guided electrodiagnosis, SFEMG threshold, polyneuropathy',
+                'Annual IONM CE — MEP alert criteria ACNS update, D-wave monitoring, SSEP variability',
+                'ACNS and AANEM conference CME planning by ABPN and primary board applicability',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2 text-xs text-foreground/80">
                   <CheckCircle2 className="h-3 w-3 text-gold shrink-0 mt-0.5" />
@@ -173,8 +173,8 @@ export default function ForClinicalNeurophysiologistsPage() {
       </section>
 
       <CTA
-        title="ABPN neurology MOC and clinical neurophysiology subspecialty maintained."
-        subtitle="CME tracking for ABPN dual certification with 10-year exam prep window, annual cEEG monitoring CE, IONM position statement CE, and clinical neurophysiology professional development. Free to start."
+        title="Primary board MOC and ABPN clinical neurophysiology subspecialty maintained."
+        subtitle="CME tracking for primary board MOC and ABPN 10-year exam prep window, annual EEG CE, EMG/NCS CE, IONM CE, and clinical neurophysiology professional development. Free to start."
         primary={{ label: 'Start free', href: '/login' }}
         secondary={{ label: 'CE analytics', href: '/features/analytics' }}
       />
