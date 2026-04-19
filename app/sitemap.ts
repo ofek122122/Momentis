@@ -509,7 +509,6 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/for/geriatric-psychiatrists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/content-calendar', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/for/pediatric-rheumatologists', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/for/pediatric-cardiologists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/social-media-calendar', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/for/interventional-radiologists', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/for/neonatologists', priority: 0.8, changeFrequency: 'monthly' },
