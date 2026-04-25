@@ -1,0 +1,9 @@
+.github
+n8n
+*.test.ts
+*.test.tsx
+__tests__
+.claude
+BACKLOG.md
+PROGRESS.md
+PROJECT_STATUS.md

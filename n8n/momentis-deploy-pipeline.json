@@ -1,0 +1,318 @@
+{
+  "name": "Momentis — Deploy Pipeline",
+  "nodes": [
+    {
+      "id": "trigger-manual",
+      "name": "🚀 Deploy Momentis",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [200, 300],
+      "parameters": {}
+    },
+    {
+      "id": "config",
+      "name": "Set Config",
+      "type": "n8n-nodes-base.set",
+      "position": [420, 300],
+      "typeVersion": 3.4,
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a1",
+              "name": "GITHUB_OWNER",
+              "value": "ofek122122",
+              "type": "string"
+            },
+            {
+              "id": "a2",
+              "name": "GITHUB_REPO",
+              "value": "calendro",
+              "type": "string"
+            },
+            {
+              "id": "a3",
+              "name": "GITHUB_BRANCH",
+              "value": "master",
+              "type": "string"
+            },
+            {
+              "id": "a4",
+              "name": "LIVE_URL",
+              "value": "https://YOUR_APP.vercel.app",
+              "type": "string"
+            },
+            {
+              "id": "a5",
+              "name": "NOTIFY_EMAIL",
+              "value": "ofek.karavani1@gmail.com",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trigger-actions",
+      "name": "Trigger GitHub Actions Deploy",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [640, 300],
+      "typeVersion": 4.4,
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.github.com/repos/{{ $json.GITHUB_OWNER }}/{{ $json.GITHUB_REPO }}/actions/workflows/deploy.yml/dispatches",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Accept", "value": "application/vnd.github+json" },
+            { "name": "X-GitHub-Api-Version", "value": "2022-11-28" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"ref\": \"{{ $('Set Config').item.json.GITHUB_BRANCH }}\"}",
+        "options": {
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 2000
+        }
+      }
+    },
+    {
+      "id": "wait-build",
+      "name": "Wait for Build (3 min)",
+      "type": "n8n-nodes-base.wait",
+      "position": [860, 300],
+      "typeVersion": 1.1,
+      "webhookId": "momentis-wait-deploy",
+      "parameters": {
+        "resume": "timeInterval",
+        "amount": 3,
+        "unit": "minutes"
+      }
+    },
+    {
+      "id": "get-run",
+      "name": "Get Latest Run Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1080, 300],
+      "typeVersion": 4.4,
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.github.com/repos/{{ $('Set Config').item.json.GITHUB_OWNER }}/{{ $('Set Config').item.json.GITHUB_REPO }}/actions/runs?branch={{ $('Set Config').item.json.GITHUB_BRANCH }}&per_page=1",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Accept", "value": "application/vnd.github+json" },
+            { "name": "X-GitHub-Api-Version", "value": "2022-11-28" }
+          ]
+        },
+        "options": {
+          "retryOnFail": true,
+          "maxTries": 3,
+          "waitBetweenTries": 3000
+        }
+      }
+    },
+    {
+      "id": "parse-run",
+      "name": "Parse Run Status",
+      "type": "n8n-nodes-base.code",
+      "position": [1300, 300],
+      "typeVersion": 2,
+      "parameters": {
+        "jsCode": "const run = $input.item.json.workflow_runs?.[0];\nif (!run) {\n  return [{ json: {\n    runId: null,\n    status: 'not_found',\n    conclusion: 'failure',\n    htmlUrl: '',\n    liveUrl: $('Set Config').item.json.LIVE_URL,\n    notifyEmail: $('Set Config').item.json.NOTIFY_EMAIL\n  }}];\n}\nreturn [{ json: {\n  runId: run.id,\n  status: run.status,\n  conclusion: run.conclusion ?? 'in_progress',\n  htmlUrl: run.html_url,\n  createdAt: run.created_at,\n  liveUrl: $('Set Config').item.json.LIVE_URL,\n  notifyEmail: $('Set Config').item.json.NOTIFY_EMAIL\n}}];"
+      }
+    },
+    {
+      "id": "check-conclusion",
+      "name": "Deployment OK?",
+      "type": "n8n-nodes-base.if",
+      "position": [1520, 300],
+      "typeVersion": 2.3,
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.conclusion }}",
+              "rightValue": "success",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "health-check",
+      "name": "Health Check Live URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1740, 200],
+      "typeVersion": 4.4,
+      "onError": "continueRegularOutput",
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.liveUrl + '/api/health' }}",
+        "options": {
+          "timeout": 10000,
+          "response": {
+            "response": { "responseFormat": "json" }
+          }
+        }
+      }
+    },
+    {
+      "id": "health-ok",
+      "name": "Health OK?",
+      "type": "n8n-nodes-base.if",
+      "position": [1960, 200],
+      "typeVersion": 2.3,
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c2",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "ok",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "success-note",
+      "name": "✅ Deployment Success",
+      "type": "n8n-nodes-base.set",
+      "position": [2180, 140],
+      "typeVersion": 3.4,
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "s1",
+              "name": "message",
+              "value": "=✅ Momentis is LIVE at {{ $('Parse Run Status').item.json.liveUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "s2",
+              "name": "deployUrl",
+              "value": "={{ $('Parse Run Status').item.json.liveUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "s3",
+              "name": "runUrl",
+              "value": "={{ $('Parse Run Status').item.json.htmlUrl }}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "failure-deploy",
+      "name": "❌ Deploy Failed",
+      "type": "n8n-nodes-base.set",
+      "position": [1740, 440],
+      "typeVersion": 3.4,
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f1",
+              "name": "message",
+              "value": "=❌ Momentis deploy FAILED — conclusion: {{ $('Parse Run Status').item.json.conclusion }}. Logs: {{ $('Parse Run Status').item.json.htmlUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "f2",
+              "name": "runUrl",
+              "value": "={{ $('Parse Run Status').item.json.htmlUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "f3",
+              "name": "conclusion",
+              "value": "={{ $('Parse Run Status').item.json.conclusion }}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "health-fail-note",
+      "name": "⚠️ Health Check Failed",
+      "type": "n8n-nodes-base.set",
+      "position": [2180, 300],
+      "typeVersion": 3.4,
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "hf1",
+              "name": "message",
+              "value": "=⚠️ Momentis deployed but /api/health returned unhealthy — check DB connection. URL: {{ $('Parse Run Status').item.json.liveUrl }}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "connections": {
+    "🚀 Deploy Momentis": {
+      "main": [[{ "node": "Set Config", "type": "main", "index": 0 }]]
+    },
+    "Set Config": {
+      "main": [[{ "node": "Trigger GitHub Actions Deploy", "type": "main", "index": 0 }]]
+    },
+    "Trigger GitHub Actions Deploy": {
+      "main": [[{ "node": "Wait for Build (3 min)", "type": "main", "index": 0 }]]
+    },
+    "Wait for Build (3 min)": {
+      "main": [[{ "node": "Get Latest Run Status", "type": "main", "index": 0 }]]
+    },
+    "Get Latest Run Status": {
+      "main": [[{ "node": "Parse Run Status", "type": "main", "index": 0 }]]
+    },
+    "Parse Run Status": {
+      "main": [[{ "node": "Deployment OK?", "type": "main", "index": 0 }]]
+    },
+    "Deployment OK?": {
+      "main": [
+        [{ "node": "Health Check Live URL", "type": "main", "index": 0 }],
+        [{ "node": "❌ Deploy Failed", "type": "main", "index": 0 }]
+      ]
+    },
+    "Health Check Live URL": {
+      "main": [[{ "node": "Health OK?", "type": "main", "index": 0 }]]
+    },
+    "Health OK?": {
+      "main": [
+        [{ "node": "✅ Deployment Success", "type": "main", "index": 0 }],
+        [{ "node": "⚠️ Health Check Failed", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": { "executionOrder": "v1" }
+}
