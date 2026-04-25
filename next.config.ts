@@ -33,6 +33,15 @@ const nextConfig: NextConfig = {
     root: __dirname, // Momenties is the workspace root, ignore parent lockfiles
   },
 
+  experimental: {
+    // Render up to 32 static pages in parallel instead of the default 8.
+    // With 400+ marketing pages this cuts static-generation time by ~4×.
+    staticGenerationMaxConcurrency: 32,
+    // Each worker handles at least 4 pages before spawning another,
+    // avoiding excessive process-spawn overhead for small page batches.
+    staticGenerationMinPagesPerWorker: 4,
+  },
+
   headers: async () => [
     {
       source: '/(.*)',

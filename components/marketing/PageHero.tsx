@@ -1,19 +1,32 @@
 import type { ReactNode } from 'react'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { Breadcrumbs, type Crumb } from './Breadcrumbs'
 
 export function PageHero({
   eyebrow,
   title,
   lede,
+  subtitle,
+  cta,
+  ctaHref = '/login',
   crumbs,
   children,
 }: {
   eyebrow?: string
   title: ReactNode
+  /** Long-form description rendered below the title. */
   lede?: ReactNode
+  /** Alias for lede — preferred by generated pages. */
+  subtitle?: ReactNode
+  /** Optional CTA button label. */
+  cta?: string
+  /** Destination for the CTA button (default: /login). */
+  ctaHref?: string
   crumbs?: Crumb[]
   children?: ReactNode
 }) {
+  const body = lede ?? subtitle
   return (
     <section className="relative border-b border-border overflow-hidden">
       <div
@@ -38,10 +51,21 @@ export function PageHero({
         <h1 className="animate-fade-up animate-fade-up-2 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight text-foreground max-w-3xl">
           {title}
         </h1>
-        {lede && (
+        {body && (
           <p className="animate-fade-up animate-fade-up-3 mt-6 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            {lede}
+            {body}
           </p>
+        )}
+        {cta && (
+          <div className="animate-fade-up animate-fade-up-4 mt-8">
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center gap-2 rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+            >
+              {cta}
+              <ArrowRight size={15} />
+            </Link>
+          </div>
         )}
         {children && <div className="animate-fade-up animate-fade-up-4 mt-8">{children}</div>}
       </div>

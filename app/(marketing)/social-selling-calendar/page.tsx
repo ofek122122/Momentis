@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Linkedin, MessageSquare, TrendingUp, BarChart3 } from "lucide-react"
+import { Users2, MessageSquare, TrendingUp, BarChart3 } from "lucide-react"
 import { PageHero } from "@/components/marketing/PageHero"
 import { Reveal } from "@/components/marketing/Reveal"
 import { CTA } from "@/components/marketing/CTA"
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const pillars = [
   {
-    icon: Linkedin,
+    icon: Users2,
     title: "LinkedIn Presence & Content Cadence",
     description:
       "Map every touchpoint for consistent executive and rep visibility: post scheduling, comment engagement windows, connection request quotas, and SSI (Social Selling Index) check-ins. Momenties surfaces your weekly content calendar, reminds reps to engage within the first hour of buyer activity, and logs SSI trends so leadership can spot coaching opportunities before quota misses compound.",
