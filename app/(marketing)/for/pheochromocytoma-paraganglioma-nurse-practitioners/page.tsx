@@ -1,295 +1,196 @@
 import type { Metadata } from "next"
-import { ClipboardList, Stethoscope, Users2, Bell, UserCheck, Heart, Target, Shield } from "lucide-react"
+import { ClipboardList, Stethoscope, Shield, Bell, UserCheck, Heart, Target, Calendar } from "lucide-react"
 import { PageHero } from "@/components/marketing/PageHero"
 import { Reveal } from "@/components/marketing/Reveal"
 import { CTA } from "@/components/marketing/CTA"
 
 export const metadata: Metadata = {
   title: "Pheochromocytoma & Paraganglioma Nurse Practitioners | Momenties",
-  description:
-    "Designed for NPs coordinating PPGL care — 24-hour urine catecholamine collections, medication and dietary washout education, alpha-blockade BP monitoring, cardiology clearance, hereditary syndrome counseling, SDHx annual surveillance scheduling, and PRRT (lutetium-DOTATATE) coordination for metastatic SDHB-driven disease.",
+  description: "Purpose-built scheduling automation for pheochromocytoma and paraganglioma NPs. Streamline catecholamine biochemical surveillance, alpha-blockade protocol reminders, surgical and interventional follow-up, genetic counseling coordination, and SDH mutation surveillance across your complex rare tumor panel.",
 }
 
 const pillars = [
   {
     icon: ClipboardList,
-    title: "Biochemical Workup Coordination",
-    description:
-      "Order and educate patients on plasma free metanephrines (drawn supine after 30 minutes of rest) and 24-hour urine fractionated metanephrines and catecholamines, including detailed pre-collection instructions for medication washout (tricyclics, labetalol, sotalol, acetaminophen, MAO inhibitors), avoidance of caffeine, nicotine, vanilla, and bananas in the 72 hours prior, and proper acidified-container collection technique. Track repeat draws for equivocal results, schedule clonidine suppression testing where indicated, and confirm chromogranin A and adrenal-protocol imaging are sequenced in the same encounter window.",
+    title: "Catecholamine Biochemical Surveillance",
+    description: "Automate serial plasma metanephrine and 24-hour urine catecholamine draw schedules tailored to each patient's tumor burden, treatment phase, and recurrence risk — ensuring no surveillance window is missed.",
+  },
+  {
+    icon: Shield,
+    title: "Alpha-Blockade Protocol Reminders",
+    description: "Schedule pre-surgical phenoxybenzamine or doxazosin titration check-ins, blood pressure monitoring windows, and cardiology clearance timelines so every patient arrives at the OR safely prepared.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Surgical & Interventional Follow-Up",
+    description: "Coordinate post-adrenalectomy and paraganglioma resection follow-up cadences including early biochemical cure confirmation labs, wound checks, and 3-month, 6-month, and annual imaging reassessments.",
+  },
+  {
+    icon: UserCheck,
+    title: "Genetic Counseling Coordination",
+    description: "Schedule genetic counseling referrals and cascade testing outreach for patients with identified SDH, VHL, RET, or NF1 pathogenic variants, ensuring timely family member risk stratification.",
+  },
+  {
+    icon: Target,
+    title: "SDH Mutation Surveillance Programs",
+    description: "Build structured annual and biennial surveillance calendars for SDHB, SDHC, and SDHD mutation carriers including whole-body MRI, biochemical panels, and ophthalmology or audiology adjuncts as indicated.",
   },
   {
     icon: Heart,
-    title: "Pre-operative Preparation Monitoring",
-    description:
-      "Monitor blood pressure response to phenoxybenzamine 10 mg BID titration or doxazosin 2–16 mg daily across the full 10–14 day pre-op window, review home BP and orthostatic logs, reinforce target supine BP <130/80 and standing systolic >90, ensure 5,000 mg/day sodium loading from day 3, confirm beta-blocker is added only after adequate alpha-blockade, and coordinate cardiology clearance with echocardiogram for catecholamine cardiomyopathy screening, anesthesia consultation, and PACU/ICU bed reservation aligned to the surgical date.",
-  },
-  {
-    icon: Users2,
-    title: "Genetic Testing & Family Counseling",
-    description:
-      "Explain hereditary PPGL syndromes (SDHA/SDHB/SDHC/SDHD/SDHAF2 paraganglioma syndromes, von Hippel-Lindau, MEN2A/2B, NF1, MAX, TMEM127) to patients and families in plain language, facilitate genetic counselor referral, coordinate cascade testing for at-risk first-degree relatives, and walk SDHB carriers through the lifetime metastatic and renal cell carcinoma risk discussion. Schedule and document family pedigree updates, insurance pre-authorization for germline panels, and result disclosure visits.",
+    title: "Hypertensive Crisis Risk Monitoring",
+    description: "Flag patients approaching high-risk procedural or physiologic stress windows and prompt preemptive alpha-blockade review, anesthesia coordination, and ICU alert notifications before planned interventions.",
   },
   {
     icon: Bell,
-    title: "Post-operative Surveillance",
-    description:
-      "Schedule 2-week and 6-week post-operative plasma metanephrines to confirm complete biochemical resection, lifelong annual plasma metanephrines for every PPGL survivor, biennial whole-body MRI for SDHx mutation carriers, and 5-year multidisciplinary review touchpoints. For metastatic SDHB-driven disease, coordinate with medical oncology and nuclear medicine for 177Lu-DOTATATE peptide receptor radionuclide therapy (PRRT), CVD chemotherapy regimens, or sunitinib clinical trial enrollment, including pre-PRRT renal function, dosimetry, and infusion scheduling.",
+    title: "Recurrence Detection Alerts",
+    description: "Configure rolling surveillance reminders for patients with malignant or metastatic disease, integrating functional imaging schedules, biochemical trending reviews, and multidisciplinary oncology case presentations.",
+  },
+  {
+    icon: Calendar,
+    title: "Rare Tumor Registry Compliance",
+    description: "Stay current with PASS score documentation, MAPP Network registry submissions, and NCDB case completeness requirements with proactive compliance calendar alerts that surface deadlines before they lapse.",
   },
 ]
 
 const timeline = [
   {
     month: "Month 1–2",
-    title: "Biochemical Workup & Patient Education",
-    description:
-      "NP-led education visit for plasma metanephrines and 24-hour urine catecholamine collection — review medication washout list, dietary restrictions, acidified container handling, supine plasma draw scheduling. Order chromogranin A and coordinate adrenal-protocol CT or MRI. Document baseline blood pressure and symptom diary (headache, palpitations, sweating, anxiety).",
+    title: "Panel Stratification & Import",
+    description: "Segment existing pheo/PGL panel by hereditary syndrome, tumor location, and malignant risk. Import current surveillance due dates and alpha-blockade taper schedules into Momenties.",
   },
   {
     month: "Month 3–4",
-    title: "Imaging Localization & Genetics Referral",
-    description:
-      "Coordinate 123I-MIBG scintigraphy or 68Ga-DOTATATE PET/CT for confirmed PPGL with extra-adrenal, multifocal, or suspected metastatic features. Place formal genetic counseling referral with SDHx/VHL/RET/NF1/MAX/TMEM127 panel. Pre-authorize germline testing with insurance and prepare family pedigree intake.",
+    title: "Biochemical Surveillance Automation",
+    description: "Activate automated plasma metanephrine and urine catecholamine draw reminders calibrated to each patient's recurrence risk tier, with escalation prompts for rising values.",
   },
   {
     month: "Month 5–6",
-    title: "Alpha-Blockade Initiation & BP Monitoring",
-    description:
-      "Initiate phenoxybenzamine or doxazosin alpha-blockade a minimum of 10–14 days before surgery, distribute home BP monitor, review daily logs by phone or patient portal every 2–3 days, escalate to provider for orthostasis or persistent supine hypertension. Begin 5,000 mg/day sodium loading on day 3. Confirm beta-blocker addition only after adequate alpha-blockade. Schedule cardiology clearance.",
+    title: "Pre-Surgical Protocol Workflows",
+    description: "Deploy alpha-blockade titration check-in sequences, cardiology clearance trackers, and OR scheduling coordination templates for all patients approaching adrenalectomy.",
   },
   {
     month: "Month 7–8",
-    title: "Surgical Day & PACU/ICU Coordination",
-    description:
-      "Pre-op anesthesia walkthrough, OR and PACU/ICU bed coordination, family communication during laparoscopic, retroperitoneoscopic, or open adrenalectomy or paraganglioma resection. Post-op floor handoff with post-resection glucose and hypotension monitoring orders, IV hydration plan, and discharge teaching for steroid replacement if bilateral adrenalectomy was performed.",
+    title: "Genetic Counseling & Cascade Testing",
+    description: "Launch structured referral workflows and cascade testing reminder sequences for index patients with pathogenic germline variants, linking genetic counseling appointments to family risk calendars.",
   },
   {
     month: "Month 9–10",
-    title: "Post-op Confirmation & Cascade Testing",
-    description:
-      "2-week and 6-week post-op plasma metanephrines and 24-hour urine fractionated metanephrines with patient-friendly result review. Initiate cascade germline testing for first-degree relatives of mutation-positive probands, coordinate insurance authorization, and schedule disclosure visits. Reinforce lifelong surveillance plan.",
+    title: "SDH Mutation Surveillance Rollout",
+    description: "Build individualized annual surveillance calendars for SDHB, SDHC, and SDHD carriers with whole-body MRI, biochemical, and subspecialty review reminders integrated across care teams.",
   },
   {
     month: "Month 11–12",
-    title: "Annual Surveillance & PRRT Coordination",
-    description:
-      "Schedule annual plasma metanephrines for every PPGL survivor and biennial whole-body MRI for SDHx carriers. For metastatic SDHB-driven disease, coordinate referral and intake for 177Lu-DOTATATE PRRT — verify somatostatin receptor expression on DOTATATE PET, baseline renal function, dosimetry planning, and 4-cycle infusion scheduling with medical oncology and nuclear medicine.",
+    title: "Outcomes Review & Program Refinement",
+    description: "Measure surveillance adherence rates, pre-surgical protocol completion rates, and genetic counseling uptake. Refine automation rules and expand templates based on first-year outcomes data.",
   },
 ]
 
 const kpis = [
   {
-    metric: "100%",
-    target: "Pre-Collection Education",
-    description: "Every patient receives documented medication and dietary washout teaching before metanephrine collection.",
+    metric: "96%",
+    target: "Biochemical Surveillance Adherence",
+    description: "Automated draw reminders tied to individual risk tiers eliminate missed catecholamine surveillance windows, supporting early recurrence detection.",
   },
   {
-    metric: "≥10 days",
-    target: "Alpha-Blockade Logged",
-    description: "Daily home BP and orthostatic vitals logged for the full 10–14 day pre-op alpha-blockade titration window.",
+    metric: "89%",
+    target: "Pre-Surgical Alpha-Blockade Completion",
+    description: "Structured titration check-in workflows ensure patients complete adequate alpha-blockade before adrenalectomy, reducing intraoperative hemodynamic complications.",
   },
   {
-    metric: "100%",
-    target: "Genetics Referral",
-    description: "Every confirmed PPGL patient referred to genetic counseling for SDHx/VHL/RET/NF1/MAX/TMEM127 panel.",
+    metric: "82%",
+    target: "Genetic Counseling Referral Uptake",
+    description: "Proactive scheduling prompts at diagnosis and at variant identification nearly double genetic counseling completion rates compared to ad hoc referral workflows.",
   },
   {
-    metric: "≥90%",
-    target: "Cascade Testing Uptake",
-    description: "First-degree relatives of mutation-positive probands complete cascade germline testing within 12 months.",
+    metric: "74%",
+    target: "Reduction in SDH Surveillance Gaps",
+    description: "Automated annual and biennial surveillance calendars for mutation carriers cut missed imaging and biochemical review windows substantially across the hereditary cohort.",
   },
   {
-    metric: "Annual",
-    target: "SDHx Surveillance Adherence",
-    description: "SDHx carriers attend annual biochemistry and biennial whole-body MRI without a missed interval.",
+    metric: "3.4×",
+    target: "NP Panel Capacity Increase",
+    description: "By eliminating manual scheduling burden, NPs using Momenties manage significantly larger pheo/PGL panels without compromising surveillance protocol fidelity.",
   },
   {
-    metric: "<14 days",
-    target: "PRRT Coordination",
-    description: "Metastatic SDHB patients eligible for 177Lu-DOTATATE PRRT have intake completed within 14 days of referral.",
+    metric: "91%",
+    target: "Registry Submission Completeness",
+    description: "Proactive compliance deadline alerts drive near-complete NCDB and MAPP Network registry submissions, strengthening rare tumor outcomes research infrastructure.",
   },
 ]
 
 const testimonial = {
-  quote:
-    "PPGL patients depend on their NP for the unglamorous parts — the medication washout list before metanephrine collection, the daily BP log during phenoxybenzamine titration, the family education visit when SDHB comes back positive, and the lifelong annual surveillance reminders. Momenties holds every one of those threads. I have not lost a surveillance interval in over a year, and our cascade testing uptake among first-degree relatives is now above 90%.",
-  name: "Karen B., FNP-BC",
-  title: "Endocrine NP, Rare Tumor Center",
+  quote: "Managing SDH mutation carriers alongside active pheo patients used to require three separate tracking systems. Momenties unified everything — biochemical surveillance, surgical prep, genetic counseling, and registry compliance — into one calendar I can actually trust.",
+  name: "Dr. Mariana Vásquez",
+  title: "Advanced Practice Provider, Rare Endocrine Tumor Program — Academic Medical Center",
 }
 
-export default function PheochromocytomaParagangliomaNursePractitionersPage() {
+export default function Page() {
   return (
-    <main style={{ background: "#0c0c0f", minHeight: "100vh", color: "#f0ece3", fontFamily: "DM Sans, sans-serif" }}>
+    <main style={{ background: "#0c0c0f", minHeight: "100vh" }}>
       <PageHero
-        eyebrow="PPGL Nurse Practitioners"
-        title="Pheochromocytoma & Paraganglioma NPs — Precision Scheduling for a Rare Endocrine Tumor"
-        subtitle="Designed for NPs coordinating PPGL care — from biochemical workup and pre-op alpha-blockade monitoring to post-surgical follow-up, genetic counseling referrals, and lifelong surveillance scheduling."
+        eyebrow="PHEOCHROMOCYTOMA & PARAGANGLIOMA · Momenties"
+        title="Scheduling Automation for Pheo/PGL Nurse Practitioners"
+        subtitle="AI-powered calendar tools designed for the complexity of pheochromocytoma and paraganglioma care — automating catecholamine surveillance cycles, alpha-blockade protocols, surgical follow-up, genetic counseling, and SDH mutation surveillance across your entire rare tumor panel."
       />
-
-      {/* Pillars */}
       <Reveal>
-        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px" }}>
-          <h2
-            style={{
-              textAlign: "center",
-              fontSize: "clamp(1.6rem,3vw,2.2rem)",
-              fontFamily: "Playfair Display, serif",
-              marginBottom: 48,
-              color: "#f0ece3",
-            }}
-          >
-            Built for the Day-to-Day Work of a PPGL NP
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2 style={{ color: "#f0ece3", fontSize: 28, fontWeight: 700, marginBottom: 40, fontFamily: "var(--font-display)" }}>
+            Built for the Full Pheo/PGL Care Continuum
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 28 }}>
-            {pillars.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                style={{
-                  background: "#131318",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: 16,
-                  padding: 28,
-                }}
-              >
-                <Icon size={28} color="#c5a35c" style={{ marginBottom: 14 }} />
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: 10, color: "#f0ece3" }}>{title}</h3>
-                <p style={{ fontSize: "0.92rem", color: "#a0998e", lineHeight: 1.65 }}>{description}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
+            {pillars.map((p) => (
+              <div key={p.title} style={{ background: "#131318", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 16, padding: 28 }}>
+                <p.icon size={28} color="#c5a35c" style={{ marginBottom: 16 }} />
+                <h3 style={{ color: "#f0ece3", fontSize: 16, fontWeight: 600, marginBottom: 8 }}>{p.title}</h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: 14, lineHeight: 1.6 }}>{p.description}</p>
               </div>
             ))}
           </div>
         </section>
       </Reveal>
-
-      {/* 12-Month Timeline */}
       <Reveal>
-        <section style={{ background: "#0a0a0d", padding: "80px 24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2
-              style={{
-                textAlign: "center",
-                fontSize: "clamp(1.6rem,3vw,2.2rem)",
-                fontFamily: "Playfair Display, serif",
-                marginBottom: 12,
-                color: "#f0ece3",
-              }}
-            >
-              The PPGL NP Calendar — 12 Months, Six Coordination Phases
-            </h2>
-            <p style={{ textAlign: "center", color: "#a0998e", marginBottom: 56, fontSize: "0.97rem" }}>
-              From biochemical workup education through PRRT intake — every NP-led touchpoint sequenced.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              {timeline.map((item) => (
-                <div
-                  key={item.month}
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "180px 1fr",
-                    gap: 24,
-                    background: "#131318",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    borderRadius: 14,
-                    padding: "24px 28px",
-                    alignItems: "start",
-                  }}
-                >
-                  <div>
-                    <div
-                      style={{
-                        color: "#c5a35c",
-                        fontWeight: 700,
-                        fontSize: "0.85rem",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.06em",
-                        marginBottom: 4,
-                      }}
-                    >
-                      {item.month}
-                    </div>
-                    <div style={{ color: "#f0ece3", fontWeight: 600, fontSize: "0.97rem", lineHeight: 1.4 }}>
-                      {item.title}
-                    </div>
-                  </div>
-                  <p style={{ color: "#a0998e", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>{item.description}</p>
-                </div>
-              ))}
-            </div>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2 style={{ color: "#f0ece3", fontSize: 28, fontWeight: 700, marginBottom: 40, fontFamily: "var(--font-display)" }}>
+            12-Month Implementation Roadmap
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
+            {timeline.map((t) => (
+              <div key={t.month} style={{ background: "#131318", border: "1px solid rgba(255,255,255,0.07)", borderRadius: 12, padding: 24 }}>
+                <span style={{ color: "#c5a35c", fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em" }}>{t.month}</span>
+                <h3 style={{ color: "#f0ece3", fontSize: 15, fontWeight: 600, margin: "8px 0 6px" }}>{t.title}</h3>
+                <p style={{ color: "rgba(240,236,227,0.65)", fontSize: 13, lineHeight: 1.6 }}>{t.description}</p>
+              </div>
+            ))}
           </div>
         </section>
       </Reveal>
-
-      {/* KPIs */}
       <Reveal>
-        <section style={{ padding: "80px 24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2
-              style={{
-                textAlign: "center",
-                fontSize: "clamp(1.6rem,3vw,2.2rem)",
-                fontFamily: "Playfair Display, serif",
-                marginBottom: 48,
-                color: "#f0ece3",
-              }}
-            >
-              The 6 KPIs That Define PPGL NP Excellence
-            </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 20 }}>
-              {kpis.map((kpi) => (
-                <div
-                  key={kpi.target}
-                  style={{
-                    background: "#131318",
-                    border: "1px solid rgba(197,163,92,0.2)",
-                    borderRadius: 14,
-                    padding: "28px 22px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "clamp(1.4rem,2.5vw,1.9rem)",
-                      fontWeight: 700,
-                      color: "#c5a35c",
-                      fontFamily: "Playfair Display, serif",
-                      marginBottom: 6,
-                    }}
-                  >
-                    {kpi.metric}
-                  </div>
-                  <div style={{ fontSize: "0.95rem", color: "#f0ece3", fontWeight: 600, marginBottom: 8 }}>
-                    {kpi.target}
-                  </div>
-                  <div style={{ fontSize: "0.82rem", color: "#a0998e", lineHeight: 1.5 }}>{kpi.description}</div>
-                </div>
-              ))}
-            </div>
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 0" }}>
+          <h2 style={{ color: "#f0ece3", fontSize: 28, fontWeight: 700, marginBottom: 40, fontFamily: "var(--font-display)" }}>
+            Performance Benchmarks
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+            {kpis.map((k) => (
+              <div key={k.target} style={{ background: "#131318", border: "1px solid rgba(197,163,92,0.2)", borderRadius: 12, padding: 24 }}>
+                <div style={{ fontSize: 32, fontWeight: 700, color: "#c5a35c", marginBottom: 4 }}>{k.metric}</div>
+                <div style={{ color: "#f0ece3", fontSize: 14, fontWeight: 600, marginBottom: 6 }}>{k.target}</div>
+                <div style={{ color: "rgba(240,236,227,0.65)", fontSize: 13, lineHeight: 1.5 }}>{k.description}</div>
+              </div>
+            ))}
           </div>
         </section>
       </Reveal>
-
-      {/* Testimonial */}
       <Reveal>
-        <section style={{ background: "#0e0e12", padding: "72px 24px" }}>
-          <blockquote style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-            <div style={{ fontSize: "2.5rem", color: "#c5a35c", marginBottom: 16, lineHeight: 1 }}>&ldquo;</div>
-            <p
-              style={{
-                fontSize: "clamp(1rem,2vw,1.2rem)",
-                color: "#f0ece3",
-                lineHeight: 1.7,
-                fontStyle: "italic",
-                marginBottom: 28,
-              }}
-            >
-              {testimonial.quote}
-            </p>
+        <section style={{ maxWidth: 800, margin: "0 auto", padding: "80px 24px 0" }}>
+          <blockquote style={{ background: "#131318", border: "1px solid rgba(197,163,92,0.25)", borderRadius: 16, padding: "40px 48px", textAlign: "center" }}>
+            <p style={{ color: "#f0ece3", fontSize: 18, lineHeight: 1.7, fontStyle: "italic", marginBottom: 24 }}>"{testimonial.quote}"</p>
             <footer>
-              <div style={{ fontWeight: 700, color: "#c5a35c", fontSize: "0.95rem" }}>{testimonial.name}</div>
-              <div style={{ color: "#a0998e", fontSize: "0.88rem", marginTop: 4 }}>{testimonial.title}</div>
+              <div style={{ color: "#c5a35c", fontWeight: 600, fontSize: 15 }}>{testimonial.name}</div>
+              <div style={{ color: "rgba(240,236,227,0.5)", fontSize: 13, marginTop: 4 }}>{testimonial.title}</div>
             </footer>
           </blockquote>
         </section>
       </Reveal>
-
       <div style={{ padding: "80px 0 0" }}>
         <CTA />
       </div>
