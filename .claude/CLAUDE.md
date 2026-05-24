@@ -8,17 +8,6 @@ Calendro is a zero-friction AI-powered calendar web app. Users create events by 
 
 ---
 
-## Current Status
-
-- Phases 1-5 complete (bugs fixed, features built, mobile polished)
-- 76 tests passing across 12 test files
-- Zero build errors
-- See `PROJECT_STATUS.md` for full current state
-- See `BACKLOG.md` for remaining work
-- See `PROGRESS.md` for iteration history
-
----
-
 ## Tech Stack
 
 - **Framework:** Next.js 16.2.2 (App Router, Turbopack)
