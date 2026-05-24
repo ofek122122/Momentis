@@ -130,3 +130,53 @@ npx prisma generate  # Regenerate client
 - Never disable failing tests to "fix" them — actually fix the issue
 - Never introduce new dependencies without strong justification
 - Never change design tokens (colors, fonts, spacing) without explicit instruction
+
+---
+
+## Git Workflow (mandatory)
+
+After any meaningful change, **commit and push to a properly-named branch**, then open a PR. Don't accumulate uncommitted work — commit logical units as you finish them. This authorization is durable: do not ask for per-action confirmation on standard commit/push/PR-open.
+
+### Branch naming
+
+- **Never commit directly to `master` or `main`.** Always create a branch first.
+- Format: `<type>/<short-kebab-case-description>`
+- Types: `feat`, `fix`, `chore`, `docs`, `refactor`, `test`, `perf`, `ci`, `style`
+- Examples:
+  - `feat/event-templates-pro`
+  - `fix/google-token-refresh-race`
+  - `chore/cleanup-stale-md-files`
+  - `docs/git-workflow-rules`
+  - `refactor/extract-parser-module`
+
+### Commit messages (Conventional Commits)
+
+- Format: `<type>(<optional-scope>): <subject>`
+- Subject: imperative mood, lowercase, under 72 chars, no trailing period
+- Body (optional but encouraged): wrap at 72 chars, explain *why* not *what*
+- Examples:
+  - `feat(parser): detect vague event times and trigger ai suggestions`
+  - `fix(google-calendar): mutex around oauth token refresh`
+  - `chore: remove stale ralph loop docs`
+  - `docs(claude-md): add mandatory git workflow rules`
+
+### Push & PR flow
+
+1. `git checkout -b <type>/<desc>` **before** starting work
+2. Make the change
+3. Run quality gates — `npm run test:run` and `npm run build` must both pass
+4. `git add` the specific files (never `git add -A` blindly — secrets risk)
+5. `git commit` with a Conventional Commit message
+6. `git push -u origin <branch>`
+7. Open a PR to `master` with `gh pr create` — title is the commit subject, body is a one-line summary + bullet list of changes + test plan
+8. **Stop there.** The user reviews and merges. Never merge a PR yourself.
+
+### What this rule does NOT authorize
+
+The following still require explicit per-action confirmation:
+- `git push --force` / `git push --force-with-lease`
+- `git reset --hard`, `git checkout --`, `git clean -f`
+- Deleting branches (local or remote)
+- Merging PRs
+- Amending or rewriting published commits
+- Skipping hooks (`--no-verify`, `--no-gpg-sign`)
